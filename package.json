@@ -1,0 +1,15 @@
+{
+  "name": "gefcore",
+  "version": "1.0.0",
+  "description": "Juego eductavico para personas disminuidas",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular-route": "^1.6.2",
+    "express": "^4.14.1"
+  }
+}
