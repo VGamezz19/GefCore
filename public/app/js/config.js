@@ -11,7 +11,7 @@ angular.module('myApp').
         }).
         //  when('/test/:phoneId'
         when('/test', {
-          template: '<test-text></test-text>'
+          template: '<test-text></test-text> <test-text2></test-text2>'
         }).
         otherwise('/');
     }

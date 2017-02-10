@@ -3,5 +3,6 @@
 
 angular.module('myApp', [
   'ngRoute',
-  'testText'
+  'testText',
+  'testText2'
 ]);
