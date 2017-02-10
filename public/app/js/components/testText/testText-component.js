@@ -3,7 +3,7 @@
 // Register `phoneList` component, along with its associated controller and template
 angular.module('testText').
   component('testText', {
-    templateUrl: '/js/components/testText/test-text.template.html',
+    templateUrl: '/js/components/testText/testText-template.html',
     controller: 'testController'
 
       // Para hacer una peticion http a un fichero de nuestro proyecto
