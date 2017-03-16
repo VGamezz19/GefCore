@@ -4,5 +4,6 @@
 angular.module('myApp', [
   'ngRoute',
   'testText',
-  'testText2'
+  'testText2',
+  'testMongoose',
 ]);

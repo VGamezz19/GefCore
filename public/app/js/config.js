@@ -13,6 +13,9 @@ angular.module('myApp').
         when('/test', {
           template: '<test-text></test-text> <test-text2></test-text2>'
         }).
+        when('/mongoose', {
+          template: '<test-mongoose></test-mongoose>'
+        }).
         otherwise('/');
     }
   ]);
