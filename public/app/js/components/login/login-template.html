@@ -3,13 +3,7 @@
   <button type="button"class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Testea el Login CABRON
   </button>
-  <script>
-    $( ".btn" ).click(function() {
-
-      $('.modal').modal('toggle')
-    });
-  </script>
-  <div class="modal fade" ng-controller="loginController">
+  <div class="modal fade" ng-controller="loginController" ng-init="loginInit()">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
