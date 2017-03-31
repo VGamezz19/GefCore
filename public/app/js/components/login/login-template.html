@@ -1,4 +1,4 @@
-  <div class="modal fade" ng-controller="loginController" >
+  <div class="modal fade" ng-controller="loginController" ng-init="loginInit()">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -11,13 +11,13 @@
           <form method="post" action='' name="login_form">
 
             <p><input type="text" class="inputLogin" name="eid" id="username" focus-me="true" placeholder="Username" ></p>
-            <p><input type="password" class="inputLogin" name="passwd" placeholder="Password" ng-init="loginInit()" ></p>
+            <p><input type="password" class="inputLogin" name="passwd" placeholder="Password"></p>
             <p><button type="submit" class="btn btn-primary">Sign in</button></p>
           </form>
         </div>
         <div class="modal-footer">
             New To GefCore?
-            <a href="#" class="btn btn-primary">Register</a>
+            <button type="submit" id ="register" class="btn btn-primary">Register</button>
           </div>
       </div>
     </div>

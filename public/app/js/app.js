@@ -6,5 +6,6 @@ angular.module('myApp', [
   'testText',
   'testText2',
   'testMongoose',
-  'login'
+  'login',
+  'register'
 ]);

@@ -14,6 +14,9 @@ angular.module('myApp').
         when('/test', {
           template: '<test-text></test-text> <test-text2></test-text2>'
         }).
+        when('/register', {
+          template: '<register-component></register-component>'
+        }).
         when('/mongoose', {
           template: '<test-mongoose-component></test-mongoose-component>'
         }).
