@@ -10,11 +10,9 @@
         <div class="modal-body">
           <form method="post" action='' name="login_form">
 
-            <p><input type="text" class="inputLogin" name="eid" id="username" placeholder="Username" ></p>
+            <p><input type="text" class="inputLogin" name="eid" id="username" focus-me="true" placeholder="Username" ></p>
             <p><input type="password" class="inputLogin" name="passwd" placeholder="Password" ng-init="loginInit()" ></p>
             <p><button type="submit" class="btn btn-primary">Sign in</button></p>
-            <p class ="testButton" ng-click ="focus()">asd </p>
-            <span onLoad="a = 1">{{ a }}</span>
           </form>
         </div>
         <div class="modal-footer">

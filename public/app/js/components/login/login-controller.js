@@ -1,12 +1,15 @@
 angular.module('login').controller('loginController',['$scope', function ($scope) {
-    $scope.titulo = "login";
-    $scope.loginInit = function () {
-            $('.modal').modal('toggle');
-            $('#username').focus();
-        };
-    $scope.focus = function() {
+  $scope.titulo = "login";
+  $scope.loginInit = function () {
+  //Jquery Bootstrap. Modal Toggle LOGIN
+    $('.modal').modal('toggle');
+      //setTimeout totalmente necesario.
+    setTimeout(focus, 300);
 
-      console.log("hola");
+    function focus () {
+        //A los 0,3 segundos landa la funcion focus sobre el inputLogin
+      $('#username').focus();
+    }
+  };
 
-    };
-  }]);
+  }])
