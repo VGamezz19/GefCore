@@ -1,3 +1,13 @@
 footer p {
   margin-left: 2em;
 }
+
+button.close {
+  margin-top: -53px !important;
+  font-size: 2em;
+}
+
+.inputLogin {
+  padding-left: 0.5em;
+  width: 15em;
+}
