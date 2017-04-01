@@ -1,3 +1,4 @@
+//cargamos las dependencias necesarias
 var config = require('./config'),
     session = require('express-session');
     express = require('express');
@@ -5,6 +6,7 @@ var config = require('./config'),
     compress = require('compression');
     bodyParser = require('body-parser');
     methodOverride = require('method-override');
+
 
 
 
@@ -28,12 +30,18 @@ module.exports =function(){
       resave: true,
       secret: config.sessionSecret
   }));
-
+  //configuramos el motor de renderizado
   app.set('views', 'app/views');
   app.set('view engine', 'ejs');
 
-
+  //cargamos el enrutamiento de nuestra aplicacion
   require('../app/routes/indexServer-routes.js')(app);
+  require('../app/routes/usersServer-routes.js')(app);
+
+
+  //configuramos el servicio de archivos estaticos.
   app.use(express.static('./public'));
+
+  //devolvemos la instancia de la aplicacion express
   return app;
 };
