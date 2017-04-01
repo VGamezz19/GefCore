@@ -8,7 +8,8 @@ var config = require('./config'),
     methodOverride = require('method-override');
 
 
-
+//Aplicamos los entornos de desarrollo y de produccion para que node los verifique
+//cuando es iniciado
 
 module.exports =function(){
   var app = express();

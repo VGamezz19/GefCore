@@ -1,3 +1,4 @@
+//mandamos la ejecución de las cookies de sesion necesarias
 exports.render = function(req, res){
   if(req.session.lastVisit){
     console.log(req.session.lastVisit);
@@ -6,7 +7,7 @@ exports.render = function(req, res){
 
   req.session.lastVisit = new Date();
 
-
+//renderizamos la vista y las variables que utilizemos
   res.render('index.ejs',{
           title: 'GefCore'
   });
