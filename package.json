@@ -1,16 +1,23 @@
 {
   "name": "gefcore",
   "version": "1.0.0",
-  "description": "Juego eductavico para personas disminuidas",
+  "description": "\"app para la ONCE\"",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular-route": "^1.6.2",
-    "express": "^4.14.1",
-    "mongoose": "^4.9.2"
+    "angular-route": "^1.6.4",
+    "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-sessions": "^1.0.6",
+    "method-override": "^2.3.8",
+    "mongoose": "^4.9.2",
+    "morgan": "^1.8.1"
   }
 }
