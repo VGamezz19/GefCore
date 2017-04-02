@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= title %></title>
+</head>
+<body>
+  <!-- asi mostramos los mensajes de error -->
+  <% for(var i in messages) { %>
+    <div class='flash'><%= messages[i] %></div>
+  <% } %>
+
+  <form action="/singin" method="post">
+
+    <div>
+      <label>Usuario:</label>
+      <input type="text" name="username"/>
+    </div>
+    <div>
+      <label>Contraseña:</label>
+      <input type="text" name="password"/>
+    </div>
+    <div>
+      <input type="submit" value="Entrar"></input>
+    </div>
+  </form>
+
+</body>
+</html>

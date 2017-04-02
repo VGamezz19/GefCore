@@ -1,11 +1,14 @@
 //cargamos las dependencias necesarias
 var config = require('./config'),
-    session = require('express-session');
-    express = require('express');
-    morgan = require('morgan');
-    compress = require('compression');
-    bodyParser = require('body-parser');
-    methodOverride = require('method-override');
+    session = require('express-session'),
+    express = require('express'),
+    morgan = require('morgan'),
+    compress = require('compression'),
+    bodyParser = require('body-parser'),
+    methodOverride = require('method-override'),
+    flash = require('connect-flash'),
+    passport = require('passport');
+
 
 
 //Aplicamos los entornos de desarrollo y de produccion para que node los verifique
@@ -34,6 +37,11 @@ module.exports =function(){
   //configuramos el motor de renderizado
   app.set('views', 'app/views');
   app.set('view engine', 'ejs');
+
+  //registramos los middleware de passport y flash
+  app.use(flash());
+  app.use(passport.initialize());
+  app.use(passport.session());
 
   //cargamos el enrutamiento de nuestra aplicacion
   require('../app/routes/indexServer-routes.js')(app);

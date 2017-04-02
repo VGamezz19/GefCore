@@ -9,6 +9,7 @@ exports.render = function(req, res){
 
 //renderizamos la vista y las variables que utilizemos
   res.render('index.ejs',{
-          title: 'GefCore'
+          title: 'GefCore',
+          userFullName: req.user ? req.user.fullname: ''
   });
 };

@@ -6,6 +6,15 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<%  if( userFullName){ %>
+    <h1>Hola <%=userFullName%></h1>
+    <a href="/singout">Cerrar sesion</a>
+<%
+  } else { %>
+    <a href="/singup">Crear cuenta</a>
+    <a href="singin">Identificarse</a>
+  <%} %>
+  <br>
   <title><%= title %></title>
   <img src="img/foto.jpeg" >
 </head>
