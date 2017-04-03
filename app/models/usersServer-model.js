@@ -25,7 +25,7 @@ var userSchema = new Schema({
     match: [/.+\@.+\..+/, 'Escribe un email correcto']},
     password: {type: String, validate: [function(password){
         return password && password.length > 6;
-    }, 'La contraseña debe ser de minimo 6 caracteres'
+    }, 'La contraseña debe ser de minimo 7 caracteres'
 ]
 },
     salt: {type: String},
@@ -39,12 +39,9 @@ var userSchema = new Schema({
 
 
 userSchema.virtual('fullname').get(function()
-{ return this.firstName + ' ' + this.lastName;
-
- this.firstName = splitName[0] || '';
- this.lastName = splitName[1] || '';
-
-});﻿
+{ return this.firstName + ' ' +
+ this.lastName; this.firstName = splitName[0] ||
+  ''; this.lastName = splitName[1] || ''; });﻿
 
 //Usamos el middleware pre-save para el hash de la contraseña
 userSchema.pre('save', function(next){
