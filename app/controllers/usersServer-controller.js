@@ -19,7 +19,7 @@ var getErrorMessage = function(err){
           message = 'Usuario ya registrado';
           break;
           //mensaje generico
-          defaul:
+          default:
           message= 'Ha ocurrido un error!';
     }
       }
