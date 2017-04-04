@@ -1,13 +1,13 @@
 {
   "name": "gefcore",
-  "version": "1.0.0",
+  "version": "0.2",
   "description": "\"app para la ONCE\"",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "",
+  "author": "Alejandro & Victor",
   "license": "ISC",
   "dependencies": {
     "angular-route": "^1.6.4",
