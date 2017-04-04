@@ -53,7 +53,7 @@ userSchema.pre('save', function(next){
 });
 //creamos un metodo de instancia para el hashing
 userSchema.methods.hashPassword = function(password) {
-    return crypto.pbkdf2Sync(password, this.salt, 10000, 64).toString('base64');
+    return crypto.pbkdf2Sync(password, this.salt, 10000, 64, 'sha1').toString('base64');
 };
 //creamos el metodo para autenticar al usuario
 userSchema.methods.authenticate = function(password){
