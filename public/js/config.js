@@ -17,7 +17,9 @@ angular.module('myApp').
         when('/mongoose', {
           template: '<test-mongoose-component></test-mongoose-component>'
         }).
-        otherwise('/');
+        otherwise({
+          redirectTo: '/'
+        });
         // use the HTML5 History API
         //esto es para quitar el #/ de la ruta
         $locationProvider.html5Mode({

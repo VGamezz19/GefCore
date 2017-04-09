@@ -8,16 +8,16 @@
           </button>
         </div>
         <div class="modal-body">
-          <form method="post" action='' name="login_form">
+          <form method="post" action='/singin' name="login_form">
 
-            <p><input type="text" class="inputLogin" name="eid" id="username" focus-me="true" placeholder="Username" ></p>
-            <p><input type="password" class="inputLogin" name="passwd" placeholder="Password" ng-init="loginInit()" ></p>
-            <p><button type="submit" class="btn btn-primary">Sign in</button></p>
+            <p><input type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Username" ></p>
+            <p><input type="password" class="inputLogin" name="password" placeholder="Password" ng-init="loginInit()" ></p>
+            <input type="submit" class="btn btn-primary" value='Sing in'>
           </form>
         </div>
         <div class="modal-footer">
             New To GefCore?
-            <a href="#" class="btn btn-primary">Register</a>
+            <a href='/singup' class="btn btn-primary">Register</a>
           </div>
       </div>
     </div>

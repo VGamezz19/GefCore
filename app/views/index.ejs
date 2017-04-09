@@ -6,19 +6,82 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
 <%  if( userFullName){ %>
     <h1>Hola <%=userFullName%></h1>
     <a href="/singout">Cerrar sesion</a>
 <%
-  } else { %>
-    <a href="/singup">Crear cuenta</a>
-    <a href="singin">Identificarse</a>
-  <%} %>
+  }%>
   <br>
   <title><%= title %></title>
-  <img src="img/foto.jpeg" >
+
 </head>
 <body>
-<h1><%= title %></h1>
+
+
+<body ng-controller="indexController">
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/test">Testing</a></li>
+            <li role="presentation"><a href="/mongoose">testing Mongo</a></li>
+            <li role="presentation"><a href="/singin">Inicia Sesión</a></li>
+            <li role="presentation"><a href="/singup">Registrate</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted"><%= title %></h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Titulo testeo MAN</h1>
+
+        <h3>Este elemento siempre estara presente 1 |||||| {{IndexController}}</h3>
+
+<div ng-view></div>
+
+
+<!--Angular Framework -->
+<script type="text/javascript" src="/lib/angular/angular.js"></script>
+<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!--Angular configuration-->
+<script src="/js/app.js"></script>
+<script src="/js/config.js"></script>
+<!--test components -->
+<script src="/js/components/testText/testText-module.js"></script>
+<script src="/js/components/testText/testText-component.js"></script>
+<script src="/js/components/testText/testText-controller.js"></script>
+<script src="/js/controller/index-controller.js"></script>
+
+<script src="/js/components/testText2/testText2-module.js"></script>
+<script src="/js/components/testText2/testText2-component.js"></script>
+<script src="/js/components/testText2/testText2-controller.js"></script>
+
+  <!-- Mongose Tester-->
+<script src="/js/components/example/testMongoose-module.js"></script>
+<script src="/js/components/example/testMongoose-component.js"></script>
+<script src="/js/components/example/testMongoose-controller.js"></script>
+<!-- Login Component-->
+<script src="/js/components/login/login-module.js"></script>
+<script src="/js/components/login/login-component.js"></script>
+<script src="/js/components/login/login-controller.js"></script>
+
+
+
+
+
+
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "name": "gefcore",
-  "version": "0.2",
+  "version": "0.0.4",
   "description": "\"app para la ONCE\"",
   "main": "server.js",
   "scripts": {
@@ -12,6 +12,7 @@
   "dependencies": {
     "angular-route": "^1.6.4",
     "body-parser": "^1.17.1",
+    "bower": "^1.8.0",
     "compression": "^1.6.2",
     "connect-flash": "^0.1.1",
     "crypto": "0.0.3",
