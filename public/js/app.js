@@ -5,8 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'testText',
   'testText2',
-  'example',
-  'login'
+  'example'
 ]);
 
 angular.element(document).ready(function(){

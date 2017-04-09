@@ -7,8 +7,7 @@ angular.module('myApp').
 
       $routeProvider.
         when('/', {
-          templateUrl: '/template/main-template.html',
-          template: '<login-component></login-component>'
+          templateUrl: '/template/main-template.html'
         }).
         //  when('/test/:phoneId'
         when('/test', {
