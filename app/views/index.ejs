@@ -19,52 +19,126 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+      <h3>GefCore</h3>
+  </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
 
-<!-- Usuario Conectado-->
-<%  if( userFullName){ %> <!-- True false User -->
-    <h1>Hola <%=userFullName%></h1>
-    <form action="/singout">
-      <input type="submit" class="btn btn-primary" value='Cerrar sesion'></input>
-    </form>
+  <!-- Header NAV -->
+  <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" class="active"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/test">Testing</a></li>
+        <li role="presentation"><a href="/mongoose">testing Mongo</a></li>
+        <!-- Usuario Conectado-->
+        <%  if( userFullName){ %> <!-- True false User -->
+            <li role="presentation"><a href=""><%=userFullName%></a></li>
+            <li role="presentation">
 
-<%
-  }%>
+                <form action="/singout">
+                  <input type="submit" class=" active" value='Cerrar sesion'></input>
+                </form>
 
-  <!--Usuario desconectado -->
-  <%  if(!userFullName){ %> <!-- True false User -->
-  <!--START Modal LOGIN -->
-  <div class="modal fade" >
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">Login</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form method="post" action='/singin' name="login_form">
+            </li>
+        <%
+          }%>
 
-            <p><input type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Username" ></p>
-            <p><input type="password" class="inputLogin" name="password" placeholder="Password" ng-init="loginInit()" ></p>
-            <input type="submit" class="btn btn-primary" value='Sing in'>
-          </form>
-        </div>
-        <div class="modal-footer">
-            New To GefCore?
-            <a href='/singup' class="btn btn-primary">Register</a>
-          </div>
-      </div>
-    </div>
+          <!--Usuario desconectado -->
+          <%  if(!userFullName){ %> <!-- True false User -->
+            <!--START Modal LOGIN -->
+            <div class="modal loginModal fade" >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title">Entra</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form method="post" action='/singin' name="login_form">
+
+                      <p><input type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
+                      <p><input type="password" class="inputLogin" name="password" placeholder="Contraseña"></p>
+                      <input type="submit" class="btn btn-primary" value='Entra'>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                      Nuevo en GefCore?
+                      <a href='/singup' class="btn btn-primary">Registrate</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <!--END Modal LOGIN -->
+
+            <!-- Start Modal REGISTER -->
+            <div class="modal registerModal fade" >
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title">Registrarse</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form method="post" action='/singup' name="login_form">
+
+                      <p><input type="text" class="inputLogin"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
+                      <p><input type="text" class="inputLogin" name="lastName" placeholder="Apellido"></p>
+                      <p><input type="text" class="inputLogin" name="email" placeholder="Correo" ></p>
+                      <p><input type="text" class="inputLogin" name="username" placeholder="Nombre de usuario"></p>
+                      <p><input type="password" class="inputLogin" name="password" placeholder="Contraseña" ></p>
+                      <input type="submit" class="btn btn-primary" value='Crear cuenta'>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END Modal REGISTER-->
+
+          <li role="presentation" class=""><a class ="login"href="">Entrar</a></li>
+          <li role="presentation"><a class ="register" href="">Registrate</a></li>
+
+          <script>
+          //Start Login Modal Jquery
+            $('.loginModal').modal('show');
+            setTimeout(focus, 300);
+
+          //Cuando hace click en Entrar del menu
+            $('.login').click(function(){
+              $('.loginModal').modal('show');
+              setTimeout(focus, 300);
+            });
+          //End Login Modal jquery
+
+          //Start Register Modal jquery
+          $('.register').click(function(){
+            $('.registerModal').modal('show');
+            setTimeout(focusRegister, 300);
+          });
+          //End Register Modal jquery
+
+          //Functions Modal Focus
+            function focus () {
+              $('#username').focus();
+            }
+            function focusRegister () {
+              $('#firstName').focus();
+            }
+          </script>
+
+        <%}%>
+      </ul>
   </div>
 
-  <!--END Modal LOGIN -->
-
-  <script>
-    $('.modal').modal('show');
-  </script>
-
-  <%}%>
 
 <!--Title-->
   <br>
@@ -76,18 +150,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 
 <body ng-controller="indexController">
     <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="/">Home</a></li>
-            <li role="presentation"><a href="/test">Testing</a></li>
-            <li role="presentation"><a href="/mongoose">testing Mongo</a></li>
-            <li role="presentation"><a href="/singin">Inicia Sesión</a></li>
-            <li role="presentation"><a href="/singup">Registrate</a></li>
-          </ul>
-        </nav>
-        <h3 class="text-muted"><%= title %></h3>
-      </div>
+
 
       <div class="jumbotron">
         <h1>Titulo testeo MAN</h1>
