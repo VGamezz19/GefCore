@@ -34,111 +34,25 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
   <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li role="presentation" class="active"><a href="/">Home</a></li>
+
         <li role="presentation"><a href="/test">Testing</a></li>
         <li role="presentation"><a href="/mongoose">testing Mongo</a></li>
+
         <!-- Usuario Conectado-->
         <%  if( userFullName){ %> <!-- True false User -->
+
             <li role="presentation"><a href=""><%=userFullName%></a></li>
-            <li role="presentation">
+            <li role="presentation"><a class ="logeOut" href="">Cerrar sesion</a></li>
+        <%}%>
 
-                <form action="/singout">
-                  <input type="submit" class=" active" value='Cerrar sesion'></input>
-                </form>
-
-            </li>
-        <%
-          }%>
-
-          <!--Usuario desconectado -->
-          <%  if(!userFullName){ %> <!-- True false User -->
-            <!--START Modal LOGIN -->
-            <div class="modal loginModal fade" >
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h2 class="modal-title">Entra</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form method="post" action='/singin' name="login_form">
-
-                      <p><input type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
-                      <p><input type="password" class="inputLogin" name="password" placeholder="Contraseña"></p>
-                      <input type="submit" class="btn btn-primary" value='Entra'>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                      Nuevo en GefCore?
-                      <a href='/singup' class="btn btn-primary">Registrate</a>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <!--END Modal LOGIN -->
-
-            <!-- Start Modal REGISTER -->
-            <div class="modal registerModal fade" >
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h2 class="modal-title">Registrarse</h2>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form method="post" action='/singup' name="login_form">
-
-                      <p><input type="text" class="inputLogin"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
-                      <p><input type="text" class="inputLogin" name="lastName" placeholder="Apellido"></p>
-                      <p><input type="text" class="inputLogin" name="email" placeholder="Correo" ></p>
-                      <p><input type="text" class="inputLogin" name="username" placeholder="Nombre de usuario"></p>
-                      <p><input type="password" class="inputLogin" name="password" placeholder="Contraseña" ></p>
-                      <input type="submit" class="btn btn-primary" value='Crear cuenta'>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- END Modal REGISTER-->
+        <!-- Usuario Desconectado-->
+      <%  if(!userFullName){ %> <!-- True false User -->
 
           <li role="presentation" class=""><a class ="login"href="">Entrar</a></li>
           <li role="presentation"><a class ="register" href="">Registrate</a></li>
-
-          <script>
-          //Start Login Modal Jquery
-            $('.loginModal').modal('show');
-            setTimeout(focus, 300);
-
-          //Cuando hace click en Entrar del menu
-            $('.login').click(function(){
-              $('.loginModal').modal('show');
-              setTimeout(focus, 300);
-            });
-          //End Login Modal jquery
-
-          //Start Register Modal jquery
-          $('.register').click(function(){
-            $('.registerModal').modal('show');
-            setTimeout(focusRegister, 300);
-          });
-          //End Register Modal jquery
-
-          //Functions Modal Focus
-            function focus () {
-              $('#username').focus();
-            }
-            function focusRegister () {
-              $('#firstName').focus();
-            }
-          </script>
-
         <%}%>
       </ul>
   </div>
-
 
 <!--Title-->
   <br>
@@ -154,7 +68,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 
       <div class="jumbotron">
         <h1>Titulo testeo MAN</h1>
-
+        <img src="" alt ="hola">
         <h3>Este elemento siempre estara presente 1 |||||| {{IndexController}}</h3>
 
 <div ng-view></div>
@@ -181,6 +95,96 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 <script src="/js/components/example/testMongoose-component.js"></script>
 <script src="/js/components/example/testMongoose-controller.js"></script>
 
+<!-- Js Index.js-->
+<script src ="/js/modals-js/modal.js"></script>
 
+
+
+<!-- _____________________________START____MODAL___________________________________ -->
+
+  <!--START Modal LOGIN -->
+  <div class="modal loginModal fade" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Entra</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method="post" action='/singin' name="login_form">
+
+            <p><input type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
+            <p><input type="password" class="inputLogin" name="password" placeholder="Contraseña"></p>
+            <input type="submit" class="btn btn-primary" value='Entra'>
+          </form>
+        </div>
+        <div class="modal-footer">
+            Nuevo en GefCore?
+            <a href='' class=" registerLogin btn btn-primary">Registrate</a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!--END Modal LOGIN -->
+
+  <!-- Start Modal REGISTER -->
+  <div class="modal registerModal fade" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Registrarse</h2>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method="post" action='/singup' name="login_form">
+
+            <p><input type="text" class="inputLogin"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
+            <p><input type="text" class="inputLogin" name="lastName" placeholder="Apellido"></p>
+            <p><input type="text" class="inputLogin" name="email" placeholder="Correo" ></p>
+            <p><input type="text" class="inputLogin" name="username" placeholder="Nombre de usuario"></p>
+            <p><input type="password" class="inputLogin" name="password" placeholder="Contraseña" ></p>
+            <input type="submit" class=" btn btn-primary" value='Crear cuenta'>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- END Modal REGISTER-->
+
+<!-- START Modal CheckLogOUT-->
+
+<div class="modal checkModal fade" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Cerrar sesion</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form  action='/singout'>
+          <input type="submit" class="btn btn-primary" value='Si'>
+        </form>
+       <input type="submit" class="btn close btn-primary" value='No' data-dismiss="modal" aria-label="Close">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END Modal CheckLogOUT-->
+<!-- _______________________________END__MODAL___________________________________ -->
+
+<%  if(!userFullName){ %> <!-- True false User -->
+    <script>
+    //Start Login Modal Jquery
+      $('.loginModal').modal('show');
+      setTimeout(focus, 300);
+    </script>
+  <%}%>
 </body>
 </html>

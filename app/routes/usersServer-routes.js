@@ -13,7 +13,7 @@ module.exports = function(app){
   //seteamos las rutas de singUp
 
   app.route('/singup')
-      .get(users.renderSingUp)
+      .get(users.list)
       .post(users.singUp);
 
   //seteamos la ruta singIn

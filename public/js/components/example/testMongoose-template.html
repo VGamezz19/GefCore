@@ -2,5 +2,13 @@
 
 <div ng-controller="testMongooseController">
   <h1>Mongoose</h1>
-  <div>{{test}}</div>
+
+  <div ng-repeat =" usuario in usuarios">
+    <div>{{usuario.username}}</div>
+      <div>{{usuario.firstName}}</div>
+      <div>{{usuario.lastName}}</div>
+      <div>{{usuario.email}}</div>
+
+      <hr>
+  </div>
 </div>
