@@ -1,10 +1,25 @@
 
 <div ng-controller="matematicasController">
-  {{$ctrl.hello}} <br>
-  2 + 5 = {{$ctrl.suma}} <br>
-    {{test2}} <br>
+    <h1>Matematicas</h1>
 
-    <script>
-      $(".container-fluid").hide();
-    </script>
+    <div class ="row " ng-repeat ="mates in matesGames.matematicas">
+      <a href="" class ="juegos-matematicas-home btn btn-primary">
+        <div class ="col-md-12 col-lg-12">
+          <div class ="col-md-3 col-lg-3">
+            Nv {{mates.deficultad}}
+          </div>
+          <div class ="col-md-6 col-lg-6">
+            <span>{{mates.game}}</span>
+          </div>
+          <div class ="col-md-3 col-lg-3">
+
+            <li>Puntos maximos: {{mates.Puntuacion}}</li>
+          </div>
+        </div>
+      </a>
+    </div>
 </div>
+
+<script>
+  $(".container-fluid").hide();
+</script>
