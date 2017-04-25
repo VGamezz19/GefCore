@@ -19,6 +19,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<div class ="bar-header">
   <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
@@ -34,8 +35,6 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
   <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li role="presentation" class="active"><a href="/">Home</a></li>
-
-        <li role="presentation"><a href="/test">Testing</a></li>
         <li role="presentation"><a href="/mongoose">testing Mongo</a></li>
 
         <!-- Usuario Conectado-->
@@ -53,6 +52,15 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         <%}%>
       </ul>
   </div>
+</div>
+<div class="container-fluid">
+ <div class="row">
+    <div class=" headerImg img-responsive" alt="Imagen principal de GefCore de tonalidad oscura">
+          <h1 class ="gefCore-title">GefCore</h1>
+    </div>
+
+ </div>
+</div>
 
 <!--Title-->
   <br>
@@ -67,9 +75,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 
 
       <div class="jumbotron">
-        <h1>Titulo testeo MAN</h1>
-        <img src="" alt ="hola">
-        <h3>Este elemento siempre estara presente 1 |||||| {{IndexController}}</h3>
+
 
 <div ng-view></div>
 
@@ -80,20 +86,27 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 <!--Angular configuration-->
 <script src="/js/app.js"></script>
 <script src="/js/config.js"></script>
-<!--test components -->
-<script src="/js/components/testText/testText-module.js"></script>
-<script src="/js/components/testText/testText-component.js"></script>
-<script src="/js/components/testText/testText-controller.js"></script>
 <script src="/js/controller/index-controller.js"></script>
-
-<script src="/js/components/testText2/testText2-module.js"></script>
-<script src="/js/components/testText2/testText2-component.js"></script>
-<script src="/js/components/testText2/testText2-controller.js"></script>
 
   <!-- Mongose Tester-->
 <script src="/js/components/example/testMongoose-module.js"></script>
 <script src="/js/components/example/testMongoose-component.js"></script>
 <script src="/js/components/example/testMongoose-controller.js"></script>
+
+<!-- home-->
+<script src="/js/components/home/home-module.js"></script>
+<script src="/js/components/home/home-component.js"></script>
+<script src="/js/components/home/home-controller.js"></script>
+
+<!-- matematicas home-->
+<script src="/js/components/matematicas/matematicas-module.js"></script>
+<script src="/js/components/matematicas/matematicas-component.js"></script>
+<script src="/js/components/matematicas/matematicas-controller.js"></script>
+
+<!-- ingles home-->
+<script src="/js/components/ingles/ingles-module.js"></script>
+<script src="/js/components/ingles/ingles-component.js"></script>
+<script src="/js/components/ingles/ingles-controller.js"></script>
 
 <!-- Js Index.js-->
 <script src ="/js/modals-js/modal.js"></script>
@@ -167,10 +180,16 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         </button>
       </div>
       <div class="modal-body">
-        <form  action='/singout'>
-          <input type="submit" class="btn btn-primary" value='Si'>
-        </form>
-       <input type="submit" class="btn close btn-primary" value='No' data-dismiss="modal" aria-label="Close">
+        <div class ="row">
+          <div class ="col-md-6 col-lg-6">
+            <form   style ="whitd: 40%;"action='/singout'>
+              <input type="submit" class="yesClose-loged btn btn-danger" value='Si'>
+            </form>
+          </div>
+          <div class ="col-md-6 col-lg-6">
+             <input type="submit" class="close-loged btn btn-primary" value='No' data-dismiss="modal" aria-label="Close">
+          </div>
+        </div>
       </div>
     </div>
   </div>

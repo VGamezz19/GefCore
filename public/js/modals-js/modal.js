@@ -21,7 +21,9 @@ $('.registerLogin').click(function(){
 
 $('.logeOut').click(function(){
   $('.checkModal').modal('show');
+  setTimeout(focusLogOut, 300);
 });
+
 //Functions Modal Focus
   function focus () {
     $('#username').focus();
@@ -30,6 +32,6 @@ $('.logeOut').click(function(){
     $('#firstName').focus();
   }
 
-  $('.logeOut').click(function(){
-    $('.checkModal').modal('show');
-  });
+  function focusLogOut () {
+    $('.yesClose-loged').focus();
+  }

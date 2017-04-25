@@ -14,3 +14,45 @@ button.close {
 h3 {
   margin-left: 2em;
 }
+h1 {
+  text-align: center;
+  margin-bottom: 0.5em !important;
+}
+
+.bar-header {
+  position: fixed;
+  width: 100%;
+  background: white;
+}
+
+.img-responsive {
+  height: 30em !important;
+}
+
+.gefCore-title {
+  font-size: 5em;
+  padding-top: 2.5em;
+  color: white;
+}
+
+.headerImg {
+  background-image: url("/img/img-header.jpg");
+  width: 100%;
+  background-size: cover;
+}
+
+.boque-home {
+  margin-bottom: 1em;
+}
+
+.boque-home div a {
+  width: 100%;
+}
+
+.close-loged {
+  float: right;
+  width: 50%;
+}
+ .yesClose-loged {
+   width: 50%;
+ }

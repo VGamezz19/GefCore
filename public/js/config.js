@@ -7,11 +7,14 @@ angular.module('myApp').
 
       $routeProvider.
         when('/', {
-          templateUrl: '/template/main-template.html'
+          template: '<home-component></home-component>'
         }).
         //  when('/test/:phoneId'
-        when('/test', {
-          template: '<test-text></test-text> <test-text2></test-text2>'
+        when('/matematicas', {
+          template: '<matematicas-component></matematicas-component>'
+        }).
+        when('/ingles', {
+          template: '<ingles-component></ingles-component>'
         }).
         when('/mongoose', {
           template: '<test-mongoose-component></test-mongoose-component>'

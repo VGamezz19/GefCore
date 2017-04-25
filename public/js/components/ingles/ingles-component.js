@@ -1,10 +1,10 @@
 'use strict';
 
 // Register `phoneList` component, along with its associated controller and template
-angular.module('testText').
-  component('testText', {
-    templateUrl: '/js/components/testText/testText-template.html',
-    controller: 'testController'
+angular.module('ingles').
+  component('inglesComponent', {
+    templateUrl: '/js/components/ingles/ingles-template.html',
+    controller: 'inglesController'
 
       // Para hacer una peticion http a un fichero de nuestro proyecto
       // y obtener sus datos. En este caso un JSON

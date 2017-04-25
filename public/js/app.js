@@ -3,9 +3,10 @@
 
 angular.module('myApp', [
   'ngRoute',
-  'testText',
-  'testText2',
-  'example'
+  'example',
+  'homeModule',
+  'matematicas',
+  'ingles'
 ]);
 
 angular.element(document).ready(function(){

@@ -1,4 +1,4 @@
 'use strict';
 
 // Define the `phoneList` module
-angular.module('testText2', []);
+angular.module('ingles', []);
