@@ -11,12 +11,7 @@ $('.register').click(function(){
   $('.registerModal').modal('show');
   setTimeout(focusRegister, 300);
 });
-          //registerLogin
-$('.registerLogin').click(function(){
-  $('.loginModal').modal('hide');
-  $('.registerModal').modal('show');
-  setTimeout(focusRegister, 300);
-});
+
 //End Register Modal jquery
 
 $('.logeOut').click(function(){

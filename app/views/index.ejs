@@ -135,7 +135,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         </div>
         <div class="modal-footer">
             Nuevo en GefCore?
-            <a href='' class=" registerLogin btn btn-primary">Registrate</a>
+            <input type="submit" class=" registerLogin btn btn-primary" value="Registrate">
           </div>
       </div>
     </div>
@@ -200,9 +200,18 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 
 <%  if(!userFullName){ %> <!-- True false User -->
     <script>
-    //Start Login Modal Jquery
+    //Iniciar Modal Login al ir al /
       $('.loginModal').modal('show');
       setTimeout(focus, 300);
+    //Preparar el boton "REGISTRATE" para que abra el modal de Registrarse.
+      $('.registerLogin').click(function(){
+        $('.loginModal').modal('hide');
+        $('.registerModal').modal('show');
+        setTimeout(focusRegister, 300);
+      });
+      function focusRegister () {
+        $('#firstName').focus();
+      }
     </script>
   <%}%>
 </body>
