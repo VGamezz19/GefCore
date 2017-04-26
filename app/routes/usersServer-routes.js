@@ -14,11 +14,7 @@ module.exports = function(app){
 
   app.route('/singup')
       .get(users.list)
-      .post(users.singUp, {
-        successRedirect: '/',
-        failureRedirect: '/',
-        failureFlash: true,
-      });
+      .post(users.singUp);
 
   //seteamos la ruta singIn
   app.route('/singin')
@@ -27,6 +23,7 @@ module.exports = function(app){
         successRedirect: '/',
         failureRedirect: '/',
         failureFlash: true,
+        
       }));
 
   //seteamos la ruta singOut

@@ -43,6 +43,7 @@ module.exports =function(){
   app.use(passport.initialize());
   app.use(passport.session());
 
+
   //cargamos el enrutamiento de nuestra aplicacion
   require('../app/routes/indexServer-routes.js')(app);
   require('../app/routes/usersServer-routes.js')(app);
@@ -50,7 +51,9 @@ module.exports =function(){
 
   //configuramos el servicio de archivos estaticos.
   app.use(express.static('./public'));
-
+  app.get('*', function(req, res){
+    res.redirect('/')
+  });
   //devolvemos la instancia de la aplicacion express
   return app;
 };

@@ -166,7 +166,7 @@ exports.singUp = function(req, res, next ){
         req.flash('error', message);
 
 
-        return res.redirect('/singUp');
+        return res.redirect('/');
       }
         //si el usuario se ha creado corectamente lo loguea
       req.login(user, function(err){
