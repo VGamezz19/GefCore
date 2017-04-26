@@ -57,7 +57,7 @@ exports.renderSingUp = function(req, res, next){
   if(!req.user){
     //usamos el objeto response para renderizar singUp
 
-    res.render('singUp',{
+    res.render('index',{
 
       //configuramos la variable title
       title: 'registrate',

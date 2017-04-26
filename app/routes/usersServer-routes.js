@@ -21,8 +21,8 @@ module.exports = function(app){
       .get(users.renderSingIn)
       .post(passport.authenticate('local', {
         successRedirect: '/',
-        failureRedirect: '/singin',
-        failureFlash: true
+        failureRedirect: '/',
+        failureFlash: true,
       }));
 
   //seteamos la ruta singOut
