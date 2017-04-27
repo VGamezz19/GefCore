@@ -34,7 +34,25 @@ var userSchema = new Schema({
     providerId: String,
     providerData: {},
     createdAt: {type: Date, default: Date.now
-    }
+    },
+    puntuacion: {
+      matematicas: Number,
+      ingles: Number
+    },
+    matematicas: [{
+      juego: {
+        identi: String,
+        puntuacion: Number,
+        estado: Number
+      }
+    }],
+    ingles: [{
+      juego: {
+        identi: String,
+        puntuacion: Number,
+        estado: Number
+      }
+    }]
 });
 
 
