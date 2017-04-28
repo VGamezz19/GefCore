@@ -13,8 +13,14 @@ angular.module('myApp').
         when('/matematicas', {
           template: '<matematicas-component></matematicas-component>'
         }).
+        when('/profile', {
+          template: '<profile-component/>'
+        }).
         when('/ingles', {
           template: '<ingles-component></ingles-component>'
+        }).
+        when('/puntuacionMatematicas', {
+          template: '<puntuacion-matematicas-component></puntuacion-matematicas-component>'
         }).
         when('/mongoose', {
           template: '<test-mongoose-component></test-mongoose-component>'

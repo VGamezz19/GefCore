@@ -11,7 +11,8 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
   <link rel="stylesheet" href="/css/index.css">
 
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-  <!-- Latest compiled and minified CSS -->
+
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
   <!-- Optional theme -->
@@ -40,7 +41,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         <!-- Usuario Conectado-->
         <%  if( userFullName){ %> <!-- True false User -->
 
-            <li role="presentation"><a href=""><%=userFullName%></a></li>
+            <li role="presentation"><a href="/profile"><%=userFullName%></a></li>
             <li role="presentation"><a class ="logeOut" href="">Cerrar sesion</a></li>
         <%}%>
 
@@ -98,6 +99,11 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 <script src="/js/components/home/home-component.js"></script>
 <script src="/js/components/home/home-controller.js"></script>
 
+<!-- profile-->
+<script src="/js/components/profile/profile-module.js"></script>
+<script src="/js/components/profile/profile-component.js"></script>
+<script src="/js/components/profile/profile-controller.js"></script>
+
 <!-- matematicas home-->
 <script src="/js/components/matematicas/matematicas-module.js"></script>
 <script src="/js/components/matematicas/matematicas-component.js"></script>
@@ -108,8 +114,15 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 <script src="/js/components/ingles/ingles-component.js"></script>
 <script src="/js/components/ingles/ingles-controller.js"></script>
 
+<!-- puntuacion matemtaicas-->
+<script src="/js/components/puntuacionMatematicas/puntuacionMatematicas-module.js"></script>
+<script src="/js/components/puntuacionMatematicas/puntuacionMatematicas-component.js"></script>
+<script src="/js/components/puntuacionMatematicas/puntuacionMatematicas-controller.js"></script>
+
 <!-- Js Index.js-->
 <script src ="/js/modals-js/modal.js"></script>
+
+
 
 
 

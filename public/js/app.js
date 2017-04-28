@@ -5,8 +5,10 @@ angular.module('myApp', [
   'ngRoute',
   'example',
   'homeModule',
+  'profile',
   'matematicas',
-  'ingles'
+  'ingles',
+  'puntuacionMatematicas'
 ]);
 
 angular.element(document).ready(function(){

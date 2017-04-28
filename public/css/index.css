@@ -61,3 +61,31 @@ h1 {
    width: 100%;
    margin-bottom: 1em;
  }
+
+ .primeraPuntuacion {
+   color: #ffbf00 !important;
+ }
+
+ .segundaPuntuacion {
+   color: #a7abae !important;
+ }
+ .terceraPuntuacion {
+   color: #CD7F32 !important;
+ }
+
+ #tag0{
+  border: 5px #ffbf00 solid;
+ }
+
+ #tag1{
+  border: 5px #a7abae solid;
+ }
+
+ #tag2{
+  border: 5px #CD7F32 solid;
+ }
+
+ tbody tr {
+   margin-bottom: 1em;
+   margin-top: 1em;
+ }
