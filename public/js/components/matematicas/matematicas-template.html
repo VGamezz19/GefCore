@@ -2,8 +2,8 @@
 <div>
     <h1>Matematicas</h1>
 
-    <div class ="row " ng-repeat ="mates in matesGames.matematicas">
-      <a href="" class ="juegos-matematicas-home btn btn-primary">
+    <div class ="row " ng-repeat ="mates in $ctrl.matesGames.matematicas">
+      <a href="" class ="juegos-matematicas-home btn btn-primary" ng-if="mates.Puntuacion < $ctrl.puntuacionMaxima ">
         <div class ="col-md-12 col-lg-12">
           <div class ="col-md-3 col-lg-3">
             Nv {{mates.deficultad}}
@@ -12,7 +12,20 @@
             <span>{{mates.game}}</span>
           </div>
           <div class ="col-md-3 col-lg-3">
-
+            <li>Puntos maximos: {{mates.Puntuacion}}</li>
+          </div>
+        </div>
+      </a>
+      <a href="" class ="juegos-matematicas-home btn btn-warning" ng-if="mates.Puntuacion > $ctrl.puntuacionMaxima ">
+        <div class ="col-md-12 col-lg-12">
+          <div class ="col-md-3 col-lg-3">
+            Nv {{mates.deficultad}}
+          </div>
+          <div class ="col-md-6 col-lg-6">
+            <span>{{mates.game}}</span>
+          </div>
+          <div class ="col-md-3 col-lg-3">
+            <span>Te faltan  {{mates.Puntuacion - $ctrl.puntuacionMaxima}} para desbloquear este nivel </span>
             <li>Puntos maximos: {{mates.Puntuacion}}</li>
           </div>
         </div>
