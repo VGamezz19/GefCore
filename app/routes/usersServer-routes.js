@@ -13,7 +13,6 @@ module.exports = function(app){
   //seteamos las rutas de singUp
 
   app.route('/singup')
-      .get(users.list)
       .post(users.singUp);
 
   //seteamos la ruta singIn
@@ -28,6 +27,9 @@ module.exports = function(app){
 
       app.route('/currentUser')
       .get(users.userById);
+
+      app.route('/getAll')
+      .get(users.list);
 
   //seteamos la ruta singOut
   app.get('/singout',users.singOut);
