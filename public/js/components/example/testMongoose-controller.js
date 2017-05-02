@@ -5,7 +5,7 @@ angular.module('example').controller('testMongooseController',['$scope', '$http'
     // Simple GET request example:
     $http({
       method: 'GET',
-      url: '/singUp'
+      url: '/getAll'
     }).then(function successCallback(response) {
         var data = response.data;
         $scope.usuarios = data;
