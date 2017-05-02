@@ -1,7 +1,6 @@
 
 angular.module('homeModule').controller('homeController',['$scope', '$http', function ($scope,$http) {
-    $scope.test = "soy de la template mongoose";
-    console.log("controller");
+  $(".container-fluid").show();
     // Simple GET request example:
     $http({
       method: 'GET',

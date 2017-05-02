@@ -1,0 +1,35 @@
+h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.mates > div > div {
+  border: solid 3px #CCCC99;
+  margin-right: : 1em;
+  padding : 0 !important;
+  background-color: rgba(204, 204, 153, 0.50);
+}
+
+.mates>div > div >a {
+  background-color: none !important;
+  background-image: none !important;
+  font-size: 1.5em;
+  color: #FFFFFF;
+  border-color: none !important;
+}
+
+.ingles > div > div {
+  border: solid 3px #999900;
+  margin-right: : 1em;
+  padding : 0 !important;
+  background-color: rgba(153, 153, 0, 0.50);
+}
+
+.ingles > div > div >a {
+  background-color: none !important;
+  background-image: none !important;
+  font-size: 1.5em;
+  color: #FFFFFF;
+  border-color: none !important;
+}

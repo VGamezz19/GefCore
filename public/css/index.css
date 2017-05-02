@@ -2,6 +2,10 @@ footer p {
   margin-left: 2em;
 }
 
+body{
+  background-color: rgb(76, 74, 74) !important;
+}
+
 button.close {
   margin-top: -53px !important;
   font-size: 2em;
@@ -22,7 +26,43 @@ h1 {
 .bar-header {
   position: fixed;
   width: 100%;
-  background: white;
+  background: rgb(76, 74, 74);
+  color: #FFFFFF;
+}
+
+.nav{
+  list-style: none !important;
+  margin: 1em !important;
+  padding: 0 !important;
+}
+.nav>li{
+  margin-left: 1em !important;
+  border-top: 5px solid transparent;
+}
+.nav>li>a {
+  color: #FFFFFF !important;
+  border: 1px solid #FFFFFF !important;
+  padding: 1em !important;
+  margin-top: 0.5em !important;
+  text-decoration: none !important;
+}
+
+.barrita-nomas{
+  border-top: 5px solid #fff !important;
+}
+
+.nav>li>a:focus, .nav>li>:hover {
+  background-color: rgba(238, 238, 238, 0)!important ;
+}
+
+.backgroundHeader{
+  margin-top: 6em;
+  height: 31em;
+  background: #CCCC99 !important;
+  background: -webkit-linear-gradient(180deg, #CCCC99, #999900) !important;
+  background: -o-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: -moz-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: linear-gradient(180deg, #CCCC99 50%, #999900 50%)!important;
 }
 
 .img-responsive {
@@ -30,9 +70,9 @@ h1 {
 }
 
 .gefCore-title {
-  font-size: 5em;
-  padding-top: 2.5em;
-  color: white;
+  font-size: 10em;
+  padding-top: 0.93em;
+  color: #666633;
 }
 
 .headerImg {

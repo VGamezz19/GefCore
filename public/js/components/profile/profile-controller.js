@@ -54,6 +54,8 @@ angular.module('profile').controller('profileController',['$scope', function ($s
       //=============================Fin FUNCIONES PROFILE======================
 
 
+      
+
       //=======================Ejecucion de las funciones ======================
 
       juegoMatesActual();
