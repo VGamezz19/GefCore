@@ -139,7 +139,7 @@ exports.userById = function(req, res, next, id) {
     if(err){
       return next(err);
     } else{
-      req.user = user;
+      res.json(req.user);
 
       next();
     }
