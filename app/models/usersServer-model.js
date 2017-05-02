@@ -45,7 +45,7 @@ var userSchema = new Schema({
         puntuacion: Number,
         estado: Number,
         correctas: Number,
-        incorrectas: Number
+        incorrectas: Number,
         ultimoUso: Date
       }
     }],
