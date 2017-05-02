@@ -12,13 +12,14 @@ var mongoose = require('mongoose'),
       juegos: [{
 
             juego: [{
-              identi: String
+              identi: Number,
               titulo: String,
               puntuacionTotal: Number,
               pregunta: [{
                 pregunta: String,
                 respuesta: String,
-                puntuacion: Number
+                puntuacion: Number,
+                opciones: Array
               }]
             }]
       }]

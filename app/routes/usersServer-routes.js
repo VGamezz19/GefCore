@@ -23,8 +23,11 @@ module.exports = function(app){
         successRedirect: '/',
         failureRedirect: '/',
         failureFlash: true,
-        
+
       }));
+
+      app.route('/currentUser')
+      .get(users.userById);
 
   //seteamos la ruta singOut
   app.get('/singout',users.singOut);
