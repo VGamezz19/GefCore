@@ -26,7 +26,7 @@ module.exports = function(app){
 
       }));
 
-      app.route('/currentUser/:id')
+      app.route('/currentUser')
       .get(users.userById);
 
   //seteamos la ruta singOut

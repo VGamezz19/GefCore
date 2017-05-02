@@ -131,8 +131,9 @@ exports.delete = function(req,res, next){
 };
 
 //creamos el metodo userById para buscar el usuario por su id
-exports.userById = function(req, res, next, id) {
+exports.userById = function(req, res, next) {
 
+var id = req.user.id;
   User.findOne({
     _id: id
   }, function(err, user){

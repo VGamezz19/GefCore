@@ -12,4 +12,14 @@ angular.module('example').controller('testMongooseController',['$scope', '$http'
       }, function errorCallback(response) {
         console.log("error");
       });
+      $http({
+        method: 'GET',
+        url: '/currentUser'
+      }).then(function successCallback(response) {
+          console.log(response.data);
+
+        }, function errorCallback(response) {
+          console.log("error");
+        });
+
   }]);
