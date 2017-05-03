@@ -128,12 +128,16 @@ h1 {
 
 
 /*========================== Modal Login ==================================*/
-
+.modal {
+  margin-top: 6em;
+}
 .modal-title {
   text-align: left !important;
   color: white;
 }
 .modal-header {
+  border-radius: 0 !important;
+  border-bottom: none !important;
   background-color: rgb(76, 74, 74);
 }
 
@@ -159,3 +163,64 @@ h1 {
   color red;
   font-size: 1.3em;
 }
+
+.loginModal>div>div>.modal-footer {
+  border: none !important;
+  padding-top: 1.5em;
+  font-size: 1.5em;
+  height: 105px;
+  background-color: #999900;
+}
+
+.loginModal>div>div>.modal-footer>input {
+  margin-left: 1em;
+  margin-right: 1em;
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border-radius: 0 !important;
+  border: 1px solid black !important;
+}
+
+/*========================== Modal Register ==================================*/
+
+.fotermodal {
+  border: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+
+.registerModal>div>div>.modal-body {
+  background: #CCCC99 !important;
+  background: -webkit-linear-gradient(180deg, #CCCC99, #999900) !important;
+  background: -o-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: -moz-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: linear-gradient(180deg, #CCCC99 55%, #999900 40%)!important;
+}
+
+.inputLogin {
+  font-size: 1.3em;
+  height: 37px;
+}
+
+.footerlog {
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+  float: left;
+}
+
+.inputsUser{
+ padding-left: 0 !important;
+}
+
+.submitRegister {
+  height: 87px;
+  font-size: 1.3em !important;
+  margin-left: 7em;
+  margin-top: 0.5em;
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border-radius: 0 !important;
+  border: 1px solid black !important;
+}
+
+
+/*========================== Modal Check logOut ==================================*/
