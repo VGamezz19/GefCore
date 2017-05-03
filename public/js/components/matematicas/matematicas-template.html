@@ -1,21 +1,22 @@
-
+<link rel="stylesheet" href="/js/components/matematicas/matematicas-css.css">
 <div>
-    <h1>Matematicas</h1>
+    <h2>Matematicas</h2>
 
-    <div class ="row " ng-repeat ="mates in $ctrl.matesGames.matematicas">
-      <a href="" class ="juegos-matematicas-home btn btn-primary" ng-if="mates.Puntuacion < $ctrl.puntuacionMaxima ">
-        <div class ="col-md-12 col-lg-12">
-          <div class ="col-md-3 col-lg-3">
-            Nv {{mates.deficultad}}
+    <div class ="row " style ="margin-bottom: 1em;" ng-repeat ="mates in $ctrl.matesGames.matematicas track by $index">
+      <div class ="col-md-12 col-lg-12 matematicasHome" ng-if="mates.Puntuacion < $ctrl.puntuacionMaxima ">
+        <a href="" class ="" >
+          <div class ="col-md-3 col-lg-3 juegos-matematicas-home juego{{$index}}">
+            Nivel {{mates.deficultad}}
           </div>
-          <div class ="col-md-6 col-lg-6">
+          <div class ="col-md-5 col-lg-5 juegos-matematicas-home juego{{$index}}">
             <span>{{mates.game}}</span>
           </div>
-          <div class ="col-md-3 col-lg-3">
-            <li>Puntos maximos: {{mates.Puntuacion}}</li>
+          <div class ="col-md-3 col-lg-3 juegos-matematicas-home juego{{$index}}">
+            <span>Puntos maximos: {{mates.Puntuacion}}</span>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
+    
       <a href="" class ="juegos-matematicas-home btn btn-warning" ng-if="mates.Puntuacion > $ctrl.puntuacionMaxima ">
         <div class ="col-md-12 col-lg-12">
           <div class ="col-md-3 col-lg-3">
@@ -33,6 +34,7 @@
     </div>
 </div>
 
+
 <script>
-  $(".container-fluid").hide();
+
 </script>

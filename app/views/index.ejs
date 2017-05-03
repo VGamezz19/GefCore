@@ -74,7 +74,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 <body ng-controller="indexController">
     <div class="container">
 
-    <div ng-view></div>
+    <div ng-view id="ngView"></div>
 
 <!--Angular Framework -->
 <script type="text/javascript" src="/lib/angular/angular.js"></script>
@@ -129,17 +129,20 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">Entra</h2>
+          <h2 class="modal-title">GefCore</h2>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class=" modal-body">
           <form method="post" action='/singin' name="login_form">
-
-            <p><input type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
-            <p><input type="password" class="inputLogin" name="password" placeholder="Contraseña"></p>
-            <input type="submit" class="btn btn-primary" value='Entra'>
+            <div class = "col-md-6 col-lg-6">
+              <p><input type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
+              <p><input type="password" class="inputLogin" name="password" placeholder="Contraseña"></p>
+            </div>
+            <div class ="col-md-4 col-ls-4">
+              <input type="submit" class="submit btn" value='Entra'>
+            </div>
           </form>
         </div>
         <div class="modal-footer">

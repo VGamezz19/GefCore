@@ -1,4 +1,6 @@
   angular.module('matematicas').controller('matematicasController',['$scope', function ($scope) {
+    $("#ngView").addClass("addMarginTopView");
+    $(".container-fluid").hide();
 
       //========================================================================
       //Peticion GET de toda la coleccion Matematicas
@@ -19,7 +21,7 @@
       //Peticion GET de toda la informacion del Usuario Conectado
 
       var jsonObjectUser = '{"usuario": [{"username": "vgamez","firstname": "victor",'  +
-      '"lastname": "gamez","email": "pictor.games@gmail.com","puntuacion": {"mates": 500,"ingles": 600},' +
+      '"lastname": "gamez","email": "pictor.games@gmail.com","puntuacion": {"mates": 1000,"ingles": 0},' +
       '"matematicas": [{"juego": {"titulo": "suma se puedes 1","puntos": 100,"estado": 1}},{"juego": {' +
 				'"titulo": "suma se puedes 2","puntos": 100,"estado": 1}},{"juego": {"titulo": "suma se puedes 3",'+
 				'"puntos": 100,"estado": 0}}],"ingles": {"juego1": {"titulo": "hello 1","puntos": 100,"estado": 1},'+
@@ -28,7 +30,7 @@
       var usuario = JSON.parse(jsonObjectUser);
 
 
-      this.puntuacionMaxima = 600;
+      this.puntuacionMaxima = 10000;
 
 
     }]);

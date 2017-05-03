@@ -4,6 +4,10 @@ h2 {
   margin-bottom: 2em;
 }
 
+body {
+  background-color: rgb(76, 74, 74) !important;
+}
+
 .mates > div > div {
   border: solid 3px #CCCC99;
   margin-right: : 1em;

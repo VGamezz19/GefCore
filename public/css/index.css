@@ -2,10 +2,6 @@ footer p {
   margin-left: 2em;
 }
 
-body{
-  background-color: rgb(76, 74, 74) !important;
-}
-
 button.close {
   margin-top: -53px !important;
   font-size: 2em;
@@ -21,6 +17,10 @@ h3 {
 h1 {
   text-align: center;
   margin-bottom: 0.5em !important;
+}
+
+.addMarginTopView {
+  margin-top: 7em;
 }
 
 .bar-header {
@@ -97,11 +97,6 @@ h1 {
    width: 50%;
  }
 
- .juegos-matematicas-home {
-   width: 100%;
-   margin-bottom: 1em;
- }
-
  .primeraPuntuacion {
    color: #ffbf00 !important;
  }
@@ -129,3 +124,38 @@ h1 {
    margin-bottom: 1em;
    margin-top: 1em;
  }
+
+
+
+/*========================== Modal Login ==================================*/
+
+.modal-title {
+  text-align: left !important;
+  color: white;
+}
+.modal-header {
+  background-color: rgb(76, 74, 74);
+}
+
+.loginModal>div>div>.modal-body {
+  background-color: #CCCC99;
+  padding: 0 !important;
+  padding-top: 2.4em !important;
+  height: 150px;
+}
+
+.loginModal>div>div>div>form>div>.submit {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border-radius: 0 !important;
+  font-size: 1.3em;
+  border: 1px solid black;
+  height: 85px !important;
+  width: 100% !important;
+}
+
+.loginModal>div>div>div>form>div>p>input {
+  height: 37px;
+  border 1px solid red;
+  color red;
+  font-size: 1.3em;
+}

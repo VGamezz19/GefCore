@@ -1,5 +1,7 @@
 angular.module('myApp').controller('indexController',['$scope', function ($scope) {
 //=========================Nav Jquery Efect=====================================
+      $("#ngView").removeClass("addMarginTopView");
+
       $(".nav li a")
       //Focus con tab
       .focus(function () {
