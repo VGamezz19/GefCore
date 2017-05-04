@@ -1,4 +1,22 @@
-angular.module('myApp').controller('indexController',['$scope', function ($scope) {
+angular.module('myApp')
+.run(function($rootScope, $http) {
+
+    //=============================currentUser ===================================
+          $http({
+            method: 'GET',
+            url: '/currentUser'
+          }).then(function successCallback(response) {
+                console.log(response.data);
+                $rootScope.currentUser = response.data;
+
+            }, function errorCallback(response) {
+              console.log($rootScope.currentUser);
+              $rootScope.currentUser;
+                console.log("error");
+            });
+})
+
+.controller('indexController',['$scope','$http', '$rootScope', function ($scope, $http, $rootScope) {
 //=========================Nav Jquery Efect=====================================
       $("#ngView").removeClass("addMarginTopView");
 
@@ -23,5 +41,7 @@ angular.module('myApp').controller('indexController',['$scope', function ($scope
         console.log("holaFocusyHoover");
         $(this).parent().removeClass("barrita-nomas");
       });
+
+
 
   }]);

@@ -1,5 +1,5 @@
 
-angular.module('example').controller('testMongooseController',['$scope', '$http', function ($scope,$http) {
+angular.module('example').controller('testMongooseController',['$scope', '$http', '$rootScope', function ($scope,$http, $rootScope) {
     $scope.test = "soy de la template mongoose";
     console.log("controller");
     // Simple GET request example:
@@ -12,14 +12,8 @@ angular.module('example').controller('testMongooseController',['$scope', '$http'
       }, function errorCallback(response) {
         console.log("error");
       });
-      $http({
-        method: 'GET',
-        url: '/currentUser'
-      }).then(function successCallback(response) {
-          console.log(response.data);
 
-        }, function errorCallback(response) {
-          console.log("error");
-        });
+      console.log($rootScope.currentUser);
+      this.usuarios = $rootScope.currentUser._id;
 
   }]);

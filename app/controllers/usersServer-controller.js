@@ -156,6 +156,8 @@ exports.singUp = function(req, res, next ){
 
     //configuramos la propiedad user providerId
     user.provider = 'local';
+    user.puntuacion.matematicas = 0;
+    user.puntuacion.ingles = 0;
 
     //intenta guardar el nuevo usuario en la DB
 
