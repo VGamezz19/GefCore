@@ -16,7 +16,11 @@ var mongoose = require('mongoose'),
                 pregunta: String,
                 respuesta: String,
                 puntuacion: Number,
-                opciones: Array
+                opciones: {
+                        a: String,
+                        b: String,
+                        c: String
+                    }
               }
             }]
 
