@@ -9,7 +9,7 @@ var mongoose = require('mongoose'),
 
     var inglesSchema = new Schema({
 
-
+          identi: String,
           titulo: String,
           puntuacionTotal: Number,
           pregunta1: {

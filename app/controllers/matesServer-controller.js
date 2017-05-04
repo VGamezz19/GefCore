@@ -6,7 +6,7 @@ var mates = require('mongoose').model('Matematicas');
 exports.getId = (req, res, next, iden) => {
 
   mates.findOne({
-    _id: iden
+    identi: iden
   }, function(err, matematicas){
     if(err){
       return next(err);
@@ -37,6 +37,7 @@ exports.getId = (req, res, next, iden) => {
         return next(err);
       } else {
         for(var i = 1; i<5; i++){
+          mates.identi = 'juego' + i;
           mates.titulo = req.body.titulo || mates.titulo;
           mates.puntuacionTotal = req.body.puntuacionTotal || mates.juego.puntuacionTotal;
           mates.pregunta[i].pregunta = req.body.pregunta[i].pregunta || mates.juego.pregunta[i].pregunta;
