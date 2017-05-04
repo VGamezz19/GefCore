@@ -9,20 +9,17 @@ var mongoose = require('mongoose'),
 
     var inglesSchema = new Schema({
 
-      juegos: [{
-
             juego: [{
               identi: Number,
               titulo: String,
               puntuacionTotal: Number,
-              pregunta: [{
+              pregunta: {
                 pregunta: String,
                 respuesta: String,
                 puntuacion: Number,
                 opciones: Array
-              }]
+              }
             }]
-      }]
 
     });
 
