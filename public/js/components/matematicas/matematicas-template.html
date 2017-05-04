@@ -1,16 +1,16 @@
 <link rel="stylesheet" href="/js/components/matematicas/matematicas-css.css">
     <h2>Matematicas</h2>
 
-    <div class ="row " style ="margin-bottom: 1em;" ng-repeat ="mates in $ctrl.matesGames.matematicas track by $index">
+    <div class ="row " style ="margin-bottom: 1em;" ng-repeat ="mates in matematicas track by $index">
 
     <!-- IF mates.puntos es más pequeña que la puntuacion que necesita para entrar-->
-      <div class ="col-md-12 col-lg-12 matematicasHome desbloqueado" ng-if="mates.Puntuacion <= $ctrl.puntuacionMaxima ">
-        <a href="" class ="" >
+      <div class ="col-md-12 col-lg-12 matematicasHome desbloqueado" ng-if="mates.puntuacionTotal <= $ctrl.puntuacionMaxima ">
+        <a href="/juego/{{mates.identi}}" class ="" >
           <div class ="col-md-3 col-lg-3 juegos-matematicas-home  juego{{$index}}">
-            Nivel {{mates.deficultad}}
+            Nivel {{$index + 1}}
           </div>
           <div class ="col-md-5 col-lg-5 juegos-matematicas-home juego{{$index}}">
-            <span>{{mates.game}}</span>
+            <span>{{mates.titulo}}</span>
           </div>
           <div class ="col-md-3 col-lg-3 juegos-matematicas-home juego{{$index}}">
             <span>Nivel desbloqueado</span>
@@ -20,16 +20,16 @@
       </div>
 
     <!-- Else if-->
-      <div class ="col-md-12 col-lg-12 matematicasHome bloqueado" ng-if="mates.Puntuacion > $ctrl.puntuacionMaxima ">
+      <div class ="col-md-12 col-lg-12 matematicasHome bloqueado" ng-if="mates.puntuacionTotal > $ctrl.puntuacionMaxima ">
         <a href="" class ="" >
           <div class ="col-md-3 col-lg-3 juegos-matematicas-home juegoBloqueado juego{{$index}}">
-            Nivel {{mates.deficultad}}
+            Nivel {{$index + 1}}
           </div>
           <div class ="col-md-5 col-lg-5 juegos-matematicas-home juegoBloqueado juego{{$index}}">
-            <span>{{mates.game}}</span>
+            <span>{{mates.titulo}}</span>
           </div>
           <div class ="col-md-3 col-lg-3 juegos-matematicas-home  juegoBloqueado juego{{$index}}">
-            <span style="font-size:1em!important">  {{$ctrl.puntuacionMaxima}} de {{mates.Puntuacion}} Nivel bloqueado</span>
+            <span style="font-size:1em!important">  {{$ctrl.puntuacionMaxima}} de {{mates.puntuacionTotal}} Nivel bloqueado</span>
           </div>
         </a>
         <span class ="fi glyphicon glyphicon-ban-circle spanFlotando"></span>

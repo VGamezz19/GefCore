@@ -3,15 +3,16 @@
 var mates = require('mongoose').model('Matematicas');
 
 
-exports.getId = (req, res, next, iden) => {
+exports.getId = (req, res, next) => {
+   var iden = req.params.id;
 
   mates.findOne({
-    identi: iden
+    identi: "juego1"
   }, function(err, matematicas){
     if(err){
       return next(err);
     } else{
-      res.json(req.matematicas);
+      res.json(matematicas);
 
       next();
     }

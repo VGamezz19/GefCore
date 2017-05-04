@@ -9,7 +9,6 @@
         $(".matematicasHome")
         //hover raton
         .hover(function () {
-          console.log("hola");
           $(this).find(".spanFlotando").show();
         })
         //quitando hover raton
@@ -28,7 +27,9 @@ if (!$rootScope.currentUser) {
     method: 'GET',
     url: '/getAllMates'
   }).then(function successCallback(response) {
-        console.log(response.data);
+
+        $scope.matematicas = response.data;
+        console.log($scope.matematicas);
 
     }, function errorCallback(response) {
 
@@ -36,5 +37,12 @@ if (!$rootScope.currentUser) {
 
  //Le pasamos la puntuacion maxima de matematicas del usuario conectado a la Template.
    this.puntuacionMaxima = $rootScope.currentUser.puntuacion.matematicas;
+
+
+
+
+   /*$scope.matematicas.forEach(function(nivelesMatematicas) {
+     this.matematicasController.push(nivelesMatematicas);
+   }); */
 
 }}]);

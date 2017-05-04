@@ -19,6 +19,10 @@ angular.module('myApp').
         when('/ingles', {
           template: '<ingles-component></ingles-component>'
         }).
+        when('/juego/:ID', {
+          template: '<juego-component></juego-component>'
+
+        }).
         when('/puntuacionMatematicas', {
           template: '<puntuacion-matematicas-component></puntuacion-matematicas-component>'
         }).
