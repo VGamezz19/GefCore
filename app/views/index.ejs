@@ -147,7 +147,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         </div>
         <div class="modal-footer">
             Nuevo en GefCore?
-            <input type="submit" class=" registerLogin btn btn-primary" value="Registrate">
+            <input type="submit" class=" registerLogin btn" value="Registrate">
           </div>
       </div>
     </div>
@@ -166,13 +166,20 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         </div>
         <div class="modal-body">
           <form method="post" action='/singup' name="login_form">
-
-            <p><input type="text" class="inputLogin"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
-            <p><input type="text" class="inputLogin" name="lastName" placeholder="Apellido"></p>
-            <p><input type="text" class="inputLogin" name="email" placeholder="Correo" ></p>
-            <p><input type="text" class="inputLogin" name="username" placeholder="Nombre de usuario"></p>
-            <p><input type="password" class="inputLogin" name="password" placeholder="Contraseña" ></p>
-            <input type="submit" class=" btn btn-primary" value='Crear cuenta'>
+            <div class ="body-model">
+              <p><input type="text" class="inputLogin"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
+              <p><input type="text" class="inputLogin" name="lastName" placeholder="Apellido"></p>
+              <p><input type="text" class="inputLogin" name="email" placeholder="Correo" ></p>
+            </div>
+            <div class="modal-footer fotermodal">
+              <div class =" inputsUser col-md-6 col-lg-6">
+                <p><input type="text" class="inputLogin footerlog" name="username" placeholder="Nombre de usuario"></p>
+                <p><input type="password" class="inputLogin footerlog" name="password" placeholder="Contraseña" ></p>
+              </div>
+              <div class =" col-md-4 col-lg-4">
+                <input type="submit" class="btn submitRegister" value='Crear cuenta'>
+              </div>
+            </div>
           </form>
         </div>
       </div>
