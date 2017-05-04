@@ -1,40 +1,38 @@
 <link rel="stylesheet" href="/js/components/matematicas/matematicas-css.css">
-<div>
     <h2>Matematicas</h2>
 
     <div class ="row " style ="margin-bottom: 1em;" ng-repeat ="mates in $ctrl.matesGames.matematicas track by $index">
-      <div class ="col-md-12 col-lg-12 matematicasHome" ng-if="mates.Puntuacion < $ctrl.puntuacionMaxima ">
+
+    <!-- IF mates.puntos es más pequeña que la puntuacion que necesita para entrar-->
+      <div class ="col-md-12 col-lg-12 matematicasHome desbloqueado" ng-if="mates.Puntuacion <= $ctrl.puntuacionMaxima ">
         <a href="" class ="" >
-          <div class ="col-md-3 col-lg-3 juegos-matematicas-home juego{{$index}}">
+          <div class ="col-md-3 col-lg-3 juegos-matematicas-home  juego{{$index}}">
             Nivel {{mates.deficultad}}
           </div>
           <div class ="col-md-5 col-lg-5 juegos-matematicas-home juego{{$index}}">
             <span>{{mates.game}}</span>
           </div>
           <div class ="col-md-3 col-lg-3 juegos-matematicas-home juego{{$index}}">
-            <span>Puntos maximos: {{mates.Puntuacion}}</span>
+            <span>Nivel desbloqueado</span>
           </div>
         </a>
+          <span class ="fi glyphicon glyphicon-arrow-left spanFlotando"></span>
       </div>
-    
-      <a href="" class ="juegos-matematicas-home btn btn-warning" ng-if="mates.Puntuacion > $ctrl.puntuacionMaxima ">
-        <div class ="col-md-12 col-lg-12">
-          <div class ="col-md-3 col-lg-3">
-            Nv {{mates.deficultad}}
+
+    <!-- Else if-->
+      <div class ="col-md-12 col-lg-12 matematicasHome bloqueado" ng-if="mates.Puntuacion > $ctrl.puntuacionMaxima ">
+        <a href="" class ="" >
+          <div class ="col-md-3 col-lg-3 juegos-matematicas-home juegoBloqueado juego{{$index}}">
+            Nivel {{mates.deficultad}}
           </div>
-          <div class ="col-md-6 col-lg-6">
+          <div class ="col-md-5 col-lg-5 juegos-matematicas-home juegoBloqueado juego{{$index}}">
             <span>{{mates.game}}</span>
           </div>
-          <div class ="col-md-3 col-lg-3">
-            <span>Te faltan  {{mates.Puntuacion - $ctrl.puntuacionMaxima}} para desbloquear este nivel </span>
-            <li>Puntos maximos: {{mates.Puntuacion}}</li>
+          <div class ="col-md-3 col-lg-3 juegos-matematicas-home  juegoBloqueado juego{{$index}}">
+            <span style="font-size:1em!important">  {{$ctrl.puntuacionMaxima}} de {{mates.Puntuacion}} Nivel bloqueado</span>
           </div>
-        </div>
-      </a>
+        </a>
+        <span class ="fi glyphicon glyphicon-ban-circle spanFlotando"></span>
+      </div>
+    <!-- End if-->
     </div>
-</div>
-
-
-<script>
-
-</script>

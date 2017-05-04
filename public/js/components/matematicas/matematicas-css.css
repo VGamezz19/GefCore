@@ -76,3 +76,14 @@ body {
 .juego9 {
   background-color: rgba(0, 51, 51, 0.50)  ;
 }
+
+.juegoBloqueado {
+  background-color: rgba(126, 122, 130, 0.50) !important;
+  border: 2px solid rgb(126, 122, 130) !important;
+  color: rgb(126, 122, 130) !important;
+}
+
+.spanFlotando {
+  font-size: 3em;
+  position: absolute;
+}
