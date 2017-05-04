@@ -47,6 +47,8 @@ module.exports =function(){
   //cargamos el enrutamiento de nuestra aplicacion
   require('../app/routes/indexServer-routes.js')(app);
   require('../app/routes/usersServer-routes.js')(app);
+  require('../app/routes/matesServer-routes.js')(app);
+  require('../app/routes/inglesServer-routes.js')(app);
 
 
   //configuramos el servicio de archivos estaticos.

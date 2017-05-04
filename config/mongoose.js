@@ -10,6 +10,8 @@ module.exports =function() {
 
       //cargamos los modelos necesarios
       require('../app/models/usersServer-model');
+      require('../app/models/matematicasServer-model');
+      require('../app/models/inglesServer-model');
 
 
 
