@@ -9,20 +9,59 @@ var mongoose = require('mongoose'),
 
     var inglesSchema = new Schema({
 
-            juego: [{
-              titulo: String,
-              puntuacionTotal: Number,
-              pregunta: {
-                pregunta: String,
-                respuesta: String,
-                puntuacion: Number,
-                opciones: {
-                        a: String,
-                        b: String,
-                        c: String
-                    }
-              }
-            }]
+        juego:
+          titulo: String,
+          puntuacionTotal: Number,
+          pregunta1: {
+            pregunta: String,
+            respuesta: String,
+            puntuacion: Number,
+            opciones: {
+                    a: String,
+                    b: String,
+                    c: String
+                }
+          }
+          pregunta2: {
+            pregunta: String,
+            respuesta: String,
+            puntuacion: Number,
+            opciones: {
+                    a: String,
+                    b: String,
+                    c: String
+                }
+          }
+          pregunta3: {
+            pregunta: String,
+            respuesta: String,
+            puntuacion: Number,
+            opciones: {
+                    a: String,
+                    b: String,
+                    c: String
+                }
+          }
+          pregunta4: {
+            pregunta: String,
+            respuesta: String,
+            puntuacion: Number,
+            opciones: {
+                    a: String,
+                    b: String,
+                    c: String
+                }
+          }
+          pregunta5: {
+            pregunta: String,
+            respuesta: String,
+            puntuacion: Number,
+            opciones: {
+                    a: String,
+                    b: String,
+                    c: String
+                }
+          }
 
     });
 
