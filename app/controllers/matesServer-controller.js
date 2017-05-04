@@ -7,7 +7,7 @@ exports.getId = (req, res, next) => {
    var iden = req.params.id;
 
   mates.findOne({
-    identi: "juego1"
+    identi: iden
   }, function(err, matematicas){
     if(err){
       return next(err);

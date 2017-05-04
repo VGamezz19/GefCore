@@ -1,0 +1,92 @@
+{
+     "titulo": "to be",
+     "puntuacionTotal": "0",
+     "pregunta1": {
+       "pregunta": "I ...",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+          "a": "am",
+          "b": "are",
+          "c": "was"
+       }
+     },
+     "pregunta2": {
+       "pregunta": "You ...",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "am",
+         "b": "are",
+         "c": "was"
+       }
+     },
+     "pregunta3": {
+       "pregunta": "He ...",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "is",
+         "b": "are",
+         "c": "was"
+
+       }
+     },
+     "pregunta4": {
+       "pregunta": "She ...",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "is",
+         "b": "are",
+         "c": "was"
+       }
+     },
+     "pregunta5": {
+       "pregunta": "We ...",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "is",
+         "b": "are",
+         "c": "was"
+       }
+     }
+
+}
+
+{
+     "titulo": "contracted forms to be",
+     "puntuacionTotal": "150",
+     "pregunta1": {
+       "pregunta": "Cuando es 20 + 10",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {}
+     },
+     "pregunta2": {
+       "pregunta": "Cuando es 20 + 10",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {}
+     },
+     "pregunta3": {
+       "pregunta": "Cuando es 20 + 10",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {}
+     },
+       "pregunta4": {
+       "pregunta": "Cuando es 20 + 10",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {}
+     },
+     "pregunta5": {
+       "pregunta": "Cuando es 20 + 10",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {}
+     }
+
+}

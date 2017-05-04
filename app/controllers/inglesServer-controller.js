@@ -3,15 +3,16 @@
 var ingles = require('mongoose').model('Ingles');
 
 
-exports.getId = (req, res, next, iden) => {
+exports.getId = (req, res, next) => {
 
+  var iden = req.params.id;
   ingles.findOne({
     identi: iden
   }, function(err, ingles){
     if(err){
       return next(err);
     } else{
-      res.json(req.ingles);
+      res.json(ingles);
 
       next();
     }
