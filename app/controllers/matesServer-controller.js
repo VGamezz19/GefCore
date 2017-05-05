@@ -3,22 +3,11 @@
 var mates = require('mongoose').model('Matematicas');
 
 
-exports.getId = (req, res, next) => {
-   var iden = req.params.id;
+exports.getId = function(req, res, next) {
 
-  mates.findOne({
-    identi: iden
-  }, function(err, matematicas){
-    if(err){
-      return next(err);
-    } else{
-      res.json(matematicas);
-
-      next();
-    }
-  });
-  }
-
+var id = req.query.id;
+res.json(id);
+};
   exports.getAll = (req, res, next) => {
 
 
