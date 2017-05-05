@@ -6,7 +6,17 @@ var mates = require('mongoose').model('Matematicas');
 exports.getId = function(req, res, next) {
 
 var id = req.query.id;
-res.json(id);
+  mates.findOne({
+    identi: id
+  }, function(err, mates){
+    if(err){
+      return next(err);
+    } else{
+      res.json(mates);
+
+      next();
+    }
+  });
 };
   exports.getAll = (req, res, next) => {
 
