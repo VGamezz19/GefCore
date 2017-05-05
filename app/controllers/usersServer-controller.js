@@ -185,6 +185,27 @@ exports.singUp = function(req, res, next ){
   }
 };
 
+exports.juego = (req, res, next) => {
+  var id = req.user.id;
+  var juego = req.data.juego;
+
+   user.findById(id, (err,juego) => {
+     if(err) {
+       next(err);
+     } else {
+       user.matematicas[juego] = req.body.matematicas[juego] || user.matematicas[juego];
+
+       user.save((err, juego) => {
+         if(err) {
+           res.send(err);
+         } else {
+           res.send(juego);
+         }
+       })
+     }
+   })
+}
+
 //metodo singOut
 exports.singOut = function(req, res) {
   //metodo log out de passport

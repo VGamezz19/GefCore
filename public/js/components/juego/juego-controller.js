@@ -9,7 +9,7 @@
       params: {'id': 'juego1'},
       headers : {'Accept' : 'application/json'}
     }).then(function successCallback(response) {
-          console.log(response.data);
+          console.log(response.data); 
 
       }, function errorCallback(response) {
 

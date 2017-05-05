@@ -41,7 +41,7 @@ var userSchema = new Schema({
     },
     matematicas: [{
       juego: {
-        identi: Number,
+        identi: String,
         puntuacion: Number,
         estado: Number,
         correctas: Number,
@@ -51,7 +51,7 @@ var userSchema = new Schema({
     }],
     ingles: [{
       juego: {
-        identi: Number,
+        identi: String,
         puntuacion: Number,
         estado: Number,
         correctas: Number,
