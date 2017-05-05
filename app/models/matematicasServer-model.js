@@ -12,6 +12,7 @@ var mongoose = require('mongoose'),
               identi: String,
               titulo: String,
               puntuacionTotal: Number,
+              nivel: Number,
               pregunta1: {
                 pregunta: String,
                 respuesta: String,
