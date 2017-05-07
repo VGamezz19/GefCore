@@ -45,6 +45,4 @@ angular.module('myApp')
         $(this).parent().removeClass("barrita-nomas");
       });
 
-
-
   }]);

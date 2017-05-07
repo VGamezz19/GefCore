@@ -1,5 +1,8 @@
   angular.module('juego').controller('juegoController',['$scope','$http','$rootScope','$routeParams', '$route', function ($scope,$http,$rootScope,$routeParams,$route) {
+    $("#ngView").addClass("addMarginTopView");
+    $(".container-fluid").hide();
 
+//==============================================================================
 
      var id = $routeParams.ID;
  //Recuperamos el juego actual de MongoDB con la ID del juego "identi"
@@ -16,11 +19,12 @@
        //montamos la variable "juegos" como un array para poder mostrarlo en la template.
            $scope.juegos = [];
 
-           $scope.juegos.push(response.data.juego1);
-           $scope.juegos.push(response.data.juego2);
-           $scope.juegos.push(response.data.juego3);
-           $scope.juegos.push(response.data.juego4);
-           $scope.juegos.push(response.data.juego5);
+           $scope.juegos.push(response.data.pregunta1);
+           $scope.juegos.push(response.data.pregunta2);
+           $scope.juegos.push(response.data.pregunta3);
+           $scope.juegos.push(response.data.pregunta4);
+           $scope.juegos.push(response.data.pregunta5);
+           console.log($scope.juegos);
 
            var jugado;
            //Cuando el usuario es nuevo en la plataforma, el array de matematicas esta vacio y

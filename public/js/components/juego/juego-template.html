@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="/js/components/juego/juego-css.css">
 
-<div class="" >
 
-  <h2 style ="color: black !important;">Titulo</h2>
-
+<div class ="" ng-repeat = "juego in juegos track by $index">
+    <span> {{$index + 1}}</span>
+    <span>{{juego.pregunta}}</span>
+    <span>{{juego.puntuacion}}</span>
 </div>
