@@ -3,6 +3,7 @@
 angular.module('myApp').
   config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $routeProvider) {
+      $routeProvider.eagerInstantiationEnabled(true);
       $locationProvider.hashPrefix('!');
 
       $routeProvider.

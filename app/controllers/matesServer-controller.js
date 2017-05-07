@@ -73,11 +73,13 @@ var id = req.query.id;
 
   exports.delete = (req,res,next) => {
 
-    mates.findByIdAndRemove(req.params.juego._id, (err, mates) => {
+    mates.findByIdAndRemove(req.body.juego._id, (err, mates) => {
       if(err) {
         res.send(err);
       } else {
         res.send('Juego eliminado correctamente');
       }
     })
+
+
   }

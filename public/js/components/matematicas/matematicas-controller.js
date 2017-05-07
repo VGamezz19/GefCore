@@ -19,7 +19,7 @@
      }, 30);
 
 //==============================================================================
-if (!$rootScope.currentUser) {
+if (!$rootScope.thisUser) {
   $location.path( "/" );
 } else {
 
@@ -36,7 +36,7 @@ if (!$rootScope.currentUser) {
     });
 
  //Le pasamos la puntuacion maxima de matematicas del usuario conectado a la Template.
-   this.puntuacionMaxima = $rootScope.currentUser.puntuacion.matematicas;
+   this.puntuacionMaxima = $rootScope.thisUser.puntuacion.matematicas;
 
 
 

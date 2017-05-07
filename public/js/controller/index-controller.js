@@ -1,19 +1,26 @@
 angular.module('myApp')
-.run(function($rootScope, $http) {
+.run(function($rootScope, $http, $q,) {
 
     //=============================currentUser ===================================
-          $http({
-            method: 'GET',
-            url: '/currentUser'
-          }).then(function successCallback(response) {
-                console.log(response.data);
-                $rootScope.currentUser = response.data;
+    $rootScope.thisUser;
 
-            }, function errorCallback(response) {
-              console.log($rootScope.currentUser);
-              $rootScope.currentUser;
-                console.log("error");
-            });
+    $rootScope.currentUser = function(){
+
+      $http({
+        method: 'GET',
+        url: '/currentUser'
+      }).then(function successCallback(response) {
+          $rootScope.thisUser = response.data;
+          console.log($rootScope.thisUser);
+
+        }, function errorCallback(response) {
+          return false;
+            console.log("error");
+        });
+    }
+
+    $rootScope.currentUser();
+
 })
 
 .controller('indexController',['$scope','$http', '$rootScope', function ($scope, $http, $rootScope) {
