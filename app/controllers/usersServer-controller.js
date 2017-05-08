@@ -195,6 +195,24 @@ exports.juego = (req, res, next) => {
       return res.send(juego);
   });
 }
+ exports.updateJuego = () => {
+   var id = req.user.id;
+   var juego = req.body;
+   var idmates = juego.identi;
+   var query = {'_id':id};
+
+
+
+   User.findOneAndUpdate(query, { "$pull": { "matematicas": {identi: idmates} } } , { "new": true, "upsert": true }, function(err, doc){
+       if (err) return res.send(500, { error: err });
+       return res.send(juego);
+   });
+
+     User.findOneAndUpdate(query, { "$push": { "matematicas": juego } } , { "new": true, "upsert": true }, function(err, doc){
+         if (err) return res.send(500, { error: err });
+         return res.send(juego);
+     });
+ };
 
 //metodo singOut
 exports.singOut = function(req, res) {

@@ -13,58 +13,18 @@ var mongoose = require('mongoose'),
               titulo: String,
               puntuacionTotal: Number,
               nivel: Number,
-              pregunta1: {
-                pregunta: String,
-                respuesta: String,
-                puntuacion: Number,
-                opciones: {
-                        a: String,
-                        b: String,
-                        c: String
-                    }
-              },
-              pregunta2: {
-                pregunta: String,
-                respuesta: String,
-                puntuacion: Number,
-                opciones: {
-                        a: String,
-                        b: String,
-                        c: String
-                    }
-              },
-              pregunta3: {
-                pregunta: String,
-                respuesta: String,
-                puntuacion: Number,
-                opciones: {
-                        a: String,
-                        b: String,
-                        c: String
-                    }
-              },
-              pregunta4: {
-                pregunta: String,
-                respuesta: String,
-                puntuacion: Number,
-                opciones: {
-                        a: String,
-                        b: String,
-                        c: String
-                    }
-              },
-              pregunta5: {
-                pregunta: String,
-                respuesta: String,
-                puntuacion: Number,
-                opciones: {
-                        a: String,
-                        b: String,
-                        c: String
-                    }
-              }
-
-
+              preguntas: [{
+                pregunta: {
+                  pregunta: String,
+                  respuesta: String,
+                  puntuacion: Number,
+                  opciones: {
+                          a: String,
+                          b: String,
+                          c: String
+                      }
+                }
+              }]
     });
 
     mongoose.model('Matematicas', matematicasSchema);
