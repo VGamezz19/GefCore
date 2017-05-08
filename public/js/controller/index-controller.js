@@ -1,5 +1,5 @@
 angular.module('myApp')
-.run(function($rootScope, $http, $q,) {
+.run(function($rootScope, $http, $q) {
 
     //=============================currentUser ===================================
     $rootScope.thisUser;

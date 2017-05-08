@@ -60,7 +60,6 @@
                      url: '/updateGame',
                      data: $scope.newJuego,
                      headers : {'Accept' : 'application/json'}
-                   //  headers : {'Accept' : 'application/json'}
                  }).then(function successCallback(response) {
                      console.log("has entrado a un nuevo juego");
                  }) ;
@@ -73,6 +72,9 @@
 
        });
 
+       $scope.uploadGame = function() {
+         
+       }
 
 
   }]);
