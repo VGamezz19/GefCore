@@ -15,7 +15,8 @@ var mongoose = require('mongoose'),
           nivel: Number,
           preguntas: [{
                    pregunta: {
-                     pregunta: String,
+                     identi: String,
+                     titulo: String,
                      respuesta: String,
                      puntuacion: Number,
                      opciones: {

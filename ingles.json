@@ -1,5 +1,5 @@
 {
-     "titulo": "to be",
+     "titulo": "Present simple to be",
      "puntuacionTotal": "0",
      "pregunta1": {
        "pregunta": "I ...",
@@ -56,37 +56,434 @@
 }
 
 {
-     "titulo": "contracted forms to be",
+     "titulo": "Basic numbers",
      "puntuacionTotal": "150",
      "pregunta1": {
-       "pregunta": "Cuando es 20 + 10",
+       "pregunta": "1",
        "respuesta": "30",
        "puntuacion": 40,
-       "opciones": {}
+       "opciones": {
+         "a": "one",
+         "b": "five",
+         "c": "four"
+       }
      },
      "pregunta2": {
-       "pregunta": "Cuando es 20 + 10",
+       "pregunta": "7",
        "respuesta": "30",
        "puntuacion": 40,
-       "opciones": {}
+       "opciones": {
+         "a": "seven",
+         "b": "five",
+         "c": "three"}
      },
      "pregunta3": {
-       "pregunta": "Cuando es 20 + 10",
+       "pregunta": "9",
        "respuesta": "30",
        "puntuacion": 40,
-       "opciones": {}
+       "opciones": {
+         "a": "nine",
+         "b": "ten",
+         "c": "six"
+       }
      },
        "pregunta4": {
-       "pregunta": "Cuando es 20 + 10",
+       "pregunta": "4",
        "respuesta": "30",
        "puntuacion": 40,
-       "opciones": {}
+       "opciones": {
+         "a": "four",
+         "b": "six",
+         "c": "twelve"
+       }
      },
      "pregunta5": {
-       "pregunta": "Cuando es 20 + 10",
+       "pregunta": "12",
        "respuesta": "30",
        "puntuacion": 40,
-       "opciones": {}
+       "opciones": {
+         "a": "twelve",
+         "b": "eleven",
+         "c": "thirteen"
+       }
+     }
+}
+
+{
+     "titulo": "Contracted forms to be",
+     "puntuacionTotal": "150",
+     "pregunta1": {
+       "pregunta": "am",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "s",
+         "b": "re",
+         "c": "m"
+       }
+     },
+     "pregunta2": {
+       "pregunta": "is",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "s",
+         "b": "re",
+         "c": "m"}
+     },
+     "pregunta3": {
+       "pregunta": "are",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "s",
+         "b": "re",
+         "c": "m"
+       }
+     },
+       "pregunta4": {
+       "pregunta": "I ....",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "s",
+         "b": "re",
+         "c": "m"
+       }
+     },
+     "pregunta5": {
+       "pregunta": "We ....",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "s",
+         "b": "re",
+         "c": "m"
+       }
      }
 
+
 }
+
+{
+     "titulo": "Advanced numbers",
+     "puntuacionTotal": "150",
+     "pregunta1": {
+       "pregunta": "20",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "forty",
+         "b": "twentyy",
+         "c": "eleven"
+       }
+     },
+     "pregunta2": {
+       "pregunta": "16",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "sixteen",
+         "b": "twelve",
+         "c": "elven"}
+     },
+     "pregunta3": {
+       "pregunta": "80",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "eighty",
+         "b": "four",
+         "c": "thirteen"
+       }
+     },
+       "pregunta4": {
+       "pregunta": "50",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "five",
+         "b": "fifty",
+         "c": "fivety"
+       }
+     },
+     "pregunta5": {
+       "pregunta": "61",
+       "respuesta": "30",
+       "puntuacion": 40,
+       "opciones": {
+         "a": "sixty",
+         "b": "sixty-one",
+         "c": "seventy-one"
+       }
+     }
+}
+
+     {
+          "titulo": "Common Animals",
+          "puntuacionTotal": "150",
+          "pregunta1": {
+            "pregunta": "perro",
+            "respuesta": "30",
+            "puntuacion": 40,
+            "opciones": {
+              "a": "dog",
+              "b": "cat",
+              "c": "bird"
+            }
+          },
+          "pregunta2": {
+            "pregunta": "vaca",
+            "respuesta": "30",
+            "puntuacion": 40,
+            "opciones": {
+              "a": "fish",
+              "b": "duck",
+              "c": "cow"}
+          },
+          "pregunta3": {
+            "pregunta": "elefante",
+            "respuesta": "30",
+            "puntuacion": 40,
+            "opciones": {
+              "a": "chicken",
+              "b": "elephant",
+              "c": "goat"
+            }
+          },
+            "pregunta4": {
+            "pregunta": "cerdo",
+            "respuesta": "30",
+            "puntuacion": 40,
+            "opciones": {
+              "a": "pork",
+              "b": "tiger",
+              "c": "frog"
+            }
+          },
+          "pregunta5": {
+            "pregunta": "cabra",
+            "respuesta": "30",
+            "puntuacion": 40,
+            "opciones": {
+              "a": "tiger",
+              "b": "goat",
+              "c": "cat"
+            }
+          }
+     }
+
+          {
+               "titulo": "Clothes",
+               "puntuacionTotal": "150",
+               "pregunta1": {
+                 "pregunta": "pantalones",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "shoes",
+                   "b": "trousers",
+                   "c": "shirt"
+                 }
+               },
+               "pregunta2": {
+                 "pregunta": "mochila",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "handbag",
+                   "b": "jeans",
+                   "c": "bag"}
+               },
+               "pregunta3": {
+                 "pregunta": "falda",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "skirt",
+                   "b": "dress",
+                   "c": "hat"
+                 }
+               },
+                 "pregunta4": {
+                 "pregunta": "reloj",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "necklake",
+                   "b": "watch",
+                   "c": "jacket"
+                 }
+               },
+               "pregunta5": {
+                 "pregunta": "camiseta",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "t-shirt",
+                   "b": "glass",
+                   "c": "shoes"
+                 }
+               }
+          }
+          {
+               "titulo": "Transport",
+               "puntuacionTotal": "150",
+               "pregunta1": {
+                 "pregunta": "motocicleta",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "bus",
+                   "b": "fly",
+                   "c": "motorbike"
+                 }
+               },
+               "pregunta2": {
+                 "pregunta": "conducir",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "car",
+                   "b": "drive",
+                   "c": "ride"}
+               },
+               "pregunta3": {
+                 "pregunta": "nadar",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "truck",
+                   "b": "swim",
+                   "c": "boat"
+                 }
+               },
+                 "pregunta4": {
+                 "pregunta": "correr",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "ride",
+                   "b": "run",
+                   "c": "drive"
+                 }
+               },
+               "pregunta5": {
+                 "pregunta": "coche",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "train",
+                   "b": "car",
+                   "c": "plane"
+                 }
+               }
+          }
+
+          {
+               "titulo": "Food",
+               "puntuacionTotal": "150",
+               "pregunta1": {
+                 "pregunta": "platano",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "banana",
+                   "b": "apple",
+                   "c": "fish"
+                 }
+               },
+               "pregunta2": {
+                 "pregunta": "pan",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "carrot",
+                   "b": "burguer",
+                   "c": "bread"}
+               },
+               "pregunta3": {
+                 "pregunta": "pastel",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "coconut",
+                   "b": "egg",
+                   "c": "cake"
+                 }
+               },
+                 "pregunta4": {
+                 "pregunta": "limon",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "pear",
+                   "b": "lemmon",
+                   "c": "fruit"
+                 }
+               },
+               "pregunta5": {
+                 "pregunta": "helado",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "ice cream",
+                   "b": "milk",
+                   "c": "juice"
+                 }
+               }
+          }
+
+          {
+               "titulo": "Toys",
+               "puntuacionTotal": "150",
+               "pregunta1": {
+                 "pregunta": "motocicleta",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "bus",
+                   "b": "fly",
+                   "c": "motorbike"
+                 }
+               },
+               "pregunta2": {
+                 "pregunta": "conducir",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "car",
+                   "b": "drive",
+                   "c": "ride"}
+               },
+               "pregunta3": {
+                 "pregunta": "nadar",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "truck",
+                   "b": "swim",
+                   "c": "boat"
+                 }
+               },
+                 "pregunta4": {
+                 "pregunta": "correr",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "ride",
+                   "b": "run",
+                   "c": "drive"
+                 }
+               },
+               "pregunta5": {
+                 "pregunta": "coche",
+                 "respuesta": "30",
+                 "puntuacion": 40,
+                 "opciones": {
+                   "a": "train",
+                   "b": "car",
+                   "c": "plane"
+                 }
+               }
+          }
