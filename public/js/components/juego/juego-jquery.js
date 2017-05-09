@@ -48,11 +48,12 @@ $( ".izquierda" ).click(function() {
   }
 
 });
+setTimeout (function(){
+  $(".inputEnter").keypress(function(e) {
+  if(e.which == 13) {
+      moverDerecha();
 
-$(".inputEnter").keypress(function(e) {
-if(e.which == 13) {
-    moverDerecha();
-
-    $(".inputEnter").focus();
-  }
-});
+      $(".inputEnter").focus();
+    }
+  });
+}, 2000)

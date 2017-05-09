@@ -5,19 +5,19 @@
       <button type="button" class="btn izquierda fi glyphicon glyphicon-chevron-left"></button>
   </div>
   <div class ="col-md-6 col-lg-6 textCentro">
-    <div class ="" ng-repeat = "juego in jugandose.preguntas track by $index">
+    <div class ="" ng-repeat = "juego in juegoActual.preguntas track by $index">
       <div class ="col-md-12 col-lg-12 juego{{$index +1}} pregunta">
         <div class ="row ">
           <div class =" col-md-2 col-lg-2" tabindex="1">
             <h1>{{$index + 1}}</h1>
           </div>
           <div class =" col-md-2 col-lg-2 col-md-offset-8 col-lg-offset-8" tabindex="1">
-            <h1 class ="fi glyphicon glyphicon-star">{{juego[0].puntuacion}}</h1>
+            <h1 class ="fi glyphicon glyphicon-star">{{juego.pregunta.puntuacion}}</h1>
           </div>
         </div>
         <div class ="row ">
           <div class =" col-md-12 col-lg-12" tabindex="1">
-            <h3>{{juego[0].titulo}}</h3>
+            <h3>{{juego.pregunta.titulo}}</h3>
           </div>
         </div>
         <div class ="row ">

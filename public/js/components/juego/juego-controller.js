@@ -1,5 +1,5 @@
   angular.module('juego').controller('juegoController',['$scope','$http','$rootScope','$routeParams', '$route', function ($scope,$http,$rootScope,$routeParams,$route) {
-    
+
 //==============================================================================
 
 
@@ -13,11 +13,9 @@
      }).then(function successCallback(response) {
        console.log(response.data);
        //Guardamos el "data" del juego seleccionado por el usuario.
-           $scope.jugandose = response.data;
+           $scope.juegoActual = response.data;
 
        //montamos la variable "juegos" como un array para poder mostrarlo en la template.
-
-
            var jugado;
            //Cuando el usuario es nuevo en la plataforma, el array de matematicas esta vacio y
            //el forEach no recorre matematicas.,
@@ -53,33 +51,17 @@
                      data: $scope.newJuego,
                      headers : {'Accept' : 'application/json'}
                  }).then(function successCallback(response) {
-                     console.log("has entrado a un nuevo juego");
+                     //console.log(response);
                  }) ;
-           } else {
-             console.log("Ya has jugado a este juego");
            }
 
-           //Load Preguntas
-           console.log("holaquetal");
-           $http({
-             method: 'GET',
-             url: '/preguntasMates',
-             params: {'id': id},
-             headers : {'Accept' : 'application/json'}
-           }).then(function successCallback(response) {
-             console.log("response");
-             console.log(response);
-             }, function errorCallback(response) {
-               console.log(response);
-            });
-
-
        }, function errorCallback(response) {
-
+              console.log(response);
        });
 
 
-
+       //Scope donde guardamos las respuestas de todos los juegos.
+       //Array de 5 porque hay 5 preguntas.
        $scope.inputsPreguntas = ["","","","",""];
 
        $scope.uploadGame = function() {
@@ -87,7 +69,7 @@
           var errores;
 
           for (var i = 0; i < $scope.inputsPreguntas.length; i++) {
-              //if ($scope.inputsPreguntas[i] ===)
+              console.log($scope.inputsPreguntas[i]);
           }
        }
 
