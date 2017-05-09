@@ -4,6 +4,7 @@
   "description": "\"app para la ONCE\"",
   "dependencies": {
     "angular": "^1.6.4",
-    "angular-route": "^1.6.4"
+    "angular-route": "^1.6.4",
+    "jquery": "^3.2.1"
   }
 }
