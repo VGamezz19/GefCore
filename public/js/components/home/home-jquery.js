@@ -31,4 +31,4 @@ setTimeout(function(){
       $('.yesClose-loged').focus();
     }
 
-},1000)
+},2000)
