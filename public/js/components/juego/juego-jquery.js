@@ -1,10 +1,11 @@
 $("#ngView").addClass("addMarginTopView");
 $(".container-fluid").hide();
 
-setTimeout(function(){
-$(".pregunta").hide();
 $(".izquierda").hide();
-$(".juego1").show();
+setTimeout(function(){
+
+  $(".juego1").show();
+},100);
 
 var cnt = 1;
 
@@ -55,5 +56,3 @@ if(e.which == 13) {
     $(".inputEnter").focus();
   }
 });
-
-},50)

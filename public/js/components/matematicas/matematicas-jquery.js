@@ -1,11 +1,15 @@
-setTimeout(function() {
+
   $(".spanFlotando").hide();
 
-  $(".matematicasHome").hover(function () {
-    $(this).find(".spanFlotando").show();
-  });
-  //quitando hover raton
-  $(".matematicasHome").mouseleave(function () {
-    $(this).find(".spanFlotando").hide();
-  });
-}, 500);
+  setTimeout(function(){
+    $(".matematicasHome").hover(function () {
+      console.log("hola");
+      $(this).find(".spanFlotando").show();
+    });
+    //quitando hover raton
+    $(".matematicasHome").mouseleave(function () {
+      $(this).find(".spanFlotando").hide();
+    });
+
+  },200)
+    
