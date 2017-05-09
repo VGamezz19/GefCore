@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/js/components/home/home-css.css">
 
-<div ng-if ="$ctrl.userCurrent">
+<div ng-if ="$root.thisUser">
     <h2 class ="title-home-template"> <strong>GAMES</strong>Home</h3>
     <div class ="row boque-home mates">
       <div class ="col-md-9 col-lg-9 col-md-offset-2 col-lg-offset-2">
@@ -31,11 +31,10 @@
       </div>
 
     </div>
-
 </div>
 
 <!-- When User is not conected-->
-<div ng-if ="!$ctrl.userCurrent">
+<div ng-if ="!$root.thisUser">
     <h2 class ="title-home-template"> <strong>GAMES</strong>Home</h3>
     <div class ="row boque-home mates login">
       <div class ="col-md-9 col-lg-9 col-md-offset-2 col-lg-offset-2">
@@ -66,12 +65,6 @@
       </div>
 
     </div>
-    <script>
-    var url = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
-    $.getScript(url);
-    </script>
-    <script src ="/js/components/home/home-jquery.js">
-
-    </script>
+    <script src ="/js/components/home/home-jquery.js"></script>
 
 </div>

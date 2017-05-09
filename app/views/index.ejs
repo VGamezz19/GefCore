@@ -68,10 +68,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
   <title><%= title %></title>
 
 </head>
-<body>
-
-
-<body ng-controller="indexController">
+<body ng-controller="indexController" ng-init="currentUser()">
     <div class="container">
 
     <div ng-view id="ngView"></div>

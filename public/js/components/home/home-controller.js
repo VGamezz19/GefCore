@@ -4,9 +4,7 @@ angular.module('homeModule').controller('homeController',['$scope', '$http', '$r
 
 
 
-  $rootScope.currentUser();
-
-  this.userCurrent = $rootScope.thisUser;
+    $rootScope.currentUser();
 
 
 
