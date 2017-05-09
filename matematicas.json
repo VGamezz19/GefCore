@@ -1,369 +1,62 @@
-{
-    "identi": "juego1",
-     "titulo": "Suma sin problemas",
-     "puntuacionTotal": "0",
-     "nivel" : 1,
-     "pregunta1": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta2": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta3": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta4": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta5": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     }
-}
 
 {
-    "identi": "juego2",
-     "titulo": "Suma sin problemas",
-     "puntuacionTotal": "50",
-     "nivel" : 2,
-     "pregunta1": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta2": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta3": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta4": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta5": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     }
-}
+     "titulo": "Aprende a sumar!",
+     "identi": "juego1",
+     "puntuacionTotal": 0,
+     "preguntas": [{
 
-{
-    "identi": "juego3",
-     "titulo": "Suma sin problemas",
-     "puntuacionTotal": "150",
-     "nivel" : 3,
-     "pregunta1": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
+       "pregunta" :{
+         "identi": "pregunta1",
+         "titulo":"suma 6 mas 10",
+         "respuesta": "16",
+         "puntuacion":10,
+         "opciones":{}
+       }
      },
-     "pregunta2": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta3": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta4": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta5": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     }
-}
 
-{
-    "identi": "juego4",
-     "titulo": "Suma sin problemas",
-     "puntuacionTotal": "250",
-     "nivel" : 4,
-     "pregunta1": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta2": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta3": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta4": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta5": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     }
-}
+       {
 
-{
-    "identi": "juego5",
-     "titulo": "Suma sin problemas",
-     "puntuacionTotal": "350",
-     "nivel" : 5,
-     "pregunta1": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta2": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta3": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta4": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta5": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     }
-}
+       "pregunta": {
+        "identi": "pregunta2",
+         "titulo":"suma 14 mas 10",
+         "respuesta": "24",
+         "puntuacion":20,
+         "opciones":{}
+       }
 
-{
-    "identi": "juego6",
-     "titulo": "Suma sin problemas",
-     "puntuacionTotal": "450",
-     "nivel" : 6,
-     "pregunta1": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
      },
-     "pregunta2": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta3": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta4": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta5": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     }
-}
 
-{
-    "identi": "juego7",
-     "titulo": "Suma sin problemas",
-     "puntuacionTotal": "550",
-     "nivel" : 7,
-     "pregunta1": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta2": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta3": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta4": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta5": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     }
-}
+     {
 
-{
-    "identi": "juego8",
-     "titulo": "Suma sin problemas",
-     "puntuacionTotal": "650",
-     "nivel" : 8,
-     "pregunta1": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta2": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta3": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta4": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta5": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     }
-}
+       "pregunta": {
+        "identi": "pregunta3",
+         "titulo":"suma 23 mas 10",
+         "respuesta": "33",
+         "puntuacion":30,
+         "opciones":{}
+       }
 
-{
-    "identi": "juego9",
-     "titulo": "Suma sin problemas",
-     "puntuacionTotal": "750",
-     "nivel" : 9,
-     "pregunta1": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta2": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta3": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta4": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta5": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     }
-}
+   },
+   {
 
-{
-    "identi": "juego10",
-     "titulo": "Suma sin problemas",
-     "puntuacionTotal": "850",
-     "nivel" : 10,
-     "pregunta1": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta2": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta3": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta4": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
-     },
-     "pregunta5": {
-       "pregunta": "Cuando es 20 + 10",
-       "respuesta": "30",
-       "puntuacion": 40,
-       "opciones": {}
+     "pregunta": {
+      "identi": "pregunta4",
+       "titulo":"suma 65 mas 12",
+       "respuesta": "77",
+       "puntuacion":35,
+       "opciones":{}
      }
+
+ }, {
+  
+   "pregunta": {
+    "identi": "pregunta5",
+     "titulo":"suma 40 mas 10",
+     "respuesta": "50",
+     "puntuacion":40,
+     "opciones":{}
+   }
+
+  }
+     ]
 }

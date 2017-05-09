@@ -2,7 +2,65 @@
     $("#ngView").addClass("addMarginTopView");
     $(".container-fluid").hide();
 
+  setTimeout(function(){
+    $(".pregunta").hide();
+    $(".izquierda").hide();
+    $(".juego1").show();
+
+    var cnt = 1;
+
+    function moverDerecha() {
+      $(".izquierda").show();
+      if (cnt === 5) {
+        $(".derecha").hide();
+        $(".juego5").hide();
+        ///////////////////
+        $(".final5").show();
+      } else {
+        $(".juego" + cnt).hide();
+        console.log($("juego" + cnt).hide());
+        //////////////////////////
+        cnt = cnt + 1;
+        $(".juego" + cnt).show();
+        console.log(cnt);
+      }
+    }
+
+    $( ".derecha" ).click(function() {
+      moverDerecha();
+      $("#numeroPregunta").focus();
+    });
+
+    $( ".izquierda" ).click(function() {
+      $(".final5").hide();
+      $(".derecha").show();
+      if (cnt === 1) {
+        $(".izquierda").hide();
+        $(".juego2").hide()
+        ///////////////////
+        $(".juego1").show();
+      } else {
+        $(".juego" + cnt).hide();
+        //////////////////////////
+        cnt = cnt - 1;
+        $(".juego" + cnt).show();
+        console.log(cnt);
+      }
+
+    });
+
+    $(".inputEnter").keypress(function(e) {
+    if(e.which == 13) {
+        moverDerecha();
+
+        $(".inputEnter").focus();
+      }
+    });
+
+  },100)
+
 //==============================================================================
+
 
      var id = $routeParams.ID;
  //Recuperamos el juego actual de MongoDB con la ID del juego "identi"
@@ -17,14 +75,7 @@
            $scope.jugandose = response.data;
 
        //montamos la variable "juegos" como un array para poder mostrarlo en la template.
-           $scope.juegos = [];
 
-           $scope.juegos.push(response.data.pregunta1);
-           $scope.juegos.push(response.data.pregunta2);
-           $scope.juegos.push(response.data.pregunta3);
-           $scope.juegos.push(response.data.pregunta4);
-           $scope.juegos.push(response.data.pregunta5);
-           console.log($scope.juegos);
 
            var jugado;
            //Cuando el usuario es nuevo en la plataforma, el array de matematicas esta vacio y
@@ -67,14 +118,38 @@
              console.log("Ya has jugado a este juego");
            }
 
+           //Load Preguntas
+           console.log("holaquetal");
+           $http({
+             method: 'GET',
+             url: '/preguntasMates',
+             params: {'id': id},
+             headers : {'Accept' : 'application/json'}
+           }).then(function successCallback(response) {
+             console.log("response");
+             console.log(response);
+             }, function errorCallback(response) {
+               console.log(response);
+            });
+
 
        }, function errorCallback(response) {
 
        });
 
+
+
+       $scope.inputsPreguntas = ["","","","",""];
+
        $scope.uploadGame = function() {
-         
+          console.log($scope.inputsPreguntas);
+          var errores;
+
+          for (var i = 0; i < $scope.inputsPreguntas.length; i++) {
+              //if ($scope.inputsPreguntas[i] ===)
+          }
        }
+
 
 
   }]);

@@ -1,12 +1,54 @@
 <link rel="stylesheet" href="/js/components/juego/juego-css.css">
 
-
-<div class ="" ng-repeat = "juego in juegos track by $index">
-  <div class ="row">
-    <div class =" col-md-12 col-lg-12" tabindex="1">
-      <span> {{$index + 1}}</span> <span>{{juego.pregunta}}</span>
+<div class ="row mainJuegos">
+  <div class= "col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1 ">
+      <button type="button" class="btn izquierda fi glyphicon glyphicon-chevron-left"></button>
+  </div>
+  <div class ="col-md-6 col-lg-6 textCentro">
+    <div class ="" ng-repeat = "juego in jugandose.preguntas track by $index">
+      <div class ="col-md-12 col-lg-12 juego{{$index +1}} pregunta">
+        <div class ="row ">
+          <div class =" col-md-2 col-lg-2" tabindex="1">
+            <h1>{{$index + 1}}</h1>
+          </div>
+          <div class =" col-md-2 col-lg-2 col-md-offset-8 col-lg-offset-8" tabindex="1">
+            <h1 class ="fi glyphicon glyphicon-star">{{juego[0].puntuacion}}</h1>
+          </div>
+        </div>
+        <div class ="row ">
+          <div class =" col-md-12 col-lg-12" tabindex="1">
+            <h3>{{juego[0].titulo}}</h3>
+          </div>
+        </div>
+        <div class ="row ">
+          <div class ="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1" tabindex="1">
+            <div class="input-group">
+              <input type="number" class="form-control inputEnter"  ng-model="inputsPreguntas[$index]">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Template final -->
+      <div class ="col-md-12 col-lg-12 pregunta final{{$index +1}}">
+        <div class ="row ">
+          <div class =" col-md-12 col-lg-12" tabindex="1">
+            <h1>Fin del nivel</h1>
+          </div>
+        </div>
+        <div class ="row ">
+          <div class =" col-md-12 col-lg-12" tabindex="1">
+            <h3>Usar el boton de la izquierda si quieres repasar</h3>
+          </div>
+        </div>
+        <div class ="row ">
+          <div class ="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1" tabindex="1">
+              <button class="btn" ng-click="uploadGame()">Corregir</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>>
-
-    <span>{{juego.puntuacion}}</span>
+  </div>
+  <div class ="col-md-2 col-lg-2 ">
+    <button type="button" class="btn derecha fi glyphicon glyphicon-chevron-right"></button>
+  </div>
 </div>

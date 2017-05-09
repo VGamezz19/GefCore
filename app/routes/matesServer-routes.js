@@ -10,4 +10,7 @@ module.exports = (app) => {
 
   app.route('/getIdMates')
      .get(mates.getId);
+
+  app.route('/preguntasMates')
+     .get(mates.getPreguntas);
 }

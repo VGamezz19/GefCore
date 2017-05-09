@@ -18,26 +18,6 @@ var id = req.query.id;
     }
   });
 };
-
-
-  exports.getPreguntas = (req,res,next) => {
-
-    var id = req.body.identi
-    mates.aggregate([
-    {
-      $match: {
-          identi: id
-          }
-  },
-  {
-      $unwind: '$preguntas'
-  },
- {
-      $group: { _id: '$preguntas'
-      }
-  }
-]);
-  };
   exports.getAll = (req, res, next) => {
 
 
@@ -102,4 +82,28 @@ var id = req.query.id;
     })
 
 
+  }
+
+  exports.getPreguntas = function(req,res,next)  {
+
+    var id = req.body.identi
+    mates.aggregate([
+      {
+          $match: {
+            identi: "juego1"
+                  }
+      },
+      {
+          $unwind: '$preguntas'
+      },
+      {
+          $group: { _id: '$preguntas'}
+      }
+    ], function (err, result) {
+          if (err) {
+              next(err);
+          } else {
+              res.json(result);
+          }
+      });
   }
