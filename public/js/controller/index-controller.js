@@ -2,14 +2,16 @@ angular.module('myApp')
 .run(function($rootScope, $http, $q) {
 
     //=============================currentUser ===================================
-    $rootScope.thisUser;
+
 
     $rootScope.currentUser = function(){
-
+      //$rootScope.thisUser;
+      //console.log($rootScope.thisUser);
       $http({
         method: 'GET',
         url: '/currentUser'
       }).then(function successCallback(response) {
+
           $rootScope.thisUser = response.data;
           console.log($rootScope.thisUser);
 
