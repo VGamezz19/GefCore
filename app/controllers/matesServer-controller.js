@@ -18,6 +18,26 @@ var id = req.query.id;
     }
   });
 };
+
+
+  exports.getPreguntas = (req,res,next) => {
+
+    var id = req.body.identi
+    mates.aggregate([
+    {
+      $match: {
+          identi: id
+          }
+  },
+  {
+      $unwind: '$preguntas'
+  },
+ {
+      $group: { _id: '$preguntas'
+      }
+  }
+]);
+  };
   exports.getAll = (req, res, next) => {
 
 
