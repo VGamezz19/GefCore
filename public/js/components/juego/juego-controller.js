@@ -124,12 +124,15 @@
               headers : {'Accept' : 'application/json'}
           }).then(function successCallback(response) {
 
-            //$scope.puntuacion
+            //Restamos la puntuacion general de matematicas del usuario por los puntos antiguos conseguidos
+            //en ese mismo nivel
             $scope.sumaPuntos  = $rootScope.thisUser.puntuacion.matematicas - $scope.puntosOld;
-            $scope.sumaPuntos = $rootScope.thisUser.puntuacion.matematicas + $scope.puntuacion;
 
-
+            //Sumamos la puntuacion general de matematicas del usuario por los puntos actuales que ha conseguido
+            //el usuario jugando en este nivel
             $scope.sumaPuntos = $rootScope.thisUser.puntuacion.matematicas + $scope.puntuacion;
+            console.log("puntos sumados", $scope.sumaPuntos);
+            //Insertamos los puntos actualizados del nivel
                 $http({
                   method: 'POST',
                   url: '/puntosMates',
