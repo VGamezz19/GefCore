@@ -31,8 +31,11 @@ module.exports = function(app){
       app.route('/getAll')
       .get(users.list);
 
-      app.route('/updateGame')
+      app.route('/createGame')
       .post(users.juego);
+
+    app.route('/updateGame')
+    .post(users.updateJuego);
 
       app.route('/puntosMates')
       .post(users.updatePuntosMates);
