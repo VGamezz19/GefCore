@@ -136,14 +136,13 @@
                 $http({
                   method: 'POST',
                   url: '/puntosMates',
-                  data: $scope.sumaPuntos,
-                  headers : {'Accept' : 'application/json'}
+                  data: $scope.sumaPuntos
               }).then(function successCallback(response) {
 
                 //Abrimos el modal que mostrara los datos del usuario.
                   $(".correccion").modal();
-              }) ;
-          }) ;
+              });
+          });
 
        }
 

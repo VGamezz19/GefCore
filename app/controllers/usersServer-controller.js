@@ -205,7 +205,7 @@ exports.juego = (req, res, next) => {
 
    User.findOneAndUpdate(query, { "$pull": { "matematicas": {_id: juego._id} } } , { "new": true, "upsert": true }, function(err, doc){
        if (err) return res.send(500, { error: err });
-       return res.send(juego);
+       return res.send(juego._id);
    });
 
      User.findOneAndUpdate(query, { "$push": { "matematicas": juego } } , { "new": true, "upsert": true }, function(err, doc){
@@ -219,8 +219,9 @@ exports.juego = (req, res, next) => {
    var puntos = req.body;
    var query = {'_.id':id};
 
-   return res.send(puntos);
-   //User.update(query, {$inc: {"puntuacion.matematicas": puntos}});
+   User.update(query, {$inc: {"puntuacion.matematicas": puntos}}, (err, puntos) => {
+     res.send(puntos);
+   });
  }
 
  exports.juegoIngles = (req, res, next) => {
@@ -257,7 +258,7 @@ exports.juego = (req, res, next) => {
     var puntos = req.body;
     var query = {'_.id':id};
 
-    User.update(query, {$inc: {"puntuacion.matematicas": puntos}});
+    //User.update(query, {$inc: {"puntuacion.ingles": puntos}});
   }
 
 //metodo singOut
