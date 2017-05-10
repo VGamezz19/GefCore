@@ -34,6 +34,9 @@ module.exports = function(app){
       app.route('/updateGame')
       .post(users.juego);
 
+      app.route('/puntosMates')
+      .post(users.updatePuntosMates);
+
   //seteamos la ruta singOut
   app.get('/singout',users.singOut);
 

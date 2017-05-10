@@ -195,7 +195,7 @@ exports.juego = (req, res, next) => {
       return res.send(juego);
   });
 }
- exports.updateJuego = () => {
+ exports.updateJuego = (req, res, next) => {
    var id = req.user.id;
    var juego = req.body;
    var idmates = juego.identi;
@@ -213,6 +213,14 @@ exports.juego = (req, res, next) => {
          return res.send(juego);
      });
  };
+
+ exports.updatePuntosMates = (req, res, next) => {
+   var id = req.user.id;
+   var puntos = req.body;
+   var query = {'_.id':id};
+
+   User.findOneAndUpdate(query, {"$pull": {'puntuacion': {matematicas: puntos}}});
+ }
 
 //metodo singOut
 exports.singOut = function(req, res) {
