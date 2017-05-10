@@ -48,7 +48,565 @@
      }
 
  }, {
-  
+
+   "pregunta": {
+    "identi": "pregunta5",
+     "titulo":"suma 40 mas 10",
+     "respuesta": "50",
+     "puntuacion":40,
+     "opciones":{}
+   }
+
+  }
+     ]
+}
+
+{
+     "titulo": "Ahora toca restar",
+     "identi": "juego2",
+     "puntuacionTotal": 50,
+     "preguntas": [{
+
+       "pregunta" :{
+         "identi": "pregunta1",
+         "titulo":"resta 10 menos 4",
+         "respuesta": "6",
+         "puntuacion":10,
+         "opciones":{}
+       }
+     },
+
+       {
+
+       "pregunta": {
+        "identi": "pregunta2",
+         "titulo":"resta 56 menos 23",
+         "respuesta": "33",
+         "puntuacion":20,
+         "opciones":{}
+       }
+
+     },
+
+     {
+
+       "pregunta": {
+        "identi": "pregunta3",
+         "titulo":"resta 44 menos 21",
+         "respuesta": "23",
+         "puntuacion":30,
+         "opciones":{}
+       }
+
+   },
+   {
+
+     "pregunta": {
+      "identi": "pregunta4",
+       "titulo":"resta 76 menos 43",
+       "respuesta": "33",
+       "puntuacion":35,
+       "opciones":{}
+     }
+
+ }, {
+
+   "pregunta": {
+    "identi": "pregunta5",
+     "titulo":"resta 5 menos 30",
+     "respuesta": "-25",
+     "puntuacion":40,
+     "opciones":{}
+   }
+
+  }
+     ]
+}
+
+{
+     "titulo": "Aprende a sumar!",
+     "identi": "juego3",
+     "puntuacionTotal": 100,
+     "preguntas": [{
+
+       "pregunta" :{
+         "identi": "pregunta1",
+         "titulo":"suma 6 mas 10",
+         "respuesta": "16",
+         "puntuacion":10,
+         "opciones":{}
+       }
+     },
+
+       {
+
+       "pregunta": {
+        "identi": "pregunta2",
+         "titulo":"suma 14 mas 10",
+         "respuesta": "24",
+         "puntuacion":20,
+         "opciones":{}
+       }
+
+     },
+
+     {
+
+       "pregunta": {
+        "identi": "pregunta3",
+         "titulo":"suma 23 mas 10",
+         "respuesta": "33",
+         "puntuacion":30,
+         "opciones":{}
+       }
+
+   },
+   {
+
+     "pregunta": {
+      "identi": "pregunta4",
+       "titulo":"suma 65 mas 12",
+       "respuesta": "77",
+       "puntuacion":35,
+       "opciones":{}
+     }
+
+ }, {
+
+   "pregunta": {
+    "identi": "pregunta5",
+     "titulo":"suma 40 mas 10",
+     "respuesta": "50",
+     "puntuacion":40,
+     "opciones":{}
+   }
+
+  }
+     ]
+}
+
+{
+     "titulo": "Aprende a sumar!",
+     "identi": "juego4",
+     "puntuacionTotal": 150,
+     "preguntas": [{
+
+       "pregunta" :{
+         "identi": "pregunta1",
+         "titulo":"suma 6 mas 10",
+         "respuesta": "16",
+         "puntuacion":10,
+         "opciones":{}
+       }
+     },
+
+       {
+
+       "pregunta": {
+        "identi": "pregunta2",
+         "titulo":"suma 14 mas 10",
+         "respuesta": "24",
+         "puntuacion":20,
+         "opciones":{}
+       }
+
+     },
+
+     {
+
+       "pregunta": {
+        "identi": "pregunta3",
+         "titulo":"suma 23 mas 10",
+         "respuesta": "33",
+         "puntuacion":30,
+         "opciones":{}
+       }
+
+   },
+   {
+
+     "pregunta": {
+      "identi": "pregunta4",
+       "titulo":"suma 65 mas 12",
+       "respuesta": "77",
+       "puntuacion":35,
+       "opciones":{}
+     }
+
+ }, {
+
+   "pregunta": {
+    "identi": "pregunta5",
+     "titulo":"suma 40 mas 10",
+     "respuesta": "50",
+     "puntuacion":40,
+     "opciones":{}
+   }
+
+  }
+     ]
+}
+
+{
+     "titulo": "Aprende a sumar!",
+     "identi": "juego5",
+     "puntuacionTotal": 200,
+     "preguntas": [{
+
+       "pregunta" :{
+         "identi": "pregunta1",
+         "titulo":"suma 6 mas 10",
+         "respuesta": "16",
+         "puntuacion":10,
+         "opciones":{}
+       }
+     },
+
+       {
+
+       "pregunta": {
+        "identi": "pregunta2",
+         "titulo":"suma 14 mas 10",
+         "respuesta": "24",
+         "puntuacion":20,
+         "opciones":{}
+       }
+
+     },
+
+     {
+
+       "pregunta": {
+        "identi": "pregunta3",
+         "titulo":"suma 23 mas 10",
+         "respuesta": "33",
+         "puntuacion":30,
+         "opciones":{}
+       }
+
+   },
+   {
+
+     "pregunta": {
+      "identi": "pregunta4",
+       "titulo":"suma 65 mas 12",
+       "respuesta": "77",
+       "puntuacion":35,
+       "opciones":{}
+     }
+
+ }, {
+
+   "pregunta": {
+    "identi": "pregunta5",
+     "titulo":"suma 40 mas 10",
+     "respuesta": "50",
+     "puntuacion":40,
+     "opciones":{}
+   }
+
+  }
+     ]
+}
+
+{
+     "titulo": "Aprende a sumar!",
+     "identi": "juego6",
+     "puntuacionTotal": 250,
+     "preguntas": [{
+
+       "pregunta" :{
+         "identi": "pregunta1",
+         "titulo":"suma 6 mas 10",
+         "respuesta": "16",
+         "puntuacion":10,
+         "opciones":{}
+       }
+     },
+
+       {
+
+       "pregunta": {
+        "identi": "pregunta2",
+         "titulo":"suma 14 mas 10",
+         "respuesta": "24",
+         "puntuacion":20,
+         "opciones":{}
+       }
+
+     },
+
+     {
+
+       "pregunta": {
+        "identi": "pregunta3",
+         "titulo":"suma 23 mas 10",
+         "respuesta": "33",
+         "puntuacion":30,
+         "opciones":{}
+       }
+
+   },
+   {
+
+     "pregunta": {
+      "identi": "pregunta4",
+       "titulo":"suma 65 mas 12",
+       "respuesta": "77",
+       "puntuacion":35,
+       "opciones":{}
+     }
+
+ }, {
+
+   "pregunta": {
+    "identi": "pregunta5",
+     "titulo":"suma 40 mas 10",
+     "respuesta": "50",
+     "puntuacion":40,
+     "opciones":{}
+   }
+
+  }
+     ]
+}
+
+{
+     "titulo": "Aprende a sumar!",
+     "identi": "juego7",
+     "puntuacionTotal": 300,
+     "preguntas": [{
+
+       "pregunta" :{
+         "identi": "pregunta1",
+         "titulo":"suma 6 mas 10",
+         "respuesta": "16",
+         "puntuacion":10,
+         "opciones":{}
+       }
+     },
+
+       {
+
+       "pregunta": {
+        "identi": "pregunta2",
+         "titulo":"suma 14 mas 10",
+         "respuesta": "24",
+         "puntuacion":20,
+         "opciones":{}
+       }
+
+     },
+
+     {
+
+       "pregunta": {
+        "identi": "pregunta3",
+         "titulo":"suma 23 mas 10",
+         "respuesta": "33",
+         "puntuacion":30,
+         "opciones":{}
+       }
+
+   },
+   {
+
+     "pregunta": {
+      "identi": "pregunta4",
+       "titulo":"suma 65 mas 12",
+       "respuesta": "77",
+       "puntuacion":35,
+       "opciones":{}
+     }
+
+ }, {
+
+   "pregunta": {
+    "identi": "pregunta5",
+     "titulo":"suma 40 mas 10",
+     "respuesta": "50",
+     "puntuacion":40,
+     "opciones":{}
+   }
+
+  }
+     ]
+}
+
+{
+     "titulo": "Aprende a sumar!",
+     "identi": "juego8",
+     "puntuacionTotal": 350,
+     "preguntas": [{
+
+       "pregunta" :{
+         "identi": "pregunta1",
+         "titulo":"suma 6 mas 10",
+         "respuesta": "16",
+         "puntuacion":10,
+         "opciones":{}
+       }
+     },
+
+       {
+
+       "pregunta": {
+        "identi": "pregunta2",
+         "titulo":"suma 14 mas 10",
+         "respuesta": "24",
+         "puntuacion":20,
+         "opciones":{}
+       }
+
+     },
+
+     {
+
+       "pregunta": {
+        "identi": "pregunta3",
+         "titulo":"suma 23 mas 10",
+         "respuesta": "33",
+         "puntuacion":30,
+         "opciones":{}
+       }
+
+   },
+   {
+
+     "pregunta": {
+      "identi": "pregunta4",
+       "titulo":"suma 65 mas 12",
+       "respuesta": "77",
+       "puntuacion":35,
+       "opciones":{}
+     }
+
+ }, {
+
+   "pregunta": {
+    "identi": "pregunta5",
+     "titulo":"suma 40 mas 10",
+     "respuesta": "50",
+     "puntuacion":40,
+     "opciones":{}
+   }
+
+  }
+     ]
+}
+
+{
+     "titulo": "Aprende a sumar!",
+     "identi": "juego9",
+     "puntuacionTotal": 400,
+     "preguntas": [{
+
+       "pregunta" :{
+         "identi": "pregunta1",
+         "titulo":"suma 6 mas 10",
+         "respuesta": "16",
+         "puntuacion":10,
+         "opciones":{}
+       }
+     },
+
+       {
+
+       "pregunta": {
+        "identi": "pregunta2",
+         "titulo":"suma 14 mas 10",
+         "respuesta": "24",
+         "puntuacion":20,
+         "opciones":{}
+       }
+
+     },
+
+     {
+
+       "pregunta": {
+        "identi": "pregunta3",
+         "titulo":"suma 23 mas 10",
+         "respuesta": "33",
+         "puntuacion":30,
+         "opciones":{}
+       }
+
+   },
+   {
+
+     "pregunta": {
+      "identi": "pregunta4",
+       "titulo":"suma 65 mas 12",
+       "respuesta": "77",
+       "puntuacion":35,
+       "opciones":{}
+     }
+
+ }, {
+
+   "pregunta": {
+    "identi": "pregunta5",
+     "titulo":"suma 40 mas 10",
+     "respuesta": "50",
+     "puntuacion":40,
+     "opciones":{}
+   }
+
+  }
+     ]
+}
+
+{
+     "titulo": "Aprende a sumar!",
+     "identi": "juego10",
+     "puntuacionTotal": 450,
+     "preguntas": [{
+
+       "pregunta" :{
+         "identi": "pregunta1",
+         "titulo":"suma 6 mas 10",
+         "respuesta": "16",
+         "puntuacion":10,
+         "opciones":{}
+       }
+     },
+
+       {
+
+       "pregunta": {
+        "identi": "pregunta2",
+         "titulo":"suma 14 mas 10",
+         "respuesta": "24",
+         "puntuacion":20,
+         "opciones":{}
+       }
+
+     },
+
+     {
+
+       "pregunta": {
+        "identi": "pregunta3",
+         "titulo":"suma 23 mas 10",
+         "respuesta": "33",
+         "puntuacion":30,
+         "opciones":{}
+       }
+
+   },
+   {
+
+     "pregunta": {
+      "identi": "pregunta4",
+       "titulo":"suma 65 mas 12",
+       "respuesta": "77",
+       "puntuacion":35,
+       "opciones":{}
+     }
+
+ }, {
+
    "pregunta": {
     "identi": "pregunta5",
      "titulo":"suma 40 mas 10",

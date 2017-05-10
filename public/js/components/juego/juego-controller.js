@@ -27,7 +27,7 @@
 
                //Si el usuario tiene un juego con la misma id que el juego actual,
                //La variable "jugado" se pondra el true.
-                   if (identUser.juego.identi == $scope.jugandose.identi) {
+                   if (identUser.juego.identi == $scope.juegoActual.identi) {
                        jugado = true;
                        console.log("ya has jugado a este juego antes");
                    } else {
@@ -43,11 +43,11 @@
            if (jugado === false) {
 
              var time = new Date();
-             $scope.newJuego = {"juego": {"identi": $scope.jugandose.identi,"titulo": $scope.jugandose.titulo,"nivel": $scope.jugandose.nivel,"puntuacion": 0,"estado": 0,"correctas": 0,"incorrectas": 0,"ultimoUso": time}}
+             $scope.newJuego = {"juego": {"identi": $scope.juegoActual.identi,"titulo": $scope.juegoActual.titulo,"nivel": $scope.juegoActual.nivel,"puntuacion": 0,"estado": 0,"correctas": 0,"incorrectas": 0,"ultimoUso": time}}
                console.log($scope.newJuego);
                    $http({
                      method: 'POST',
-                     url: '/updateGame',
+                     url: '/createGame',
                      data: $scope.newJuego,
                      headers : {'Accept' : 'application/json'}
                  }).then(function successCallback(response) {
@@ -65,12 +65,73 @@
        $scope.inputsPreguntas = ["","","","",""];
 
        $scope.uploadGame = function() {
-          console.log($scope.inputsPreguntas);
-          var errores;
+
+        $scope.errores = 0;
+        $scope.correctas = 0;
+        $scope.puntuacion  = 0;
 
           for (var i = 0; i < $scope.inputsPreguntas.length; i++) {
               console.log($scope.inputsPreguntas[i]);
+
+              if ($scope.inputsPreguntas[i] == $scope.juegoActual.preguntas[i].pregunta.respuesta) {
+                $scope.correctas = $scope.correctas + 1;
+                $scope.puntuacion = $scope.puntuacion + $scope.juegoActual.preguntas[i].pregunta.puntuacion;
+
+              } else {
+                $scope.errores = $scope.errores + 1;
+              }
           }
+
+        $scope.sumaPuntos = $rootScope.thisUser.puntuacion.matematicas + $scope.puntuacion;
+        var cnt = 0;
+        var j = 0;
+
+        $rootScope.thisUser.matematicas.forEach(function(thisMatematicasGameUser) {
+
+          if(thisMatematicasGameUser.juego.identi == $scope.juegoActual.identi) {
+            cnt = j;
+            console.log(cnt);
+          }
+          j = j + 1;
+        });
+
+
+        var updateUserGame = $rootScope.thisUser.matematicas[cnt];
+
+
+        //Si tiene 3 o máserrores, el juego tendra estado 3.
+        //Significa que ha jugado el juego con dificultad.
+        //Luego en el profile, se le recordara, que deveria volverlo hacer
+        //Para mejorar su marca
+        if ($scope.errores >=3) {
+          $scope.estado = 3;
+        } else {
+          $scope.estado = 1;
+        }
+
+        var time = new Date();
+        $scope.updateGame = {"_id":updateUserGame._id,"juego": {"identi": $scope.juegoActual.identi,"titulo": $scope.juegoActual.titulo,"nivel": $scope.juegoActual.nivel,"puntuacion": $scope.puntuacion,"estado": $scope.estado,"correctas": $scope.correctas,"incorrectas": $scope.errores,"ultimoUso": time}}
+        //console.log($scope.newJuego);
+
+            $http({
+              method: 'POST',
+              url: '/updateGame',
+              data: $scope.updateGame,
+              headers : {'Accept' : 'application/json'}
+          }).then(function successCallback(response) {
+              console.log(response);
+              /*  $http({
+                  method: 'POST',
+                  url: '/updateGame',
+                  data: $scope.newJuego,
+                  headers : {'Accept' : 'application/json'}
+              }).then(function successCallback(response) {
+
+                //Abrimos el modal que mostrara los datos del usuario.
+                  $(".correccion").modal();
+              }) ; */
+          }) ;
+
        }
 
 

@@ -2,7 +2,7 @@
 
 <div class ="row mainJuegos">
   <div class= "col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1 ">
-      <button type="button" class="btn izquierda fi glyphicon glyphicon-chevron-left"></button>
+      <button type="button" class="btn izquierda fi glyphicon glyphicon-chevron-left" tabindex="1"></button>
   </div>
   <div class ="col-md-6 col-lg-6 textCentro">
     <div class ="" ng-repeat = "juego in juegoActual.preguntas track by $index">
@@ -21,9 +21,9 @@
           </div>
         </div>
         <div class ="row ">
-          <div class ="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1" tabindex="1">
+          <div class ="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
             <div class="input-group">
-              <input type="number" class="form-control inputEnter"  ng-model="inputsPreguntas[$index]">
+              <input type="number" class="form-control inputEnter" tabindex="1" ng-model="inputsPreguntas[$index]">
             </div>
           </div>
         </div>
@@ -53,10 +53,31 @@
     </div>
   </div>
   <div class ="col-md-2 col-lg-2 ">
-    <button type="button" class="btn derecha fi glyphicon glyphicon-chevron-right"></button>
+    <button type="button" class="btn derecha fi glyphicon glyphicon-chevron-right" tabindex="1"></button>
   </div>
 </div>
 
+<!-- START Modal CheckLogOUT-->
+
+<div class="modal correccion fade" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Correccion de nivel</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        {{correctas}}
+        {{errores}}
+        {{puntuacion}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- END Modal CheckLogOUT-->
 
 
-    <script src =" /js/components/juego/juego-jquery.js"></script>
+<script src =" /js/components/juego/juego-jquery.js"></script>

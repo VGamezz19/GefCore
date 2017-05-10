@@ -203,7 +203,7 @@ exports.juego = (req, res, next) => {
 
 
 
-   User.findOneAndUpdate(query, { "$pull": { "matematicas": {identi: idmates} } } , { "new": true, "upsert": true }, function(err, doc){
+   User.findOneAndUpdate(query, { "$pull": { "matematicas": {_id: juego._id} } } , { "new": true, "upsert": true }, function(err, doc){
        if (err) return res.send(500, { error: err });
        return res.send(juego);
    });
