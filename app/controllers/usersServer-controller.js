@@ -219,7 +219,7 @@ exports.juego = (req, res, next) => {
    var puntos = req.body;
    var query = {'_.id':id};
 
-   User.findOneAndUpdate(query, {"$pull": {'puntuacion': {matematicas: puntos}}});
+   User.update(query, {$inc: {"puntuacion.matematicas": puntos}});
  }
 
  exports.juegoIngles = (req, res, next) => {
@@ -256,7 +256,7 @@ exports.juego = (req, res, next) => {
     var puntos = req.body;
     var query = {'_.id':id};
 
-    User.findOneAndUpdate(query, {"$pull": {'puntuacion': {ingles: puntos}}});
+    User.update(query, {$inc: {"puntuacion.matematicas": puntos}});
   }
 
 //metodo singOut

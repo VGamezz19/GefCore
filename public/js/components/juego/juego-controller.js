@@ -11,7 +11,6 @@
        params: {'id': id},
        headers : {'Accept' : 'application/json'}
      }).then(function successCallback(response) {
-       console.log(response.data);
        //Guardamos el "data" del juego seleccionado por el usuario.
            $scope.juegoActual = response.data;
 
@@ -44,19 +43,20 @@
 
              var time = new Date();
              $scope.newJuego = {"juego": {"identi": $scope.juegoActual.identi,"titulo": $scope.juegoActual.titulo,"nivel": $scope.juegoActual.nivel,"puntuacion": 0,"estado": 0,"correctas": 0,"incorrectas": 0,"ultimoUso": time}}
-               console.log($scope.newJuego);
+
                    $http({
                      method: 'POST',
                      url: '/createGame',
                      data: $scope.newJuego,
                      headers : {'Accept' : 'application/json'}
                  }).then(function successCallback(response) {
-                     //console.log(response);
+                   //recargamos la informacion actual del usuario.
+                     $rootScope.currentUser();
                  }) ;
            }
 
        }, function errorCallback(response) {
-              console.log(response);
+
        });
 
 
@@ -64,12 +64,14 @@
        //Array de 5 porque hay 5 preguntas.
        $scope.inputsPreguntas = ["","","","",""];
 
+       //Funcion que se ejecutara cuando el usuario pulse el boton de "corregir nivel"
        $scope.uploadGame = function() {
 
         $scope.errores = 0;
         $scope.correctas = 0;
         $scope.puntuacion  = 0;
 
+        //En este FOR rellenamos los puntos/errores/aciertos del nivel realizado
           for (var i = 0; i < $scope.inputsPreguntas.length; i++) {
               console.log($scope.inputsPreguntas[i]);
 
@@ -82,21 +84,22 @@
               }
           }
 
-        $scope.sumaPuntos = $rootScope.thisUser.puntuacion.matematicas + $scope.puntuacion;
+
+        //Necesitamos tener constancia de en que posicion tiene el usuario el registro del juego
+        //que esta jugando, para luego buscar la ID del nivel cursado y actualizar los datos
+        //en la colleccion de Usuarios (para tener un historico)
         var cnt = 0;
         var j = 0;
-
         $rootScope.thisUser.matematicas.forEach(function(thisMatematicasGameUser) {
-
           if(thisMatematicasGameUser.juego.identi == $scope.juegoActual.identi) {
             cnt = j;
-            console.log(cnt);
           }
           j = j + 1;
         });
 
+        // Guardamos la _id de matematicas del usuario conectado.
+        var idGameUser = $rootScope.thisUser.matematicas[cnt]._id;
 
-        var updateUserGame = $rootScope.thisUser.matematicas[cnt];
 
 
         //Si tiene 3 o máserrores, el juego tendra estado 3.
@@ -108,10 +111,11 @@
         } else {
           $scope.estado = 1;
         }
+        //los puntos anteriores de este juego
+        $scope.puntosOld = $rootScope.thisUser.matematicas[cnt].juego.puntuacion;
 
         var time = new Date();
-        $scope.updateGame = {"_id":updateUserGame._id,"juego": {"identi": $scope.juegoActual.identi,"titulo": $scope.juegoActual.titulo,"nivel": $scope.juegoActual.nivel,"puntuacion": $scope.puntuacion,"estado": $scope.estado,"correctas": $scope.correctas,"incorrectas": $scope.errores,"ultimoUso": time}}
-        //console.log($scope.newJuego);
+        $scope.updateGame = {"_id":idGameUser,"juego": {"identi": $scope.juegoActual.identi,"titulo": $scope.juegoActual.titulo,"nivel": $scope.juegoActual.nivel,"puntuacion": $scope.puntuacion,"estado": $scope.estado,"correctas": $scope.correctas,"incorrectas": $scope.errores,"ultimoUso": time}}
 
             $http({
               method: 'POST',
@@ -119,17 +123,23 @@
               data: $scope.updateGame,
               headers : {'Accept' : 'application/json'}
           }).then(function successCallback(response) {
-              console.log(response);
-              /*  $http({
+
+            //$scope.puntuacion
+            $scope.sumaPuntos  = $rootScope.thisUser.puntuacion.matematicas - $scope.puntosOld;
+            $scope.sumaPuntos = $rootScope.thisUser.puntuacion.matematicas + $scope.puntuacion;
+
+
+            $scope.sumaPuntos = $rootScope.thisUser.puntuacion.matematicas + $scope.puntuacion;
+                $http({
                   method: 'POST',
-                  url: '/updateGame',
-                  data: $scope.newJuego,
+                  url: '/puntosMates',
+                  data: $scope.sumaPuntos,
                   headers : {'Accept' : 'application/json'}
               }).then(function successCallback(response) {
 
                 //Abrimos el modal que mostrara los datos del usuario.
                   $(".correccion").modal();
-              }) ; */
+              }) ;
           }) ;
 
        }
