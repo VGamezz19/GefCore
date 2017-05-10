@@ -222,6 +222,43 @@ exports.juego = (req, res, next) => {
    User.findOneAndUpdate(query, {"$pull": {'puntuacion': {matematicas: puntos}}});
  }
 
+ exports.juegoIngles = (req, res, next) => {
+   var id = req.user.id;
+   var juego = req.body;
+   var query = {'_id':id};
+
+   User.findOneAndUpdate(query, { "$push": { "matematicas": juego } } , { "new": true, "upsert": true }, function(err, doc){
+       if (err) return res.send(500, { error: err });
+       return res.send(juego);
+   });
+ }
+  exports.updateJuegoIngles = (req, res, next) => {
+    var id = req.user.id;
+    var juego = req.body;
+    var idmates = juego.identi;
+    var query = {'_id':id};
+
+
+
+    User.findOneAndUpdate(query, { "$pull": { "ingles": {identi: idmates} } } , { "new": true, "upsert": true }, function(err, doc){
+        if (err) return res.send(500, { error: err });
+        return res.send(juego);
+    });
+
+      User.findOneAndUpdate(query, { "$push": { "ingles": juego } } , { "new": true, "upsert": true }, function(err, doc){
+          if (err) return res.send(500, { error: err });
+          return res.send(juego);
+      });
+  };
+
+  exports.updatePuntosIngles = (req, res, next) => {
+    var id = req.user.id;
+    var puntos = req.body;
+    var query = {'_.id':id};
+
+    User.findOneAndUpdate(query, {"$pull": {'puntuacion': {ingles: puntos}}});
+  }
+
 //metodo singOut
 exports.singOut = function(req, res) {
   //metodo log out de passport
