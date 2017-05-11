@@ -214,23 +214,23 @@ exports.juego = (req, res, next) => {
      });
  };
 
- exports.updatePuntosMates = (req, res, next) => {
+exports.updatePuntosMates = (req, res, next) => {
    var id = req.user.id;
    var puntos = req.body;
-   var num = parseInt(puntos.puntos);
-   var query = {'_.id':id};
+   var query = {'_id':id};
 
-   User.findOneAndUpdate(query, puntos, (err,  puntos) => {
-     if(!err) {
-     res.send("it works");
+  User.findOneAndUpdate(query,{ $set:{"puntuacion":{"matematicas":puntos.puntuacion.matematicas}}}, {"upsert": true},
+      (err,  puntos) => {
+       if(!err) {
+       res.send("it works");
+     }
+     else {
+       res.json(err);
+     }
+     });
    }
-   else {
-     res.json(puntos);
-   }
-   });
- }
 
- exports.juegoIngles = (req, res, next) => {
+exports.juegoIngles = (req, res, next) => {
    var id = req.user.id;
    var juego = req.body;
    var query = {'_id':id};
@@ -240,7 +240,7 @@ exports.juego = (req, res, next) => {
        return res.send(juego);
    });
  }
-  exports.updateJuegoIngles = (req, res, next) => {
+exports.updateJuegoIngles = (req, res, next) => {
     var id = req.user.id;
     var juego = req.body;
     var idmates = juego.identi;
@@ -259,12 +259,20 @@ exports.juego = (req, res, next) => {
       });
   };
 
-  exports.updatePuntosIngles = (req, res, next) => {
+exports.updatePuntosIngles = (req, res, next) => {
     var id = req.user.id;
     var puntos = req.body;
-    var query = {'_.id':id};
+    var query = {'_id':id};
 
-    //User.update(query, {$inc: {"puntuacion.ingles": puntos}});
+   User.findOneAndUpdate(query,{ $set:{"puntuacion":{"matematicas":puntos.puntuacion.ingles}}}, {"upsert": true},
+       (err,  puntos) => {
+        if(!err) {
+        res.send("it works");
+      }
+      else {
+        res.json(err);
+      }
+      });
   }
 
 //metodo singOut
