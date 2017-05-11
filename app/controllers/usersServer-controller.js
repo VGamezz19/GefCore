@@ -219,7 +219,7 @@ exports.updatePuntosMates = (req, res, next) => {
    var puntos = req.body;
    var query = {'_id':id};
 
-  User.findOneAndUpdate(query,{ $set:{"puntuacion":{"matematicas":puntos.puntuacion.matematicas}}}, {"upsert": true},
+  User.findOneAndUpdate(query,{ $set:{"puntuacion":{"matematicas":puntos.puntuacion.matematicas, "ingles": puntos.puntuacion.ingles}}}, {"upsert": true},
       (err,  puntos) => {
        if(!err) {
        res.send("it works");
@@ -264,7 +264,7 @@ exports.updatePuntosIngles = (req, res, next) => {
     var puntos = req.body;
     var query = {'_id':id};
 
-   User.findOneAndUpdate(query,{ $set:{"puntuacion":{"matematicas":puntos.puntuacion.ingles}}}, {"upsert": true},
+   User.findOneAndUpdate(query,{ $set:{"puntuacion":{"ingles":puntos.puntuacion.ingles}}}, {"upsert": true},
        (err,  puntos) => {
         if(!err) {
         res.send("it works");
