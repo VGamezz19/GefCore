@@ -135,7 +135,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
 
 
         });
-
+//////!!!!!!!!******
         //Restamos la puntuacion general de matematicas del usuario por los puntos antiguos conseguidos
         //en ese mismo nivel
         $scope.sumaPuntos  = $rootScope.thisUser.puntuacion.matematicas - $scope.puntosOld;
@@ -155,11 +155,47 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
           console.log(response);
         //Abrimos el modal que mostrara los datos del usuario.
           $(".correccion").modal();
+          $http({
+            method: 'GET',
+            url: '/getAllMates'
+          }).then(function successCallback(response) {
+
+              $scope.matematicas.forEach(function(allMates) {
+            //  var allMates = allMates;
+              var jugado = false ;
+              if($scope.sumaPuntos > allMates.puntuacionTotal ) {
+
+                 $rootScope.thisUser.matematicas.forEach(function(identUser) {
+
+                    if(!jugado) {
+
+                        if (identUser.juego.identi == allMates.identi && (identUser.juego.estado == 0 || identUser.juego.estado == 1 || identUser.juego.estado == 3) && $scope.sumaPuntos > allMates.puntuacionTotal ) {
+                            jugado = true;
+                        }
+                     }
+                    });
+
+                    if (jugado == false && allMates.identi != id) {
+
+                      var time = new Date();
+                      $scope.newJuego = {"juego": {"identi": allMates.identi,"titulo": allMates.titulo,"nivel": allMates.nivel,"puntuacion": 0,"estado": 0,"correctas": 0,"incorrectas": 0,"ultimoUso": time}}
+
+                            $http({
+                              method: 'POST',
+                              url: '/createGame',
+                              data: $scope.newJuego,
+                              headers : {'Accept' : 'application/json'}
+                          }).then(function successCallback(response) {
+                              $rootScope.currentUser();
+                          }) ;
+                    }
+                } else {
+                  jugado = false;
+                }
+              });
+          }, function errorCallback(response) {
+          });
       });
-      });
-
-     }
-
-
-
+    });
+  }
 }]);
