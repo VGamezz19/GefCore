@@ -132,13 +132,14 @@
             //el usuario jugando en este nivel
             $scope.sumaPuntos = $rootScope.thisUser.puntuacion.matematicas + $scope.puntuacion;
             console.log("puntos sumados", $scope.sumaPuntos);
+            $scope.transfer = {puntos: $scope.sumaPuntos};
             //Insertamos los puntos actualizados del nivel
                 $http({
                   method: 'POST',
                   url: '/puntosMates',
-                  data: $scope.sumaPuntos
+                  data: $scope.transfer,
               }).then(function successCallback(response) {
-
+                  console.log(response);
                 //Abrimos el modal que mostrara los datos del usuario.
                   $(".correccion").modal();
               });

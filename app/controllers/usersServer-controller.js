@@ -210,17 +210,23 @@ exports.juego = (req, res, next) => {
 
      User.findOneAndUpdate(query, { "$push": { "matematicas": juego } } , { "new": true, "upsert": true }, function(err, doc){
          if (err) return res.send(500, { error: err });
-         return res.send(juego);
+
      });
  };
 
  exports.updatePuntosMates = (req, res, next) => {
    var id = req.user.id;
    var puntos = req.body;
+   var num = parseInt(puntos.puntos);
    var query = {'_.id':id};
 
-   User.update(query, {$inc: {"puntuacion.matematicas": puntos}}, (err, puntos) => {
-     res.send(puntos);
+   User.findOneAndUpdate(query, puntos, (err,  puntos) => {
+     if(!err) {
+     res.send("it works");
+   }
+   else {
+     res.json(puntos);
+   }
    });
  }
 
