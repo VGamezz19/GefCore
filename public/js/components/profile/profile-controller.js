@@ -1,57 +1,68 @@
 angular.module('profile').controller('profileController',['$scope', function ($scope) {
 
 
-      
 
-      //========================FUNCIONES PROFILE===============================
+      $http({
+        method: 'GET',
+        url: '/currentUser',
 
-      //1--=====================================================================
-      //Funcion para sumar todos los puntos totales que lleva actualmente el
-      //usuario en Matematicas.
+      }).then(function successCallback(res) {
+        $scope.currentUser = response.data;
 
-      function puntosTotales ()  {
-        $scope.puntosTotalesMates = 0;
+        //========================FUNCIONES PROFILE===============================
 
-        $scope.usuario.usuario[0].matematicas.forEach(function(juegosMatematicas) {
+        //1--=====================================================================
+        //Funcion para sumar todos los puntos totales que lleva actualmente el
+        //usuario en Matematicas.
 
-            $scope.puntosTotalesMates = $scope.puntosTotalesMates + juegosMatematicas.juego.puntos;
-        });
-      }
+        function puntosTotales ()  {
+          $scope.puntosTotalesMates = 0;
 
-      //2--=====================================================================
-      //Funcion para saver el ultimo juego que esta cursando el usuario.
-      //Eso lo podemos saber gracias al estado del juego.
-      // Estado 0  --> El juego ya esta disponible
-      // Estado 1 --> El usuario ya ha jugado a ese juego
-      // Estado 3 --> El juego ha sido jugado pero con muchos errors (recordar).
+          $scope.usuario.usuario[0].matematicas.forEach(function(juegosMatematicas) {
 
-      function juegoMatesActual() {
-        var i = 0;
+              $scope.puntosTotalesMates = $scope.puntosTotalesMates + juegosMatematicas.juego.puntos;
+          });
+        }
 
-        $scope.usuario.usuario[0].matematicas.forEach(function(juegosMatematicas) {
-            console.log(juegosMatematicas);
+        //2--=====================================================================
+        //Funcion para saver el ultimo juego que esta cursando el usuario.
+        //Eso lo podemos saber gracias al estado del juego.
+        // Estado 0  --> El juego ya esta disponible
+        // Estado 1 --> El usuario ya ha jugado a ese juego
+        // Estado 3 --> El juego ha sido jugado pero con muchos errors (recordar).
 
-            if (juegosMatematicas.juego.estado === 0) {
+        function juegoMatesActual() {
+          var i = 0;
 
-              return  $scope.ultimoNivel = juegosMatematicas.juego.titulo;
+          $scope.usuario.usuario[0].matematicas.forEach(function(juegosMatematicas) {
+              console.log(juegosMatematicas);
 
-            } else {
-              return $scope.ultimoNivel = "Aun no has jugado ningun nivel";
-            }
+              if (juegosMatematicas.juego.estado === 0) {
 
-        });
+                return  $scope.ultimoNivel = juegosMatematicas.juego.titulo;
 
-      }
+              } else {
+                return $scope.ultimoNivel = "Aun no has jugado ningun nivel";
+              }
 
-      //=============================Fin FUNCIONES PROFILE======================
+          });
+
+        }
+
+        //=============================Fin FUNCIONES PROFILE======================
 
 
 
 
-      //=======================Ejecucion de las funciones ======================
+        //=======================Ejecucion de las funciones ======================
 
-      juegoMatesActual();
+        juegoMatesActual();
 
-      puntosTotales();
+        puntosTotales();
 
-    }]);
+      }]);
+
+      }, function errorCallback(res) {
+        return false;
+          console.log("error");
+      });
