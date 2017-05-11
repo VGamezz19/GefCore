@@ -21,10 +21,16 @@ if (!$rootScope.thisUser) {
     });
 
     console.log($rootScope.thisUser.puntuacion);
+    this.puntuacionMaxima = $rootScope.thisUser.puntuacion.matematicas;
+/* //Le pasamos la puntuacion maxima de matematicas del usuario conectado a la Template.
 
- //Le pasamos la puntuacion maxima de matematicas del usuario conectado a la Template.
-   this.puntuacionMaxima = $rootScope.thisUser.puntuacion.matematicas;
 
+   for (var i = 0; i < matematicas.length; i++) {
+     if this.puntuacionMaxima > matematicas[i].puntuacionTotal {
+
+     }
+   }
+ */
 
 
 

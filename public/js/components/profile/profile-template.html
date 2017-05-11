@@ -7,6 +7,11 @@
       <span>{{puntosTotalesMates}}</span>
 </div>
 
+<div ng-repeat ="paraJugar in ultimoNivel">
+  <a href="/juego/ {{paraJugar.juego.identi}}" ></a>
+  <span>{{paraJugar.juego.titulo}}</span>
+</div>
+
 <script>
   $(".container-fluid").hide();
 </script>

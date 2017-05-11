@@ -36,6 +36,9 @@ module.exports = function(app){
 
     app.route('/updateGame')
     .post(users.updateJuego);
+    
+    app.route('/deleteGame')
+    .post(users.deleteJuego);
 
       app.route('/puntosMates')
       .post(users.updatePuntosMates);
