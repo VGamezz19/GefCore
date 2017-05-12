@@ -42,7 +42,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
          console.log(jugado);
          if (jugado === false) {
           console.log("NUNCA HA JUGADO COÑO", jugado);
-           var time = new Date();
+          
            $scope.newJuego = {"juego": {"identi": $scope.juegoActual.identi,"titulo": $scope.juegoActual.titulo,"nivel": $scope.juegoActual.nivel,"puntuacion": 0,"estado": 0,"correctas": 0,"incorrectas": 0,"ultimoUso": time}}
 
                  $http({
@@ -68,6 +68,9 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
      //Funcion que se ejecutara cuando el usuario pulse el boton de "corregir nivel"
      $scope.uploadGame = function() {
 
+      var time = new Date();
+      var hora = time.getHours();
+      time.setHours(hora + 2);
       $scope.errores = 0;
       $scope.correctas = 0;
       $scope.puntuacion  = 0;
@@ -117,7 +120,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
       console.log($scope.puntosOld);
       console.log( "cnt",cnt);
 
-      var time = new Date();
+
       $scope.updateGame = {"_id":idGameUser,"juego": {"identi": $scope.juegoActual.identi,"titulo": $scope.juegoActual.titulo,"nivel": $scope.juegoActual.nivel,"puntuacion": $scope.puntuacion,"estado": $scope.estado,"correctas": $scope.correctas,"incorrectas": $scope.errores,"ultimoUso": time}}
       $http({
         method: 'POST',

@@ -20,10 +20,10 @@ var userSchema = new Schema({
 },
     firstName : String,
     lastName : String,
-    email : {type: String, required: true,
+    email : {type: String, required: 'email necesario',
     //validamos que sea de formato email
     match: [/.+\@.+\..+/, 'Escribe un email correcto']},
-    password: {type: String, validate: [function(password){
+    password: {type: String, required: 'necesitas una contraseña', validate: [function(password){
         return password && password.length > 6;
     }, 'La contraseña debe ser de minimo 7 caracteres'
 ]
