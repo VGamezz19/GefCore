@@ -8,7 +8,8 @@
         url:'/getAll'
       }).then(function successCallback(response){
         $scope.usuarioCompleto = response.data;
-        console.log(response.data[0].username);
+        console.log(response.data);
+
       });
 
 
