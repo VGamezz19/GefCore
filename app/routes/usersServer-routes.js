@@ -17,12 +17,14 @@ module.exports = function(app){
   app.route('/error')
       .get(users.renderSingUp);
 
+    app.route('/logError')
+        .get(users.renderSingIn);
+
   //seteamos la ruta singIn
   app.route('/singin')
-      .get(users.renderSingIn)
       .post(passport.authenticate('local', {
         successRedirect: '/',
-        failureRedirect: '/',
+        failureRedirect: '/logError',
         failureFlash: true,
 
       }));
