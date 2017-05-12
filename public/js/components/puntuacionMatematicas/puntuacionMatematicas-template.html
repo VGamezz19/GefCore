@@ -12,7 +12,7 @@
           <tbody>
             <tr ng-repeat ="usuarios in puntuacion.usuarios  | orderBy: '-puntuacionTotal' track by $index " id ="tag{{$index}}">
 
-              <td>{{1 + $index}} - {{usuarios.name}}</td>
+              <td>{{1 + $index}} - {{usuarioCompleto[$index].username}}</td>
               <td>{{usuarios.puntuacionTotal}}</td>
               <td>{{usuarios.NivelActual}}</td>
             </tr>

@@ -219,6 +219,8 @@ exports.updateJuego = (req, res, next) => {
      User.findOneAndUpdate(query, { "$push": { "matematicas": juego } } , { "new": true, "upsert": true }, function(err, doc){
          if(err){
            return next(err);
+         } else {
+           return next();
          }
 
      });
