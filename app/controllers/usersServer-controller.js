@@ -217,11 +217,11 @@ exports.updateJuego = (req, res, next) => {
    var query = {'_id':id};
 
      User.findOneAndUpdate(query, { "$push": { "matematicas": juego } } , { "new": true, "upsert": true }, function(err, doc){
-         if(err){
-           return next(err);
-         } else {
-           return next();
-         }
+       if(err){
+         return next(err);
+       } else {
+         return next();
+       }
 
      });
  };
@@ -264,16 +264,12 @@ exports.updateJuegoIngles = (req, res, next) => {
 
 
     User.findOneAndUpdate(query, { "$pull": { "ingles": {identi: idmates} } } , { "new": true, "upsert": true }, function(err, doc){
-        if(err){
-          return next(err);
-        }
+        if (err) return res.send(500, { error: err });
         return res.send(juego);
     });
 
       User.findOneAndUpdate(query, { "$push": { "ingles": juego } } , { "new": true, "upsert": true }, function(err, doc){
-        if(err){
-          return next(err);
-        }
+          if (err) return res.send(500, { error: err });
           return res.send(juego);
       });
   };
@@ -288,8 +284,8 @@ exports.updatePuntosIngles = (req, res, next) => {
         if(!err) {
         res.send("it works");
       }
-      if(err){
-        return next(err);
+      else {
+        res.json(err);
       }
       });
   }
