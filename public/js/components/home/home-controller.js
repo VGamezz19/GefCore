@@ -15,6 +15,7 @@ angular.module('homeModule').controller('homeController',['$scope', '$http', '$r
     } else {
       $scope.nivel = 0;
       $rootScope.thisUser.matematicas.forEach(function(actualUser) {
+
           if (actualUser.juego.estado == 0) {
 
             if ($scope.nivel < actualUser.juego.nivel) {
@@ -22,8 +23,7 @@ angular.module('homeModule').controller('homeController',['$scope', '$http', '$r
               $scope.link = actualUser.juego.identi;
               $scope.tituloJuego = actualUser.juego.titulo;
             }
-
-          }
+          } 
       });
 
     }
