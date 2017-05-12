@@ -24,7 +24,7 @@ module.exports = function(app){
   app.route('/singin')
       .post(passport.authenticate('local', {
         successRedirect: '/',
-        failureRedirect: '/logError',
+        failureRedirect: '/',
         failureFlash: true,
 
       }));

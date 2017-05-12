@@ -48,7 +48,7 @@ exports.renderSingIn = function(req, res, next){
       messages: req.flash('error') || req.flash('info')
     });
   } else {
-    return res.redirect('/logError');
+    return res.redirect('/');
   }
 };
 
