@@ -10,11 +10,11 @@
           </tr>
         </thead>
           <tbody>
-            <tr ng-repeat ="usuarios in puntuacion.usuarios  | orderBy: '-puntuacionTotal' track by $index " id ="tag{{$index}}">
+            <tr ng-repeat ="usuarios in usuarioCompleto  | orderBy: '-puntuacion.matematicas' track by $index " id ="tag{{$index}}">
 
-              <td>{{1 + $index}} - {{usuarioCompleto[$index].username}}</td>
-              <td>{{usuarios.puntuacionTotal}}</td>
-              <td>{{usuarios.NivelActual}}</td>
+              <td>{{1 + $index}} - {{usuarios.username}}</td>
+              <td>{{usuarios.puntuacion.matematicas}}</td>
+              <td>{{usuarios.matematicas[$index].juego.identi}}</td>
             </tr>
           </tbody>
         </table>
