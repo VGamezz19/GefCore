@@ -14,6 +14,8 @@ module.exports = function(app){
 
   app.route('/singup')
       .post(users.singUp);
+  app.route('/error')
+      .get(users.renderSingUp);
 
   //seteamos la ruta singIn
   app.route('/singin')
@@ -36,7 +38,7 @@ module.exports = function(app){
 
     app.route('/updateGame')
     .post(users.updateJuego);
-    
+
     app.route('/deleteGame')
     .post(users.deleteJuego);
 

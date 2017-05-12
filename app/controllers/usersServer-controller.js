@@ -57,10 +57,11 @@ exports.renderSingUp = function(req, res, next){
   if(!req.user){
     //usamos el objeto response para renderizar singUp
 
-    res.render('index',{
+    res.render('singUp',{
 
       //configuramos la variable title
       title: 'registrate',
+
       //cogemos la variable de los mensajes de error
       messages: req.flash('error') || req.flash('info')
     });
@@ -169,7 +170,7 @@ exports.singUp = function(req, res, next ){
         req.flash('error', message);
 
 
-        return res.redirect('/');
+        return res.redirect('/error');
       }
         //si el usuario se ha creado corectamente lo loguea
       req.login(user, function(err){
