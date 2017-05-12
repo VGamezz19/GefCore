@@ -3,6 +3,7 @@
      "titulo": "Aprende a sumar!",
      "identi": "juego1",
      "puntuacionTotal": 0,
+     "nivel": 1,
      "preguntas": [{
 
        "pregunta" :{
@@ -65,6 +66,7 @@
      "titulo": "Ahora toca restar",
      "identi": "juego2",
      "puntuacionTotal": 50,
+     "nivel":2,
      "preguntas": [{
 
        "pregunta" :{
@@ -127,6 +129,7 @@
      "titulo": "Aprende a sumar!",
      "identi": "juego3",
      "puntuacionTotal": 100,
+     "nivel":3,
      "preguntas": [{
 
        "pregunta" :{
@@ -189,6 +192,7 @@
      "titulo": "Aprende a sumar!",
      "identi": "juego4",
      "puntuacionTotal": 150,
+     "nivel":4,
      "preguntas": [{
 
        "pregunta" :{
@@ -251,6 +255,7 @@
      "titulo": "Aprende a sumar!",
      "identi": "juego5",
      "puntuacionTotal": 200,
+     "nivel":5,
      "preguntas": [{
 
        "pregunta" :{
@@ -313,6 +318,7 @@
      "titulo": "Aprende a sumar!",
      "identi": "juego6",
      "puntuacionTotal": 250,
+     "nivel":6,
      "preguntas": [{
 
        "pregunta" :{
@@ -375,6 +381,7 @@
      "titulo": "Aprende a sumar!",
      "identi": "juego7",
      "puntuacionTotal": 300,
+     "nivel":7,
      "preguntas": [{
 
        "pregunta" :{
@@ -437,6 +444,7 @@
      "titulo": "Aprende a sumar!",
      "identi": "juego8",
      "puntuacionTotal": 350,
+     "nivel":8,
      "preguntas": [{
 
        "pregunta" :{
@@ -499,6 +507,7 @@
      "titulo": "Aprende a sumar!",
      "identi": "juego9",
      "puntuacionTotal": 400,
+     "nivel":9,
      "preguntas": [{
 
        "pregunta" :{
@@ -561,6 +570,7 @@
      "titulo": "Aprende a sumar!",
      "identi": "juego10",
      "puntuacionTotal": 450,
+     "nivel":10,
      "preguntas": [{
 
        "pregunta" :{

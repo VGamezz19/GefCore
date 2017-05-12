@@ -1,4 +1,4 @@
-angular.module('juego').controller('juegoController',['$scope','$http','$rootScope','$routeParams', '$route', function ($scope,$http,$rootScope,$routeParams,$route) {
+angular.module('juego').controller('juegoController',['$scope','$http','$rootScope','$routeParams', '$route', function ($scope,$http,$rootScope,$routeParams,$route, $location) {
 
 //==============================================================================
 
@@ -132,8 +132,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
             data: $scope.updateGame,
             headers : {'Accept' : 'application/json'}
         }).then(function successCallback(response) {
-
-
+            console.log("HEEEEE UPDATE GAME PUTO", response);
         });
 //////!!!!!!!!******
         //Restamos la puntuacion general de matematicas del usuario por los puntos antiguos conseguidos
@@ -154,14 +153,24 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
       }).then(function successCallback(response) {
           console.log(response);
         //Abrimos el modal que mostrara los datos del usuario.
+          $("botton").click(function(){
+            $location.path( "/matematicas" );
+          });
           $(".correccion").modal();
+
+          $("botton").click(function(){
+            $location.path( "/matematicas" );
+          });
+
           $http({
             method: 'GET',
             url: '/getAllMates'
           }).then(function successCallback(response) {
+            console.log("getAll",$scope.matematicas);
+              $scope.matematicasList = response.data;
 
-              $scope.matematicas.forEach(function(allMates) {
-            //  var allMates = allMates;
+              $scope.matematicasList.forEach(function(allMates) {
+
               var jugado = false ;
               if($scope.sumaPuntos > allMates.puntuacionTotal ) {
 
@@ -169,7 +178,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
 
                     if(!jugado) {
 
-                        if (identUser.juego.identi == allMates.identi && (identUser.juego.estado == 0 || identUser.juego.estado == 1 || identUser.juego.estado == 3) && $scope.sumaPuntos > allMates.puntuacionTotal ) {
+                        if (identUser.juego.identi == allMates.identi && (identUser.juego.estado == 0 || identUser.juego.estado == 1 || identUser.juego.estado == 3)) {
                             jugado = true;
                         }
                      }
