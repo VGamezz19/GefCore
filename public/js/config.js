@@ -27,9 +27,6 @@ angular.module('myApp').
         when('/puntuacionMatematicas', {
           template: '<puntuacion-matematicas-component></puntuacion-matematicas-component>'
         }).
-        when('/mongoose', {
-          template: '<test-mongoose-component></test-mongoose-component>'
-        }).
         otherwise({
           redirectTo: '/'
         });

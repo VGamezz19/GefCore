@@ -3,7 +3,6 @@
 
 angular.module('myApp', [
   'ngRoute',
-  'example',
   'homeModule',
   'profile',
   'matematicas',

@@ -1,17 +1,60 @@
-
+<link rel="stylesheet" href="/js/components/profile/profile-css.css">
 <div>
     <h1>profile</h1>
-      <span>
-        <span> {{ultimoNivel}}</span>
-      </span>
-      <span>{{puntosTotalesMates}}</span>
 </div>
+<h1>Matematicas</h1>
+  <div class ="row">
+    <div class =" col-md-7 col-lg-7">
+      <h1>Juegos para repetir</h1>
+      <div ng-repeat ="paraJugar in repetir">
+        <div class ="col-md-12 col-lg-12 matematicasHome " >
+          <a href="/juego/{{paraJugar.juego.identi}}" class ="" >
+            <div class ="col-md-3 col-lg-3 juegos-matematicas-home  {{paraJugar.juego.identi}}">
+              Nivel {{paraJugar.juego.nivel}}
+            </div>
+            <div class ="col-md-6 col-lg-6 juegos-matematicas-home  {{paraJugar.juego.identi}}">
+              <span>{{paraJugar.juego.titulo}}</span>
+            </div>
+          </a>
+        </div>
+        <span class ="fi glyphicon glyphicon-refresh spanFlotando"></span>
+      </div>
 
-<div ng-repeat ="paraJugar in ultimoNivel">
-  <a href="/juego/ {{paraJugar.juego.identi}}" ></a>
-  <span>{{paraJugar.juego.titulo}}</span>
-</div>
 
-<script>
-  $(".container-fluid").hide();
-</script>
+    <div class ="col-md-12 col-lg-12 matematicasHome " >
+      <h1>Niveles que puedes jugar</h1>
+      <div ng-repeat ="paraJugar in ultimoNivel">
+        <a href="/juego/{{paraJugar.juego.identi}}" class ="" >
+          <div class ="col-md-3 col-lg-3 juegos-matematicas-home  {{paraJugar.juego.identi}}">
+            Nivel {{paraJugar.juego.nivel}}
+          </div>
+          <div class ="col-md-6 col-lg-6 juegos-matematicas-home  {{paraJugar.juego.identi}}">
+            <span>{{paraJugar.juego.titulo}}</span>
+          </div>
+        </a>
+        <span class ="fi glyphicon glyphicon-arrow-left spanFlotando"></span>
+      </div>
+    </div>
+
+    </div>
+    <div class =" col-md-5 col-lg-5">
+      <div class ="col-md-12 col-lg-12 matematicasHome " >
+        <h1>Juegos jugados</h1>
+        <div ng-repeat ="paraJugar in ultimoRegistro">
+          <a href="/juego/{{paraJugar.juego.identi}}" class ="" >
+            <div class ="col-md-3 col-lg-3 juegos-matematicas-home  {{paraJugar.juego.identi}}">
+              Nivel {{paraJugar.juego.nivel}}
+            </div>
+            <div class ="col-md-7 col-lg-7 juegos-matematicas-home  {{paraJugar.juego.identi}}">
+              <span>{{paraJugar.juego.titulo}}</span>
+            </div>
+          </a>
+          <span class ="fi glyphicon glyphicon-ok spanFlotando"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src ="/js/components/profile/profile-jquery.js">  </script>

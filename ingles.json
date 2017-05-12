@@ -1,7 +1,8 @@
 {
-     "titulo": "Present simple to be",
+     "titulo": "To be",
      "identi": "juego1",
      "puntuacionTotal": 0,
+     "nivel": 1,
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
@@ -84,6 +85,7 @@
      "titulo": "Basic numbers",
      "identi": "juego2",
      "puntuacionTotal": 0,
+     "nivel": 2,
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
@@ -162,9 +164,10 @@
 },
 
 {
-     "titulo": "Contracted forms to be",
+     "titulo": "Contracted to be",
      "identi": "juego3",
      "puntuacionTotal": 0,
+     "nivel": 3,
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
@@ -245,6 +248,7 @@
      "titulo": "Advanced numbers",
      "identi": "juego4",
      "puntuacionTotal": 0,
+     "nivel": 4,
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
@@ -325,6 +329,7 @@
      "titulo": "Common Animals",
      "identi": "juego5",
      "puntuacionTotal": 0,
+     "nivel": 5,
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
@@ -406,6 +411,7 @@
      "titulo": "Clothes",
      "identi": "juego6",
      "puntuacionTotal": 0,
+     "nivel": 6,
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
@@ -486,6 +492,7 @@
      "titulo": "Transport",
      "identi": "juego7",
      "puntuacionTotal": 0,
+     "nivel": 7,
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
@@ -567,6 +574,7 @@
      "titulo": "Food",
      "identi": "juego8",
      "puntuacionTotal": 0,
+     "nivel": 8,
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
@@ -648,6 +656,7 @@
      "titulo": "Toys",
      "identi": "juego9",
      "puntuacionTotal": 0,
+     "nivel": 9,
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
@@ -728,6 +737,7 @@
      "titulo": "House",
      "identi": "juego10",
      "puntuacionTotal": 0,
+     "nivel": 10,
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",

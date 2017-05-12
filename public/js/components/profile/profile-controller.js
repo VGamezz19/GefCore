@@ -27,24 +27,29 @@ angular.module('profile').controller('profileController',['$scope','$http', func
 
         function juegoMatesActual() {
           $scope.ultimoNivel =[];
+          $scope.ultimoRegistro = [];
+          $scope.repetir = [];
+
+          $scope.totalErrores = 0;
+          $scope.totalCorrecto = 0;
           //Si el array de matematicas, esta vacio, significa que aun no ha jugado
-          if ($scope.currentUser.matematicas.length == 0) {
-            $scope.ultimoNivel = "Aun no has jugado ningun juego de mates";
-          } else {
+
+
             $scope.currentUser.matematicas.forEach(function(juegosMatematicas) {
-                console.log(juegosMatematicas);
+
+              $scope.totalErrores =  $scope.totalErrores + juegosMatematicas.juego.incorrectas;
+              $scope.totalCorrecto = $scope.totalCorrecto + juegosMatematicas.juego.correctas;
+
                 if (juegosMatematicas.juego.estado === 0) {
-                    //Hacemos un push de los juegos disponibles.
                     $scope.ultimoNivel.push(juegosMatematicas);
-
-
-                } else  {
-                   $scope.ultimoNivel = "Has superado todos los juegos de Mates!";
-                   $scope.TodoSuperadoMates = true;
                 }
-
+                if (juegosMatematicas.juego.estado === 1) {
+                    $scope.ultimoRegistro.push(juegosMatematicas);
+                }
+                if (juegosMatematicas.juego.estado === 3) {
+                    $scope.repetir.push(juegosMatematicas);
+                }
             });
-          }
 
 
         }
