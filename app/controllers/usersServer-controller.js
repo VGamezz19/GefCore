@@ -202,7 +202,9 @@ exports.deleteJuego = (req, res, next) => {
   var query = {'_id':id};
 
   User.findOneAndUpdate(query, { "$pull": { "matematicas": {_id: juego._id} } } , { "new": true, "upsert": true }, function(err, doc){
-      if (err) return res.send(500, { error: err });
+      if(err){
+        return next(err);
+      }
       return res.send(juego._id);
 
     });
@@ -215,7 +217,9 @@ exports.updateJuego = (req, res, next) => {
    var query = {'_id':id};
 
      User.findOneAndUpdate(query, { "$push": { "matematicas": juego } } , { "new": true, "upsert": true }, function(err, doc){
-         if (err) return res.send(500, { error: err });
+         if(err){
+           return next(err);
+         }
 
      });
  };
@@ -228,11 +232,12 @@ exports.updatePuntosMates = (req, res, next) => {
   User.findOneAndUpdate(query,{ $set:{"puntuacion":{"matematicas":puntos.puntuacion.matematicas, "ingles": puntos.puntuacion.ingles}}}, {"upsert": true},
       (err,  puntos) => {
        if(!err) {
-       res.send("it works");
-     }
-     else {
-       res.json(err);
-     }
+         res.send("it works");
+       }
+       if(err){
+         return next(err);
+       }
+
      });
    }
 
@@ -242,7 +247,9 @@ exports.juegoIngles = (req, res, next) => {
    var query = {'_id':id};
 
    User.findOneAndUpdate(query, { "$push": { "matematicas": juego } } , { "new": true, "upsert": true }, function(err, doc){
-       if (err) return res.send(500, { error: err });
+       if(err){
+         return next(err);
+       }
        return res.send(juego);
    });
  }
@@ -255,12 +262,16 @@ exports.updateJuegoIngles = (req, res, next) => {
 
 
     User.findOneAndUpdate(query, { "$pull": { "ingles": {identi: idmates} } } , { "new": true, "upsert": true }, function(err, doc){
-        if (err) return res.send(500, { error: err });
+        if(err){
+          return next(err);
+        }
         return res.send(juego);
     });
 
       User.findOneAndUpdate(query, { "$push": { "ingles": juego } } , { "new": true, "upsert": true }, function(err, doc){
-          if (err) return res.send(500, { error: err });
+        if(err){
+          return next(err);
+        }
           return res.send(juego);
       });
   };
@@ -275,8 +286,8 @@ exports.updatePuntosIngles = (req, res, next) => {
         if(!err) {
         res.send("it works");
       }
-      else {
-        res.json(err);
+      if(err){
+        return next(err);
       }
       });
   }
