@@ -14,48 +14,6 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
      //Guardamos el "data" del juego seleccionado por el usuario.
          $scope.juegoActual = response.data;
 
-     //montamos la variable "juegos" como un array para poder mostrarlo en la template.
-         var jugado = false;
-         //Cuando el usuario es nuevo en la plataforma, el array de matematicas esta vacio y
-         //el forEach no recorre matematicas.,
-         if ($rootScope.thisUser.matematicas.length == 0) {
-           jugado = false;
-         } else {
-           //Recorremos todos lo juegos de matematicas del usuario conectado
-          $rootScope.thisUser.matematicas.forEach(function(identUser) {
-
-             //Si el usuario tiene un juego con la misma id que el juego actual,
-             //La variable "jugado" se pondra el true.
-             if(!jugado) {
-
-                 if (identUser.juego.identi == $scope.juegoActual.identi) {
-                     jugado = true;
-                 }
-              }
-             });
-         }
-
-         // Fuera del forEach (una vez terminada la comprobación de si se ha jugado a no)
-         //Usamos la variable "Jugado" para  añadirle al usuario conectado el nuevo juego o no
-         //Si NO lo ha jugado, le añadiremos un nuevo juego en "matematicas" con los datos del juego
-         //que ha entrado.
-         console.log(jugado);
-         if (jugado === false) {
-          console.log("NUNCA HA JUGADO COÑO", jugado);
-          
-           $scope.newJuego = {"juego": {"identi": $scope.juegoActual.identi,"titulo": $scope.juegoActual.titulo,"nivel": $scope.juegoActual.nivel,"puntuacion": 0,"estado": 0,"correctas": 0,"incorrectas": 0,"ultimoUso": time}}
-
-                 $http({
-                   method: 'POST',
-                   url: '/createGame',
-                   data: $scope.newJuego,
-                   headers : {'Accept' : 'application/json'}
-               }).then(function successCallback(response) {
-                 //recargamos la informacion actual del usuario.
-                   $rootScope.currentUser();
-               }) ;
-         }
-
      }, function errorCallback(response) {
 
      });
@@ -117,8 +75,6 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
       }
       //los puntos anteriores de este juego
       $scope.puntosOld = $rootScope.thisUser.matematicas[cnt].juego.puntuacion;
-      console.log($scope.puntosOld);
-      console.log( "cnt",cnt);
 
 
       $scope.updateGame = {"_id":idGameUser,"juego": {"identi": $scope.juegoActual.identi,"titulo": $scope.juegoActual.titulo,"nivel": $scope.juegoActual.nivel,"puntuacion": $scope.puntuacion,"estado": $scope.estado,"correctas": $scope.correctas,"incorrectas": $scope.errores,"ultimoUso": time}}
@@ -135,18 +91,22 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
             data: $scope.updateGame,
             headers : {'Accept' : 'application/json'}
         }).then(function successCallback(response) {
-            console.log("HEEEEE UPDATE GAME PUTO", response);
+
         });
-//////!!!!!!!!******
-        //Restamos la puntuacion general de matematicas del usuario por los puntos antiguos conseguidos
-        //en ese mismo nivel
-        $scope.sumaPuntos  = $rootScope.thisUser.puntuacion.matematicas - $scope.puntosOld;
 
-        //Sumamos la puntuacion general de matematicas del usuario por los puntos actuales que ha conseguido
-        //el usuario jugando en este nivel
-        $scope.sumaPuntos = $rootScope.thisUser.puntuacion.matematicas + $scope.puntuacion;
 
-        $rootScope.thisUser.puntuacion.matematicas = $scope.sumaPuntos;
+        if ($scope.puntosOld > $scope.puntuacion) {
+
+        } else {
+          var actualP = $rootScope.thisUser.puntuacion.matematicas;
+          var oldPuntos = $scope.puntosOld;
+          var newPuntos = $scope.puntuacion;
+          var puntuacionFinal = 0;
+
+          puntuacionFinal = actualP - oldPuntos;
+          puntuacionFinal = puntuacionFinal + newPuntos;
+          $rootScope.thisUser.puntuacion.matematicas = puntuacionFinal;
+        }
 
         //Insertamos los puntos actualizados del nivel
         $http({
@@ -154,8 +114,8 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
           url: '/puntosMates',
           data: $rootScope.thisUser,
       }).then(function successCallback(response) {
-          console.log(response);
         //Abrimos el modal que mostrara los datos del usuario.
+  ////****!!!!!
           $("botton").click(function(){
             $location.path( "/matematicas" );
           });
@@ -169,7 +129,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
             method: 'GET',
             url: '/getAllMates'
           }).then(function successCallback(response) {
-            console.log("getAll",$scope.matematicas);
+
               $scope.matematicasList = response.data;
 
               $scope.matematicasList.forEach(function(allMates) {
