@@ -8,7 +8,7 @@
 
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo":"suma 6 mas 10",
+         "titulo":"suma 6 más 10",
          "respuesta": "16",
          "puntuacion":10,
          "opciones":{}
@@ -19,7 +19,7 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo":"suma 14 mas 10",
+         "titulo":"suma 14 más 10",
          "respuesta": "24",
          "puntuacion":20,
          "opciones":{}
@@ -31,7 +31,7 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo":"suma 23 mas 10",
+         "titulo":"suma 23 más 10",
          "respuesta": "33",
          "puntuacion":30,
          "opciones":{}
@@ -126,7 +126,7 @@
 }
 
 {
-     "titulo": "Aprende a sumar!",
+     "titulo": "sumas y restas ",
      "identi": "juego3",
      "puntuacionTotal": 100,
      "nivel":3,
@@ -134,8 +134,8 @@
 
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo":"suma 6 mas 10",
-         "respuesta": "16",
+         "titulo":"6 más 10 menos 4 ",
+         "respuesta": "12",
          "puntuacion":10,
          "opciones":{}
        }
@@ -145,8 +145,8 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo":"suma 14 mas 10",
-         "respuesta": "24",
+         "titulo":"23 menos 10 más 3",
+         "respuesta": "16",
          "puntuacion":20,
          "opciones":{}
        }
@@ -157,8 +157,8 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo":"suma 23 mas 10",
-         "respuesta": "33",
+         "titulo":"suma 23 más 10 y restale 4",
+         "respuesta": "29",
          "puntuacion":30,
          "opciones":{}
        }
@@ -168,8 +168,8 @@
 
      "pregunta": {
       "identi": "pregunta4",
-       "titulo":"suma 65 mas 12",
-       "respuesta": "77",
+       "titulo":"suma 46 más 12 menos 23",
+       "respuesta": "35",
        "puntuacion":35,
        "opciones":{}
      }
@@ -178,8 +178,8 @@
 
    "pregunta": {
     "identi": "pregunta5",
-     "titulo":"suma 40 mas 10",
-     "respuesta": "50",
+     "titulo":"31 mas 5 menos 35",
+     "respuesta": "1",
      "puntuacion":40,
      "opciones":{}
    }
@@ -189,7 +189,7 @@
 }
 
 {
-     "titulo": "Aprende a sumar!",
+     "titulo": "Multiplicaciones",
      "identi": "juego4",
      "puntuacionTotal": 150,
      "nivel":4,
@@ -197,8 +197,8 @@
 
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo":"suma 6 mas 10",
-         "respuesta": "16",
+         "titulo":"3 por 6",
+         "respuesta": "18",
          "puntuacion":10,
          "opciones":{}
        }
@@ -208,8 +208,8 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo":"suma 14 mas 10",
-         "respuesta": "24",
+         "titulo":"6 por 8",
+         "respuesta": "48",
          "puntuacion":20,
          "opciones":{}
        }
@@ -220,8 +220,8 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo":"suma 23 mas 10",
-         "respuesta": "33",
+         "titulo":"3 por 9",
+         "respuesta": "27",
          "puntuacion":30,
          "opciones":{}
        }
@@ -231,8 +231,8 @@
 
      "pregunta": {
       "identi": "pregunta4",
-       "titulo":"suma 65 mas 12",
-       "respuesta": "77",
+       "titulo":"2 por 4",
+       "respuesta": "8",
        "puntuacion":35,
        "opciones":{}
      }
@@ -241,8 +241,8 @@
 
    "pregunta": {
     "identi": "pregunta5",
-     "titulo":"suma 40 mas 10",
-     "respuesta": "50",
+     "titulo":"7 por 7",
+     "respuesta": "49",
      "puntuacion":40,
      "opciones":{}
    }
@@ -252,7 +252,7 @@
 }
 
 {
-     "titulo": "Aprende a sumar!",
+     "titulo": "Más multiplicaciones",
      "identi": "juego5",
      "puntuacionTotal": 200,
      "nivel":5,
@@ -260,8 +260,8 @@
 
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo":"suma 6 mas 10",
-         "respuesta": "16",
+         "titulo":"10 por 2",
+         "respuesta": "20",
          "puntuacion":10,
          "opciones":{}
        }
@@ -271,8 +271,8 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo":"suma 14 mas 10",
-         "respuesta": "24",
+         "titulo":"8 por 9",
+         "respuesta": "72",
          "puntuacion":20,
          "opciones":{}
        }
@@ -283,8 +283,8 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo":"suma 23 mas 10",
-         "respuesta": "33",
+         "titulo":"3 por 12",
+         "respuesta": "36",
          "puntuacion":30,
          "opciones":{}
        }
@@ -294,8 +294,8 @@
 
      "pregunta": {
       "identi": "pregunta4",
-       "titulo":"suma 65 mas 12",
-       "respuesta": "77",
+       "titulo":"10 por 50",
+       "respuesta": "500",
        "puntuacion":35,
        "opciones":{}
      }
@@ -304,8 +304,8 @@
 
    "pregunta": {
     "identi": "pregunta5",
-     "titulo":"suma 40 mas 10",
-     "respuesta": "50",
+     "titulo":"12 por 12",
+     "respuesta": "144",
      "puntuacion":40,
      "opciones":{}
    }
@@ -315,7 +315,7 @@
 }
 
 {
-     "titulo": "Aprende a sumar!",
+     "titulo": "Practica la división",
      "identi": "juego6",
      "puntuacionTotal": 250,
      "nivel":6,
@@ -323,8 +323,8 @@
 
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo":"suma 6 mas 10",
-         "respuesta": "16",
+         "titulo":"6 dividido entre 2",
+         "respuesta": "3",
          "puntuacion":10,
          "opciones":{}
        }
@@ -334,8 +334,8 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo":"suma 14 mas 10",
-         "respuesta": "24",
+         "titulo":"10 dividido entre 2",
+         "respuesta": "5",
          "puntuacion":20,
          "opciones":{}
        }
@@ -346,8 +346,8 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo":"suma 23 mas 10",
-         "respuesta": "33",
+         "titulo":"20 dividido entre 5",
+         "respuesta": "4",
          "puntuacion":30,
          "opciones":{}
        }
@@ -357,8 +357,8 @@
 
      "pregunta": {
       "identi": "pregunta4",
-       "titulo":"suma 65 mas 12",
-       "respuesta": "77",
+       "titulo":"21 dividido entre 3",
+       "respuesta": "7",
        "puntuacion":35,
        "opciones":{}
      }
@@ -367,8 +367,8 @@
 
    "pregunta": {
     "identi": "pregunta5",
-     "titulo":"suma 40 mas 10",
-     "respuesta": "50",
+     "titulo":"40 dividido entre 2",
+     "respuesta": "20",
      "puntuacion":40,
      "opciones":{}
    }
@@ -378,7 +378,7 @@
 }
 
 {
-     "titulo": "Aprende a sumar!",
+     "titulo": "Más divisiones",
      "identi": "juego7",
      "puntuacionTotal": 300,
      "nivel":7,
@@ -386,8 +386,8 @@
 
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo":"suma 6 mas 10",
-         "respuesta": "16",
+         "titulo":"60 dividido entre 20",
+         "respuesta": "3",
          "puntuacion":10,
          "opciones":{}
        }
@@ -397,8 +397,8 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo":"suma 14 mas 10",
-         "respuesta": "24",
+         "titulo":"430 dividido entre 10",
+         "respuesta": "43",
          "puntuacion":20,
          "opciones":{}
        }
@@ -409,8 +409,8 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo":"suma 23 mas 10",
-         "respuesta": "33",
+         "titulo":"81 dividido entre 9",
+         "respuesta": "9",
          "puntuacion":30,
          "opciones":{}
        }
@@ -420,8 +420,8 @@
 
      "pregunta": {
       "identi": "pregunta4",
-       "titulo":"suma 65 mas 12",
-       "respuesta": "77",
+       "titulo":"800 dividido entre 800",
+       "respuesta": "1",
        "puntuacion":35,
        "opciones":{}
      }
@@ -430,8 +430,8 @@
 
    "pregunta": {
     "identi": "pregunta5",
-     "titulo":"suma 40 mas 10",
-     "respuesta": "50",
+     "titulo":"72 dividido entre 9",
+     "respuesta": "8",
      "puntuacion":40,
      "opciones":{}
    }
@@ -441,7 +441,7 @@
 }
 
 {
-     "titulo": "Aprende a sumar!",
+     "titulo": "Operaciones",
      "identi": "juego8",
      "puntuacionTotal": 350,
      "nivel":8,
@@ -449,8 +449,8 @@
 
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo":"suma 6 mas 10",
-         "respuesta": "16",
+         "titulo":"6 más 4, multiplicado por 3",
+         "respuesta": "30",
          "puntuacion":10,
          "opciones":{}
        }
@@ -460,8 +460,8 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo":"suma 14 mas 10",
-         "respuesta": "24",
+         "titulo":"10 más 5, multiplicado por 2",
+         "respuesta": "30",
          "puntuacion":20,
          "opciones":{}
        }
@@ -472,8 +472,8 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo":"suma 23 mas 10",
-         "respuesta": "33",
+         "titulo":"8 más 3, multiplicado por 5",
+         "respuesta": "55",
          "puntuacion":30,
          "opciones":{}
        }
@@ -483,8 +483,8 @@
 
      "pregunta": {
       "identi": "pregunta4",
-       "titulo":"suma 65 mas 12",
-       "respuesta": "77",
+       "titulo":"9 más 5, multiplicado por 4",
+       "respuesta": "56",
        "puntuacion":35,
        "opciones":{}
      }
@@ -493,8 +493,8 @@
 
    "pregunta": {
     "identi": "pregunta5",
-     "titulo":"suma 40 mas 10",
-     "respuesta": "50",
+     "titulo":"20 más 4, multiplicado por 2",
+     "respuesta": "48",
      "puntuacion":40,
      "opciones":{}
    }
@@ -504,7 +504,7 @@
 }
 
 {
-     "titulo": "Aprende a sumar!",
+     "titulo": "Más operaciones",
      "identi": "juego9",
      "puntuacionTotal": 400,
      "nivel":9,
@@ -512,8 +512,8 @@
 
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo":"suma 6 mas 10",
-         "respuesta": "16",
+         "titulo":"52 más 29, dividido entre 9",
+         "respuesta": "9",
          "puntuacion":10,
          "opciones":{}
        }
@@ -523,8 +523,8 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo":"suma 14 mas 10",
-         "respuesta": "24",
+         "titulo":"10 menos 6, dividido entre 2",
+         "respuesta": "2",
          "puntuacion":20,
          "opciones":{}
        }
@@ -535,8 +535,8 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo":"suma 23 mas 10",
-         "respuesta": "33",
+         "titulo":"34 más 6, dividido entre 5",
+         "respuesta": "8",
          "puntuacion":30,
          "opciones":{}
        }
@@ -546,8 +546,8 @@
 
      "pregunta": {
       "identi": "pregunta4",
-       "titulo":"suma 65 mas 12",
-       "respuesta": "77",
+       "titulo":"125 más 25, dividido entre 10",
+       "respuesta": "15",
        "puntuacion":35,
        "opciones":{}
      }
@@ -556,8 +556,8 @@
 
    "pregunta": {
     "identi": "pregunta5",
-     "titulo":"suma 40 mas 10",
-     "respuesta": "50",
+     "titulo":"45 más 3, dividido entre 8",
+     "respuesta": "6",
      "puntuacion":40,
      "opciones":{}
    }
@@ -567,7 +567,7 @@
 }
 
 {
-     "titulo": "Aprende a sumar!",
+     "titulo": "Repaso",
      "identi": "juego10",
      "puntuacionTotal": 450,
      "nivel":10,
@@ -575,8 +575,8 @@
 
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo":"suma 6 mas 10",
-         "respuesta": "16",
+         "titulo":"467 más 309",
+         "respuesta": "776",
          "puntuacion":10,
          "opciones":{}
        }
@@ -586,8 +586,8 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo":"suma 14 mas 10",
-         "respuesta": "24",
+         "titulo":"79 menos 46",
+         "respuesta": "33",
          "puntuacion":20,
          "opciones":{}
        }
@@ -598,8 +598,8 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo":"suma 23 mas 10",
-         "respuesta": "33",
+         "titulo":"74 multiplicado por 2",
+         "respuesta": "148",
          "puntuacion":30,
          "opciones":{}
        }
@@ -609,8 +609,8 @@
 
      "pregunta": {
       "identi": "pregunta4",
-       "titulo":"suma 65 mas 12",
-       "respuesta": "77",
+       "titulo":"72 dividido entre 9",
+       "respuesta": "8",
        "puntuacion":35,
        "opciones":{}
      }
@@ -619,8 +619,8 @@
 
    "pregunta": {
     "identi": "pregunta5",
-     "titulo":"suma 40 mas 10",
-     "respuesta": "50",
+     "titulo":"52 más 29, dividido entre 9",
+     "respuesta": "9",
      "puntuacion":40,
      "opciones":{}
    }

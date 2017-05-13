@@ -79,12 +79,12 @@
 
   }
      ]
-},
+}
 
 {
      "titulo": "Basic numbers",
      "identi": "juego2",
-     "puntuacionTotal": 0,
+     "puntuacionTotal": 50,
      "nivel": 2,
      "preguntas": [{
        "pregunta" :{
@@ -161,12 +161,12 @@
 
   }
      ]
-},
+}
 
 {
      "titulo": "Contracted to be",
      "identi": "juego3",
-     "puntuacionTotal": 0,
+     "puntuacionTotal": 100,
      "nivel": 3,
      "preguntas": [{
        "pregunta" :{
@@ -243,11 +243,11 @@
 
   }
      ]
-},
+}
 {
      "titulo": "Advanced numbers",
      "identi": "juego4",
-     "puntuacionTotal": 0,
+     "puntuacionTotal": 150,
      "nivel": 4,
      "preguntas": [{
        "pregunta" :{
@@ -324,11 +324,11 @@
 
   }
      ]
-},
+}
 {
      "titulo": "Common Animals",
      "identi": "juego5",
-     "puntuacionTotal": 0,
+     "puntuacionTotal": 200,
      "nivel": 5,
      "preguntas": [{
        "pregunta" :{
@@ -405,12 +405,12 @@
 
   }
      ]
-},
+}
 
 {
      "titulo": "Clothes",
      "identi": "juego6",
-     "puntuacionTotal": 0,
+     "puntuacionTotal": 250,
      "nivel": 6,
      "preguntas": [{
        "pregunta" :{
@@ -486,12 +486,12 @@
 
   }
      ]
-},
+}
 
 {
      "titulo": "Transport",
      "identi": "juego7",
-     "puntuacionTotal": 0,
+     "puntuacionTotal": 300,
      "nivel": 7,
      "preguntas": [{
        "pregunta" :{
@@ -568,12 +568,12 @@
 
   }
      ]
-},
+}
 
 {
      "titulo": "Food",
      "identi": "juego8",
-     "puntuacionTotal": 0,
+     "puntuacionTotal": 350,
      "nivel": 8,
      "preguntas": [{
        "pregunta" :{
@@ -650,12 +650,12 @@
 
   }
      ]
-},
+}
 
 {
      "titulo": "Toys",
      "identi": "juego9",
-     "puntuacionTotal": 0,
+     "puntuacionTotal": 400,
      "nivel": 9,
      "preguntas": [{
        "pregunta" :{
@@ -732,11 +732,11 @@
 
   }
      ]
-},
+}
 {
      "titulo": "House",
      "identi": "juego10",
-     "puntuacionTotal": 0,
+     "puntuacionTotal": 450,
      "nivel": 10,
      "preguntas": [{
        "pregunta" :{
