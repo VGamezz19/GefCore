@@ -255,7 +255,7 @@ exports.juegoIngles = (req, res, next) => {
    });
  }
 
- exports.deleteJuegoIngles = (req, res, next) => {
+exports.deleteJuegoIngles = (req, res, next) => {
    var id = req.user.id;
    var juego = req.body;
    var idIngles = juego._id;
@@ -270,7 +270,7 @@ exports.juegoIngles = (req, res, next) => {
      });
  };
 
- exports.updateJuegoIngles = (req, res, next) => {
+exports.updateJuegoIngles = (req, res, next) => {
     var id = req.user.id;
     var juego = req.body;
     var query = {'_id':id};

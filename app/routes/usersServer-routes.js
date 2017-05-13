@@ -51,12 +51,12 @@ module.exports = function(app) {
     .post(users.juegoIngles);
 
   app.route('/updateIngles')
-    .post(users.updateIngles);
+    .post(users.updateJuegoIngles);
   app.route('/deleteIngles')
-    .post(users.deleteIngles);
+    .post(users.deleteJuegoIngles);
 
   app.route('/puntosIngles')
-    .post(users.updatePuntosIngles)
+    .post(users.updatePuntosIngles);
 
   //seteamos la ruta singOut
   app.get('/singout', users.singOut);

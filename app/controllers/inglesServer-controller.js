@@ -5,7 +5,7 @@ var ingles = require('mongoose').model('Ingles');
 
 exports.getId = (req, res, next) => {
 
-  var iden = req.params.id;
+  var iden =  req.query.id;
   ingles.findOne({
     identi: iden
   }, function(err, ingles){

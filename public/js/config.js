@@ -14,6 +14,9 @@ angular.module('myApp').
         when('/matematicas', {
           template: '<matematicas-component></matematicas-component>'
         }).
+        when('/ingle', {
+          template: '<ingles-component></ingles-component>'
+        }).
         when('/profile', {
           template: '<profile-component/>'
         }).

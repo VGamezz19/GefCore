@@ -39,7 +39,7 @@ angular.module('homeModule').controller('homeController',['$scope', '$http', '$r
                  //recargamos la informacion actual del usuario.
                    $rootScope.currentUser();
                }) ;
-           
+
 
        }, function errorCallback(response) {
          console.log("not succes");
@@ -65,6 +65,40 @@ angular.module('homeModule').controller('homeController',['$scope', '$http', '$r
       $scope.tituloJuegoing = "Aun no has jugado";
       $scope.linking = "";
       $scope.niveling = "";
+
+      //Recuperamos el juego actual de MongoDB con la ID del juego "identi"
+     $http({
+       method: 'GET',
+       url: '/getIdIngles',
+       params: {'id': "juego1"},
+       headers : {'Accept' : 'application/json'}
+     }).then(function successCallback(response) {
+       //Guardamos el "data" del juego seleccionado por el usuario.
+       console.log("ingles",response.data);
+           $scope.juegoActualIngles = response.data;
+
+           var time = new Date();
+           var hora = time.getHours();
+           time.setHours(hora + 2);
+
+           $scope.newJuego = {"juego": {"identi": $scope.juegoActualIngles.identi,"titulo": $scope.juegoActualIngles.titulo,"nivel": $scope.juegoActualIngles.nivel,"puntuacion": 0,"estado": 0,"correctas": 0,"incorrectas": 0,"ultimoUso": time}}
+
+                 $http({
+                   method: 'POST',
+                   url: '/createIngles',
+                   data: $scope.newJuego,
+                   headers : {'Accept' : 'application/json'}
+               }).then(function successCallback(response) {
+                 //recargamos la informacion actual del usuario.
+                   $rootScope.currentUser();
+               }) ;
+
+
+       }, function errorCallback(response) {
+         console.log("not succes");
+       });
+
+
     } else {
       $scope.niveling = 0;
       $rootScope.thisUser.ingles.forEach(function(actualUser) {

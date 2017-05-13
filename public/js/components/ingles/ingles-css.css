@@ -1,0 +1,89 @@
+h2 {
+  color: #666633;
+  text-align: left;
+  margin-bottom: 1.5em;
+}
+body {
+  background-color: #CCCC99 !important;
+}
+
+/*=======================Css Ng-Repeat Matematicas=============================*/
+
+.juegos-matematicas-home {
+  /width: 100%;
+  height: 50px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  /border: 1px solid black;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  color:black!important;
+  font-size: 1.5em;
+  /font-weight: 400;
+  /line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid black;
+  /border-radius: 4px;
+}
+
+.juego1 {
+  background-color: rgba(204, 255, 102, 0.50);
+}
+
+.juego2 {
+ background-color: rgba(153, 204, 0, 0.50)  ;
+}
+
+.juego3 {
+  background-color: rgba(102, 153, 0, 0.50)  ;
+}
+
+.juego4{
+  background-color: rgba(51, 102, 0, 0.50)  ;
+}
+
+.juego5 {
+  background-color: rgba(51, 102, 51, 0.50)  ;
+}
+
+.juego6 {
+  background-color: rgba(0, 51, 0, 0.50)  ;
+}
+
+.juego7 {
+  background-color: rgba(102, 204, 153, 0.50)  ;
+}
+
+.juego8 {
+  background-color: rgba(0, 102, 51, 0.50)  ;
+}
+
+.juego9 {
+  background-color: rgba(51, 102, 102, 0.50)  ;
+}
+
+.juego10 {
+  background-color: rgba(0, 51, 51, 0.50)  ;
+}
+
+.juegoBloqueado {
+  background-color: rgba(126, 122, 130, 0.50) !important;
+  border: 2px solid rgb(126, 122, 130) !important;
+  color: rgb(126, 122, 130) !important;
+}
+
+.spanFlotando {
+  font-size: 3em;
+  position: absolute;
+}
