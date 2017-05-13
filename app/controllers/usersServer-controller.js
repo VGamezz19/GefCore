@@ -198,10 +198,10 @@ exports.juego = (req, res, next) => {
 exports.deleteJuego = (req, res, next) => {
   var id = req.user.id;
   var juego = req.body;
-  var idmates = juego.identi;
+  var idmates = juego._id;
   var query = {'_id':id};
 
-  User.findOneAndUpdate(query, { "$pull": { "matematicas": {_id: juego._id} } } , { "new": true, "upsert": true }, function(err, doc){
+  User.findOneAndUpdate(query, { "$pull": { "matematicas": {_id: idmates} } } , { "new": true, "upsert": true }, function(err, doc){
       if(err){
         return next(err);
       }
@@ -213,7 +213,6 @@ exports.deleteJuego = (req, res, next) => {
 exports.updateJuego = (req, res, next) => {
    var id = req.user.id;
    var juego = req.body;
-   var idmates = juego.identi;
    var query = {'_id':id};
 
      User.findOneAndUpdate(query, { "$push": { "matematicas": juego } } , { "new": true, "upsert": true }, function(err, doc){
@@ -248,29 +247,41 @@ exports.juegoIngles = (req, res, next) => {
    var juego = req.body;
    var query = {'_id':id};
 
-   User.findOneAndUpdate(query, { "$push": { "matematicas": juego } } , { "new": true, "upsert": true }, function(err, doc){
+   User.findOneAndUpdate(query, { "$push": { "ingles": juego } } , { "new": true, "upsert": true }, function(err, doc){
        if(err){
          return next(err);
        }
        return res.send(juego);
    });
  }
-exports.updateJuegoIngles = (req, res, next) => {
+
+ exports.deleteJuegoIngles = (req, res, next) => {
+   var id = req.user.id;
+   var juego = req.body;
+   var idIngles = juego._id;
+   var query = {'_id':id};
+
+   User.findOneAndUpdate(query, { "$pull": { "ingles": {_id: idIngles} } } , { "new": true, "upsert": true }, function(err, doc){
+       if(err){
+         return next(err);
+       }
+       return res.send(juego._id);
+
+     });
+ };
+
+ exports.updateJuegoIngles = (req, res, next) => {
     var id = req.user.id;
     var juego = req.body;
-    var idmates = juego.identi;
     var query = {'_id':id};
 
-
-
-    User.findOneAndUpdate(query, { "$pull": { "ingles": {identi: idmates} } } , { "new": true, "upsert": true }, function(err, doc){
-        if (err) return res.send(500, { error: err });
-        return res.send(juego);
-    });
-
       User.findOneAndUpdate(query, { "$push": { "ingles": juego } } , { "new": true, "upsert": true }, function(err, doc){
-          if (err) return res.send(500, { error: err });
-          return res.send(juego);
+        if(err){
+          return next(err);
+        } else {
+          return next();
+        }
+
       });
   };
 
@@ -279,13 +290,13 @@ exports.updatePuntosIngles = (req, res, next) => {
     var puntos = req.body;
     var query = {'_id':id};
 
-   User.findOneAndUpdate(query,{ $set:{"puntuacion":{"ingles":puntos.puntuacion.ingles}}}, {"upsert": true},
+   User.findOneAndUpdate(query,{ $set:{"puntuacion":{"matematicas":puntos.puntuacion.matematicas,"ingles":puntos.puntuacion.ingles}}}, {"upsert": true},
        (err,  puntos) => {
         if(!err) {
         res.send("it works");
       }
       else {
-        res.json(err);
+        next(err);
       }
       });
   }
