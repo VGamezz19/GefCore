@@ -1,4 +1,4 @@
-angular.module('juego').controller('juegoController',['$scope','$http','$rootScope','$routeParams', '$route', function ($scope,$http,$rootScope,$routeParams,$route, $location) {
+angular.module('juegoIngles').controller('juegoInglesController',['$scope','$http','$rootScope','$routeParams', '$route', function ($scope,$http,$rootScope,$routeParams,$route, $location) {
 
 //==============================================================================
 
@@ -7,7 +7,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
 //Recuperamos el juego actual de MongoDB con la ID del juego "identi"
    $http({
      method: 'GET',
-     url: '/getIdMates',
+     url: '/getIdIngles',
      params: {'id': id},
      headers : {'Accept' : 'application/json'}
    }).then(function successCallback(response) {
@@ -18,10 +18,13 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
 
      });
 
+    $scope.ids = [];
+    $scope.$watchCollection('ids', function(newVal) {
+      for (var i = 0; i < newVal.length; ++i) {
 
-     //Scope donde guardamos las respuestas de todos los juegos.
-     //Array de 5 porque hay 5 preguntas.
-     $scope.inputsPreguntas = ["","","","",""];
+        console.log(newVal[i]);
+      }
+    });
 
      //Funcion que se ejecutara cuando el usuario pulse el boton de "corregir nivel"
      $scope.uploadGame = function() {
@@ -34,9 +37,10 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
       $scope.puntuacion  = 0;
 
       //En este FOR rellenamos los puntos/errores/aciertos del nivel realizado
-        for (var i = 0; i < $scope.inputsPreguntas.length; i++) {
+      console.log($scope.lst);
+        for (var i = 0; i < $scope.lst.length; i++) {
 
-            if ($scope.inputsPreguntas[i] == $scope.juegoActual.preguntas[i].pregunta.respuesta) {
+            if ($scope.lst[i] == $scope.juegoActual.preguntas[i].pregunta.respuesta) {
               $scope.correctas = $scope.correctas + 1;
               $scope.puntuacion = $scope.puntuacion + $scope.juegoActual.preguntas[i].pregunta.puntuacion;
 
@@ -51,7 +55,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
       //en la colleccion de Usuarios (para tener un historico)
       var cnt = 0;
       var j = 0;
-      $rootScope.thisUser.matematicas.forEach(function(thisMatematicasGameUser) {
+      $rootScope.thisUser.ingles.forEach(function(thisMatematicasGameUser) {
         if(thisMatematicasGameUser.juego.identi == $scope.juegoActual.identi) {
           cnt = j;
 
@@ -60,7 +64,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
       });
 
       // Guardamos la _id de matematicas del usuario conectado.
-      var idGameUser = $rootScope.thisUser.matematicas[cnt]._id;
+      var idGameUser = $rootScope.thisUser.ingles[cnt]._id;
 
 
 
@@ -74,25 +78,26 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
         $scope.estado = 1;
       }
       //los puntos anteriores de este juego
-      $scope.puntosOld = $rootScope.thisUser.matematicas[cnt].juego.puntuacion;
+      $scope.puntosOld = $rootScope.thisUser.ingles[cnt].juego.puntuacion;
 
 
       $scope.updateGame = {"_id":idGameUser,"juego": {"identi": $scope.juegoActual.identi,"titulo": $scope.juegoActual.titulo,"nivel": $scope.juegoActual.nivel,"puntuacion": $scope.puntuacion,"estado": $scope.estado,"correctas": $scope.correctas,"incorrectas": $scope.errores,"ultimoUso": time}}
       $http({
         method: 'POST',
-        url: '/deleteGame',
+        url: '/deleteIngles',
         data: $scope.updateGame,
         headers : {'Accept' : 'application/json'}
       }).then(function successCallback(response) {
 
           $http({
             method: 'POST',
-            url: '/updateGame',
+            url: '/updateIngles',
             data: $scope.updateGame,
             headers : {'Accept' : 'application/json'}
         }).then(function successCallback(response) {
 
         });
+
 
         if ($scope.puntosOld > $scope.puntuacion) {
 
@@ -104,18 +109,17 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
 
           puntuacionFinal = actualP - oldPuntos;
           puntuacionFinal = puntuacionFinal + newPuntos;
-          $rootScope.thisUser.puntuacion.matematicas = puntuacionFinal;
+          $rootScope.thisUser.puntuacion.ingles = puntuacionFinal;
         }
 
         //Insertamos los puntos actualizados del nivel
         $http({
           method: 'POST',
-          url: '/puntosMates',
+          url: '/puntosIngles',
           data: $rootScope.thisUser,
       }).then(function successCallback(response) {
         //Abrimos el modal que mostrara los datos del usuario.
   ////****!!!!!
-        console.log("dentro de puntos mates");
           $("botton").click(function(){
             $location.path( "/matematicas" );
           });
@@ -127,15 +131,17 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
 
           $http({
             method: 'GET',
-            url: '/getAllMates'
+            url: '/getAllIngles'
           }).then(function successCallback(response) {
+
               $scope.matematicasList = response.data;
 
               $scope.matematicasList.forEach(function(allMates) {
 
               var jugado = false ;
-              if($rootScope.thisUser.puntuacion.matematicas > allMates.puntuacionTotal ) {
-                 $rootScope.thisUser.matematicas.forEach(function(identUser) {
+              if($scope.sumaPuntos > allMates.puntuacionTotal ) {
+
+                 $rootScope.thisUser.ingles.forEach(function(identUser) {
 
                     if(!jugado) {
 
@@ -152,7 +158,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
 
                             $http({
                               method: 'POST',
-                              url: '/createGame',
+                              url: '/createIngles',
                               data: $scope.newJuego,
                               headers : {'Accept' : 'application/json'}
                           }).then(function successCallback(response) {

@@ -1,0 +1,28 @@
+.mainJuegos {
+  margin-top: 20em;
+  max-height: 15em !important;
+}
+
+.derecha {
+
+  min-height: 15em !important;
+}
+
+.izquierda {
+  float: right !important;
+  min-height: 15em !important;
+}
+
+.pregunta {
+  min-height: 15em !important;
+  background-color: rgba(158, 155, 155, 0.72);
+  border-radius: 5px !important;
+}
+
+.input-group {
+  width: 100%!important;
+}
+
+.textCentro {
+  max-height: 15em !important;
+}
