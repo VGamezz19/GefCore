@@ -1,30 +1,38 @@
 <link rel="stylesheet" href="/js/components/juegoIngles/juegoIngles-css.css">
 
+
 <div class ="row mainJuegos">
   <div class= "col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1 ">
-      <button type="button" class="btn izquierda fi glyphicon glyphicon-chevron-left" tabindex="1"></button>
+      <button type="button" class="btn izquierda fi glyphicon glyphicon-chevron-left izquierdaFlecha" tabindex="1"></button>
   </div>
   <div class ="col-md-6 col-lg-6 textCentro">
     <div class ="" ng-repeat = "juego in juegoActual.preguntas track by $index">
       <div class ="col-md-12 col-lg-12 juego{{$index +1}} pregunta">
         <div class ="row ">
           <div class =" col-md-2 col-lg-2" tabindex="1">
-            <h1>{{$index + 1}}</h1>
+            <h1 class ="nivel">{{$index + 1}}</h1>
           </div>
-          <div class =" col-md-2 col-lg-2 col-md-offset-8 col-lg-offset-8" tabindex="1">
-            <h1 class ="fi glyphicon glyphicon-star">{{juego.pregunta.puntuacion}}</h1>
+          <div class =" col-md-3 col-lg-3 col-md-offset-7 col-lg-offset-7" tabindex="1">
+            <div class ="col-md-6 col-lg-6 colStar">
+              <h1 class ="fi glyphicon glyphicon-star starGame"> </h1>
+            </div>
+            <div class ="col-md-6 col-lg-6">
+              <h1>{{juego.pregunta.puntuacion}}</h1>
+            </div>
           </div>
         </div>
         <div class ="row ">
           <div class =" col-md-12 col-lg-12" tabindex="1">
-            <h3>{{juego.pregunta.titulo}}</h3>
+            <h3 class ="titulo">{{juego.pregunta.titulo}}</h3>
           </div>
         </div>
         <div class ="row ">
-          <div class ="col-md-4 col-lg-4 " ng-repeat ="opcion in juego.pregunta.opciones ">
-
-            <input type="checkbox" value="opcion" id="status" ng-model="modal" class="checkbox checkbox-success" ng-change="IfCheck(opcion.opcion, modal)">
-            <span class="Form-label-text">{{opcion.opcion}}</span>
+          <div class ="col-md-10 col-lg-10 inputPregunta">
+            <div class ="col-md-4 col-lg-4 " ng-repeat ="opcion in juego.pregunta.opciones ">
+              <input type="checkbox" value="opcion" id="status" ng-model="modal" class="checkbox checkbox-success" ng-change="IfCheck(opcion.opcion, modal)">
+              <span class="Form-label-text">{{opcion.opcion}}</span>
+            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -33,17 +41,17 @@
         <script>  $(".pregunta").hide();</script>
         <div class ="row ">
           <div class =" col-md-12 col-lg-12" tabindex="1">
-            <h1>Fin del nivel</h1>
+            <h1>FIN DE NIVEL</h1>
           </div>
         </div>
         <div class ="row ">
-          <div class =" col-md-12 col-lg-12" tabindex="1">
-            <h3>Usar el boton de la izquierda si quieres repasar</h3>
+          <div class =" col-md-12 col-lg-12 bodyFinalJuego" tabindex="1">
+            <h3 class ="Fintitulo">Usar el botón de la izquierda si quieres repasar</h3>
           </div>
         </div>
         <div class ="row ">
-          <div class ="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1" tabindex="1">
-              <button class="btn" ng-click="uploadGame()">Corregir</button>
+          <div class ="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 containerButton" tabindex="1">
+              <button class="btn corregir" ng-click="uploadGame()">Corregir</button>
           </div>
         </div>
       </div>
@@ -52,8 +60,8 @@
       </script>
     </div>
   </div>
-  <div class ="col-md-2 col-lg-2 ">
-    <button type="button" class="btn derecha fi glyphicon glyphicon-chevron-right" tabindex="1"></button>
+  <div class ="col-md-2 col-lg-2  ">
+    <button type="button" class="btn derecha fi glyphicon glyphicon-chevron-right derechaFlecha" tabindex="1"></button>
   </div>
 </div>
 
@@ -63,23 +71,40 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title">Correccion de nivel</h2>
+        <h2 class="modal-title">Correción Nivel</h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        {{correctas}}
-        {{errores}}
-        {{puntuacion}}
+        <div class ="row">
+          <div class = "col-md-8 col-lg-8 main juegos-matematicas-home ">
+            Correctos
+          </div>
+          <div class =" col-md-4 col-lg-4 juegos-matematicas-home ">
+            {{correctas}}
+          </div>
 
-        <button class ="botton"></button>
+          <div class = "col-md-8 col-lg-8  main juegos-matematicas-home ">
+            Fallados
+          </div>
+          <div class =" col-md-4 col-lg-4 juegos-matematicas-home ">
+            {{errores}}
+          </div>
+        </div>
+        <div class ="row" style="margin-top: 4em;">
+          <div class = "col-md-8 col-lg-8 main juegos-matematicas-home ">
+              <h1 class ="fi glyphicon glyphicon-star starGame"style="right: 6.6em;top: -0.5em;"></h1>
+              <h3 style="margin-top: 0.2em;">Puntuación total</h3>
+          </div>
+          <div class =" col-md-4 col-lg-4 juegos-matematicas-home ">
+            <h3 style="width: 50%;margin-top: 0.2em;text-align: center;">{{puntuacion}}</h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- END Modal CheckLogOUT-->
 
 
 <script src =" /js/components/juegoIngles/juegoIngles-jquery.js"></script>
