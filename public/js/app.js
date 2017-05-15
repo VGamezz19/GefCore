@@ -8,7 +8,8 @@ angular.module('myApp', [
   'matematicas',
   'ingles',
   'puntuacionMatematicas',
-  'juego'
+  'juego',
+  'juegoIngles'
 ]);
 
 angular.element(document).ready(function(){
