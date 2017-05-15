@@ -1,3 +1,9 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
 footer p {
   margin-left: 2em;
 }
@@ -10,6 +16,9 @@ button.close {
 .inputLogin {
   padding-left: 0.5em;
   width: 15em;
+}
+.glyphicon-star{
+  color: #FFCC00 !important;
 }
 h3 {
   margin-left: 2em;

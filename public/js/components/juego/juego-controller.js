@@ -95,7 +95,6 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
         });
 
         if ($scope.puntosOld > $scope.puntuacion) {
-
         } else {
           var actualP = $rootScope.thisUser.puntuacion.matematicas;
           var oldPuntos = $scope.puntosOld;
@@ -105,7 +104,10 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
           puntuacionFinal = actualP - oldPuntos;
           puntuacionFinal = puntuacionFinal + newPuntos;
           $rootScope.thisUser.puntuacion.matematicas = puntuacionFinal;
+
+
         }
+
 
         //Insertamos los puntos actualizados del nivel
         $http({
