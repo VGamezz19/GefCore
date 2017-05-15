@@ -21,12 +21,10 @@
           </div>
         </div>
         <div class ="row ">
-          <div class ="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
-            <tr ng-repeat="value in juego.pregunta.opciones">
-              <td>
-                <input type="checkbox" ng-model="ids[$index]" ng-true-value="{{value}}" ng-false-value="{{undefined}}" />{{value}}
-              </td>
-            </tr>
+          <div class ="col-md-4 col-lg-4 " ng-repeat ="opcion in juego.pregunta.opciones ">
+
+            <input type="checkbox" value="opcion" id="status" ng-model="modal" class="checkbox checkbox-success" ng-change="IfCheck(opcion.opcion, modal)">
+            <span class="Form-label-text">{{opcion.opcion}}</span>
           </div>
         </div>
       </div>

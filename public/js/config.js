@@ -34,6 +34,9 @@ angular.module('myApp').
         when('/puntuacionMatematicas', {
           template: '<puntuacion-matematicas-component></puntuacion-matematicas-component>'
         }).
+        when('/puntuacionIngles', {
+          template: '<puntuacion-ingles-component></puntuacion-ingles-component>'
+        }).
         otherwise({
           redirectTo: '/'
         });

@@ -9,11 +9,11 @@
          "titulo": "I ...",
          "respuesta": "am",
          "puntuacion":10,
-         "opciones": {
-            "a": "am",
-            "b": "are",
-            "c": "was"
-         }
+         "opciones": [
+            {"opcion": "am"},
+            {"opcion": "are"},
+            {"opcion": "was"}
+        ]
        }
      },
 
@@ -24,11 +24,11 @@
          "titulo": "You ...",
          "respuesta": "are",
          "puntuacion":20,
-         "opciones": {
-           "a": "am",
-           "b": "are",
-           "c": "was"
-         }
+         "opciones": [
+            {"opcion": "am"},
+            {"opcion": "are"},
+            {"opcion": "was"}
+        ]
        }
 
      },
@@ -40,12 +40,11 @@
          "titulo": "He ...",
          "respuesta": "is",
          "puntuacion":30,
-         "opciones": {
-           "a": "is",
-           "b": "are",
-           "c": "was"
-
-         }
+         "opciones": [
+            {"opcion": "is"},
+            {"opcion": "are"},
+            {"opcion": "was"}
+        ]
        }
 
    },
@@ -56,11 +55,11 @@
        "titulo":"She ...",
        "respuesta": "is",
        "puntuacion":35,
-       "opciones": {
-         "a": "is",
-         "b": "are",
-         "c": "was"
-       }
+       "opciones": [
+          {"opcion": "is"},
+          {"opcion": "are"},
+          {"opcion": "was"}
+      ]
      }
 
  }, {
@@ -70,11 +69,11 @@
      "titulo":"We ...",
      "respuesta": "are",
      "puntuacion":40,
-     "opciones": {
-       "a": "is",
-       "b": "are",
-       "c": "was"
-     }
+     "opciones": [
+        {"opcion": "is"},
+        {"opcion": "are"},
+        {"opcion": "was"}
+    ]
    }
 
   }
@@ -92,11 +91,11 @@
          "titulo": "1",
          "respuesta": "one",
          "puntuacion":10,
-         "opciones": {
-           "a": "one",
-           "b": "five",
-           "c": "four"
-         }
+         "opciones": [
+            {"opcion": "one"},
+            {"opcion": "five"},
+            {"opcion": "four"}
+        ]
        }
      },
 
@@ -107,11 +106,12 @@
          "titulo": "7",
          "respuesta": "seven",
          "puntuacion":20,
-         "opciones": {
-           "a": "seven",
-           "b": "five",
-           "c": "three"
-         }
+         "opciones": [
+            {"opcion": "seven"},
+            {"opcion": "five"},
+            {"opcion": "three"}
+        ]
+
        }
 
      },
@@ -123,11 +123,12 @@
          "titulo": "9",
          "respuesta": "nine",
          "puntuacion":30,
-         "opciones": {
-           "a": "nine",
-           "b": "ten",
-           "c": "six"
-         }
+         "opciones": [
+            {"opcion": "nine"},
+            {"opcion": "ten"},
+            {"opcion": "six"}
+        ]
+
        }
 
    },
@@ -138,11 +139,12 @@
        "titulo":"4",
        "respuesta": "four",
        "puntuacion":35,
-       "opciones": {
-         "a": "four",
-         "b": "six",
-         "c": "twelve"
-       }
+       "opciones": [
+          {"opcion": "four"},
+          {"opcion": "six"},
+          {"opcion": "twelve"}
+      ]
+
      }
 
  }, {
@@ -152,11 +154,12 @@
      "titulo":"12",
      "respuesta": "twelve",
      "puntuacion":40,
-     "opciones": {
-       "a": "twelve",
-       "b": "eleven",
-       "c": "thirteen"
-     }
+     "opciones": [
+        {"opcion": "twelve"},
+        {"opcion": "eleven"},
+        {"opcion": "thirteen"}
+    ]
+
    }
 
   }
@@ -172,13 +175,14 @@
        "pregunta" :{
          "identi": "pregunta1",
          "titulo": "am",
-         "respuesta": "one",
+         "respuesta": "m",
          "puntuacion":10,
-         "opciones": {
-           "a": "s",
-           "b": "re",
-           "c": "m"
-         }
+         "opciones": [
+            {"opcion": "s"},
+            {"opcion": "re"},
+            {"opcion": "m"}
+        ]
+
        }
      },
 
@@ -189,11 +193,11 @@
          "titulo": "is",
          "respuesta": "s",
          "puntuacion":20,
-         "opciones": {
-           "a": "s",
-           "b": "m",
-           "c": "re"
-         }
+         "opciones": [
+            {"opcion": "s"},
+            {"opcion": "re"},
+            {"opcion": "m"}
+        ]
        }
 
      },
@@ -205,11 +209,11 @@
          "titulo": "are",
          "respuesta": "re",
          "puntuacion":30,
-         "opciones": {
-           "a": "s",
-           "b": "re",
-           "c": "m"
-         }
+         "opciones": [
+            {"opcion": "s"},
+            {"opcion": "re"},
+            {"opcion": "m"}
+        ]
        }
 
    },
@@ -220,11 +224,11 @@
        "titulo":"I ...",
        "respuesta": "m",
        "puntuacion":35,
-       "opciones": {
-         "a": "s",
-         "b": "re",
-         "c": "m"
-       }
+       "opciones": [
+          {"opcion": "s"},
+          {"opcion": "re"},
+          {"opcion": "m"}
+      ]
      }
 
  }, {
@@ -234,11 +238,11 @@
      "titulo":"We ...",
      "respuesta": "re",
      "puntuacion":40,
-     "opciones": {
-       "a": "s",
-       "b": "re",
-       "c": "m"
-     }
+     "opciones": [
+        {"opcion": "s"},
+        {"opcion": "re"},
+        {"opcion": "m"}
+    ]
    }
 
   }
@@ -255,11 +259,12 @@
          "titulo": "20",
          "respuesta": "twenty",
          "puntuacion":10,
-         "opciones": {
-           "a": "forty",
-           "b": "twenty",
-           "c": "eleven"
-         }
+         "opciones": [
+            {"opcion": "forty"},
+            {"opcion": "twenty"},
+            {"opcion": "eleven"}
+        ]
+
        }
      },
 
@@ -270,11 +275,12 @@
          "titulo": "16",
          "respuesta": "sixteen",
          "puntuacion":20,
-         "opciones": {
-           "a": "sixteen",
-           "b": "twelve",
-           "c": "eleven"
-         }
+         "opciones": [
+            {"opcion": "sixteen"},
+            {"opcion": "twelve"},
+            {"opcion": "eleven"}
+        ]
+
        }
 
      },
@@ -286,11 +292,12 @@
          "titulo": "80",
          "respuesta": "eighty",
          "puntuacion":30,
-         "opciones": {
-           "a": "eighty",
-           "b": "four",
-           "c": "eighteen"
-         }
+         "opciones": [
+            {"opcion": "eighty"},
+            {"opcion": "four"},
+            {"opcion": "eighteen"}
+        ]
+
        }
 
    },
@@ -301,11 +308,12 @@
        "titulo":"50",
        "respuesta": "fifty",
        "puntuacion":35,
-       "opciones": {
-         "a": "five",
-         "b": "fifty",
-         "c": "fivety"
-       }
+       "opciones": [
+          {"opcion": "five"},
+          {"opcion": "fifty"},
+          {"opcion": "fivety"}
+      ]
+
      }
 
  }, {
@@ -315,11 +323,12 @@
      "titulo":"61",
      "respuesta": "sixty-one",
      "puntuacion":40,
-     "opciones": {
-       "a": "sixty",
-       "b": "sixty-one",
-       "c": "seventy-one"
-     }
+     "opciones": [
+        {"opcion": "sixty"},
+        {"opcion": "sixty-one"},
+        {"opcion": "seventy-one"}
+    ]
+
    }
 
   }
@@ -336,11 +345,12 @@
          "titulo": "perro",
          "respuesta": "dog",
          "puntuacion":10,
-         "opciones": {
-           "a": "dog",
-           "b": "cat",
-           "c": "bird"
-         }
+         "opciones": [
+            {"opcion": "dog"},
+            {"opcion": "cat"},
+            {"opcion": "bird"}
+        ]
+
        }
      },
 
@@ -350,12 +360,13 @@
         "identi": "pregunta2",
         "titulo": "vaca",
         "respuesta": "cow",
-        "puntuacion": 40,
-        "opciones": {
-          "a": "fish",
-          "b": "duck",
-          "c": "cow"
-        }
+        "puntuacion": 20,
+        "opciones": [
+           {"opcion": "fish"},
+           {"opcion": "duck"},
+           {"opcion": "cow"}
+       ]
+
        }
 
      },
@@ -366,12 +377,13 @@
         "identi": "pregunta3",
         "titulo": "elefante",
         "respuesta": "elephant",
-        "puntuacion": 40,
-        "opciones": {
-          "a": "chicken",
-          "b": "elephant",
-          "c": "goat"
-        }
+        "puntuacion": 30,
+        "opciones": [
+           {"opcion": "chicken"},
+           {"opcion": "elephant"},
+           {"opcion": "goat"}
+       ]
+
        }
 
    },
@@ -381,12 +393,13 @@
       "identi": "pregunta4",
       "titulo": "cerdo",
       "respuesta": "pork",
-      "puntuacion": 40,
-      "opciones": {
-        "a": "pork",
-        "b": "tiger",
-        "c": "frog"
-      }
+      "puntuacion": 35,
+      "opciones": [
+         {"opcion": "pork"},
+         {"opcion": "tiger"},
+         {"opcion": "frog"}
+     ]
+
      }
 
  }, {
@@ -396,11 +409,12 @@
     "titulo": "cabra",
     "respuesta": "goat",
     "puntuacion": 40,
-    "opciones": {
-      "a": "tiger",
-      "b": "goat",
-      "c": "cat"
-    }
+    "opciones": [
+       {"opcion": "tiger"},
+       {"opcion": "goat"},
+       {"opcion": "cat"}
+   ]
+
    }
 
   }
@@ -417,12 +431,13 @@
          "identi": "pregunta1",
          "titulo": "trousers",
          "respuesta": "30",
-         "puntuacion": 40,
-         "opciones": {
-           "a": "shoes",
-           "b": "trousers",
-           "c": "shirt"
-         }
+         "puntuacion": 10,
+         "opciones": [
+            {"opcion": "shoes"},
+            {"opcion": "trousers"},
+            {"opcion": "shirt"}
+        ]
+
        }
      },
 
@@ -432,11 +447,13 @@
         "identi": "pregunta2",
         "titulo": "mochila",
         "respuesta": "bag",
-        "puntuacion": 40,
-        "opciones": {
-          "a": "handbag",
-          "b": "jeans",
-          "c": "bag"}
+        "puntuacion": 20,
+        "opciones": [
+           {"opcion": "handbag"},
+           {"opcion": "jeans"},
+           {"opcion": "bag"}
+       ]
+
        }
 
      },
@@ -447,12 +464,13 @@
         "identi": "pregunta3",
         "titulo": "falda",
         "respuesta": "skirt",
-        "puntuacion": 40,
-        "opciones": {
-          "a": "skirt",
-          "b": "dress",
-          "c": "hat"
-        }
+        "puntuacion": 30,
+        "opciones": [
+           {"opcion": "skirt"},
+           {"opcion": "dress"},
+           {"opcion": "hat"}
+       ]
+
        }
 
    },
@@ -462,12 +480,13 @@
       "identi": "pregunta4",
       "titulo": "reloj",
       "respuesta": "watch",
-      "puntuacion": 40,
-      "opciones": {
-        "a": "necklake",
-        "b": "watch",
-        "c": "jacket"
-      }
+      "puntuacion": 35,
+      "opciones": [
+         {"opcion": "necklake"},
+         {"opcion": "watch"},
+         {"opcion": "jacket"}
+     ]
+
      }
 
  }, {
@@ -477,11 +496,12 @@
     "titulo": "camiseta",
     "respuesta": "t-shirt",
     "puntuacion": 40,
-    "opciones": {
-      "a": "t-shirt",
-      "b": "glass",
-      "c": "shoes"
-    }
+    "opciones": [
+       {"opcion": "t-shirt"},
+       {"opcion": "glass"},
+       {"opcion": "shoes"}
+   ]
+
    }
 
   }
@@ -498,12 +518,13 @@
          "identi": "pregunta1",
          "titulo": "motocicleta",
          "respuesta": "motorbike",
-         "puntuacion": 40,
-         "opciones": {
-           "a": "bus",
-           "b": "fly",
-           "c": "motorbike"
-         }
+         "puntuacion": 10,
+         "opciones": [
+            {"opcion": "bus"},
+            {"opcion": "fly"},
+            {"opcion": "motorbike"}
+        ]
+
        }
      },
 
@@ -513,12 +534,13 @@
         "identi": "pregunta2",
         "titulo": "conducir",
         "respuesta": "drive",
-        "puntuacion": 40,
-        "opciones": {
-          "a": "car",
-          "b": "drive",
-          "c": "ride"
-        }
+        "puntuacion": 20,
+        "opciones": [
+           {"opcion": "car"},
+           {"opcion": "drive"},
+           {"opcion": "ride"}
+       ]
+
       }
 
      },
@@ -529,12 +551,13 @@
         "identi": "pregunta3",
         "titulo": "nadar",
         "respuesta": "swim",
-        "puntuacion": 40,
-        "opciones": {
-          "a": "truck",
-          "b": "swim",
-          "c": "boat"
-        }
+        "puntuacion": 30,
+        "opciones": [
+           {"opcion": "truck"},
+           {"opcion": "swim"},
+           {"opcion": "boat"}
+       ]
+
        }
 
    },
@@ -544,12 +567,13 @@
       "identi": "pregunta4",
       "titulo": "correr",
       "respuesta": "run",
-      "puntuacion": 40,
-      "opciones": {
-        "a": "ride",
-        "b": "run",
-        "c": "drive"
-      }
+      "puntuacion": 35,
+      "opciones": [
+         {"opcion": "ride"},
+         {"opcion": "run"},
+         {"opcion": "drive"}
+     ]
+
      }
 
  }, {
@@ -559,11 +583,12 @@
     "titulo": "coche",
     "respuesta": "car",
     "puntuacion": 40,
-    "opciones": {
-      "a": "train",
-      "b": "car",
-      "c": "plane"
-    }
+    "opciones": [
+       {"opcion": "train"},
+       {"opcion": "car"},
+       {"opcion": "plane"}
+   ]
+
    }
 
   }
@@ -580,12 +605,13 @@
          "identi": "pregunta1",
          "titulo": "platano",
          "respuesta": "banana",
-         "puntuacion": 40,
-         "opciones": {
-           "a": "banana",
-           "b": "apple",
-           "c": "fish"
-         }
+         "puntuacion": 10,
+         "opciones": [
+            {"opcion": "banana"},
+            {"opcion": "apple"},
+            {"opcion": "fish"}
+        ]
+
        }
      },
 
@@ -595,12 +621,13 @@
         "identi": "pregunta2",
         "titulo": "pan",
         "respuesta": "bread",
-        "puntuacion": 40,
-        "opciones": {
-          "a": "carrot",
-          "b": "burguer",
-          "c": "bread"
-        }
+        "puntuacion": 20,
+        "opciones": [
+           {"opcion": "carrot"},
+           {"opcion": "burguer"},
+           {"opcion": "bread"}
+       ]
+
       }
 
      },
@@ -611,12 +638,13 @@
         "identi": "pregunta3",
         "titulo": "pastel",
         "respuesta": "cake",
-        "puntuacion": 40,
-        "opciones": {
-          "a": "coconut",
-          "b": "egg",
-          "c": "cake"
-        }
+        "puntuacion": 30,
+        "opciones": [
+           {"opcion": "coconut"},
+           {"opcion": "egg"},
+           {"opcion": "cake"}
+       ]
+
        }
 
    },
@@ -626,12 +654,13 @@
       "identi": "pregunta4",
       "titulo": "limon",
       "respuesta": "lemmon",
-      "puntuacion": 40,
-      "opciones": {
-        "a": "pear",
-        "b": "lemmon",
-        "c": "fruit"
-      }
+      "puntuacion": 35,
+      "opciones": [
+         {"opcion": "pear"},
+         {"opcion": "lemmon"},
+         {"opcion": "fruit"}
+     ]
+
      }
 
  }, {
@@ -641,11 +670,12 @@
     "titulo": "helado",
     "respuesta": "ice cream",
     "puntuacion": 40,
-    "opciones": {
-      "a": "ice cream",
-      "b": "milk",
-      "c": "juice"
-    }
+    "opciones": [
+       {"opcion": "ice cream"},
+       {"opcion": "milk"},
+       {"opcion": "juice"}
+   ]
+
    }
 
   }
@@ -662,12 +692,13 @@
          "identi": "pregunta1",
          "titulo": "pelota",
          "respuesta": "ball",
-         "puntuacion": 40,
-         "opciones": {
-           "a": "spinning top",
-           "b": "ball",
-           "c": "skates"
-         }
+         "puntuacion": 10,
+         "opciones": [
+            {"opcion": "spinning top"},
+            {"opcion": "ball"},
+            {"opcion": "skates"}
+        ]
+
        }
      },
 
@@ -677,12 +708,13 @@
         "identi": "pregunta2",
         "titulo": "patines",
         "respuesta": "skates",
-        "puntuacion": 40,
-        "opciones": {
-          "a": "skate board",
-          "b": "kite",
-          "c": "skates"
-        }
+        "puntuacion": 20,
+        "opciones": [
+           {"opcion": "skate board"},
+           {"opcion": "kite"},
+           {"opcion": "skates"}
+       ]
+
       }
 
      },
@@ -693,12 +725,12 @@
         "identi": "pregunta3",
         "titulo": "cometa",
         "respuesta": "kite",
-        "puntuacion": 40,
-        "opciones": {
-          "a": "kite",
-          "b": "rocket",
-          "c": "windmill"
-        }
+        "puntuacion": 30,
+        "opciones": [
+           {"opcion": "kite"},
+           {"opcion": "rocket"},
+           {"opcion": "windmill"}
+       ]
        }
 
    },
@@ -708,12 +740,12 @@
       "identi": "pregunta4",
       "titulo": "muñeca",
       "respuesta": "doll",
-      "puntuacion": 40,
-      "opciones": {
-        "a": "bike",
-        "b": "dice",
-        "c": "yo-yo"
-      }
+      "puntuacion": 35,
+      "opciones": [
+         {"opcion": "bike"},
+         {"opcion": "dice"},
+         {"opcion": "doll"}
+     ]
      }
 
  }, {
@@ -723,11 +755,12 @@
     "titulo": "dados",
     "respuesta": "dice",
     "puntuacion": 40,
-    "opciones": {
-      "a": "rocket",
-      "b": "rubber duck",
-      "c": "dice"
-    }
+    "opciones": [
+       {"opcion": "rocket"},
+       {"opcion": "rubber duck"},
+       {"opcion": "dice"}
+   ]
+
    }
 
   }
@@ -743,12 +776,13 @@
          "identi": "pregunta1",
          "titulo": "suelo",
          "respuesta": "floor",
-         "puntuacion": 40,
-         "opciones": {
-           "a": "wall",
-           "b": "floor",
-           "c": "window"
-         }
+         "puntuacion": 10,
+         "opciones": [
+            {"opcion": "wall"},
+            {"opcion": "floor"},
+            {"opcion": "window"}
+        ]
+
        }
      },
 
@@ -758,12 +792,13 @@
         "identi": "puerta",
         "titulo": "patines",
         "respuesta": "door",
-        "puntuacion": 40,
-        "opciones": {
-          "a": "window",
-          "b": "floor",
-          "c": "door"
-        }
+        "puntuacion": 20,
+        "opciones": [
+           {"opcion": "window"},
+           {"opcion": "floor"},
+           {"opcion": "door"}
+       ]
+
       }
 
      },
@@ -774,12 +809,12 @@
         "identi": "pregunta3",
         "titulo": "Escaleras",
         "respuesta": "stairs",
-        "puntuacion": 40,
-        "opciones": {
-          "a": "roof",
-          "b": "stairs",
-          "c": "wall"
-        }
+        "puntuacion": 30,
+        "opciones": [
+           {"opcion": "roof"},
+           {"opcion": "stairs"},
+           {"opcion": "wall"}
+       ]
        }
 
    },
@@ -789,12 +824,12 @@
       "identi": "pregunta4",
       "titulo": "pared",
       "respuesta": "wall",
-      "puntuacion": 40,
-      "opciones": {
-        "a": "roof",
-        "b": "stairs",
-        "c": "wall"
-      }
+      "puntuacion": 35,
+      "opciones": [
+         {"opcion": "roof"},
+         {"opcion": "stairs"},
+         {"opcion": "wall"}
+     ]
      }
 
  }, {
@@ -804,11 +839,11 @@
     "titulo": "azotea",
     "respuesta": "dice",
     "puntuacion": 40,
-    "opciones": {
-      "a": "roof",
-      "b": "stairs",
-      "c": "flat"
-    }
+    "opciones": [
+       {"opcion": "roof"},
+       {"opcion": "stairs"},
+       {"opcion": "dice"}
+   ]
    }
 
   }

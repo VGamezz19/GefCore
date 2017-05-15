@@ -19,11 +19,9 @@ var mongoose = require('mongoose'),
                      titulo: String,
                      respuesta: String,
                      puntuacion: Number,
-                     opciones: {
-                             a: String,
-                             b: String,
-                             c: String
-                         }
+                     opciones: [
+                             {opcion: String}
+                         ]
                    }
                  }]
 

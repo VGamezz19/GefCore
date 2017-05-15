@@ -1,0 +1,27 @@
+
+<div>
+    <h1>Todas las puntuaciones de Ingles</h1>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nombre de usuario</th>
+            <th>Puntuacion total</th>
+            <th>Ultimo nivel</th>
+          </tr>
+        </thead>
+          <tbody>
+            <tr ng-repeat ="usuarios in usuarioCompleto  | orderBy: '-puntuacion.matematicas' track by $index " id ="tag{{$index}}">
+
+              <td>{{1 + $index}} - {{usuarios.username}}</td>
+              <td>{{usuarios.puntuacion.ingles}}</td>
+              <td>Actual mente esta por el nivel {{nivelesUsers[$index]}}</td>
+            </tr>
+          </tbody>
+        </table>
+</div>
+
+<script>
+
+//  $('#1tag').addClass( "primeroPuntuacion" );
+//  $('#1tag').html( "<span class ='fi glyphicon glyphicon-star'></spam>" );
+</script>
