@@ -106,7 +106,7 @@ h1 {
  .yesClose-loged {
    width: 50%;
  }
- 
+
  tbody tr {
    margin-bottom: 1em;
    margin-top: 1em;
@@ -211,3 +211,47 @@ h1 {
 
 
 /*========================== Modal Check logOut ==================================*/
+
+
+.checkModal {
+  border-radius: 0 !important;
+}
+.fotermodal {
+  border: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+
+.checkModal>div>div>.modal-body {
+  background: #CCCC99 !important;
+  background: -webkit-linear-gradient(180deg, #CCCC99, #999900) !important;
+  background: -o-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: -moz-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: linear-gradient(90deg, #CCCC99 50%, #999900 50%)!important;
+}
+
+.yesClose-loged  {
+    height: 2.5em !important;
+    font-size: 2em !important;
+    color: white !important;
+    border: 2px solid white !important;
+    border-radius: 0 !important;
+    width: 40% !important;
+    background: #CCCC99 !important;
+    margin: 1.5em !important;
+    margin-bottom: 1.5em !important;
+    margin-left: 3em !important;
+}
+
+.close-loged {
+  height: 2.5em !important;
+    font-size: 2em !important;
+    color: rgba(0, 0, 0, 0.75)  !important;
+    border: 2px solid rgba(255, 255, 255, 0.75) !important;
+    border-radius: 0 !important;
+    width: 40% !important;
+    margin: 1.5em !important;
+    background: #999900 !important;
+    margin-bottom: 1.5em !important;
+    margin-right:3em !important;
+}

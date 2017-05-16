@@ -11,10 +11,11 @@
       $(this).find(".spanFlotandoProfile").hide();
     });
 
-    $( ".profileHome" ).on( "focus", function(  ) {
-      console.log("Hola");
-    });
-    $( ".profileHome").trigger( "focus");
+
+//Work
+    $('[tabindex=1]').on('focus', function() {
+          console.log("hola");
+     });
 
 
   },300);

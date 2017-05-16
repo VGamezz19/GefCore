@@ -28,5 +28,5 @@ $('.logeOut').click(function(){
   }
 
   function focusLogOut () {
-    $('.yesClose-loged').focus();
+    $('.close-loged').focus();
   }
