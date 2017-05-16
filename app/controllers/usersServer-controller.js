@@ -142,7 +142,6 @@ var id = req.user.id;
     } else{
       res.json(user);
       res.end();
-      next();
     }
   });
 };
