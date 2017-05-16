@@ -54,6 +54,35 @@ angular.module('profile').controller('profileController',['$scope','$http', func
 
         }
 
+        function juegoInglesActual() {
+          $scope.ultimoNivelIng =[];
+          $scope.ultimoRegistroIng = [];
+          $scope.repetirIng = [];
+
+          $scope.totalErroresIng = 0;
+          $scope.totalCorrectoIng = 0;
+          //Si el array de matematicas, esta vacio, significa que aun no ha jugado
+
+
+            $scope.currentUser.ingles.forEach(function(juegosIngles) {
+
+              $scope.totalErroresIng =  $scope.totalErrores + juegosIngles.juego.incorrectas;
+              $scope.totalCorrectoIng = $scope.totalCorrecto + juegosIngles.juego.correctas;
+
+                if (juegosIngles.juego.estado === 0) {
+                    $scope.ultimoNivelIng.push(juegosIngles);
+                }
+                if (juegosIngles.juego.estado === 1) {
+                    $scope.ultimoRegistroIng.push(juegosIngles);
+                }
+                if (juegosIngles.juego.estado === 3) {
+                    $scope.repetirIng.push(juegosIngles);
+                }
+            });
+
+
+        }
+
         //=============================Fin FUNCIONES PROFILE======================
 
 
@@ -62,7 +91,7 @@ angular.module('profile').controller('profileController',['$scope','$http', func
         //=======================Ejecucion de las funciones ======================
 
         juegoMatesActual();
-
+        juegoInglesActual();
         puntosTotales();
 
       }, function errorCallback(res) {

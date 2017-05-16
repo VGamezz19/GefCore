@@ -4,24 +4,21 @@ h2 {
   margin-bottom: 1.5em;
 }
 body {
-  background-color: #CCCC99 !important;
+  background-color: rgba(204, 204, 153, 0.50) !important;
 }
 
 /*=======================Css Ng-Repeat Matematicas=============================*/
 
-.juegos-matematicas-home {
+.profile-matematicas-home {
   /width: 100%;
   height: 50px;
   margin-right: 1em;
   margin-bottom: 1em;
-  /border: 1px solid black;
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
   color:black!important;
   font-size: 1.5em;
-  /font-weight: 400;
-  /line-height: 1.42857143;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -34,7 +31,6 @@ body {
   user-select: none;
   background-image: none;
   border: 1px solid black;
-  /border-radius: 4px;
 }
 
 .juego1 {
@@ -83,7 +79,52 @@ body {
   color: rgb(126, 122, 130) !important;
 }
 
-.spanFlotando {
-  font-size: 3em;
-  position: absolute;
+.spanFlotandoProfile {
+   font-size: 3em;
+    
+    position: absolute;
+}
+
+.tituloProfile {
+background: #CCCC99;
+color: #666633;
+padding-left: -8%;
+left: -4.5em;
+padding-left: 1em !important;
+padding: 0.5em;
+margin-top: 1em;
+width: 128%;
+text-align: left;
+position: relative;
+margin-right: 0em;
+}
+
+.profileHome {
+  margin-bottom: 1em;
+}
+
+.initRepetir {
+  margin-bottom: 14em;
+}
+
+.tituloRepetir {
+  padding-right: : 0.4em;
+  color: #990000;
+}
+
+.tituloJugable {
+  padding-left: 2.5em;
+  color: #3399cc;
+}
+
+.tituloCompleto {
+  padding-left: 8.5em;
+  color: #666633;
+}
+
+.bloqueadoGame {
+  background-color: rgba(126, 122, 130, 0.50) !important;
+  border: 2px solid rgb(126, 122, 130) !important;
+  color: rgb(126, 122, 130) !important;
+  width: 88% !important;
 }
