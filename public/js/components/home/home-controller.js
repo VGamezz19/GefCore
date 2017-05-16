@@ -6,7 +6,7 @@ angular.module('homeModule').controller('homeController',['$scope', '$http', '$r
   $scope.link;
   $scope.nivel;
 
-    $rootScope.currentUser();
+
 
     if ($rootScope.thisUser.matematicas.length == 0){
 
@@ -116,7 +116,7 @@ angular.module('homeModule').controller('homeController',['$scope', '$http', '$r
     }
 
 
-
+$rootScope.currentUser();
 
 
 

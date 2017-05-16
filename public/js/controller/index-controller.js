@@ -21,6 +21,8 @@ angular.module('myApp')
         });
     }
 
+    $rootScope.currentUser();
+
 })
 
 .controller('indexController',['$scope','$http', '$rootScope', function ($scope, $http, $rootScope) {
