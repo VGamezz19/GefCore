@@ -3,19 +3,21 @@
     <h1>Todas las puntuaciones de matematicas</h1>
 
     <div class ="row">
-      <div class ="col-md-3 col-lg-3 head" >
-        <h2>Usuario</h2>
-      </div>
-      <div class ="col-md-5 col-lg-5 head" >
-        <h2>Nivel actual</h2>
-      </div>
-      <div class ="col-md-3 col-lg-3 head" >
-        <h2>Puntuación total</h2>
+      <div tabindex="1">
+        <div class ="col-md-3 col-lg-3 head" >
+          <h2>Usuario</h2>
+        </div>
+        <div class ="col-md-5 col-lg-5 head" >
+          <h2>Nivel actual</h2>
+        </div>
+        <div class ="col-md-3 col-lg-3 head" >
+          <h2>Puntuación total</h2>
+        </div>
       </div>
     </div>
     <div class ="row" ng-repeat ="usuarios in usuarioCompleto  | orderBy: '-puntuacion.matematicas' track by $index ">
       <div class ="col-md-12 col-lg-12 matematicasHome " >
-        <a href="" class ="" >
+        <div tabindex="1">
           <div class ="col-md-3 col-lg-3 puntos-matematicas-home"  id ="tag{{$index}}">
             <h3 style="margin: 0 !important; text-align: left;">{{1 + $index}} - {{usuarios.username}}</h3>
           </div>
@@ -25,7 +27,7 @@
           <div class ="col-md-3 col-lg-3 puntos-matematicas-home"  id ="tag{{$index}}">
             <h3 style="margin: 0 !important; text-align: center;">{{usuarios.puntuacion.matematicas}}</h3>
           </div>
-        </a>
+        </div>
       </div>
     </div>
 </div>

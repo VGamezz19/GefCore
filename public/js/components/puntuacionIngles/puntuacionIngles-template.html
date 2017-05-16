@@ -1,27 +1,35 @@
-
+<link rel="stylesheet" href="/js/components/puntuacionIngles/puntuacionIngles-css.css">
 <div>
-    <h1>Todas las puntuaciones de Ingles</h1>
-    <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Nombre de usuario</th>
-            <th>Puntuacion total</th>
-            <th>Ultimo nivel</th>
-          </tr>
-        </thead>
-          <tbody>
-            <tr ng-repeat ="usuarios in usuarioCompleto  | orderBy: '-puntuacion.matematicas' track by $index " id ="tag{{$index}}">
+    <h1>Todas las puntuaciones de matematicas</h1>
 
-              <td>{{1 + $index}} - {{usuarios.username}}</td>
-              <td>{{usuarios.puntuacion.ingles}}</td>
-              <td>Actual mente esta por el nivel {{nivelesUsers[$index]}}</td>
-            </tr>
-          </tbody>
-        </table>
+    <div class ="row">
+      <div tabindex ="1">
+        <div class ="col-md-3 col-lg-3 head" >
+          <h2>Usuario</h2>
+        </div>
+        <div class ="col-md-5 col-lg-5 head" >
+          <h2>Nivel actual</h2>
+        </div>
+        <div class ="col-md-3 col-lg-3 head" >
+          <h2>Puntuación total</h2>
+        </div>
+      </div>
+    </div>
+    <div class ="row" ng-repeat ="usuarios in usuarioCompleto  | orderBy: '-puntuacion.matematicas' track by $index ">
+      <div class ="col-md-12 col-lg-12 matematicasHome " >
+        <div tabindex ="1">
+          <div class ="col-md-3 col-lg-3 puntos-matematicas-home"  id ="tag{{$index}}">
+            <h3 style="margin: 0 !important; text-align: left;">{{1 + $index}} - {{usuarios.username}}</h3>
+          </div>
+          <div class ="col-md-5 col-lg-5 puntos-matematicas-home"  id ="tag{{$index}}">
+            <h3 style="margin: 0 !important; text-align: left;">Actual mente esta por el Nivel {{nivelesUsers[$index]}}</h3>
+          </div>
+          <div class ="col-md-3 col-lg-3 puntos-matematicas-home"  id ="tag{{$index}}">
+            <h3 style="margin: 0 !important; text-align: center;">{{usuarios.puntuacion.matematicas}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
 
-<script>
-
-//  $('#1tag').addClass( "primeroPuntuacion" );
-//  $('#1tag').html( "<span class ='fi glyphicon glyphicon-star'></spam>" );
-</script>
+<script src =" /js/components/puntuacionIngles/puntuacionIngles-jquery.js"></script>
