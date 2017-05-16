@@ -1,6 +1,6 @@
 angular.module('myApp')
 .run(function($rootScope, $http, $q) {
-
+  $rootScope.trueFalse = false;
     //=============================currentUser ===================================
 
 
@@ -13,9 +13,11 @@ angular.module('myApp')
       }).then(function successCallback(response) {
 
           $rootScope.thisUser = response.data;
+          $rootScope.trueFalse = true;
           console.log($rootScope.thisUser);
 
         }, function errorCallback(response) {
+          $rootScope.trueFalse = false;
           return false;
             console.log("error");
         });
