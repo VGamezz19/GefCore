@@ -6,7 +6,7 @@
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo": "I ...",
+         "titulo": "I ... a kid",
          "respuesta": "am",
          "puntuacion":10,
          "opciones": [
@@ -21,7 +21,7 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo": "You ...",
+         "titulo": "You ... a good student",
          "respuesta": "are",
          "puntuacion":20,
          "opciones": [
@@ -37,7 +37,7 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo": "He ...",
+         "titulo": "He ... nice with everybody",
          "respuesta": "is",
          "puntuacion":30,
          "opciones": [
@@ -52,7 +52,7 @@
 
      "pregunta": {
       "identi": "pregunta4",
-       "titulo":"She ...",
+       "titulo":"She ... is the best at maths",
        "respuesta": "is",
        "puntuacion":35,
        "opciones": [
@@ -66,7 +66,7 @@
 
    "pregunta": {
     "identi": "pregunta5",
-     "titulo":"We ...",
+     "titulo":"We ... always together",
      "respuesta": "are",
      "puntuacion":40,
      "opciones": [
@@ -88,7 +88,7 @@
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo": "1",
+         "titulo": "Traduce el numero uno",
          "respuesta": "one",
          "puntuacion":10,
          "opciones": [
@@ -103,7 +103,7 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo": "7",
+         "titulo": "Traduce el numero siete",
          "respuesta": "seven",
          "puntuacion":20,
          "opciones": [
@@ -120,7 +120,7 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo": "9",
+         "titulo": "Traduce el numero nueve",
          "respuesta": "nine",
          "puntuacion":30,
          "opciones": [
@@ -136,7 +136,7 @@
 
      "pregunta": {
       "identi": "pregunta4",
-       "titulo":"4",
+       "titulo":"Traduce el numero cuatro",
        "respuesta": "four",
        "puntuacion":35,
        "opciones": [
@@ -151,7 +151,7 @@
 
    "pregunta": {
     "identi": "pregunta5",
-     "titulo":"12",
+     "titulo":" Traduce el numero doce",
      "respuesta": "twelve",
      "puntuacion":40,
      "opciones": [
@@ -174,7 +174,7 @@
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo": "am",
+         "titulo": "Cual es la forma contraida de am",
          "respuesta": "m",
          "puntuacion":10,
          "opciones": [
@@ -190,7 +190,7 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo": "is",
+         "titulo": "Cual es la forma contraida de is",
          "respuesta": "s",
          "puntuacion":20,
          "opciones": [
@@ -206,7 +206,7 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo": "are",
+         "titulo": "Cual es la forma contraida de are",
          "respuesta": "re",
          "puntuacion":30,
          "opciones": [
@@ -221,7 +221,7 @@
 
      "pregunta": {
       "identi": "pregunta4",
-       "titulo":"I ...",
+       "titulo":"I ... fourteen years old",
        "respuesta": "m",
        "puntuacion":35,
        "opciones": [
@@ -235,7 +235,7 @@
 
    "pregunta": {
     "identi": "pregunta5",
-     "titulo":"We ...",
+     "titulo":"We ... the champions",
      "respuesta": "re",
      "puntuacion":40,
      "opciones": [
@@ -256,7 +256,7 @@
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo": "20",
+         "titulo": "Traduce el numero veinte",
          "respuesta": "twenty",
          "puntuacion":10,
          "opciones": [
@@ -272,7 +272,7 @@
 
        "pregunta": {
         "identi": "pregunta2",
-         "titulo": "16",
+         "titulo": "Traduce el numero dieciséis",
          "respuesta": "sixteen",
          "puntuacion":20,
          "opciones": [
@@ -289,7 +289,7 @@
 
        "pregunta": {
         "identi": "pregunta3",
-         "titulo": "80",
+         "titulo": "Traduce el numero ochenta",
          "respuesta": "eighty",
          "puntuacion":30,
          "opciones": [
@@ -305,7 +305,7 @@
 
      "pregunta": {
       "identi": "pregunta4",
-       "titulo":"50",
+       "titulo":"Traduce el numero cincuenta",
        "respuesta": "fifty",
        "puntuacion":35,
        "opciones": [
@@ -320,7 +320,7 @@
 
    "pregunta": {
     "identi": "pregunta5",
-     "titulo":"61",
+     "titulo":"Traduce el numero sesenta y uno",
      "respuesta": "sixty-one",
      "puntuacion":40,
      "opciones": [
@@ -342,7 +342,7 @@
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo": "perro",
+         "titulo": "Como se dice perro en ingles",
          "respuesta": "dog",
          "puntuacion":10,
          "opciones": [
@@ -358,7 +358,7 @@
 
        "pregunta": {
         "identi": "pregunta2",
-        "titulo": "vaca",
+        "titulo": "Como se dice vaca en ingles",
         "respuesta": "cow",
         "puntuacion": 20,
         "opciones": [
@@ -375,7 +375,7 @@
 
        "pregunta": {
         "identi": "pregunta3",
-        "titulo": "elefante",
+        "titulo": "Como se dice elefante en ingles",
         "respuesta": "elephant",
         "puntuacion": 30,
         "opciones": [
@@ -391,7 +391,7 @@
 
      "pregunta": {
       "identi": "pregunta4",
-      "titulo": "cerdo",
+      "titulo": "Como se dice cerdo en ingles",
       "respuesta": "pork",
       "puntuacion": 35,
       "opciones": [
@@ -406,7 +406,7 @@
 
    "pregunta": {
     "identi": "pregunta5",
-    "titulo": "cabra",
+    "titulo": "Como se dice cabra en ingles",
     "respuesta": "goat",
     "puntuacion": 40,
     "opciones": [
@@ -429,8 +429,8 @@
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo": "trousers",
-         "respuesta": "30",
+         "titulo": "Nombre de pantalones en ingles",
+         "respuesta": "trousers",
          "puntuacion": 10,
          "opciones": [
             {"opcion": "shoes"},
@@ -445,7 +445,7 @@
 
        "pregunta": {
         "identi": "pregunta2",
-        "titulo": "mochila",
+        "titulo": "Nombre de mochila en ingles",
         "respuesta": "bag",
         "puntuacion": 20,
         "opciones": [
@@ -462,7 +462,7 @@
 
        "pregunta": {
         "identi": "pregunta3",
-        "titulo": "falda",
+        "titulo": "Nombre de falda en ingles",
         "respuesta": "skirt",
         "puntuacion": 30,
         "opciones": [
@@ -478,7 +478,7 @@
 
      "pregunta": {
       "identi": "pregunta4",
-      "titulo": "reloj",
+      "titulo": "Nombre de reloj en ingles",
       "respuesta": "watch",
       "puntuacion": 35,
       "opciones": [
@@ -493,7 +493,7 @@
 
    "pregunta": {
     "identi": "pregunta5",
-    "titulo": "camiseta",
+    "titulo": "Nombre de camiseta en ingles",
     "respuesta": "t-shirt",
     "puntuacion": 40,
     "opciones": [
@@ -516,7 +516,7 @@
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo": "motocicleta",
+         "titulo": "Traduce moto ",
          "respuesta": "motorbike",
          "puntuacion": 10,
          "opciones": [
@@ -532,7 +532,7 @@
 
        "pregunta": {
         "identi": "pregunta2",
-        "titulo": "conducir",
+        "titulo": "Traduce conducir",
         "respuesta": "drive",
         "puntuacion": 20,
         "opciones": [
@@ -549,7 +549,7 @@
 
        "pregunta": {
         "identi": "pregunta3",
-        "titulo": "nadar",
+        "titulo": "Traduce nadar",
         "respuesta": "swim",
         "puntuacion": 30,
         "opciones": [
@@ -565,7 +565,7 @@
 
      "pregunta": {
       "identi": "pregunta4",
-      "titulo": "correr",
+      "titulo": "Traduce correr",
       "respuesta": "run",
       "puntuacion": 35,
       "opciones": [
@@ -580,7 +580,7 @@
 
    "pregunta": {
     "identi": "pregunta5",
-    "titulo": "coche",
+    "titulo": "Traduce coche",
     "respuesta": "car",
     "puntuacion": 40,
     "opciones": [
@@ -603,7 +603,7 @@
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo": "platano",
+         "titulo": "Di el nombre de platano en ingles",
          "respuesta": "banana",
          "puntuacion": 10,
          "opciones": [
@@ -619,7 +619,7 @@
 
        "pregunta": {
         "identi": "pregunta2",
-        "titulo": "pan",
+        "titulo": "Di el nombre de pan en ingles",
         "respuesta": "bread",
         "puntuacion": 20,
         "opciones": [
@@ -636,7 +636,7 @@
 
        "pregunta": {
         "identi": "pregunta3",
-        "titulo": "pastel",
+        "titulo": "Di el nombre de pastel en ingles",
         "respuesta": "cake",
         "puntuacion": 30,
         "opciones": [
@@ -652,7 +652,7 @@
 
      "pregunta": {
       "identi": "pregunta4",
-      "titulo": "limon",
+      "titulo": "Di el nombre de limon en ingles",
       "respuesta": "lemmon",
       "puntuacion": 35,
       "opciones": [
@@ -667,7 +667,7 @@
 
    "pregunta": {
     "identi": "pregunta5",
-    "titulo": "helado",
+    "titulo": "Di el nombre de helado en ingles",
     "respuesta": "ice cream",
     "puntuacion": 40,
     "opciones": [
@@ -690,7 +690,7 @@
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo": "pelota",
+         "titulo": "Como se dice pelota en ingles",
          "respuesta": "ball",
          "puntuacion": 10,
          "opciones": [
@@ -706,7 +706,7 @@
 
        "pregunta": {
         "identi": "pregunta2",
-        "titulo": "patines",
+        "titulo": "Como se dice patines en ingles",
         "respuesta": "skates",
         "puntuacion": 20,
         "opciones": [
@@ -723,7 +723,7 @@
 
        "pregunta": {
         "identi": "pregunta3",
-        "titulo": "cometa",
+        "titulo": "Como se dice cometa en ingles",
         "respuesta": "kite",
         "puntuacion": 30,
         "opciones": [
@@ -738,7 +738,7 @@
 
      "pregunta": {
       "identi": "pregunta4",
-      "titulo": "muñeca",
+      "titulo": "Como se dice muñeca en ingles",
       "respuesta": "doll",
       "puntuacion": 35,
       "opciones": [
@@ -752,7 +752,7 @@
 
    "pregunta": {
     "identi": "pregunta5",
-    "titulo": "dados",
+    "titulo": "Dime el nombre de dados en ingles",
     "respuesta": "dice",
     "puntuacion": 40,
     "opciones": [
@@ -774,7 +774,7 @@
      "preguntas": [{
        "pregunta" :{
          "identi": "pregunta1",
-         "titulo": "suelo",
+         "titulo": "Como se llama el suelo",
          "respuesta": "floor",
          "puntuacion": 10,
          "opciones": [
@@ -790,7 +790,7 @@
 
        "pregunta": {
         "identi": "puerta",
-        "titulo": "patines",
+        "titulo": "Como se llama la puerta",
         "respuesta": "door",
         "puntuacion": 20,
         "opciones": [
@@ -807,7 +807,7 @@
 
        "pregunta": {
         "identi": "pregunta3",
-        "titulo": "Escaleras",
+        "titulo": "Como se llaman las escaleras",
         "respuesta": "stairs",
         "puntuacion": 30,
         "opciones": [
@@ -822,7 +822,7 @@
 
      "pregunta": {
       "identi": "pregunta4",
-      "titulo": "pared",
+      "titulo": "Como se llaman las paredes",
       "respuesta": "wall",
       "puntuacion": 35,
       "opciones": [
@@ -836,7 +836,7 @@
 
    "pregunta": {
     "identi": "pregunta5",
-    "titulo": "azotea",
+    "titulo": "Como llaman a la azotea",
     "respuesta": "dice",
     "puntuacion": 40,
     "opciones": [
