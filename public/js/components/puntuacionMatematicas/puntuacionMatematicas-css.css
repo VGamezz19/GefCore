@@ -1,0 +1,65 @@
+
+body {
+  background: #cccc99 !important;
+}
+.puntos-matematicas-home {
+  height: 50px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  display: inline-block;
+  padding: 6px 12px;
+  color:black!important;
+  font-size: 1.5em;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  background: rgba(102, 102, 102, 0.50);
+  border: 5px solid #666666;
+}
+
+
+#tag0{
+ border: 5px #FFCC00 solid !important;
+ background: rgba(255, 204, 0, 0.30) !important;
+}
+
+#tag1{
+ border: 5px #9a9a9a solid !important;
+ background: rgba(154, 154, 154, 0.50) !important;
+}
+
+#tag2{
+ border: 5px #996633 solid !important;
+ background: rgba(153, 102, 51, 0.49) !important;
+}
+
+.head{
+  margin-left: 1em;
+  margin-bottom: 1em;
+  margin-top: 5em;
+}
+
+.primeraPuntuacion {
+    left: -7.8em;
+  top: -1.2em;
+  color: #FFCC00 !important;
+ }
+
+.segundaPuntuacion {
+    left: -7.8em;
+  top: -1.2em;
+  color: #9a9a9a !important;
+ }
+.terceraPuntuacion {
+    left: -7.8em;
+  top: -1.2em;
+  color: #996633 !important;
+ }

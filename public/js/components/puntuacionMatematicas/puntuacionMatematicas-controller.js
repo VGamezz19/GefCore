@@ -26,7 +26,7 @@
          $("#tag0").append("<span class='fi glyphicon glyphicon-star primeraPuntuacion'></span>");
          $("#tag1").append("<span class='fi glyphicon glyphicon-star segundaPuntuacion'></span>");
          $("#tag2").append("<span class='fi glyphicon glyphicon-star terceraPuntuacion'></span>");
-      }, 0)
+      }, 100)
 
     }]);
 
