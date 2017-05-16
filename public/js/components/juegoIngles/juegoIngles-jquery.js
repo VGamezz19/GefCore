@@ -3,23 +3,27 @@ $(".container-fluid").hide();
 
 $(".izquierda").hide();
 setTimeout(function(){
-
+  $(".nivel").focus();
   $(".juego1").show();
-},100);
+},150);
 
 var cnt = 1;
 
 function moverDerecha() {
   $(".izquierda").show();
+
+
   if (cnt === 5) {
     $(".derecha").hide();
     $(".juego5").hide();
     ///////////////////
+    cnt = cnt + 1;
     $(".final5").show();
   } else {
     $(".juego" + cnt).hide();
     //////////////////////////
     cnt = cnt + 1;
+    console.log(cnt);
     $(".juego" + cnt).show();
   }
 }
@@ -32,16 +36,29 @@ $( ".derecha" ).click(function() {
 $( ".izquierda" ).click(function() {
   $(".final5").hide();
   $(".derecha").show();
-  if (cnt === 1) {
+
+
+  if (cnt === 1 || cnt === 0) {
     $(".izquierda").hide();
     $(".juego2").hide()
     ///////////////////
+    cnt = 0;
     $(".juego1").show();
   } else {
     $(".juego" + cnt).hide();
     //////////////////////////
     cnt = cnt - 1;
-    $(".juego" + cnt).show();
+    if (cnt === 1 || cnt === 0) {
+      $(".izquierda").hide();
+      $(".juego2").hide()
+      ///////////////////
+      cnt = 0;
+      $(".juego1").show();
+    } else {
+      $(".juego" + cnt).show();
+      console.log(cnt);
+    }
+
   }
 
 });

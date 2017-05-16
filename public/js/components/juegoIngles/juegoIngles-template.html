@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/js/components/juegoIngles/juegoIngles-css.css">
 
 
+
 <div class ="row mainJuegos">
   <div class= "col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1 ">
       <button type="button" class="btn izquierda fi glyphicon glyphicon-chevron-left izquierdaFlecha" tabindex="1"></button>
@@ -29,10 +30,9 @@
         <div class ="row ">
           <div class ="col-md-10 col-lg-10 inputPregunta">
             <div class ="col-md-4 col-lg-4 " ng-repeat ="opcion in juego.pregunta.opciones ">
-              <input type="checkbox" value="opcion" id="status" ng-model="modal" class="checkbox checkbox-success" ng-change="IfCheck(opcion.opcion, modal)">
+              <input type="checkbox" value="opcion" id="status" ng-model="modal" class="checkbox checkbox-success" tabindex="1" ng-change="IfCheck(opcion.opcion, modal)">
               <span class="Form-label-text">{{opcion.opcion}}</span>
             </div>
-          </div>
           </div>
         </div>
       </div>
@@ -106,5 +106,18 @@
   </div>
 </div>
 
+<!-- END Modal CheckLogOUT-->
+
 
 <script src =" /js/components/juegoIngles/juegoIngles-jquery.js"></script>
+
+
+<!--
+<div class ="row ">
+  <div class ="col-md-10 col-lg-10 inputPregunta">
+    <div class ="col-md-4 col-lg-4 " ng-repeat ="opcion in juego.pregunta.opciones ">
+      <input type="checkbox" value="opcion" id="status" ng-model="modal" class="checkbox checkbox-success" ng-change="IfCheck(opcion.opcion, modal)">
+      <span class="Form-label-text">{{opcion.opcion}}</span>
+    </div>
+  </div>
+</div> -->
