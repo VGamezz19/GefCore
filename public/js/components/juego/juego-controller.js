@@ -84,7 +84,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
         data: $scope.updateGame,
         headers : {'Accept' : 'application/json'}
       }).then(function successCallback(response) {
-
+          $rootScope.currentUser();
           $http({
             method: 'POST',
             url: '/updateGame',
@@ -158,7 +158,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
                               data: $scope.newJuego,
                               headers : {'Accept' : 'application/json'}
                           }).then(function successCallback(response) {
-                              
+
                           }) ;
                     }
                 } else {
