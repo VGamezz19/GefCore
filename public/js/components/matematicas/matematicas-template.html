@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/js/components/matematicas/matematicas-css.css">
     <h2>Matematicas</h2>
-    <div class ="row " style ="margin-bottom: 1em;" ng-repeat ="mates in matematicas track by $index">
+    <div class ="row " style ="margin-bottom: 1em;" ng-repeat ="mates in matematicas track by mates.nivel">
     <!-- IF mates.puntos es más pequeña que la puntuacion que necesita para entrar-->
       <div class ="col-md-12 col-lg-12 matematicasHome desbloqueado" ng-if="mates.puntuacionTotal <= thisUser.puntuacion.matematicas">
         <a href="/juego/{{mates.identi}}" class ="" >
