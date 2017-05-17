@@ -1,13 +1,17 @@
 
 
 
-  angular.module('ingles').controller('inglesController',['$scope', '$rootScope','$http', '$location', function ($scope, $rootScope, $http, $location) {
+  angular.module('ingles').controller('inglesController',['$scope', '$rootScope','$http', '$location', 'UserCurrent', function ($scope, $rootScope, $http, $location, UserCurrent) {
     $("#ngView").addClass("addMarginTopView");
     $(".container-fluid").hide();
 
+UserCurrent.getUser()
+   .then( function(user) {
+     $scope.thisUser = user
+   })
 
 //==============================================================================
-if (!$rootScope.thisUser) {
+if (!$scope.thisUser) {
   $location.path( "/" );
 } else {
 
@@ -23,8 +27,8 @@ if (!$rootScope.thisUser) {
 
     });
 
-    console.log($rootScope.thisUser.puntuacion);
-    this.puntuacionMaxima = $rootScope.thisUser.puntuacion.ingles;
+    console.log($rscope.thisUser.puntuacion);
+    this.puntuacionMaxima = $scope.thisUser.puntuacion.ingles;
 /* //Le pasamos la puntuacion maxima de matematicas del usuario conectado a la Template.
 
 

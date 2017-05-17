@@ -12,8 +12,8 @@
           <div class ="col-md-5 col-lg-5 juegos-matematicas-home {{mates.identi}}">
             <span>{{mates.titulo}}</span>
           </div>
-          <div ng-if ="$root.thisUser.matematicas">
-            <div ng-repeat ="matematicasUser in $root.thisUser.ingles">
+          <div ng-if ="thisUser.matematicas">
+            <div ng-repeat ="matematicasUser in thisUser.ingles">
               <div ng-if ="matematicasUser.juego.identi == mates.identi && matematicasUser.juego.estado == 0">
 
                 <div class ="col-md-3 col-lg-3 juegos-matematicas-home {{mates.identi}}">
@@ -38,7 +38,7 @@
               </div>
             </div>
           </div>
-          <div ng-if ="$root.thisUser.matematicas.length == 0">
+          <div ng-if ="thisUser.matematicas.length == 0">
             <div class ="col-md-3 col-lg-3 juegos-matematicas-home {{mates.identi}}">
               <span>Nuevo Nivel</span>
             </div>
