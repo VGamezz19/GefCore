@@ -1,6 +1,6 @@
 
 {
-     "titulo": "Aprende a sumar!",
+     "titulo": "Aprende a sumar",
      "identi": "juego1",
      "puntuacionTotal": 0,
      "nivel": 1,
@@ -126,9 +126,9 @@
 }
 
 {
-     "titulo": "sumas y restas ",
+     "titulo": "Sumas y restas ",
      "identi": "juego3",
-     "puntuacionTotal": 100,
+     "puntuacionTotal": 150,
      "nivel":3,
      "preguntas": [{
 
@@ -191,7 +191,7 @@
 {
      "titulo": "Multiplicaciones",
      "identi": "juego4",
-     "puntuacionTotal": 150,
+     "puntuacionTotal": 200,
      "nivel":4,
      "preguntas": [{
 
@@ -254,7 +254,7 @@
 {
      "titulo": "Más multiplicaciones",
      "identi": "juego5",
-     "puntuacionTotal": 200,
+     "puntuacionTotal": 300,
      "nivel":5,
      "preguntas": [{
 
@@ -317,7 +317,7 @@
 {
      "titulo": "Practica la división",
      "identi": "juego6",
-     "puntuacionTotal": 250,
+     "puntuacionTotal": 350,
      "nivel":6,
      "preguntas": [{
 
@@ -380,7 +380,7 @@
 {
      "titulo": "Más divisiones",
      "identi": "juego7",
-     "puntuacionTotal": 300,
+     "puntuacionTotal": 400,
      "nivel":7,
      "preguntas": [{
 
@@ -443,7 +443,7 @@
 {
      "titulo": "Operaciones",
      "identi": "juego8",
-     "puntuacionTotal": 350,
+     "puntuacionTotal": 500,
      "nivel":8,
      "preguntas": [{
 
@@ -506,7 +506,7 @@
 {
      "titulo": "Más operaciones",
      "identi": "juego9",
-     "puntuacionTotal": 400,
+     "puntuacionTotal": 600,
      "nivel":9,
      "preguntas": [{
 
@@ -569,7 +569,7 @@
 {
      "titulo": "Repaso",
      "identi": "juego10",
-     "puntuacionTotal": 450,
+     "puntuacionTotal": 800,
      "nivel":10,
      "preguntas": [{
 
