@@ -9,13 +9,13 @@
         url:'/getAll'
       }).then(function successCallback(response){
         $scope.usuarioCompleto = response.data;
-        console.log($scope.usuarioCompleto);
         $scope.usuarioCompleto.forEach(function(usuario) {
           var cnt = 0;
             usuario.matematicas.forEach(function(nivel) {
                 cnt = cnt + 1;
             });
-          $scope.nivelesUsers.push(cnt);
+
+            usuario['juegoActual'] = cnt;
         });
 
       });
