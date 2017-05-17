@@ -232,7 +232,7 @@ h1 {
 
 .yesClose-loged  {
     height: 2.5em !important;
-    font-size: 2em !important;
+    font-size: 1.3em !important;
     color: white !important;
     border: 2px solid white !important;
     border-radius: 0 !important;
@@ -240,18 +240,18 @@ h1 {
     background: #CCCC99 !important;
     margin: 1.5em !important;
     margin-bottom: 1.5em !important;
-    margin-left: 3em !important;
+    margin-left: 4.5em !important;
 }
 
 .close-loged {
   height: 2.5em !important;
-    font-size: 2em !important;
-    color: rgba(0, 0, 0, 0.75)  !important;
-    border: 2px solid rgba(255, 255, 255, 0.75) !important;
+    font-size: 1.3em !important;
+    color: #666666  !important;
+    border: 2px solid #666666 !important;
     border-radius: 0 !important;
     width: 40% !important;
     margin: 1.5em !important;
     background: #999900 !important;
     margin-bottom: 1.5em !important;
-    margin-right:3em !important;
+    margin-right: 4.5em !important;
 }
