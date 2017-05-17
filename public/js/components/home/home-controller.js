@@ -12,6 +12,8 @@ angular.module('homeModule').controller('homeController',['$scope', '$http', '$s
        console.log(user.matematicas);
        $scope.thisUser = user
 
+//Recuperamos THIS USER nada mas empezar la carga del HOME.
+
        if ($scope.thisUser.matematicas.length == 0){
 
          $scope.tituloJuego = "Aun no has jugado";
@@ -118,13 +120,4 @@ angular.module('homeModule').controller('homeController',['$scope', '$http', '$s
        }
 
      })
-
-
-
-
-
-
-
-
-
   }]);

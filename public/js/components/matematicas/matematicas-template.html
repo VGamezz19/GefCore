@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="/js/components/matematicas/matematicas-css.css">
     <h2>Matematicas</h2>
-
+    holhol
     <div class ="row " style ="margin-bottom: 1em;" ng-repeat ="mates in matematicas track by $index">
-
+    fff
     <!-- IF mates.puntos es más pequeña que la puntuacion que necesita para entrar-->
-      <div class ="col-md-12 col-lg-12 matematicasHome desbloqueado" ng-if="mates.puntuacionTotal <= $ctrl.puntuacionMaxima ">
+      <div class ="col-md-12 col-lg-12 matematicasHome desbloqueado" ng-if="mates.puntuacionTotal <= thisUser.puntuacion.matematicas">
         <a href="/juego/{{mates.identi}}" class ="" >
           <div class ="col-md-3 col-lg-3 juegos-matematicas-home  {{mates.identi}}">
             Nivel {{mates.nivel}}
@@ -12,8 +12,8 @@
           <div class ="col-md-5 col-lg-5 juegos-matematicas-home {{mates.identi}}">
             <span>{{mates.titulo}}</span>
           </div>
-          <div ng-if ="$root.thisUser.matematicas">
-            <div ng-repeat ="matematicasUser in $root.thisUser.matematicas">
+          <div ng-if ="thisUser.matematicas">
+            <div ng-repeat ="matematicasUser in thisUser.matematicas">
               <div ng-if ="matematicasUser.juego.identi == mates.identi && matematicasUser.juego.estado == 0">
 
                 <div class ="col-md-3 col-lg-3 juegos-matematicas-home {{mates.identi}}">
@@ -38,7 +38,7 @@
               </div>
             </div>
           </div>
-          <div ng-if ="$root.thisUser.matematicas.length == 0">
+          <div ng-if ="thisUser.matematicas.length == 0">
             <div class ="col-md-3 col-lg-3 juegos-matematicas-home {{mates.identi}}">
               <span>Nuevo Nivel</span>
             </div>
@@ -49,7 +49,7 @@
       </div>
 
     <!-- Else if-->
-      <div class ="col-md-12 col-lg-12 matematicasHome bloqueado" ng-if="mates.puntuacionTotal > $ctrl.puntuacionMaxima ">
+      <div class ="col-md-12 col-lg-12 matematicasHome bloqueado" ng-if="mates.puntuacionTotal > thisUser.puntuacion.matematicas">
         <a href="" class ="" >
           <div class ="col-md-3 col-lg-3 juegos-matematicas-home juegoBloqueado {{mates.identi}}">
             Nivel {{$index + 1}}

@@ -1,4 +1,4 @@
-angular.module('juegoIngles').controller('juegoInglesController',['$scope','$http','$rootScope','$routeParams', '$route', function ($scope,$http,$rootScope,$routeParams,$route, $location) {
+angular.module('juegoIngles').controller('juegoInglesController',['$scope','$http','$rootScope','$routeParams', '$route', '$window','UserCurrent', function ($scope,$http,$rootScope,$routeParams,$route, $window, UserCurrent) {
 
 //==============================================================================
 
@@ -19,6 +19,11 @@ angular.module('juegoIngles').controller('juegoInglesController',['$scope','$htt
 
      }, function errorCallback(response) {
 
+     });
+
+     //Funcion jquery para ejecutar algo despues de usar un modal
+     $('.correccion').on('hidden.bs.modal', function () {
+        $window.location.assign('/matematicas');
      });
 
          $scope.ids = [];
@@ -59,122 +64,130 @@ angular.module('juegoIngles').controller('juegoInglesController',['$scope','$htt
               $scope.errores = $scope.errores + 1;
             }
         }
-
-        //Necesitamos tener constancia de en que posicion tiene el usuario el registro del juego
-        //que esta jugando, para luego buscar la ID del nivel cursado y actualizar los datos
-        //en la colleccion de Usuarios (para tener un historico)
-        var cnt = 0;
-        var j = 0;
-        $rootScope.thisUser.ingles.forEach(function(thisMatematicasGameUser) {
-          if(thisMatematicasGameUser.juego.identi == $scope.juegoActual.identi) {
-            cnt = j;
-
-          }
-          j = j + 1;
-        });
-
-        // Guardamos la _id de matematicas del usuario conectado.
-        var idGameUser = $rootScope.thisUser.ingles[cnt]._id;
+        UserCurrent.getUser()
+           .then( function(user) {
+             $scope.thisUser = user;
 
 
+             //Necesitamos tener constancia de en que posicion tiene el usuario el registro del juego
+             //que esta jugando, para luego buscar la ID del nivel cursado y actualizar los datos
+             //en la colleccion de Usuarios (para tener un historico)
+             var cnt = 0;
+             var j = 0;
+             $scope.thisUser.ingles.forEach(function(thisMatematicasGameUser) {
+               if(thisMatematicasGameUser.juego.identi == $scope.juegoActual.identi) {
+                 cnt = j;
 
-        //Si tiene 3 o máserrores, el juego tendra estado 3.
-        //Significa que ha jugado el juego con dificultad.
-        //Luego en el profile, se le recordara, que deveria volverlo hacer
-        //Para mejorar su marca
-        if ($scope.errores >=3) {
-          $scope.estado = 3;
-        } else {
-          $scope.estado = 1;
-        }
-        //los puntos anteriores de este juego
-        $scope.puntosOld = $rootScope.thisUser.ingles[cnt].juego.puntuacion;
+               }
+               j = j + 1;
+             });
 
-        $scope.updateGame = {"_id":idGameUser,"juego": {"identi": $scope.juegoActual.identi,"titulo": $scope.juegoActual.titulo,"nivel": $scope.juegoActual.nivel,"puntuacion": $scope.puntuacion,"estado": $scope.estado,"correctas": $scope.correctas,"incorrectas": $scope.errores,"ultimoUso": time}}
-        $http({
-          method: 'POST',
-          url: '/deleteIngles',
-          data: $scope.updateGame,
-          headers : {'Accept' : 'application/json'}
-        }).then(function successCallback(response) {
-
-            $http({
-              method: 'POST',
-              url: '/updateIngles',
-              data: $scope.updateGame,
-              headers : {'Accept' : 'application/json'}
-          }).then(function successCallback(response) {
-
-          });
+             // Guardamos la _id de matematicas del usuario conectado.
+             var idGameUser = $scope.thisUser.ingles[cnt]._id;
 
 
-          if ($scope.puntosOld > $scope.puntuacion) {
 
-          } else {
-            var actualP = $rootScope.thisUser.puntuacion.ingles;
-            var oldPuntos = $scope.puntosOld;
-            var newPuntos = $scope.puntuacion;
-            var puntuacionFinal = 0;
+             //Si tiene 3 o máserrores, el juego tendra estado 3.
+             //Significa que ha jugado el juego con dificultad.
+             //Luego en el profile, se le recordara, que deveria volverlo hacer
+             //Para mejorar su marca
+             if ($scope.errores >=3) {
+               $scope.estado = 3;
+             } else {
+               $scope.estado = 1;
+             }
+             //los puntos anteriores de este juego
+             $scope.puntosOld = $scope.thisUser.ingles[cnt].juego.puntuacion;
 
-            puntuacionFinal = actualP - oldPuntos;
-            puntuacionFinal = puntuacionFinal + newPuntos;
-            $rootScope.thisUser.puntuacion.ingles = puntuacionFinal;
-          }
+             $scope.updateGame = {"_id":idGameUser,"juego": {"identi": $scope.juegoActual.identi,"titulo": $scope.juegoActual.titulo,"nivel": $scope.juegoActual.nivel,"puntuacion": $scope.puntuacion,"estado": $scope.estado,"correctas": $scope.correctas,"incorrectas": $scope.errores,"ultimoUso": time}}
+             $http({
+               method: 'POST',
+               url: '/deleteIngles',
+               data: $scope.updateGame,
+               headers : {'Accept' : 'application/json'}
+             }).then(function successCallback(response) {
 
-          //Insertamos los puntos actualizados del nivel
-          $http({
-            method: 'POST',
-            url: '/puntosIngles',
-            data: $rootScope.thisUser,
-        }).then(function successCallback(response) {
-          //Abrimos el modal que mostrara los datos del usuario.
-    ////****!!!!!
-            $(".correccion").modal();
+                 $http({
+                   method: 'POST',
+                   url: '/updateIngles',
+                   data: $scope.updateGame,
+                   headers : {'Accept' : 'application/json'}
+               }).then(function successCallback(response) {
 
-            $http({
-              method: 'GET',
-              url: '/getAllIngles'
-            }).then(function successCallback(response) {
+               });
 
-                $scope.matematicasList = response.data;
 
-                $scope.matematicasList.forEach(function(allMates) {
+               if ($scope.puntosOld > $scope.puntuacion) {
 
-                var jugado = false ;
-                if($rootScope.thisUser.puntuacion.ingles > allMates.puntuacionTotal ) {
+               } else {
+                 var actualP = $scope.thisUser.puntuacion.ingles;
+                 var oldPuntos = $scope.puntosOld;
+                 var newPuntos = $scope.puntuacion;
+                 var puntuacionFinal = 0;
 
-                   $rootScope.thisUser.ingles.forEach(function(identUser) {
+                 puntuacionFinal = actualP - oldPuntos;
+                 puntuacionFinal = puntuacionFinal + newPuntos;
+                 $scope.thisUser.puntuacion.ingles = puntuacionFinal;
+               }
 
-                      if(!jugado) {
+               //Insertamos los puntos actualizados del nivel
+               $http({
+                 method: 'POST',
+                 url: '/puntosIngles',
+                 data: $scope.thisUser,
+             }).then(function successCallback(response) {
+               //Abrimos el modal que mostrara los datos del usuario.
+         ////****!!!!!
+                 $(".correccion").modal();
 
-                          if (identUser.juego.identi == allMates.identi && (identUser.juego.estado == 0 || identUser.juego.estado == 1 || identUser.juego.estado == 3)) {
-                              jugado = true;
-                          }
+                 $http({
+                   method: 'GET',
+                   url: '/getAllIngles'
+                 }).then(function successCallback(response) {
+
+                     $scope.matematicasList = response.data;
+
+                     $scope.matematicasList.forEach(function(allMates) {
+
+                     var jugado = false ;
+                     if($scope.thisUser.puntuacion.ingles > allMates.puntuacionTotal ) {
+
+                        $scope.thisUser.ingles.forEach(function(identUser) {
+
+                           if(!jugado) {
+
+                               if (identUser.juego.identi == allMates.identi && (identUser.juego.estado == 0 || identUser.juego.estado == 1 || identUser.juego.estado == 3)) {
+                                   jugado = true;
+                               }
+                            }
+                           });
+
+                           if (jugado == false && allMates.identi != id) {
+
+                             var time = new Date();
+                             $scope.newJuego = {"juego": {"identi": allMates.identi,"titulo": allMates.titulo,"nivel": allMates.nivel,"puntuacion": 0,"estado": 0,"correctas": 0,"incorrectas": 0,"ultimoUso": time}}
+
+                                   $http({
+                                     method: 'POST',
+                                     url: '/createIngles',
+                                     data: $scope.newJuego,
+                                     headers : {'Accept' : 'application/json'}
+                                 }).then(function successCallback(response) {
+                                     $rootScope.currentUser();
+                                 }) ;
+                           }
+                       } else {
+                         jugado = false;
                        }
-                      });
+                     });
+                 }, function errorCallback(response) {
+                 });
+             });
+           });
 
-                      if (jugado == false && allMates.identi != id) {
+        })
 
-                        var time = new Date();
-                        $scope.newJuego = {"juego": {"identi": allMates.identi,"titulo": allMates.titulo,"nivel": allMates.nivel,"puntuacion": 0,"estado": 0,"correctas": 0,"incorrectas": 0,"ultimoUso": time}}
-
-                              $http({
-                                method: 'POST',
-                                url: '/createIngles',
-                                data: $scope.newJuego,
-                                headers : {'Accept' : 'application/json'}
-                            }).then(function successCallback(response) {
-                                $rootScope.currentUser();
-                            }) ;
-                      }
-                  } else {
-                    jugado = false;
-                  }
-                });
-            }, function errorCallback(response) {
-            });
-        });
-      });
-    }
+      }
+      $(".correccion").modal();
   }
 }]);

@@ -11,7 +11,9 @@
         <a href="/matematicas" class ="btn "> Matematicas </a>
       </div>
       <div class ="col-md-5 col-lg-5">
-        <a href="/juego/{{link}}" class ="btn ">{{nivel}} - {{tituloJuego}}</a>
+
+        <a ng-if ="nivel != 0" href="/juego/{{link}}" class ="btn ">{{nivel}} - {{tituloJuego}}</a>
+        <a ng-if ="nivel == 0" href="/profile" class ="btn ">No hay nuevos juegos</a>
       </div>
     </div>
 
@@ -26,7 +28,8 @@
         <a href="/ingles" class ="btn "> Ingles </a>
       </div>
       <div class ="col-md-5 col-lg-5">
-        <a href="/juegoIngles/{{linking}}" class ="btn ">{{niveling}} - {{tituloJuegoing}}</a>
+        <a ng-if ="niveling != 0" href="/juego/{{link}}" class ="btn ">{{niveling}} - {{tituloJuegoing}}</a>
+        <a ng-if ="niveling == 0" href="/profile" class ="btn ">No hay nuevos juegos</a>
       </div>
     </div>
 
