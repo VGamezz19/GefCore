@@ -35,20 +35,20 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
   <!-- Header NAV -->
   <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li role="presentation" class="active"><a href="/">Home</a></li>
+        <li role="presentation" class="active"><a tabindex="1" href="/">Home</a ></li>
 
         <!-- Usuario Conectado-->
         <%  if( userFullName){ %> <!-- True false User -->
 
-            <li role="presentation"><a href="/profile"><%=userFullName%></a></li>
-            <li role="presentation"><a class ="logeOut" href="">Cerrar sesion</a></li>
+            <li role="presentation"><a href="/profile" tabindex="1"><%=userFullName%></a></li>
+            <li role="presentation"><a class ="logeOut" href="" tabindex="1">Cerrar sesion</a></li>
         <%}%>
 
         <!-- Usuario Desconectado-->
       <%  if(!userFullName){ %> <!-- True false User -->
 
-          <li role="presentation" class=""><a class ="login"href="">Entrar</a></li>
-          <li role="presentation"><a class ="register" href="">Registrate</a></li>
+          <li role="presentation" class=""><a tabindex="1" class ="login" href="" >Entrar</a></li>
+          <li role="presentation"><a  tabindex="1" class ="register" href="" >Registrate</a></li>
         <%}%>
       </ul>
   </div>
@@ -56,7 +56,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 <div class="container-fluid">
  <div class="row">
     <div class="backgroundHeader" >
-          <h1 class ="gefCore-title">GefCore</h1>
+          <h1 tabindex="1" class ="gefCore-title">GefCore</h1 >
     </div>
 
  </div>

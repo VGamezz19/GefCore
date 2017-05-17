@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="/js/components/ingles/ingles-css.css">
-    <h2>Ingles</h2>
+    <h2 tabindex="1">Ingles</h2>
 
     <div class ="row " style ="margin-bottom: 1em;" ng-repeat ="mates in matematicas track by mates.nivel">
 
     <!-- IF mates.puntos es más pequeña que la puntuacion que necesita para entrar-->
       <div class ="col-md-12 col-lg-12 matematicasHome desbloqueado" ng-if="mates.puntuacionTotal <= thisUser.puntuacion.ingles">
-        <a href="/juegoIngles/{{mates.identi}}" class ="" >
+        <a href="/juegoIngles/{{mates.identi}}" class ="" tabindex="1">
           <div class ="col-md-3 col-lg-3 juegos-matematicas-home  {{mates.identi}}">
             Nivel {{mates.nivel}}
           </div>
@@ -50,7 +50,7 @@
 
     <!-- Else if-->
       <div class ="col-md-12 col-lg-12 matematicasHome bloqueado" ng-if="mates.puntuacionTotal > thisUser.puntuacion.ingles">
-        <a href="" class ="" >
+        <a href="" class ="" tabindex="1">
           <div class ="col-md-3 col-lg-3 juegos-matematicas-home juegoBloqueado {{mates.identi}}">
             Nivel {{$index + 1}}
           </div>
