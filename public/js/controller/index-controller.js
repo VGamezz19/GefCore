@@ -29,6 +29,7 @@ angular.module('myApp')
     }
 
     $rootScope.currentUser();
+    
 //=========================Nav Jquery Efect=====================================
       $("#ngView").removeClass("addMarginTopView");
 

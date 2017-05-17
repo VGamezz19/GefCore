@@ -21,7 +21,6 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
 
    //Funcion jquery para ejecutar algo despues de usar un modal
    $('.correccion').on('hidden.bs.modal', function () {
-      window.alert('hidden event fired!');
       $window.location.assign('/matematicas');
     });
 
@@ -92,7 +91,7 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
         data: $scope.updateGame,
         headers : {'Accept' : 'application/json'}
       }).then(function successCallback(response) {
-          $rootScope.currentUser();
+
           $http({
             method: 'POST',
             url: '/updateGame',
