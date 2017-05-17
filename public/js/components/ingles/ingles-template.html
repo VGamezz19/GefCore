@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/js/components/ingles/ingles-css.css">
     <h2>Ingles</h2>
 
-    <div class ="row " style ="margin-bottom: 1em;" ng-repeat ="mates in matematicas track by $index">
+    <div class ="row " style ="margin-bottom: 1em;" ng-repeat ="mates in matematicas track by mates.nivel">
 
     <!-- IF mates.puntos es más pequeña que la puntuacion que necesita para entrar-->
       <div class ="col-md-12 col-lg-12 matematicasHome desbloqueado" ng-if="mates.puntuacionTotal <= thisUser.puntuacion.ingles">
