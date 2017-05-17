@@ -1,5 +1,11 @@
 angular.module('myApp')
 .run(function($rootScope, $http, $q) {
+
+
+})
+
+.controller('indexController',['$scope','$http', '$rootScope', function ($scope, $http, $rootScope) {
+
   $rootScope.trueFalse = false;
     //=============================currentUser ===================================
 
@@ -11,10 +17,9 @@ angular.module('myApp')
         method: 'GET',
         url: '/currentUser'
       }).then(function successCallback(response) {
+              $rootScope.thisUser = response.data;
+              $rootScope.trueFalse = true;
 
-          $rootScope.thisUser = response.data;
-          $rootScope.trueFalse = true;
-          console.log($rootScope.thisUser);
 
         }, function errorCallback(response) {
           $rootScope.trueFalse = false;
@@ -24,10 +29,6 @@ angular.module('myApp')
     }
 
     $rootScope.currentUser();
-
-})
-
-.controller('indexController',['$scope','$http', '$rootScope', function ($scope, $http, $rootScope) {
 //=========================Nav Jquery Efect=====================================
       $("#ngView").removeClass("addMarginTopView");
 

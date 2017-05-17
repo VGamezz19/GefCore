@@ -1,4 +1,4 @@
-angular.module('juego').controller('juegoController',['$scope','$http','$rootScope','$routeParams', '$route', function ($scope,$http,$rootScope,$routeParams,$route, $location) {
+angular.module('juego').controller('juegoController',['$scope','$http','$rootScope','$routeParams', '$route', '$window', function ($scope,$http,$rootScope,$routeParams,$route, $window) {
 
 //==============================================================================
 
@@ -17,6 +17,14 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
      }, function errorCallback(response) {
 
      });
+
+
+   //Funcion jquery para ejecutar algo despues de usar un modal
+   $('.correccion').on('hidden.bs.modal', function () {
+      window.alert('hidden event fired!');
+      $window.location.assign('/matematicas');
+    });
+
 
 
      //Scope donde guardamos las respuestas de todos los juegos.
@@ -116,16 +124,6 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
           data: $rootScope.thisUser,
       }).then(function successCallback(response) {
         //Abrimos el modal que mostrara los datos del usuario.
-  ////****!!!!!
-        console.log("dentro de puntos mates");
-          $("botton").click(function(){
-            $location.path( "/matematicas" );
-          });
-          $(".correccion").modal();
-
-          $("botton").click(function(){
-            $location.path( "/matematicas" );
-          });
 
           $http({
             method: 'GET',
@@ -164,10 +162,15 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
                 } else {
                   jugado = false;
                 }
+
               });
           }, function errorCallback(response) {
           });
       });
     });
+
+    $(".correccion").modal();
+
+
   }
 }]);

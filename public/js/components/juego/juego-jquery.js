@@ -70,4 +70,6 @@ setTimeout (function(){
       $(".inputEnter").focus();
     }
   });
+
+
 }, 2000)
