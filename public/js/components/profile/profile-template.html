@@ -12,7 +12,7 @@
         <div class ="col-md-12 col-lg-12">
           <h1 class ="tituloRepetir" tabindex="1">Juegos para repetir</h1>
           <div class ="initRepetir" ng-if="repetir.length != 0">
-            <div ng-repeat ="paraJugar in repetir">
+            <div ng-repeat ="paraJugar in repetir | orderBy: 'paraJugar.juego.nivel'">
               <div class ="col-md-12 col-lg-12 profileHome " >
                 <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1">
                   <div class ="col-md-3 col-lg-3 profile-matematicas-home  {{paraJugar.juego.identi}}">
@@ -42,7 +42,7 @@
 
         <div class ="col-md-12 col-lg-12">
           <h1 class ="tituloJugable" tabindex="1">Nuevo Juego</h1>
-          <div ng-repeat ="paraJugar in ultimoNivel">
+          <div ng-repeat ="paraJugar in ultimoNivel | orderBy: 'paraJugar.juego.nivel'">
             <div class ="col-md-12 col-lg-12 profileHome " >
               <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1">
                 <div class ="col-md-3 col-lg-3 profile-matematicas-home  {{paraJugar.juego.identi}}">
@@ -74,7 +74,7 @@
       <div class =" col-md-7 col-lg-7">
         <div class ="col-md-12 col-lg-12">
           <h1 class ="tituloCompleto" tabindex="1">Juegos jugados</h1>
-          <div ng-repeat ="paraJugar in ultimoRegistro">
+          <div ng-repeat ="paraJugar in ultimoRegistro | orderBy: 'paraJugar.juego.nivel'">
             <div class ="col-md-12 col-lg-12 profileHome " >
               <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1">
                 <div class ="col-md-2 col-lg-2 profile-matematicas-home  {{paraJugar.juego.identi}}">
@@ -114,7 +114,7 @@
         <div class ="col-md-12 col-lg-12">
           <h1 class ="tituloRepetir" tabindex="1">Juegos para repetir</h1>
           <div class ="initRepetir" ng-if="repetirIng.length != 0">
-            <div ng-repeat ="paraJugar in repetirIng">
+            <div ng-repeat ="paraJugar in repetirIng | orderBy: 'paraJugar.juego.nivel'">
               <div class ="col-md-12 col-lg-12 profileHome " >
                 <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1">
                   <div class ="col-md-3 col-lg-3 profile-matematicas-home  {{paraJugar.juego.identi}}">
@@ -143,7 +143,7 @@
 
         <div class ="col-md-12 col-lg-12">
           <h1 class ="tituloJugable" tabindex="1">Nuevo Juego</h1>
-          <div ng-repeat ="paraJugar in ultimoNivelIng">
+          <div ng-repeat ="paraJugar in ultimoNivelIng | orderBy: 'paraJugar.juego.nivel'">
             <div class ="col-md-12 col-lg-12 profileHome " >
               <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1">
                 <div class ="col-md-3 col-lg-3 profile-matematicas-home  {{paraJugar.juego.identi}}">
@@ -173,7 +173,7 @@
       <div class =" col-md-7 col-lg-7">
         <div class ="col-md-12 col-lg-12">
           <h1 class ="tituloCompleto" tabindex="1">Juegos jugados</h1>
-          <div ng-repeat ="paraJugar in ultimoRegistroIng">
+          <div ng-repeat ="paraJugar in ultimoRegistroIng | orderBy: 'paraJugar.juego.nivel'">
             <div class ="col-md-12 col-lg-12 profileHome " >
               <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1">
                 <div class ="col-md-2 col-lg-2 profile-matematicas-home  {{paraJugar.juego.identi}}">
