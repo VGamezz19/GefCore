@@ -134,25 +134,25 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title" tabindex="1" >GefCore</h2>
-          <button  type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <h2 class="modal-title" tabindex="2" id="loginModal"> <p aria-label ="Bienvenido a GefCore!"></p>GefCore</h2>
+          <button  type="button" class="close" data-dismiss="modal" aria-label="Cerrar ">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class=" modal-body">
           <form method="post" action='/singin' name="login_form">
             <div class = "col-md-6 col-lg-6">
-              <p><input tabindex="1" aria-label='Introduce tu usuario' type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
-              <p><input tabindex="1" aria-label='Introduce tu contraseña'type="password" class="inputLogin" name="password" placeholder="Contraseña"></p>
+              <p><input tabindex="3" aria-label='Introduce tu usuario' type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
+              <p><input tabindex="3" aria-label='Introduce tu contraseña'type="password" class="inputLogin" name="password" placeholder="Contraseña"></p>
             </div>
             <div class ="col-md-4 col-ls-4">
-              <input tabindex="1" aria-label='Aceptar y entrar. Si no tienes una cuenta en GefCore, baja al proximo boton' type="submit" class="submit btn" value='Entra'>
+              <input tabindex="3" aria-label='Aceptar y entrar. Si no tienes una cuenta en GefCore, baja al proximo boton' type="submit" class="submit btn" value='Entra'>
             </div>
           </form>
         </div>
         <div class="modal-footer">
             Nuevo en GefCore?
-            <input tabindex="1" aria-label='Si no tienes cuenta en GefCore, Pulsa aqui para crearla' type="submit" class=" registerLogin btn" value="Registrate">
+            <input tabindex="3" aria-label='Si no tienes cuenta en GefCore, Pulsa aqui para crearla' type="submit" class=" registerLogin btn" value="Registrate">
           </div>
       </div>
     </div>
@@ -164,7 +164,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 tabindex ="1" aria-label='Create un usuario para GefCore. Pulsa "ESC" para salir'class="modal-title">Registrarse</h2>
+          <h2 tabindex ="4" id="registerModal" style ="margin-bottom: 0 !important; text-align: left !important;"><p aria-label='Create un usuario para GefCore'class="modal-title"></p>Registrarse</h2>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -172,17 +172,17 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         <div class="modal-body">
           <form method="post" action='/singup' name="login_form">
             <div class ="body-model">
-              <p><input  tabindex ="1" aria-label= 'introduce tu nombre'type="text" class="inputLogin"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
-              <p><input tabindex ="1" aria-label= 'introduce tu apellido' type="text" class="inputLogin" name="lastName" placeholder="Apellido"></p>
-              <p><input tabindex ="1" aria-label= 'introduce tu correo electronico (es obligatorio)' type="text" class="inputLogin" name="email" placeholder="Correo" ></p>
+              <p><input  tabindex ="5" aria-label= 'introduce tu nombre'type="text" class="inputLogin"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
+              <p><input tabindex ="5" aria-label= 'introduce tu apellido' type="text" class="inputLogin" name="lastName" placeholder="Apellido"></p>
+              <p><input tabindex ="5" aria-label= 'introduce tu correo electronico (es obligatorio)' type="text" class="inputLogin" name="email" placeholder="Correo" ></p>
             </div>
             <div class="modal-footer fotermodal">
               <div class =" inputsUser col-md-6 col-lg-6">
-                <p><input tabindex ="1" aria-label= 'introduce nombre de usuario. Es importante que no te olvides de el' type="text" class="inputLogin footerlog" name="username" placeholder="Nombre de usuario"></p>
-                <p><input tabindex ="1" aria-label= 'introduce una contraseña' type="password" class="inputLogin footerlog" name="password" placeholder="Contraseña" ></p>
+                <p><input tabindex ="5" aria-label= 'introduce nombre de usuario. Es importante que no te olvides de el' type="text" class="inputLogin footerlog" name="username" placeholder="Nombre de usuario"></p>
+                <p><input tabindex ="5" aria-label= 'introduce una contraseña' type="password" class="inputLogin footerlog" name="password" placeholder="Contraseña" ></p>
               </div>
               <div class =" col-md-4 col-lg-4">
-                <input tabindex ="1" aria-label= 'Aceptar y crear usuario' type="submit" class="btn submitRegister" value='Crear cuenta'>
+                <input tabindex ="5" aria-label= 'Aceptar y crear usuario' type="submit" class="btn submitRegister" value='Crear cuenta'>
               </div>
             </div>
           </form>
@@ -198,7 +198,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title" tabindex ="1" aria-label= 'Cerrar sesion'>Cerrar Sesion</h2>
+        <h2 class="modal-title" tabindex ="6" id="check" aria-label= 'Cerrar sesion'>Cerrar Sesion</h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -206,11 +206,11 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
       <div class="modal-body">
         <div class ="row">
           <div class ="col-md-6 col-lg-6" >
-             <input type="submit" class="close-loged btn " value='No' data-dismiss="modal"  tabindex ="1" aria-label= 'No cerrar sesion'>
+             <input type="submit" class="close-loged btn " value='No' data-dismiss="modal"  tabindex ="7" aria-label= 'No cerrar sesion'>
           </div>
           <div class ="col-md-6 col-lg-6">
             <form   style ="whitd: 40%;"action='/singout'>
-              <input type="submit" class="yesClose-loged btn " value='Si' tabindex ="1" aria-label= 'Verificar que quieres cerrar sesion'>
+              <input type="submit" class="yesClose-loged btn " value='Si' tabindex ="7" aria-label= 'Verificar que quieres cerrar sesion'>
             </form>
           </div>
         </div>
@@ -234,7 +234,9 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         setTimeout(focusRegister, 300);
       });
       function focusRegister () {
-        $('#firstName').focus();
+        document.getElementById('loginModal').focus();
+        $('[tabindex=2]').focus();
+        $("#loginModal").focus();
       }
     </script>
   <%}%>
