@@ -321,13 +321,14 @@ exports.forgot = (req, res) => {
     },
     function (token, user, done) {
       var Transport = mail.createTransport({
+        service: 'SendGrid',
         host: 'smtp.sendgrid.net',
         port:'587',
         authentication:'plain',
         domain: 'heroku',
         auth: {
-          user:  process.env.SENDGRID_USERNAME,
-          pass: process.env.SENDGRID_PASSWORD
+          user:  'app67374351@heroku.com',
+          pass: 'ag6vgsku1842'
         }
       });
       var mailOptions = {
