@@ -332,7 +332,7 @@ exports.forgot = (req, res) => {
         }
       });
       var mailOptions = {
-        from: 'alexjandroN7@gmail.com',
+        from: user.mail,
         to: req.body.email,
         subject: 'Recuperar contraseña',
         text: `http://${req.headers.host}/reset/${token}`
