@@ -1,34 +1,34 @@
 <link rel="stylesheet" href="/js/components/matematicas/matematicas-css.css">
-    <h2 tabindex="1">Matematicas</h2>
+    <h2 tabindex="1"> <p aria-label='Listado de todos los ejercicios de Matematicas.'></p>Matematicas</h2>
     <div class ="row " style ="margin-bottom: 1em;" ng-repeat ="mates in matematicas track by mates.nivel">
     <!-- IF mates.puntos es más pequeña que la puntuacion que necesita para entrar-->
       <div class ="col-md-12 col-lg-12 matematicasHome desbloqueado" ng-if="mates.puntuacionTotal <= thisUser.puntuacion.matematicas">
-        <a href="/juego/{{mates.identi}}" class ="" tabindex="1">
-          <div class ="col-md-3 col-lg-3 juegos-matematicas-home  {{mates.identi}}">
+        <a href="/juego/{{mates.identi}}" class ="" tabindex="1" >
+          <div aria-label='{{mates.nivel}}' class ="col-md-3 col-lg-3 juegos-matematicas-home  {{mates.identi}}">
             Nivel {{mates.nivel}}
           </div>
-          <div class ="col-md-5 col-lg-5 juegos-matematicas-home {{mates.identi}}">
+          <div aria-label='{{mates.titulo}}.' class ="col-md-5 col-lg-5 juegos-matematicas-home {{mates.identi}}">
             <span>{{mates.titulo}}</span>
           </div>
           <div ng-if ="thisUser.matematicas">
             <div ng-repeat ="matematicasUser in thisUser.matematicas">
               <div ng-if ="matematicasUser.juego.identi == mates.identi && matematicasUser.juego.estado == 0">
 
-                <div class ="col-md-3 col-lg-3 juegos-matematicas-home {{mates.identi}}">
+                <div  aria-label= 'Juego Nuevo'class ="col-md-3 col-lg-3 juegos-matematicas-home {{mates.identi}}">
                   <span>Nuevo Nivel</span>
                 </div>
 
                   <span class ="fi glyphicon glyphicon-arrow-left spanFlotando"></span>
               </div>
               <div ng-if="matematicasUser.juego.identi == mates.identi && matematicasUser.juego.estado == 1">
-                <div class ="col-md-3 col-lg-3 juegos-matematicas-home {{mates.identi}}">
+                <div  aria-label= 'Juego Superado' class ="col-md-3 col-lg-3 juegos-matematicas-home {{mates.identi}}">
                   <span>Superado</span>
                 </div>
 
                   <span class ="fi glyphicon glyphicon-ok spanFlotando"></span>
               </div>
               <div ng-if="matematicasUser.juego.identi == mates.identi && matematicasUser.juego.estado == 3">
-                <div class ="col-md-3 col-lg-3 juegos-matematicas-home {{mates.identi}}">
+                <div aria-label= 'Repetir juego' class ="col-md-3 col-lg-3 juegos-matematicas-home {{mates.identi}}">
                   <span>Repetir</span>
                 </div>
 
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div ng-if ="thisUser.matematicas.length == 0">
-            <div class ="col-md-3 col-lg-3 juegos-matematicas-home {{mates.identi}}">
+            <div arial-label='Juego Nuevo' class ="col-md-3 col-lg-3 juegos-matematicas-home {{mates.identi}}">
               <span>Nuevo Nivel</span>
             </div>
 
@@ -48,7 +48,7 @@
 
     <!-- Else if-->
       <div class ="col-md-12 col-lg-12 matematicasHome bloqueado" ng-if="mates.puntuacionTotal > thisUser.puntuacion.matematicas">
-        <a href="" class =""tabindex="1" >
+        <a href="" class =""tabindex="1" aria-label='No puedes jugar el Nivel {{$index + 1}} {{mates.titulo}}. Te faltan {{mates.puntuacionTotal - thisUser.puntuacion.matematicas}} puntos para desbloquearlo.'>
           <div class ="col-md-3 col-lg-3 juegos-matematicas-home juegoBloqueado {{mates.identi}}">
             Nivel {{$index + 1}}
           </div>
@@ -56,7 +56,7 @@
             <span>{{mates.titulo}}</span>
           </div>
           <div class ="col-md-3 col-lg-3 juegos-matematicas-home  juegoBloqueado {{mates.identi}}">
-            <span style="font-size:1em!important">  {{$ctrl.puntuacionMaxima}} de {{mates.puntuacionTotal}} Nivel bloqueado</span>
+            <span style="font-size:1em!important">  {{thisUser.puntuacion.matematicas}} de {{mates.puntuacionTotal}} Nivel bloqueado</span>
           </div>
         </a>
         <span class ="fi glyphicon glyphicon-ban-circle spanFlotando"></span>

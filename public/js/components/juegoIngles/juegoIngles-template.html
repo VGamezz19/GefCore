@@ -1,36 +1,34 @@
-<link rel="stylesheet" href="/js/components/juegoIngles/juegoIngles-css.css">
-
-
+<link rel="stylesheet" href="/js/components/juego/juego-css.css">
 
 <div class ="row mainJuegos">
   <div class= "col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1 ">
-      <button type="button" class="btn izquierda fi glyphicon glyphicon-chevron-left izquierdaFlecha" tabindex="1"></button>
+      <button type="button" class="btn izquierda fi glyphicon glyphicon-chevron-left izquierdaFlecha" tabindex="1" aria-label='Retroceder al juego anterior'></button>
   </div>
   <div class ="col-md-6 col-lg-6 textCentro">
     <div class ="" ng-repeat = "juego in juegoActual.preguntas track by $index">
       <div class ="col-md-12 col-lg-12 juego{{$index +1}} pregunta">
         <div class ="row ">
-          <div class =" col-md-2 col-lg-2" tabindex="1">
-            <h1 class ="nivel">{{$index + 1}}</h1>
+          <div class =" col-md-2 col-lg-2">
+            <p tabindex="2" class ="nivel" id="numeroPregunta" aria-label='Pregunta {{$index + 1}}' style ="font-size: 3em;margin-top: 0.2em;">{{$index + 1}}</p>
           </div>
-          <div class =" col-md-3 col-lg-3 col-md-offset-7 col-lg-offset-7" tabindex="1">
+          <div class =" col-md-3 col-lg-3 col-md-offset-7 col-lg-offset-7" >
             <div class ="col-md-6 col-lg-6 colStar">
               <h1 class ="fi glyphicon glyphicon-star starGame"> </h1>
             </div>
             <div class ="col-md-6 col-lg-6">
-              <h1>{{juego.pregunta.puntuacion}}</h1>
+              <p tabindex="3" aria-label ='Ganaras {{juego.pregunta.puntuacion}} Puntos si respondes bien a esta pregunta' style ="font-size: 3em;margin-top: 0.2em;">{{juego.pregunta.puntuacion}}</p>
             </div>
           </div>
         </div>
         <div class ="row ">
-          <div class =" col-md-12 col-lg-12" tabindex="1">
-            <h3 class ="titulo">{{juego.pregunta.titulo}}</h3>
+          <div class =" col-md-12 col-lg-12" >
+            <h3 tabindex="4" class ="titulo">  {{juego.pregunta.titulo}}</h3>
           </div>
         </div>
         <div class ="row ">
           <div class ="col-md-10 col-lg-10 inputPregunta">
             <div class ="col-md-4 col-lg-4 " ng-repeat ="opcion in juego.pregunta.opciones ">
-              <input type="checkbox" value="opcion" id="status" ng-model="modal" class="checkbox checkbox-success" tabindex="1" ng-change="IfCheck(opcion.opcion, modal)">
+              <input type="checkbox" value="opcion" id="status"  aria-label ="{{opcion.opcion}}"ng-model="modal" class="checkbox checkbox-success" tabindex="{{5 + $index}}" ng-change="IfCheck(opcion.opcion, modal)">
               <span class="Form-label-text">{{opcion.opcion}}</span>
             </div>
           </div>
@@ -40,18 +38,18 @@
       <div class ="col-md-12 col-lg-12 pregunta final{{$index +1}}">
         <script>  $(".pregunta").hide();</script>
         <div class ="row ">
-          <div class =" col-md-12 col-lg-12" tabindex="1">
-            <h1>FIN DE NIVEL</h1>
+          <div class =" col-md-12 col-lg-12" >
+            <h1 tabindex="2">FIN DE NIVEL</h1>
           </div>
         </div>
         <div class ="row ">
-          <div class =" col-md-12 col-lg-12 bodyFinalJuego" tabindex="1">
-            <h3 class ="Fintitulo">Usar el botón de la izquierda si quieres repasar</h3>
+          <div class =" col-md-12 col-lg-12 bodyFinalJuego">
+            <h3 class ="Fintitulo" tabindex="3">Usar el botón de la izquierda si quieres repasar</h3>
           </div>
         </div>
         <div class ="row ">
-          <div class ="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 containerButton" tabindex="1">
-              <button class="btn corregir" ng-click="uploadGame()">Corregir</button>
+          <div class ="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 containerButton" >
+              <button class="btn corregir" ng-click="uploadGame()" tabindex="4" arial-label ='Corregir el nivel'>Corregir</button>
           </div>
         </div>
       </div>
@@ -60,8 +58,8 @@
       </script>
     </div>
   </div>
-  <div class ="col-md-2 col-lg-2  ">
-    <button type="button" class="btn derecha fi glyphicon glyphicon-chevron-right derechaFlecha" tabindex="1"></button>
+  <div class= "col-md-2 col-lg-2 ">
+      <button type="button" class="btn derecha fi glyphicon glyphicon-chevron-right derechaFlecha" tabindex="8" aria-label='Salta a la proxima pregunta'></button>
   </div>
 </div>
 
@@ -71,21 +69,21 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title">Correción Nivel</h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <h2 class="modal-title" tabindex = "9">Correción Nivel</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <div class ="row">
-          <div class = "col-md-8 col-lg-8 main juegos-matematicas-home ">
+        <div class ="row" >
+          <div class = "col-md-8 col-lg-8 main juegos-matematicas-home " tabindex ="10" aria-label ="Has conterstado correctamente {{correctas}} preguntas." >
             Correctos
           </div>
           <div class =" col-md-4 col-lg-4 juegos-matematicas-home ">
             {{correctas}}
           </div>
 
-          <div class = "col-md-8 col-lg-8  main juegos-matematicas-home ">
+          <div class = "col-md-8 col-lg-8  main juegos-matematicas-home " tabindex ="10" aria-label ="Has conterstado incorrectamente {{errores}} preguntas. ">
             Fallados
           </div>
           <div class =" col-md-4 col-lg-4 juegos-matematicas-home ">
@@ -93,9 +91,9 @@
           </div>
         </div>
         <div class ="row" style="margin-top: 4em;">
-          <div class = "col-md-8 col-lg-8 main juegos-matematicas-home " style="border: none;">
+          <div class = "col-md-8 col-lg-8 main juegos-matematicas-home " style="  border: none;" >
               <h1 class ="fi glyphicon glyphicon-star starGame"style="right: 6.6em;top: -0.5em;"></h1>
-              <h3 style="margin-top: 0.2em;">Puntuación total</h3>
+              <h3 style="margin-top: 0.2em;"> <p tabindex ="10"   aria-label ="Has ganado {{puntuacion}} puntos. "></p>Puntuación total</h3>
           </div>
           <div class =" col-md-4 col-lg-4 juegos-matematicas-home " style="  border: none;">
             <h3 style="width: 50%;margin-top: 0.2em;text-align: center;">{{puntuacion}}</h3>
@@ -109,15 +107,4 @@
 <!-- END Modal CheckLogOUT-->
 
 
-<script src =" /js/components/juegoIngles/juegoIngles-jquery.js"></script>
-
-
-<!--
-<div class ="row ">
-  <div class ="col-md-10 col-lg-10 inputPregunta">
-    <div class ="col-md-4 col-lg-4 " ng-repeat ="opcion in juego.pregunta.opciones ">
-      <input type="checkbox" value="opcion" id="status" ng-model="modal" class="checkbox checkbox-success" ng-change="IfCheck(opcion.opcion, modal)">
-      <span class="Form-label-text">{{opcion.opcion}}</span>
-    </div>
-  </div>
-</div> -->
+<script src =" /js/components/juego/juego-jquery.js"></script>

@@ -1,19 +1,19 @@
 <link rel="stylesheet" href="/js/components/home/home-css.css">
 
 <div ng-if = "thisUser">
-  <h2 class ="title-home-template" tabindex="1"> <strong>GAMES</strong>Home</h3>
+  <h2 class ="title-home-template" tabindex="1" lang="en"> <strong>GAMES</strong>Home</h3>
   <div class ="row boque-home mates">
     <div class ="col-md-9 col-lg-9 col-md-offset-2 col-lg-offset-2">
       <div class ="col-md-1 col-lg-1  ">
-        <a href="/puntuacionMatematicas" style ="color:#FFCC00"class ="btn fi glyphicon glyphicon-star" tabindex="1" title="Puntuacion Global Matematicas"></a>
+        <a href="/puntuacionMatematicas" style ="color:#FFCC00"class ="btn fi glyphicon glyphicon-star" tabindex="1" aria-label='Puntuacion Global Matematicas'></a>
       </div>
       <div class ="col-md-5 col-lg-5">
-        <a href="/matematicas" class ="btn" tabindex="1"> Matematicas </a>
+        <a href="/matematicas" class ="btn" aria-label='Menu de juegos de Matematicas' tabindex="1"> Matematicas </a>
       </div>
       <div class ="col-md-5 col-lg-5">
 
-        <a ng-if ="nivel != 0" href="/juego/{{link}}" class ="btn " tabindex="1" titulo ="Juega">{{nivel}} - {{tituloJuego}}</a>
-        <a ng-if ="nivel == 0" href="/profile" class ="btn " tabindex="1" titulo ="Redirige a tu perfil">No hay nuevos juegos</a>
+        <a ng-if ="nivel != 0" href="/juego/{{link}}" class ="btn " tabindex="1"  aria-label='Juega  al Nivel {{nivel}}. Titulo de nivel {{tituloJuego}}' titulo ="Juega">{{nivel}} - {{tituloJuego}}</a>
+        <a ng-if ="nivel == 0" href="/profile" class ="btn " tabindex="1" aria-label='No Tienes juegos disponibles. Redirige a tu perfil.'>No hay nuevos juegos</a>
       </div>
     </div>
 
@@ -22,14 +22,14 @@
   <div class ="row boque-home ingles">
     <div class ="ol-md-9 col-lg-9 col-md-offset-2 col-lg-offset-2">
       <div class ="col-md-1 col-lg-1">
-        <a href="/puntuacionIngles" style ="color:#FFCC00" class ="btn  fi glyphicon glyphicon-star" tabindex="1" alt ="Puntuacion Global Ingles" title="Puntuacion Global Ingles"></a>
+        <a href="/puntuacionIngles" style ="color:#FFCC00" class ="btn  fi glyphicon glyphicon-star" tabindex="1" aria-label='Puntuacion Global Matematicas'></a>
       </div>
       <div class ="col-md-5 col-lg-5">
-        <a href="/ingles" class ="btn" tabindex="1"> Ingles </a>
+        <a href="/ingles" class ="btn" aria-label='Menu de juegos de Ingles' tabindex="1"> Ingles </a>
       </div>
       <div class ="col-md-5 col-lg-5">
-        <a ng-if ="niveling != 0" href="/juego/{{link}}" class ="btn" tabindex="1">{{niveling}} - {{tituloJuegoing}}</a>
-        <a ng-if ="niveling == 0" href="/profile" class ="btn" tabindex="1">No hay nuevos juegos</a>
+        <a ng-if ="niveling != 0" href="/juegoIngles/{{linking}}" class ="btn" tabindex="1" aria-label='Juega  al Nivel {{niveling}}. Titulo de nivel {{tituloJuegoing}}'>{{niveling}} - {{tituloJuegoing}}</a>
+        <a ng-if ="niveling == 0" href="/profile" class ="btn" tabindex="1" aria-label='No Tienes juegos disponibles. Redirige a tu perfil.'>No hay nuevos juegos</a>
       </div>
     </div>
 

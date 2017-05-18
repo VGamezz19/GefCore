@@ -6,19 +6,6 @@ angular.module('myApp')
 
 .controller('indexController',['$scope','$http', '$rootScope', function ($scope, $http, $rootScope) {
 
-$scope.prueba = {email: "alejandro.urdiales.93@gmail.com", nombre: "alejandro"};
-$http({
-     method: 'POST',
-     url: '/email',
-     data: $scope.prueba,
-     headers : {'Accept' : 'application/json'}
-   }).then(function successCallback(response) {
-     //Guardamos el "data" del juego seleccionado por el usuario.
-         
-
-     }, function errorCallback(response) {
-
-     });
 
 //=========================Nav Jquery Efect=====================================
       $("#ngView").removeClass("addMarginTopView");

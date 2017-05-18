@@ -21,12 +21,18 @@ $('.logeOut').click(function(){
 
 //Functions Modal Focus
   function focus () {
-    $('#username').focus();
+    document.getElementById('loginModal').focus();
+    $('[tabindex=2]').focus();
+    $("#loginModal").focus();
   }
   function focusRegister () {
-    $('#firstName').focus();
+    document.getElementById('registerModal').focus();
+    $('[tabindex=4]').focus();
+    $("#registerModal").focus();
   }
 
   function focusLogOut () {
-    $('.close-loged').focus();
+    document.getElementById('check').focus();
+    $('[tabindex=6]').focus();
+    $("#check").focus();
   }

@@ -30,6 +30,9 @@ function moverDerecha() {
 
 $( ".derecha" ).click(function() {
   moverDerecha();
+
+  document.getElementById('numeroPregunta').focus();
+  $('[tabindex=2]').focus();
   $("#numeroPregunta").focus();
 });
 
@@ -67,7 +70,9 @@ setTimeout (function(){
   if(e.which == 13) {
       moverDerecha();
 
-      $(".inputEnter").focus();
+      document.getElementById('numeroPregunta').focus();
+      $('[tabindex=2]').focus();
+      $("#numeroPregunta").focus();
     }
   });
 
