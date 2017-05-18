@@ -305,7 +305,7 @@ exports.forgot = (req, res) => {
       });
     },
     function (token, done) {
-      var user = 'alexjandron7@gmail.com';
+      
       User.findOne({ email: req.body.email }, function (err, user) {
         if (!user) {
           req.flash('error', 'No existe ninguna cuenta con este correo!');
@@ -320,7 +320,7 @@ exports.forgot = (req, res) => {
         });
       });
     },
-    function (token, done) {
+    function (token,user, done) {
       var Transport = mail.createTransport({
        
         host: 'smtp.sendgrid.net',
@@ -333,13 +333,13 @@ exports.forgot = (req, res) => {
         }
       });
       var mailOptions = {
-        from: user,
+        from: 'alexjandron7@gmail.com',
         to: req.body.email,
         subject: 'Recuperar contraseña',
         text: `http://${req.headers.host}/reset/${token}`
       };
       Transport.sendMail(mailOptions, function (err) {
-        req.flash('info', `Se ha enviado un correo a ${req.user.mail} con las instrucciones para cambiar la contraseña.`);
+        req.flash('info', `Se ha enviado un correo a ${user.email} con las instrucciones para cambiar la contraseña.`);
         done(err);
       });
     }
