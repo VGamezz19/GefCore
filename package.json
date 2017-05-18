@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "angular-route": "^1.6.4",
+    "async": "^2.4.0",
     "body-parser": "^1.17.1",
     "bower": "^1.8.0",
     "compression": "^1.6.2",
@@ -23,6 +24,7 @@
     "method-override": "^2.3.8",
     "mongoose": "^4.9.2",
     "morgan": "^1.8.1",
+    "nodemailer": "^4.0.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0"
   }

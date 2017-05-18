@@ -60,5 +60,13 @@ module.exports = function(app) {
 
   //seteamos la ruta singOut
   app.get('/singout', users.singOut);
+  //mail para recuperar la contraseña
+  app.route('/forgot')
+  .get(users.renderForgot)
+  .post(users.forgot);
 
+  app.route('/reset/:token')
+  .get(users.resetPassword)
+  .post(users.resetConfirmation);
+  
 };
