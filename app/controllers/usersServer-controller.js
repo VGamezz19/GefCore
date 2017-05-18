@@ -321,7 +321,7 @@ exports.forgot = (req, res) => {
     },
     function (token, user, done) {
       var Transport = mail.createTransport({
-        service: 'SendGrid',
+       
         host: 'smtp.sendgrid.net',
         port:'587',
         authentication:'plain',
@@ -380,7 +380,7 @@ exports.resetConfirmation = (req, res, next) => {
     },
     function ( user, done) {
       var Transport = mail.createTransport({
-        service: 'SendGrid',
+        
         host: 'smtp.sendgrid.net',
         port:'587',
         authentication:'plain',
