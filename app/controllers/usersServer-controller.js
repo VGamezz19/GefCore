@@ -393,12 +393,12 @@ exports.resetConfirmation = (req, res, next) => {
       });
       var mailOptions = {
         from: 'alexjandron7@gmail.com',
-        to: req.body.email,
+        to: user.email,
         subject: 'contraseña cambiada',
         text: `Confirmamos que su contraseña ha sido cambiada correctamente.`
       };
       Transport.sendMail(mailOptions, function (err) {
-        req.flash('info', `Se ha reiniciado la contraseña para la cuenta ${req.body.mail}.`);
+        req.flash('info', `Se ha reiniciado la contraseña para la cuenta ${user.mail}.`);
         done(err);
       });
     }
