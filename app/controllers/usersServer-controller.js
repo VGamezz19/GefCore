@@ -321,10 +321,13 @@ exports.forgot = (req, res) => {
     },
     function (token, user, done) {
       var Transport = mail.createTransport({
-        service: 'Gmail',
+        host: 'smtp.sendgrid.net',
+        port:'587',
+        authentication:'plain',
+        domain: 'heroku',
         auth: {
-          user: 'alexjandron7@gmail.com',
-          pass: 'connorkenway18'
+          user:  process.env.SENDGRID_USERNAME,
+          pass: process.env.SENDGRID_PASSWORD
         }
       });
       var mailOptions = {
@@ -376,10 +379,13 @@ exports.resetConfirmation = (req, res, next) => {
     },
     function ( user, done) {
       var Transport = mail.createTransport({
-        service: 'Gmail',
+        host: 'smtp.sendgrid.net',
+        port:'587',
+        authentication:'plain',
+        domain: 'heroku',
         auth: {
-          user: 'alexjandron7@gmail.com',
-          pass: 'connorkenway18'
+          user:  process.env.SENDGRID_USERNAME,
+          pass: process.env.SENDGRID_PASSWORD
         }
       });
       var mailOptions = {
