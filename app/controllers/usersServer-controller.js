@@ -321,14 +321,13 @@ exports.forgot = (req, res) => {
     },
     function (token, user, done) {
       var Transport = mail.createTransport({
-        service: 'SendGrid',
         host: 'smtp.sendgrid.net',
         port:'587',
         authentication:'plain',
         domain: 'heroku',
         auth: {
-          user:  'app67374351@heroku.com',
-          pass: 'ag6vgsku1842'
+          user:  process.env.SENDGRID_USERNAME,
+          pass: process.env.SENDGRID_PASSWORD
         }
       });
       var mailOptions = {
@@ -338,7 +337,7 @@ exports.forgot = (req, res) => {
         text: `http://${req.headers.host}/reset/${token}`
       };
       Transport.sendMail(mailOptions, function (err) {
-        req.flash('info', `Se ha enviado un correo a ${req.user.email} con las instrucciones para cambiar la contraseña.`);
+        req.flash('info', `Se ha enviado un correo a ${user.email} con las instrucciones para cambiar la contraseña.`);
         done(err);
       });
     }
@@ -380,14 +379,13 @@ exports.resetConfirmation = (req, res, next) => {
     },
     function ( user, done) {
       var Transport = mail.createTransport({
-        service: 'SendGrid',
         host: 'smtp.sendgrid.net',
         port:'587',
         authentication:'plain',
         domain: 'heroku',
         auth: {
-          user:  'app67374351@heroku.com',
-          pass: 'ag6vgsku1842'
+          user:  process.env.SENDGRID_USERNAME,
+          pass: process.env.SENDGRID_PASSWORD
         }
       });
       var mailOptions = {
