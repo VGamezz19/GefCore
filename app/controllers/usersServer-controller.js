@@ -386,8 +386,8 @@ exports.resetConfirmation = (req, res, next) => {
         authentication:'plain',
         domain: 'heroku',
         auth: {
-          user:  process.env.SENDGRID_USERNAME,
-          pass: process.env.SENDGRID_PASSWORD
+          user:  'app67374351@heroku.com',
+          pass: 'ag6vgsku1842'
         }
       });
       var mailOptions = {
