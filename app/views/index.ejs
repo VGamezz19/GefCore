@@ -1,7 +1,7 @@
 <!--este indice es un ejemplo de la ejecución a traves del
 enrutamiento y las variables de la carpeta routes con el motor de renderizado ejs -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,20 +35,20 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
   <!-- Header NAV -->
   <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li role="presentation" class="active"><a tabindex="1" href="/">Home</a ></li>
+        <li role="presentation" class="active"><a tabindex="1" href="/" aria-label='Menu principal'>Home</a ></li>
 
         <!-- Usuario Conectado-->
         <%  if( userFullName){ %> <!-- True false User -->
 
-            <li role="presentation"><a href="/profile" tabindex="1"><%=userFullName%></a></li>
-            <li role="presentation"><a class ="logeOut" href="" tabindex="1">Cerrar sesion</a></li>
+            <li role="presentation"><a href="/profile" tabindex="1" aria-label='Tu perfil <%=userFullName%>'><%=userFullName%></a></li>
+            <li role="presentation"><a class ="logeOut" href="" tabindex="1" aria-label='Cerrar sesion'>Cerrar sesion</a></li>
         <%}%>
 
         <!-- Usuario Desconectado-->
       <%  if(!userFullName){ %> <!-- True false User -->
 
-          <li role="presentation" class=""><a tabindex="1" class ="login" href="" >Entrar</a></li>
-          <li role="presentation"><a  tabindex="1" class ="register" href="" >Registrate</a></li>
+          <li role="presentation" class=""><a tabindex="1" class ="login" href="" aria-label='Entra a la sesion'>Entrar</a></li>
+          <li role="presentation"><a  tabindex="1" class ="register" href="" aria-label='Registrarse en GefCore'>Registrate</a></li>
         <%}%>
       </ul>
   </div>
@@ -56,7 +56,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 <div class="container-fluid">
  <div class="row">
     <div class="backgroundHeader" >
-          <h1 tabindex="1" class ="gefCore-title">GefCore</h1 >
+        <h1 tabindex="1" class ="gefCore-title"> <p aria-label='GefCore, una pagina donde podras jugar y aprender a la vez'></p>GefCore</h1>
     </div>
 
  </div>
@@ -134,25 +134,25 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">GefCore</h2>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <h2 class="modal-title" tabindex="1" >GefCore</h2>
+          <button  type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class=" modal-body">
           <form method="post" action='/singin' name="login_form">
             <div class = "col-md-6 col-lg-6">
-              <p><input type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
-              <p><input type="password" class="inputLogin" name="password" placeholder="Contraseña"></p>
+              <p><input tabindex="1" aria-label='Introduce tu usuario' type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
+              <p><input tabindex="1" aria-label='Introduce tu contraseña'type="password" class="inputLogin" name="password" placeholder="Contraseña"></p>
             </div>
             <div class ="col-md-4 col-ls-4">
-              <input type="submit" class="submit btn" value='Entra'>
+              <input tabindex="1" aria-label='Aceptar y entrar. Si no tienes una cuenta en GefCore, baja al proximo boton' type="submit" class="submit btn" value='Entra'>
             </div>
           </form>
         </div>
         <div class="modal-footer">
             Nuevo en GefCore?
-            <input type="submit" class=" registerLogin btn" value="Registrate">
+            <input tabindex="1" aria-label='Si no tienes cuenta en GefCore, Pulsa aqui para crearla' type="submit" class=" registerLogin btn" value="Registrate">
           </div>
       </div>
     </div>
@@ -164,7 +164,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title">Registrarse</h2>
+          <h2 tabindex ="1" aria-label='Create un usuario para GefCore. Pulsa "ESC" para salir'class="modal-title">Registrarse</h2>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -172,17 +172,17 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         <div class="modal-body">
           <form method="post" action='/singup' name="login_form">
             <div class ="body-model">
-              <p><input type="text" class="inputLogin"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
-              <p><input type="text" class="inputLogin" name="lastName" placeholder="Apellido"></p>
-              <p><input type="text" class="inputLogin" name="email" placeholder="Correo" ></p>
+              <p><input  tabindex ="1" aria-label= 'introduce tu nombre'type="text" class="inputLogin"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
+              <p><input tabindex ="1" aria-label= 'introduce tu apellido' type="text" class="inputLogin" name="lastName" placeholder="Apellido"></p>
+              <p><input tabindex ="1" aria-label= 'introduce tu correo electronico (es obligatorio)' type="text" class="inputLogin" name="email" placeholder="Correo" ></p>
             </div>
             <div class="modal-footer fotermodal">
               <div class =" inputsUser col-md-6 col-lg-6">
-                <p><input type="text" class="inputLogin footerlog" name="username" placeholder="Nombre de usuario"></p>
-                <p><input type="password" class="inputLogin footerlog" name="password" placeholder="Contraseña" ></p>
+                <p><input tabindex ="1" aria-label= 'introduce nombre de usuario. Es importante que no te olvides de el' type="text" class="inputLogin footerlog" name="username" placeholder="Nombre de usuario"></p>
+                <p><input tabindex ="1" aria-label= 'introduce una contraseña' type="password" class="inputLogin footerlog" name="password" placeholder="Contraseña" ></p>
               </div>
               <div class =" col-md-4 col-lg-4">
-                <input type="submit" class="btn submitRegister" value='Crear cuenta'>
+                <input tabindex ="1" aria-label= 'Aceptar y crear usuario' type="submit" class="btn submitRegister" value='Crear cuenta'>
               </div>
             </div>
           </form>
@@ -198,19 +198,19 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 class="modal-title">Cerrar Sesion</h2>
+        <h2 class="modal-title" tabindex ="1" aria-label= 'Cerrar sesion'>Cerrar Sesion</h2>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
         <div class ="row">
-          <div class ="col-md-6 col-lg-6">
-             <input type="submit" class="close-loged btn " value='No' data-dismiss="modal" aria-label="Close">
+          <div class ="col-md-6 col-lg-6" >
+             <input type="submit" class="close-loged btn " value='No' data-dismiss="modal"  tabindex ="1" aria-label= 'No cerrar sesion'>
           </div>
           <div class ="col-md-6 col-lg-6">
             <form   style ="whitd: 40%;"action='/singout'>
-              <input type="submit" class="yesClose-loged btn " value='Si'>
+              <input type="submit" class="yesClose-loged btn " value='Si' tabindex ="1" aria-label= 'Verificar que quieres cerrar sesion'>
             </form>
           </div>
         </div>

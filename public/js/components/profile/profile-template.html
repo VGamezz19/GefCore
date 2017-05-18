@@ -6,15 +6,15 @@
 <!-- Profile Matematicas -->
 
   <!-- Repetir -->
-  <h1 class ="tituloProfile" tabindex="1">MATEMATICAS</h1>
+  <h1 class ="tituloProfile" tabindex="1"><p aria-label='Tus juegos de Matematicas'></p>MATEMATICAS</h1>
     <div class ="row">
       <div  class =" col-md-5 col-lg-5">
         <div class ="col-md-12 col-lg-12">
-          <h1 class ="tituloRepetir" tabindex="1">Juegos para repetir</h1>
+          <h1 class ="tituloRepetir" tabindex="1" ><p aria-label='Aqui estan todos los juegos de matematicas que te recomendamos repetir'></p>Juegos para repetir</h1>
           <div class ="initRepetir" ng-if="repetir.length != 0">
             <div ng-repeat ="paraJugar in repetir | orderBy: 'juego.nivel'">
               <div class ="col-md-12 col-lg-12 profileHome " >
-                <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1">
+                <a  href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1" aria-label='Repite el juego. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
                   <div class ="col-md-3 col-lg-3 profile-matematicas-home  {{paraJugar.juego.identi}}">
                     Nivel {{paraJugar.juego.nivel}}
                   </div>
@@ -41,10 +41,10 @@
         <!-- Nuevo Juego-->
 
         <div class ="col-md-12 col-lg-12">
-          <h1 class ="tituloJugable" tabindex="1">Nuevo Juego</h1>
+          <h1 class ="tituloJugable" tabindex="1"> <p aria-label='Aqui estan todos los juegos de matematicas desbloqueados recientemente'></p>Nuevo Juego</h1>
           <div ng-repeat ="paraJugar in ultimoNivel | orderBy: 'juego.nivel'">
             <div class ="col-md-12 col-lg-12 profileHome " >
-              <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1">
+              <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1" aria-label='Juegar el nuevo juego. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
                 <div class ="col-md-3 col-lg-3 profile-matematicas-home  {{paraJugar.juego.identi}}">
                   Nivel {{paraJugar.juego.nivel}}
                 </div>
@@ -73,10 +73,10 @@
 
       <div class =" col-md-7 col-lg-7">
         <div class ="col-md-12 col-lg-12">
-          <h1 class ="tituloCompleto" tabindex="1">Juegos jugados</h1>
+          <h1 class ="tituloCompleto" tabindex="1"> <p aria-label='Aqui estan todos tus juegos completados de matematicas'></p>Juegos jugados</h1>
           <div ng-repeat ="paraJugar in ultimoRegistro | orderBy: 'juego.nivel'">
             <div class ="col-md-12 col-lg-12 profileHome " >
-              <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1">
+              <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1" aria-label='Juego completado. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
                 <div class ="col-md-2 col-lg-2 profile-matematicas-home  {{paraJugar.juego.identi}}">
                   Nivel {{paraJugar.juego.nivel}}
                 </div>
@@ -108,15 +108,15 @@
 <!-- Profile Ingles -->
 
   <!-- Repetir -->
-  <h1 class ="tituloProfile" tabindex="1">INGLES</h1>
+  <h1 class ="tituloProfile" tabindex="1" aria-label='Tus juegos de Matematicas'>INGLES</h1>
     <div class ="row">
       <div  class =" col-md-5 col-lg-5">
         <div class ="col-md-12 col-lg-12">
-          <h1 class ="tituloRepetir" tabindex="1">Juegos para repetir</h1>
+          <h1 class ="tituloRepetir" tabindex="1"> <p aria-label='Aqui estan todos los juegos de ingles que te recomendamos repetir'></p>Juegos para repetir</h1>
           <div class ="initRepetir" ng-if="repetirIng.length != 0">
             <div ng-repeat ="paraJugar in repetirIng | orderBy: 'juego.nivel'">
               <div class ="col-md-12 col-lg-12 profileHome " >
-                <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1">
+                <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1" aria-label='Repetir el juego. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
                   <div class ="col-md-3 col-lg-3 profile-matematicas-home  {{paraJugar.juego.identi}}">
                     Nivel {{paraJugar.juego.nivel}}
                   </div>
@@ -142,10 +142,10 @@
         <!-- Nuevo Juego-->
 
         <div class ="col-md-12 col-lg-12">
-          <h1 class ="tituloJugable" tabindex="1">Nuevo Juego</h1>
+          <h1 class ="tituloJugable" tabindex="1"> <p aria-label='Aqui estan todos los juegos de ingles desbloqueados recientemente'></p>Nuevo Juego</h1>
           <div ng-repeat ="paraJugar in ultimoNivelIng | orderBy: 'juego.nivel'">
             <div class ="col-md-12 col-lg-12 profileHome " >
-              <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1">
+              <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1" aria-label='Nuevo juego desbloqueado. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
                 <div class ="col-md-3 col-lg-3 profile-matematicas-home  {{paraJugar.juego.identi}}">
                   Nivel {{paraJugar.juego.nivel}}
                 </div>
@@ -172,10 +172,10 @@
 
       <div class =" col-md-7 col-lg-7">
         <div class ="col-md-12 col-lg-12">
-          <h1 class ="tituloCompleto" tabindex="1">Juegos jugados</h1>
+          <h1 class ="tituloCompleto" tabindex="1"> <p aria-label='Aqui estan todos tus juegos completados de ingles'></p>Juegos jugados</h1>
           <div ng-repeat ="paraJugar in ultimoRegistroIng | orderBy: 'juego.nivel'">
             <div class ="col-md-12 col-lg-12 profileHome " >
-              <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1">
+              <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1" aria-label='Juego completado. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
                 <div class ="col-md-2 col-lg-2 profile-matematicas-home  {{paraJugar.juego.identi}}">
                   Nivel {{paraJugar.juego.nivel}}
                 </div>
