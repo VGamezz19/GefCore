@@ -392,7 +392,7 @@ exports.resetConfirmation = (req, res, next) => {
         }
       });
       var mailOptions = {
-        from: user.mail,
+        from: 'alexjandron7@gmail.com',
         to: req.body.email,
         subject: 'contraseña cambiada',
         text: `Confirmamos que su contraseña ha sido cambiada correctamente.`
