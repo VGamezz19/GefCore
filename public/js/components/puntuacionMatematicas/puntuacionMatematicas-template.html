@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="/js/components/puntuacionMatematicas/puntuacionMatematicas-css.css">
 <div>
-    <h1>Todas las puntuaciones de matematicas</h1>
+    <h1 tabindex = "1"><p aria-label ="Ranking de los usuarios que han jugado a Matematicas."></p>Todas las puntuaciones de matematicas</h1>
 
     <div class ="row">
-      <div tabindex="1">
+      <div>
         <div class ="col-md-3 col-lg-3 head" >
           <h2>Usuario</h2>
         </div>
@@ -17,7 +17,7 @@
     </div>
     <div class ="row" ng-repeat ="usuarios in usuarioCompleto  | orderBy: '-puntuacion.matematicas' track by $index ">
       <div class ="col-md-12 col-lg-12 matematicasHome " >
-        <div tabindex="1">
+        <div tabindex="1" tabindex ="1" aria-label ="Posicion {{1 + $index}}. El usuario {{usuarios.username}}, esta actualmente por el nivel {{usuarios.juegoActual}}. Con un total de {{usuarios.puntuacion.matematicas}} puntos!">
           <div class ="col-md-3 col-lg-3 puntos-matematicas-home"  id ="tag{{$index}}">
             <h3 style="margin: 0 !important; text-align: left;">{{1 + $index}} - {{usuarios.username}}</h3>
           </div>
