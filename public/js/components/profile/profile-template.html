@@ -75,7 +75,7 @@
         <div class ="col-md-12 col-lg-12">
           <h1 class ="tituloCompleto" tabindex="1"> <p aria-label='Aqui estan todos tus juegos completados de matematicas'></p>Juegos jugados</h1>
           <div ng-repeat ="paraJugar in ultimoRegistro | orderBy: 'juego.nivel'">
-            <div class ="col-md-12 col-lg-12 profileHome " >
+            <div class ="col-md-12 col-lg-12 profileHome " ng-init="formatFecha(paraJugar.juego.ultimoUso)">
               <a href="/juego/{{paraJugar.juego.identi}}" class ="" tabindex="1" aria-label='Juego completado. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
                 <div class ="col-md-2 col-lg-2 profile-matematicas-home  {{paraJugar.juego.identi}}">
                   Nivel {{paraJugar.juego.nivel}}
@@ -84,7 +84,7 @@
                   <span>{{paraJugar.juego.titulo}}</span>
                 </div>
                 <div class ="col-md-3 col-lg-3 profile-matematicas-home  {{paraJugar.juego.identi}}" style ="margin-right: 0 !important;">
-                  {{paraJugar.juego.ultimoUso}}
+                  {{formatFecha(paraJugar.juego.ultimoUso)}}
                 </div>
               </a>
               <span class ="fi glyphicon glyphicon-ok spanFlotandoProfile" style ="right: -1em;"></span>

@@ -1,5 +1,6 @@
 angular.module('profile').controller('profileController',['$scope','$http', 'UserCurrent', function ($scope, $http, UserCurrent) {
 
+    
   UserCurrent.getUser()
      .then( function(user) {
        $scope.currentUser = user;
@@ -9,7 +10,10 @@ angular.module('profile').controller('profileController',['$scope','$http', 'Use
        //1--=====================================================================
        //Funcion para sumar todos los puntos totales que lleva actualmente el
        //usuario en Matematicas.
-
+       $scope.formatFecha = function(fecha) {
+           var str = fecha.substring(0,10);
+           return str;
+       }
        function puntosTotales ()  {
          $scope.puntosTotalesMates = 0;
              $scope.puntosTotalesMates = $scope.currentUser.puntuacion.matematicas;

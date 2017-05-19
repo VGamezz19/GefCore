@@ -333,7 +333,7 @@ exports.forgot = (req, res) => {
         }
       });
       var mailOptions = {
-        from: 'alexjandron7@gmail.com',
+        from: 'gefcoreapp@gmail.com',
         to: req.body.email,
         subject: 'Recuperar contraseña',
         text: `http://${req.headers.host}/reset/${token}`
@@ -392,7 +392,7 @@ exports.resetConfirmation = (req, res, next) => {
         }
       });
       var mailOptions = {
-        from: 'alexjandron7@gmail.com',
+        from: 'gefcoreapp@gmail.com',
         to: user.email,
         subject: 'contraseña cambiada',
         text: `Confirmamos que su contraseña ha sido cambiada correctamente.`
