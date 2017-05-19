@@ -2,3 +2,7 @@ node_modules/
 
 ._matematicas
 public/lib/
+
+matematicas.json
+ingles.json
+npm-debug.log
