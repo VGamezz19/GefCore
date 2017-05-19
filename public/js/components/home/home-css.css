@@ -37,3 +37,10 @@ body {
   color: #FFFFFF;
   border-color: none !important;
 }
+
+.menuPhone{
+  border: solid 3px #CCCC99;
+margin-right: : 1em;
+padding: 0 !important;
+background-color: rgba(204, 204, 153, 0.50);
+}

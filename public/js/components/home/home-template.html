@@ -1,16 +1,84 @@
 <link rel="stylesheet" href="/js/components/home/home-css.css">
 
+<!--=============== HEADER NAV FOR PHONE ================================= -->
+<div class ="row visible-xs boque-home mates" style ="margin-top: 3em;">
+  <div class ="col-xs-12 menuPhone">
+    <a href="/" style ="color:#FFCC00"class ="btn" tabindex="1" aria-label='Puntuacion Global Matematicas'>Home</a>
+  </div>
+  <div ng-if ="thisUser"class ="col-xs-12 menuPhone">
+    <a href="/profile" style ="color:#FFCC00"class ="btn " tabindex="1" aria-label='Puntuacion Global Matematicas'>Perfil</a>
+  </div>
+  <div ng-if ="thisUser" class ="col-xs-12 menuPhone">
+    <a href="" style ="color:#FFCC00"class ="btn  logeOut" tabindex="1" aria-label='Puntuacion Global Matematicas'>Cerrar sesion</a>
+  </div>
+  <div class =" menuPhone   col-sx-12" ng-if ="!thisUser">
+    <a href="" style ="color:#FFCC00"class ="btn  login" tabindex="1" aria-label='Puntuacion Global Matematicas'>Entrar</a>
+  </div>
+  <div class =" menuPhone col-sx-12" ng-if ="!thisUser">
+    <a href="" style ="color:#FFCC00"class ="btn  register" tabindex="1" aria-label='Puntuacion Global Matematicas'>Registrarse</a>
+  </div>
+  <script>
+
+  //Cuando hace click en Entrar del menu
+  setTimeout(function(){
+    $('.login').click(function(){
+      $('.loginModal').modal('show');
+      setTimeout(focus, 300);
+    });
+  },300)
+
+  //End Login Modal jquery
+
+  //Start Register Modal jquery
+  setTimeout(function(){
+    $('.register').click(function(){
+      $('.registerModal').modal('show');
+      setTimeout(focusRegister, 300);
+    });
+  },300)
+
+
+  //End Register Modal jquery
+
+  $('.logeOut').click(function(){
+    $('.checkModal').modal('show');
+    setTimeout(focusLogOut, 300);
+  });
+
+  //Functions Modal Focus
+    function focus () {
+      document.getElementById('loginModal').focus();
+      $('[tabindex=2]').focus();
+      $("#loginModal").focus();
+    }
+    function focusRegister () {
+      document.getElementById('registerModal').focus();
+      $('[tabindex=4]').focus();
+      $("#registerModal").focus();
+    }
+
+    function focusLogOut () {
+      document.getElementById('check').focus();
+      $('[tabindex=6]').focus();
+      $("#check").focus();
+    }
+
+  </script>
+
+</div>
+<!--=============== HEADER NAV FOR PHONE ================================= -->
+
 <div ng-if = "thisUser">
   <h2 class ="title-home-template" tabindex="1" lang="en"> <strong>GAMES</strong>Home</h3>
   <div class ="row boque-home mates">
-    <div class ="col-md-9 col-lg-9 col-md-offset-2 col-lg-offset-2">
-      <div class ="col-md-1 col-lg-1  ">
+    <div class ="col-md-9 col-lg-9 col-sm-9 col-xs-12 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+      <div class ="col-md-1 col-lg-1 col-sm-2 col-xs-4">
         <a href="/puntuacionMatematicas" style ="color:#FFCC00"class ="btn fi glyphicon glyphicon-star" tabindex="1" aria-label='Puntuacion Global Matematicas'></a>
       </div>
-      <div class ="col-md-5 col-lg-5">
+      <div class ="col-md-5 col-lg-5 col-sm-4 col-xs-8">
         <a href="/matematicas" class ="btn" aria-label='Menu de juegos de Matematicas' tabindex="1"> Matematicas </a>
       </div>
-      <div class ="col-md-5 col-lg-5">
+      <div class ="col-md-5 col-lg-5 col-sm-6 col-xs-12">
 
         <a ng-if ="nivel != 0" href="/juego/{{link}}" class ="btn " tabindex="1"  aria-label='Juega  al Nivel {{nivel}}. Titulo de nivel {{tituloJuego}}' titulo ="Juega">{{nivel}} - {{tituloJuego}}</a>
         <a ng-if ="nivel == 0" href="/profile" class ="btn " tabindex="1" aria-label='No Tienes juegos disponibles. Redirige a tu perfil.'>No hay nuevos juegos</a>
@@ -20,14 +88,14 @@
   </div>
 
   <div class ="row boque-home ingles">
-    <div class ="ol-md-9 col-lg-9 col-md-offset-2 col-lg-offset-2">
-      <div class ="col-md-1 col-lg-1">
-        <a href="/puntuacionIngles" style ="color:#FFCC00" class ="btn  fi glyphicon glyphicon-star" tabindex="1" aria-label='Puntuacion Global Matematicas'></a>
+    <div class ="ol-md-9 col-lg-9 col-sm-9 col-xs-12 col-sm-offset-2  col-md-offset-2 col-lg-offset-2">
+      <div class ="col-md-1 col-lg-1 col-sm-2 col-xs-4">
+        <a href="/puntuacionIngles" style ="color:#FFCC00" class ="btn  fi glyphicon glyphicon-star" tabindex="1" aria-label='Puntuacion Global Ingles'></a>
       </div>
-      <div class ="col-md-5 col-lg-5">
+      <div class ="col-md-5 col-lg-5 col-sm-4 col-xs-8">
         <a href="/ingles" class ="btn" aria-label='Menu de juegos de Ingles' tabindex="1"> Ingles </a>
       </div>
-      <div class ="col-md-5 col-lg-5">
+      <div class ="col-md-5 col-lg-5 col-sm-6 col-xs-12">
         <a ng-if ="niveling != 0" href="/juegoIngles/{{linking}}" class ="btn" tabindex="1" aria-label='Juega  al Nivel {{niveling}}. Titulo de nivel {{tituloJuegoing}}'>{{niveling}} - {{tituloJuegoing}}</a>
         <a ng-if ="niveling == 0" href="/profile" class ="btn" tabindex="1" aria-label='No Tienes juegos disponibles. Redirige a tu perfil.'>No hay nuevos juegos</a>
       </div>

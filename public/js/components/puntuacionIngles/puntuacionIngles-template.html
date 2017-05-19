@@ -1,30 +1,60 @@
 <link rel="stylesheet" href="/js/components/puntuacionIngles/puntuacionIngles-css.css">
 <div>
-    <h1 tabindex = "1"><p aria-label ="Ranking de los usuarios que han jugado a Ingles."></p>Todas las puntuaciones de matematicas</h1>
-
-    <div class ="row">
-      <div >
-        <div class ="col-md-3 col-lg-3 head" >
+    <h1 class ="hidden-xs" tabindex = "1"><p aria-label ="Ranking de los usuarios que han jugado a Ingles."></p>Todas las puntuaciones de Ingles</h1>
+    <!--=============== HEADER NAV FOR PHONE ================================= -->
+    <div class ="row visible-xs boque-home mates" style ="margin-top: 3em;">
+      <div class ="col-xs-12 menuPhone">
+        <a href="/" style ="color:black"class ="btn" tabindex="1" aria-label='Home'>Home</a>
+      </div>
+      <div class ="col-xs-12 menuPhone">
+        <a href="/profile" style ="color:black"class ="btn " tabindex="1" aria-label='profile'>Perfil</a>
+      </div>
+      <div class ="col-xs-12 menuPhone">
+        <a href="" style ="color:black"class ="btn  logeOut" tabindex="1" aria-label='Cerrar sesion'>Cerrar sesion</a>
+      </div>
+      <script>
+        $('.logeOut').click(function(){
+          $('.checkModal').modal('show');
+          setTimeout(focusLogOut, 300);
+        });
+        function focusLogOut () {
+          document.getElementById('check').focus();
+          $('[tabindex=6]').focus();
+          $("#check").focus();
+        }
+      </script>
+    </div>
+    <!--=============== HEADER NAV FOR PHONE ================================= -->
+    <div class =" hidden-xs row">
+      <div>
+        <div class =" hidden-sm col-md-3 col-lg-3 col-sm-3 head" >
           <h2>Usuario</h2>
         </div>
-        <div class ="col-md-5 col-lg-5 head" >
+        <div class =" hidden-sm col-md-5 col-lg-5 col-sm-3  head" >
           <h2>Nivel actual</h2>
         </div>
-        <div class ="col-md-3 col-lg-3 head" >
+        <div class ="hidden-sm col-md-3 col-lg-3 col-sm-5  head" >
           <h2>Puntuación total</h2>
+        </div>
+        <div class ="visible-sm  col-sm-12  head" >
+          <h1> Ranking de usuarios de Ingles</h1>
         </div>
       </div>
     </div>
     <div class ="row" ng-repeat ="usuarios in usuarioCompleto  | orderBy: '-puntuacion.matematicas' track by $index ">
-      <div class ="col-md-12 col-lg-12 matematicasHome " >
-        <div tabindex ="1" aria-label ="Posicion {{1 + $index}}. El usuario {{usuarios.username}}, esta actualmente por el nivel {{usuarios.juegoActual}}. Con un total de {{usuarios.puntuacion.matematicas}} puntos!">
-          <div class ="col-md-3 col-lg-3 puntos-matematicas-home"  id ="tag{{$index}}">
+      <div class ="col-md-12 col-lg-12 col-sm-12 col-xs-12 matematicasHome " >
+        <div tabindex="1" tabindex ="1" aria-label ="Posicion {{1 + $index}}. El usuario {{usuarios.username}}, esta actualmente por el nivel {{usuarios.juegoActual}}. Con un total de {{usuarios.puntuacion.matematicas}} puntos!">
+          <div class ="col-md-3 col-lg-3 col-sm-3 col-xs-12  puntos-matematicas-home"  id ="tag{{$index}}">
             <h3 style="margin: 0 !important; text-align: left;">{{1 + $index}} - {{usuarios.username}}</h3>
           </div>
-          <div class ="col-md-5 col-lg-5 puntos-matematicas-home"  id ="tag{{$index}}">
-            <h3 style="margin: 0 !important; text-align: left;">Actual mente esta por el Nivel {{usuarios.juegoActual}}</h3>
+          <div class ="col-md-5 col-lg-5 col-sm-8 col-xs-12 puntos-matematicas-home"  id ="tag{{$index}}">
+            <h3 style="margin: 0 !important; text-align: left; " class ="hidden-xs">Actualmente esta por el Nivel {{usuarios.juegoActual}}</h3>
+            <p class ="visible-xs" style="font-size:0.8em;">Actualmente esta por el Nivel {{usuarios.juegoActual}}</p>
           </div>
-          <div class ="col-md-3 col-lg-3 puntos-matematicas-home"  id ="tag{{$index}}">
+          <div class ="col-md-3 col-lg-3 hidden-sm col-xs-12 puntos-matematicas-home"  id ="tag{{$index}}">
+            <h3 style="margin: 0 !important; text-align: center;">{{usuarios.puntuacion.matematicas}}</h3>
+          </div>
+          <div class ="visible-sm col-sm-11 puntos-matematicas-home" style="width: 95%;" id ="tag{{$index}}">
             <h3 style="margin: 0 !important; text-align: center;">{{usuarios.puntuacion.matematicas}}</h3>
           </div>
         </div>

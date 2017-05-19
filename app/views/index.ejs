@@ -55,7 +55,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
 </div>
 <div class="container-fluid">
  <div class="row">
-    <div class="backgroundHeader" >
+    <div class="backgroundHeader col-lg-12 col-md-12 col-ls-12 hidden-xs" >
         <h1 tabindex="1" class ="gefCore-title"> <p aria-label='GefCore, una pagina donde podras jugar y aprender a la vez'></p>GefCore</h1>
     </div>
 
@@ -141,19 +141,24 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         </div>
         <div class=" modal-body">
           <form method="post" action='/singin' name="login_form">
-            <div class = "col-md-6 col-lg-6">
-              <p><input tabindex="3" aria-label='Introduce tu usuario' type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
-              <p><input tabindex="3" aria-label='Introduce tu contraseña'type="password" class="inputLogin" name="password" placeholder="Contraseña"></p>
+            <div class = "col-md-6 col-lg-6 col-sm-6 col-xs-12 ">
+              <p><input tabindex="3" class ="col-xs-12" aria-label='Introduce tu usuario' type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
+              <p><input tabindex="3" class ="col-xs-12" aria-label='Introduce tu contraseña'type="password" class="inputLogin" name="password" placeholder="Contraseña"></p>
             </div>
-            <div class ="col-md-4 col-ls-4">
-              <input tabindex="3" aria-label='Aceptar y entrar. Si no tienes una cuenta en GefCore, baja al proximo boton' type="submit" class="submit btn" value='Entra'>
+            <div class ="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+              <p class ="visible-xs" style="margin-top:1em;"></p>
+              <input tabindex="3" aria-label='Aceptar y entrar. Si no tienes una cuenta en GefCore, baja al proximo boton' type="submit" class="submit btn col-xs-12" value='Entra'>
+              <p class =" visible-xs" style="margin-bottom: 2em;"></p>
             </div>
           </form>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer hidden-xs">
             Nuevo en GefCore?
             <input tabindex="3" aria-label='Si no tienes cuenta en GefCore, Pulsa aqui para crearla' type="submit" class=" registerLogin btn" value="Registrate">
-          </div>
+        </div>
+        <div class="modal-footer visible-xs">
+            <input tabindex="3" aria-label='Si no tienes cuenta en GefCore, Pulsa aqui para crearla' type="submit" class=" registerLogin btn" value="Registrate">
+        </div>
       </div>
     </div>
   </div>
@@ -172,17 +177,17 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         <div class="modal-body">
           <form method="post" action='/singup' name="login_form">
             <div class ="body-model">
-              <p><input  tabindex ="5" aria-label= 'introduce tu nombre'type="text" class="inputLogin"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
-              <p><input tabindex ="5" aria-label= 'introduce tu apellido' type="text" class="inputLogin" name="lastName" placeholder="Apellido"></p>
-              <p><input tabindex ="5" aria-label= 'introduce tu correo electronico (es obligatorio)' type="text" class="inputLogin" name="email" placeholder="Correo" ></p>
+              <p><input  tabindex ="5"  aria-label= 'introduce tu nombre'type="text" class="inputLogin col-xs-12"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
+              <p><input tabindex ="5"  aria-label= 'introduce tu apellido' type="text" class="inputLogin col-xs-12" name="lastName" placeholder="Apellido"></p>
+              <p><input tabindex ="5"  aria-label= 'introduce tu correo electronico (es obligatorio)' type="text" class="inputLogin col-xs-12" name="email" placeholder="Correo" ></p>
             </div>
             <div class="modal-footer fotermodal">
-              <div class =" inputsUser col-md-6 col-lg-6">
-                <p><input tabindex ="5" aria-label= 'introduce nombre de usuario. Es importante que no te olvides de el' type="text" class="inputLogin footerlog" name="username" placeholder="Nombre de usuario"></p>
-                <p><input tabindex ="5" aria-label= 'introduce una contraseña' type="password" class="inputLogin footerlog" name="password" placeholder="Contraseña" ></p>
+              <div class =" inputsUser col-md-6 col-lg-6 col-xs-12">
+                <p><input tabindex ="5"  aria-label= 'introduce nombre de usuario. Es importante que no te olvides de el' type="text" class="inputLogin footerlog col-xs-12" name="username" placeholder="Nombre de usuario"></p>
+                <p><input tabindex ="5"  aria-label= 'introduce una contraseña' type="password" class="inputLogin footerlog col-xs-12" name="password" placeholder="Contraseña" ></p>
               </div>
-              <div class =" col-md-4 col-lg-4">
-                <input tabindex ="5" aria-label= 'Aceptar y crear usuario' type="submit" class="btn submitRegister" value='Crear cuenta'>
+              <div class =" col-md-4 col-lg-4 col-xs-8">
+                <input tabindex ="5"   aria-label= 'Aceptar y crear usuario' type="submit" class="btn submitRegister col-xs-12" value='Crear cuenta'>
               </div>
             </div>
           </form>
@@ -205,12 +210,21 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
       </div>
       <div class="modal-body">
         <div class ="row">
-          <div class ="col-md-6 col-lg-6" >
+          <div class ="col-md-6 col-lg-6 col-sm-6 hidden-xs" >
              <input type="submit" class="close-loged btn " value='No' data-dismiss="modal"  tabindex ="7" aria-label= 'No cerrar sesion'>
           </div>
-          <div class ="col-md-6 col-lg-6">
+          <div class ="col-md-6 col-lg-6 col-sm-6 hidden-xs">
             <form   style ="whitd: 40%;"action='/singout'>
               <input type="submit" class="yesClose-loged btn " value='Si' tabindex ="7" aria-label= 'Verificar que quieres cerrar sesion'>
+            </form>
+          </div>
+
+          <div class ="col-xs-6 visible-xs" >
+             <input type="submit" style ="margin-right:2em !important;" class="close-loged btn " value='No' data-dismiss="modal"  tabindex ="7" aria-label= 'No cerrar sesion'>
+          </div>
+          <div class ="col-xs-6 visible-xs">
+            <form   style ="whitd: 40%;"action='/singout'>
+              <input type="submit" style ="margin-left:2em !important;" class="yesClose-loged btn " value='Si' tabindex ="7" aria-label= 'Verificar que quieres cerrar sesion'>
             </form>
           </div>
         </div>
