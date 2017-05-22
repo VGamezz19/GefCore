@@ -1,32 +1,66 @@
 <link rel="stylesheet" href="/js/components/juego/juego-css.css">
 
-<div class ="row mainJuegos">
-  <div class= "col-md-2 col-lg-2 col-sm-2 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 ">
+<!--=============== HEADER NAV FOR PHONE ================================= -->
+<div class ="row visible-xs boque-home mates" style ="margin-top: 3em;">
+  <div class ="col-xs-12 menuPhone">
+    <a href="/" style ="color:#FFCC00"class ="btn" tabindex="1" aria-label='Home'>Home</a>
+  </div>
+  <div class ="col-xs-12 menuPhone">
+    <a href="/profile" style ="color:#FFCC00"class ="btn " tabindex="1" aria-label=perfil>Perfil</a>
+  </div>
+  <div  class ="col-xs-12 menuPhone">
+    <a href="" style ="color:#FFCC00"class ="btn  logeOut" tabindex="1" aria-label='Cerrar sesion'>Cerrar sesion</a>
+  </div>
+
+  <script>
+
+  //End Register Modal jquery
+ setTimeout(function(){
+   $('.logeOut').click(function(){
+     $('.checkModal').modal('show');
+     setTimeout(focusLogOut, 300);
+   });
+ },300)
+
+  function focusLogOut () {
+    document.getElementById('check').focus();
+    $('[tabindex=6]').focus();
+    $("#check").focus();
+  }
+
+  </script>
+
+</div>
+<!--=============== HEADER NAV FOR PHONE ================================= -->
+<div class ="hidden-xs mainJuegos"></div>
+
+<div class ="row boxJuego">
+  <div class= "col-md-2 col-lg-2 col-sm-3 col-xs-3  col-md-offset-1 col-lg-offset-1 ">
       <button type="button" class="btn izquierda fi glyphicon glyphicon-chevron-left izquierdaFlecha" tabindex="1" aria-label='Retroceder al juego anterior'></button>
   </div>
-  <div class ="col-md-6 col-lg-6 col-sm-6 textCentro">
+  <div class ="col-md-6 col-lg-6 col-sm-6 col-xs-6 textCentro">
     <div class ="" ng-repeat = "juego in juegoActual.preguntas track by $index">
-      <div class ="col-md-12 col-lg-12 col-sm-12 juego{{$index +1}} pregunta">
+      <div class ="col-md-12 col-lg-12 col-sm-12 col-xs-12 juego{{$index +1}} pregunta">
         <div class ="row ">
-          <div class =" col-md-2 col-lg-2 col-sm-2">
+          <div class =" col-md-2 col-lg-2 col-sm-2 col-xs-2">
             <p tabindex="2" class ="nivel" id="numeroPregunta" aria-label='Pregunta {{$index + 1}}' style ="font-size: 3em;margin-top: 0.2em;">{{$index + 1}}</p>
           </div>
-          <div class =" col-md-3 col-lg-3 col-sm-3 col-sm-offset-7 col-md-offset-7 col-lg-offset-7" >
-            <div class ="col-md-6 col-lg-6 col-sm-6 colStar">
+          <div class =" col-md-3 col-lg-3 col-sm-4 col-xs-8  col-sm-offset-6 col-md-offset-7 col-lg-offset-7" >
+            <div class ="col-md-6 col-lg-6 col-sm-6 col-xs-3 colStar">
               <h1 class ="fi glyphicon glyphicon-star starGame"> </h1>
             </div>
-            <div class ="col-md-6 col-lg-6 col-sm-6">
+            <div class ="col-md-6 col-lg-6 col-sm-6 col-xs-3 rowsbugo" >
               <p tabindex="3" aria-label ='Ganaras {{juego.pregunta.puntuacion}} Puntos si respondes bien a esta pregunta' style ="font-size: 3em;margin-top: 0.2em;">{{juego.pregunta.puntuacion}}</p>
             </div>
           </div>
         </div>
         <div class ="row ">
-          <div class =" col-md-12 col-lg-12 col-sm-12" >
+          <div class =" col-md-12 col-lg-12 col-sm-12 col-xs-12" >
             <h3 tabindex="4" class ="titulo">  {{juego.pregunta.titulo}}</h3>
           </div>
         </div>
         <div class ="row ">
-          <div class ="col-md-10 col-lg-10 col-sm-10 inputPregunta">
+          <div class ="col-md-10 col-lg-10 col-sm-10 col-xs-12 inputPregunta">
             <div class="input-group">
               <input type="number"  placeholder="Introduce la respuesta" class="form-control inputEnter" tabindex="5" ng-model="inputsPreguntas[$index]">
             </div>
@@ -34,20 +68,21 @@
         </div>
       </div>
       <!-- Template final -->
-      <div class ="col-md-12 col-lg-12 col-sm-12 pregunta final{{$index +1}}">
+      <div class ="col-md-12 col-lg-12 col-sm-12 col-xs-12 pregunta final{{$index +1}}">
         <script>  $(".pregunta").hide();</script>
         <div class ="row ">
-          <div class =" col-md-12 col-lg-12 col-sm-12" >
+          <div class =" col-md-12 col-lg-12 col-sm-12 col-xs-12" >
             <h1 tabindex="2">FIN DE NIVEL</h1>
           </div>
         </div>
         <div class ="row ">
-          <div class =" col-md-12 col-lg-12 col-sm-12 bodyFinalJuego">
-            <h3 class ="Fintitulo" tabindex="3">Usar el botón de la izquierda si quieres repasar</h3>
+          <div class =" col-md-12 col-lg-12  col-sm-12 col-xs-12 bodyFinalJuego">
+            <h4 class ="Fintitulo" tabindex="3"> <p aria-label ="Usa Shift + Tab. Para usar el boton para retroceder y repasar"></p>Puedes repasar antes de comprobar el nivel</h3>
           </div>
+
         </div>
         <div class ="row ">
-          <div class ="col-md-10 col-lg-10 col-sm-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 containerButton" >
+          <div class ="col-md-10 col-lg-10 col-sm-10 col-xs-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 containerButton" >
               <button class="btn corregir" ng-click="uploadGame()" tabindex="4" arial-label ='Corregir el nivel'>Corregir</button>
           </div>
         </div>
@@ -57,12 +92,12 @@
       </script>
     </div>
   </div>
-  <div class= "col-md-2 col-lg-2 col-sm-2">
+  <div class= "col-md-2 col-lg-2 col-sm-3 col-xs-3">
       <button type="button" class="btn derecha fi glyphicon glyphicon-chevron-right derechaFlecha" tabindex="6" aria-label='Salta a la proxima pregunta'></button>
   </div>
 </div>
 
-<!-- START Modal CheckLogOUT-->
+<!-- START Modal checkLevel-->
 
 <div class="modal correccion fade" >
   <div class="modal-dialog" role="document">
@@ -75,26 +110,26 @@
       </div>
       <div class="modal-body">
         <div class ="row" >
-          <div class = "col-md-8 col-lg-8 col-sm-8 main juegos-matematicas-home " tabindex ="8" aria-label ="Has conterstado correctamente {{correctas}} preguntas." >
+          <div class = "col-md-8 col-lg-8 col-sm-8 col-xs-8 main juegos-matematicas-home " tabindex ="8" aria-label ="Has conterstado correctamente {{correctas}} preguntas." >
             Correctos
           </div>
-          <div class =" col-md-4 col-lg-4 col-sm-4 juegos-matematicas-home ">
+          <div class =" col-md-4 col-lg-4 col-sm-4 col-xs-4 juegos-matematicas-home ">
             {{correctas}}
           </div>
 
-          <div class = "col-md-8 col-lg-8 col-sm-8 main juegos-matematicas-home " tabindex ="8" aria-label ="Has conterstado incorrectamente {{errores}} preguntas. ">
+          <div class = "col-md-8 col-lg-8 col-sm-8 col-xs-8 main juegos-matematicas-home " tabindex ="8" aria-label ="Has conterstado incorrectamente {{errores}} preguntas. ">
             Fallados
           </div>
-          <div class =" col-md-4 col-lg-4 col-sm-4 juegos-matematicas-home ">
+          <div class =" col-md-4 col-lg-4 col-sm-4 col-xs-4 juegos-matematicas-home ">
             {{errores}}
           </div>
         </div>
-        <div class ="row" style="margin-top: 4em;">
-          <div class = "col-md-8 col-lg-8 col-sm-8 main juegos-matematicas-home " style="  border: none;" >
+        <div class ="row rowpuntos">
+          <div class = "col-md-8 col-lg-8 col-sm-8 col-xs-8 main juegos-matematicas-home " style="  border: none;" >
               <h1 class ="fi glyphicon glyphicon-star starGame"style="right: 6.6em;top: -0.5em;"></h1>
               <h3 style="margin-top: 0.2em;"> <p tabindex ="8"   aria-label ="Has ganado {{puntuacion}} puntos. "></p>Puntuación total</h3>
           </div>
-          <div class =" col-md-4 col-lg-4 col-sm-4 juegos-matematicas-home " style="  border: none;">
+          <div class =" col-md-4 col-lg-4 col-sm-4 col-xs-4 juegos-matematicas-home " style="  border: none;">
             <h3 style="width: 50%;margin-top: 0.2em;text-align: center;">{{puntuacion}}</h3>
           </div>
         </div>
