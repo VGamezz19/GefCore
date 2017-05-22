@@ -1,5 +1,5 @@
 //configuración de producción
 module.exports = {
-    db: 'mongodb://heroku_8fsbwhs8:et2d4jfr33opkfsopjamv2jvbp@ds141358.mlab.com:41358/heroku_8fsbwhs8',
+    db: 'mongodb://heroku_b1r92xqv:rhci47ihks9njo9jksagn777qf@ds149221.mlab.com:49221/heroku_b1r92xqv',
     sessionSecret : 'developmentSessionSecret'
 };
