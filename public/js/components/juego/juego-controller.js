@@ -13,6 +13,10 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
    }).then(function successCallback(response) {
      //Guardamos el "data" del juego seleccionado por el usuario.
          $scope.juegoActual = response.data;
+         setTimeout(function(){
+
+           $(".juego1").show();
+         },100);
 
      }, function errorCallback(response) {
 

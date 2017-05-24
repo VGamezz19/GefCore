@@ -14,8 +14,11 @@ angular.module('juegoIngles').controller('juegoInglesController',['$scope','$htt
    }).then(function successCallback(response) {
      //Guardamos el "data" del juego seleccionado por el usuario.
          $scope.juegoActual = response.data;
-         console.log("juego Ingles", $scope.juegoActual);
-         console.log($scope.juegoActual.preguntas[1].pregunta.opciones);
+
+         setTimeout(function(){
+
+           $(".juego1").show();
+         },100);
 
      }, function errorCallback(response) {
 

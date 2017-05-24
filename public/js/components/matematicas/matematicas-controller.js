@@ -18,7 +18,17 @@ UserCurrent.getUser()
          }).then(function successCallback(response) {
 
                $scope.matematicas = response.data;
-               console.log($scope.matematicas);
+
+               setTimeout(function(){
+                 $(".matematicasHome").hover(function () {
+                   $(this).find(".spanFlotando").show();
+                 });
+                 //quitando hover raton
+                 $(".matematicasHome").mouseleave(function () {
+                   $(this).find(".spanFlotando").hide();
+                 });
+
+               },200)
 
            }, function errorCallback(response) {
 

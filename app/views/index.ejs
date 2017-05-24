@@ -142,8 +142,8 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         <div class=" modal-body">
           <form method="post" action='/singin' name="login_form">
             <div class = "col-md-6 col-lg-6 col-sm-6 col-xs-12 ">
-              <p><input tabindex="3" class ="col-xs-12" aria-label='Introduce tu usuario' type="text" class="inputLogin"  id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
-              <p><input tabindex="3" class ="col-xs-12" aria-label='Introduce tu contraseña'type="password" class="inputLogin" name="password" placeholder="Contraseña"></p>
+              <p><input tabindex="3" class ="col-xs-12 inputLogin" aria-label='Introduce tu usuario' type="text"   id="username" focus-me="true" name="username" placeholder="Usuario" ></p>
+              <p><input tabindex="3" class ="col-xs-12 inputLogin downinput" aria-label='Introduce tu contraseña'type="password"  name="password" placeholder="Contraseña"></p>
             </div>
             <div class ="col-md-4 col-lg-4 col-sm-6 col-xs-12">
               <p class ="visible-xs" style="margin-top:1em;"></p>
@@ -154,10 +154,16 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         </div>
         <div class="modal-footer hidden-xs">
             Nuevo en GefCore?
-            <form action="/forgot">
-              <button class="forgot btn" tabindex="4" aria-label="Si no recuerdas tu contraseña, Pulsa aqui para recuperarla">Recuperar Contraseña</button>
-              </form>
-            <input tabindex="3" aria-label='Si no tienes cuenta en GefCore, Pulsa aqui para crearla' type="submit" class=" registerLogin btn" value="Registrate">
+            <div class ="row">
+              <div class ="col-md-6 col-lg-6 col-sm-6">
+                <form action="/forgot" class ="formRemember">
+                  <button class="forgot " tabindex="4" aria-label="Si no recuerdas tu contraseña, Pulsa aqui para recuperarla">Recuperar Contraseña</button>
+                </form>
+              </div>
+              <div class ="col-md-6 col-lg-6 col-sm-6">
+                <input tabindex="3" aria-label='Si no tienes cuenta en GefCore, Pulsa aqui para crearla' type="submit" class=" registerLogin btn" value="Registrate">
+              </div>
+            </div>
         </div>
         <div class="modal-footer visible-xs">
             <input tabindex="3" aria-label='Si no tienes cuenta en GefCore, Pulsa aqui para crearla' type="submit" class=" registerLogin btn" value="Registrate">
@@ -180,21 +186,21 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
         <div class="modal-body">
           <form method="post" action='/singup' name="login_form">
             <div class ="body-model">
-              <p><input  tabindex ="5"  aria-label= 'introduce tu nombre'type="text" class="inputLogin col-xs-12"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
-              <p><input tabindex ="5"  aria-label= 'introduce tu apellido' type="text" class="inputLogin col-xs-12" name="lastName" placeholder="Apellido"></p>
-              <p><input tabindex ="5"  aria-label= 'introduce tu correo electronico (es obligatorio)' type="text" class="inputLogin col-xs-12" name="email" placeholder="Correo" ></p>
+              <p><input  tabindex ="5"  aria-label= 'introduce tu nombre'type="text" class="inputLogin triplelog col-md-6 col-lg-6 col-sm-6 col-xs-12"  id="firstName" focus-me="true" name="firstName" placeholder="Nombre" ></p>
+              <p><input tabindex ="5"  aria-label= 'introduce tu apellido' type="text" class="inputLogin triplelog col-md-6 col-lg-6 col-sm-6 col-xs-12" name="lastName" placeholder="Apellido"></p>
+              <p><input tabindex ="5"  aria-label= 'introduce tu correo electronico (es obligatorio)' type="text" class="inputLogin triplelog col-md-6 col-lg-6 col-sm-6 col-xs-12" name="email" placeholder="Correo" ></p>
             </div>
             <div class="modal-footer fotermodal">
               <div class ="row footerModalRegister">
-                <div class =" inputsUser col-md-6 col-lg-6 col-xs-12">
-                  <p><input tabindex ="5"  aria-label= 'introduce nombre de usuario. Es importante que no te olvides de el' type="text" class="inputLogin footerlog col-xs-12" name="username" placeholder="Nombre de usuario"></p>
-                  <p><input tabindex ="5"  aria-label= 'introduce una contraseña' type="password" class="inputLogin footerlog col-xs-12" name="password" placeholder="Contraseña" ></p>
+                <div class =" inputsUser col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                  <p><input tabindex ="5"  aria-label= 'introduce nombre de usuario. Es importante que no te olvides de el' type="text" class="inputLogin footerlog  col-md-12 col-lg-12 col-sm-12 col-xs-12" name="username" placeholder="Nombre de usuario"></p>
+                  <p><input tabindex ="5"  aria-label= 'introduce una contraseña' type="password" class="inputLogin footerlog col-md-12 col-lg-12 col-sm-12 col-xs-12" name="password" placeholder="Contraseña" ></p>
                 </div>
-                <div class =" col-md-4 col-lg-4 hidden-xs">
-                  <input tabindex ="5"   aria-label= 'Aceptar y crear usuario' type="submit" class="btn submitRegister col-xs-12" value='Crear cuenta'>
+                <div class =" col-md-4 col-lg-4 col-sm-4 hidden-xs">
+                  <input tabindex ="5"   aria-label= 'Aceptar y crear usuario' type="submit" class="btn submitRegister " value='Crear cuenta'>
                 </div>
                 <div class =" col-xs-12 visible-xs">
-                  <input tabindex ="5" style="margin: 0 !important; width: 100% !important;"   aria-label= 'Aceptar y crear usuario' type="submit" class="btn submitRegister col-xs-12" value='Crear cuenta'>
+                  <input tabindex ="5" aria-label= 'Aceptar y crear usuario' type="submit" class="btn submitRegister col-xs-12" value='Crear cuenta'>
                 </div>
               </div>
             </div>

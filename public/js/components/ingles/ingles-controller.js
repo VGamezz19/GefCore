@@ -19,6 +19,17 @@ angular.module('ingles').controller('inglesController',['$scope', '$rootScope','
 
                    $scope.matematicas = response.data;
 
+                   setTimeout(function(){
+                     $(".matematicasHome").hover(function () {
+                       $(this).find(".spanFlotando").show();
+                     });
+                     //quitando hover raton
+                     $(".matematicasHome").mouseleave(function () {
+                       $(this).find(".spanFlotando").hide();
+                     });
+
+                   },200)
+
                }, function errorCallback(response) {
 
                });

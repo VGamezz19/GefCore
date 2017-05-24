@@ -2,10 +2,6 @@ $("#ngView").addClass("addMarginTopView");
 $(".container-fluid").hide();
 
 $(".izquierda").hide();
-setTimeout(function(){
-
-  $(".juego1").show();
-},100);
 
 var cnt = 1;
 

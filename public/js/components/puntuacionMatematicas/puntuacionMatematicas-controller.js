@@ -18,15 +18,17 @@
             usuario['juegoActual'] = cnt;
         });
 
+        $(".container-fluid").hide();
+        setTimeout(function(){
+           $("#tag0").append("<span class='fi glyphicon glyphicon-star primeraPuntuacion hidden-xs hidden-sm'></span>");
+           $("#tag1").append("<span class='fi glyphicon glyphicon-star segundaPuntuacion hidden-xs hidden-sm'></span>");
+           $("#tag2").append("<span class='fi glyphicon glyphicon-star terceraPuntuacion hidden-xs hidden-sm'></span>");
+        }, 100)
+
       });
 
 
-      $(".container-fluid").hide();
-      setTimeout(function(){
-         $("#tag0").append("<span class='fi glyphicon glyphicon-star primeraPuntuacion hidden-xs hidden-sm'></span>");
-         $("#tag1").append("<span class='fi glyphicon glyphicon-star segundaPuntuacion hidden-xs hidden-sm'></span>");
-         $("#tag2").append("<span class='fi glyphicon glyphicon-star terceraPuntuacion hidden-xs hidden-sm'></span>");
-      }, 100)
+
 
     }]);
 

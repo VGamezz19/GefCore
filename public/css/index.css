@@ -13,10 +13,7 @@ button.close {
   font-size: 2em;
 }
 
-.inputLogin {
-  padding-left: 0.5em;
-  width: 15em;
-}
+
 .menuPhone{
   border: solid 3px #CCCC99;
   margin-right: : 1em;
@@ -160,19 +157,38 @@ h1 {
 
 .loginModal>div>div>.modal-footer {
   border: none !important;
-  padding-top: 1.5em;
+  padding-bottom: 6em;
   font-size: 1.5em;
   height: 105px;
   background-color: #999900;
 }
 
-.loginModal>div>div>.modal-footer>input {
+.registerLogin{
   margin-left: 1em;
-  margin-right: 1em;
-  font-size: 1em;
   background-color: rgba(255, 255, 255, 0.75) !important;
   border-radius: 0 !important;
   border: 1px solid black !important;
+  height: 2.5em;
+  font-size: 1em !important;
+  margin-right: 0 !important;
+  margin-top: 1em;
+  width: 63%;
+}
+
+.formRemember {
+  float: left;
+}
+
+.forgot {
+  /* margin-left: 1em; */
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border-radius: 0 !important;
+  border: 1px solid black !important;
+  height: 2.5em;
+  font-size: 1em !important;
+  /* margin-right: 0 !important; */
+  /* margin-top: 1em; */
+  /* width: 63%; */
 }
 
 /*========================== Modal Register ==================================*/
@@ -194,6 +210,19 @@ h1 {
 .inputLogin {
   font-size: 1.3em;
   height: 37px;
+  padding-left: 0.5em;
+  width: 15em;
+}
+
+.triplelog {
+  margin-right: 1.5em !important;
+  margin-bottom: 1em !important;
+  width: 46% !important;
+}
+
+.downinput {
+  margin-top: 0.5em !important;
+  margin-bottom: 0 !important;
 }
 
 .footerlog {
@@ -265,20 +294,52 @@ h1 {
 
 .footerModalRegister {
   padding: 1em !important;
-  margin-top: 8em !important;
+  margin-top: 11em !important;
 }
 
 
 /* Custom, iPhone Retina */
-  @media only screen and (max-width : 350px) {
+  @media only screen and (max-width : 767px) {
     .loginModal>div>div>div>form>div>.submit {
-      height: 2em !important
+      height: 3em !important
     }
+
+    .downinput {
+      margin-bottom: 2em !important;
+    }
+
+    .triplelog {
+      margin-right: 1.5em !important;
+      margin-bottom: 1em !important;
+      width: 90% !important;
+    }
+  .loginModal>div>div>.modal-footer {
+    border: none !important;
+    padding-bottom: 6em;
+    font-size: 1.5em;
+    height: 164px !important;
+    background-color: #999900;
+  }
+  .registerModal>div>div>.modal-body {
+
+    background: #CCCC99 !important;
+    background: -webkit-linear-gradient(180deg, #CCCC99, #999900) !important;
+    background: -o-linear-gradient(180deg, #CCCC99, #999900)!important;
+    background: -moz-linear-gradient(180deg, #CCCC99, #999900)!important;
+    background: linear-gradient(180deg, #CCCC99 46%, #999900 40%)!important;
+
   }
 
-  @media only screen and (max-width : 991px) {
-    .submitRegister{
-    margin-left: 21em !important;
-    width: 30% !important;
+  .submitRegister {
+    margin: 0 !important;
+    width: 57% !important;
+    float: right !important;
+    margin-top: 1em !important;
   }
+
+
+}
+
+  @media only screen and (max-width : 991px) {
+
   }
