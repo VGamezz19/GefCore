@@ -137,11 +137,11 @@ body {
 }
 
 .modal-content {
-  height: 25em !important;
+  /*height: 25em !important; */
 }
 
 .modal-body{
-  height: 80% !important;
+  /*height: 80% !important; */
 }
 
 .menuPhone{
@@ -203,7 +203,5 @@ body {
     .modal-body {
       height: 86% !important;
     }
-    .paddingXS {
-      padding: 0!important;
-    }
   }
+s

@@ -262,3 +262,23 @@ h1 {
     margin-bottom: 1.5em !important;
     margin-right: 4.5em !important;
 }
+
+.footerModalRegister {
+  padding: 1em !important;
+  margin-top: 8em !important;
+}
+
+
+/* Custom, iPhone Retina */
+  @media only screen and (max-width : 350px) {
+    .loginModal>div>div>div>form>div>.submit {
+      height: 2em !important
+    }
+  }
+
+  @media only screen and (max-width : 991px) {
+    .submitRegister{
+    margin-left: 21em !important;
+    width: 30% !important;
+  }
+  }
