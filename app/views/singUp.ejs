@@ -4,40 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="/css/subIndex.css">
+
+    <script  src="/lib/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="/lib/bootstrap/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <title><%= title %></title>
 
 </head>
-<body>
+<body clas ="backgroundHeader">
+  <p class ="msg"></p>
 
-<h1><%= title %></h1>
+<div class ="row formularioSingUpr">
+  <div class ="col-md-4 col-sm-4 col-xs-4 col-lg-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 col-lg-offset-4">
+    <% for(var i in messages) { %>
+      <div class ="col-ms-12 col-md-12 col-xs-12 col-lg-12">
+        <div class='flash btn btn-warning mensageWarning '><%= messages[i] %></div>
+      </div>
+    <% } %>
 
-<% for(var i in messages) { %>
-  <div class='flash'><%= messages[i] %></div>
-<% } %>
-<form action="/singup" method="post">
-<div>
-  <label>Nombre:<label>
-  <input type='text' name= 'firstName'/>
+    <div class ="col-ms-12 col-md-12 col-xs-12 col-lg-12 titulosinGUp">
+        <h1><%= title %></h1>
+    </div>
+    <div class ="col-ms-12 col-md-12 col-xs-12 col-lg-12 formularioSingUp">
+      <form action="/singup" method="post">
+        <div>
+          <label>Nombre:<label>
+          <input type='text' name= 'firstName'/>
+        </div>
+        <div>
+          <label>Apellido:<label>
+          <input type='text' name= 'lastName'/>
+        </div>
+        <div>
+          <label>Correo electronico:<label>
+          <input type='text' name= 'email'/>
+          </div>
+          <div>
+            <label>Nombre de usuario:<label>
+            <input type='text' name= 'username'/>
+          </div>
+          <div>
+            <label>Contraseña:<label>
+            <input type='password' name= 'password'/>
+          </div>
+          <div>
+            <input type="submit" value="crear cuenta"/>
+          </div>
+      </form>
+    </div>
+  </div>
 </div>
-<div>
-  <label>Apellido:<label>
-  <input type='text' name= 'lastName'/>
-</div>
-<div>
-  <label>Correo electronico:<label>
-  <input type='text' name= 'email'/>
-  </div>
-  <div>
-    <label>Nombre de usuario:<label>
-    <input type='text' name= 'username'/>
-  </div>
-  <div>
-    <label>Contraseña:<label>
-    <input type='password' name= 'password'/>
-  </div>
-  <div>
-    <input type="submit" value="crear cuenta"/>
-  </div>
-</form>
 </body>
 </html>

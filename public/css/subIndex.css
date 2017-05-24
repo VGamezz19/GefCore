@@ -1,0 +1,380 @@
+html {
+  height: 100%;
+}
+body {
+/  margin-top: 6em;
+/  height: 31em;
+  background: #CCCC99 !important;
+  background: -webkit-linear-gradient(180deg, #CCCC99, #999900) !important;
+  background: -o-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: -moz-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: linear-gradient(180deg, #CCCC99 50%, #999900 50%)!important;
+}
+footer p {
+  margin-left: 2em;
+}
+
+button.close {
+  margin-top: -53px !important;
+  font-size: 2em;
+}
+
+
+.menuPhone{
+  border: solid 3px #CCCC99;
+  margin-right: : 1em;
+  padding: 0 !important;
+  background-color: rgba(204, 204, 153, 0.50);
+}
+
+.glyphicon-star{
+  color: #FFCC00 !important;
+}
+h3 {
+  margin-left: 2em;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 0.5em !important;
+}
+
+.addMarginTopView {
+  margin-top: 7em;
+}
+
+.bar-header {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  background: rgb(76, 74, 74);
+  color: #FFFFFF;
+}
+
+.nav{
+  list-style: none !important;
+  margin: 1em !important;
+  padding: 0 !important;
+}
+.nav>li{
+  margin-left: 1em !important;
+  border-top: 5px solid transparent;
+}
+.nav>li>a {
+  color: #FFFFFF !important;
+  border: 1px solid #FFFFFF !important;
+  padding: 1em !important;
+  margin-top: 0.5em !important;
+  text-decoration: none !important;
+}
+
+.barrita-nomas{
+  border-top: 5px solid #fff !important;
+}
+
+.nav>li>a:focus, .nav>li>:hover {
+  background-color: rgba(238, 238, 238, 0)!important ;
+}
+
+.backgroundHeader{
+  margin-top: 6em;
+  height: 31em;
+  background: #CCCC99 !important;
+  background: -webkit-linear-gradient(180deg, #CCCC99, #999900) !important;
+  background: -o-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: -moz-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: linear-gradient(180deg, #CCCC99 50%, #999900 50%)!important;
+}
+
+.img-responsive {
+  height: 30em !important;
+}
+
+.gefCore-title {
+  font-size: 10em;
+  padding-top: 0.93em;
+  color: #666633;
+}
+
+.headerImg {
+  background-image: url("/img/img-header.jpg");
+  width: 100%;
+  background-size: cover;
+}
+
+.boque-home {
+  margin-bottom: 1em;
+}
+
+.boque-home div a {
+  width: 100%;
+}
+
+.close-loged {
+  float: right;
+  width: 50%;
+}
+ .yesClose-loged {
+   width: 50%;
+ }
+
+ tbody tr {
+   margin-bottom: 1em;
+   margin-top: 1em;
+ }
+
+
+
+/*========================== Modal Login ==================================*/
+.modal {
+  margin-top: 6em;
+}
+.modal-title {
+  text-align: left !important;
+  color: white;
+}
+.modal-header {
+  border-radius: 0 !important;
+  border-bottom: none !important;
+  background-color: rgb(76, 74, 74);
+}
+
+.loginModal>div>div>.modal-body {
+  background-color: #CCCC99;
+  padding: 0 !important;
+  padding-top: 2.4em !important;
+  height: 150px;
+}
+
+.loginModal>div>div>div>form>div>.submit {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border-radius: 0 !important;
+  font-size: 1.3em;
+  border: 1px solid black;
+  height: 85px !important;
+  width: 100% !important;
+}
+
+.loginModal>div>div>div>form>div>p>input {
+  height: 37px;
+  border 1px solid red;
+  color red;
+  font-size: 1.3em;
+}
+
+.loginModal>div>div>.modal-footer {
+  border: none !important;
+  padding-bottom: 6em;
+  font-size: 1.5em;
+  height: 105px;
+  background-color: #999900;
+}
+
+.registerLogin{
+  margin-left: 1em;
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border-radius: 0 !important;
+  border: 1px solid black !important;
+  height: 2.5em;
+  font-size: 1em !important;
+  margin-right: 0 !important;
+  margin-top: 1em;
+  width: 63%;
+}
+
+.formRemember {
+  float: left;
+}
+
+.forgot {
+  /* margin-left: 1em; */
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border-radius: 0 !important;
+  border: 1px solid black !important;
+  height: 2.5em;
+  font-size: 1em !important;
+  /* margin-right: 0 !important; */
+  /* margin-top: 1em; */
+  /* width: 63%; */
+}
+
+/*========================== Modal Register ==================================*/
+
+.fotermodal {
+  border: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+
+.msg {
+  margin-top: 8em !important;
+}
+.mensageWarning {
+  width: 100%;
+}
+
+.titulosinGUp {
+  width: 100%;
+  background: rgb(76, 74, 74);
+  color: white;
+  margin-bottom: 0 !important;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.formularioSingUpr{
+  margin-top: 5em !important;
+}
+
+.formularioSingUp {
+  padding-top: 1em;
+  border-bottom: 2px solid black;
+  padding-bottom: 1em;
+  background: rgb(206, 206, 140) !important;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.registerModal>div>div>.modal-body {
+  background: #CCCC99 !important;
+  background: -webkit-linear-gradient(180deg, #CCCC99, #999900) !important;
+  background: -o-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: -moz-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: linear-gradient(180deg, #CCCC99 55%, #999900 40%)!important;
+}
+
+.inputLogin {
+  font-size: 1.3em;
+  height: 37px;
+  padding-left: 0.5em;
+  width: 15em;
+}
+
+.triplelog {
+  margin-right: 1.5em !important;
+  margin-bottom: 1em !important;
+  width: 46% !important;
+}
+
+.downinput {
+  margin-top: 0.5em !important;
+  margin-bottom: 0 !important;
+}
+
+.footerlog {
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+  float: left;
+}
+
+.inputsUser{
+ padding-left: 0 !important;
+}
+
+.submitRegister {
+  height: 87px;
+  font-size: 1.3em !important;
+  margin-left: 7em;
+  margin-top: 0.5em;
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border-radius: 0 !important;
+  border: 1px solid black !important;
+}
+
+
+/*========================== Modal Check logOut ==================================*/
+
+
+.checkModal {
+  border-radius: 0 !important;
+}
+.fotermodal {
+  border: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+
+.checkModal>div>div>.modal-body {
+  background: #CCCC99 !important;
+  background: -webkit-linear-gradient(180deg, #CCCC99, #999900) !important;
+  background: -o-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: -moz-linear-gradient(180deg, #CCCC99, #999900)!important;
+  background: linear-gradient(90deg, #CCCC99 50%, #999900 50%)!important;
+}
+
+.yesClose-loged  {
+    height: 2.5em !important;
+    font-size: 1.3em !important;
+    color: white !important;
+    border: 2px solid white !important;
+    border-radius: 0 !important;
+    width: 40% !important;
+    background: #CCCC99 !important;
+    margin: 1.5em !important;
+    margin-bottom: 1.5em !important;
+    margin-left: 4.5em !important;
+}
+
+.close-loged {
+  height: 2.5em !important;
+    font-size: 1.3em !important;
+    color: #666666  !important;
+    border: 2px solid #666666 !important;
+    border-radius: 0 !important;
+    width: 40% !important;
+    margin: 1.5em !important;
+    background: #999900 !important;
+    margin-bottom: 1.5em !important;
+    margin-right: 4.5em !important;
+}
+
+.footerModalRegister {
+  padding: 1em !important;
+  margin-top: 11em !important;
+}
+
+
+/* Custom, iPhone Retina */
+  @media only screen and (max-width : 767px) {
+    .loginModal>div>div>div>form>div>.submit {
+      height: 3em !important
+    }
+
+    .downinput {
+      margin-bottom: 2em !important;
+    }
+
+    .triplelog {
+      margin-right: 1.5em !important;
+      margin-bottom: 1em !important;
+      width: 90% !important;
+    }
+  .loginModal>div>div>.modal-footer {
+    border: none !important;
+    padding-bottom: 6em;
+    font-size: 1.5em;
+    height: 164px !important;
+    background-color: #999900;
+  }
+  .registerModal>div>div>.modal-body {
+
+    background: #CCCC99 !important;
+    background: -webkit-linear-gradient(180deg, #CCCC99, #999900) !important;
+    background: -o-linear-gradient(180deg, #CCCC99, #999900)!important;
+    background: -moz-linear-gradient(180deg, #CCCC99, #999900)!important;
+    background: linear-gradient(180deg, #CCCC99 46%, #999900 40%)!important;
+
+  }
+
+  .submitRegister {
+    margin: 0 !important;
+    width: 57% !important;
+    float: right !important;
+    margin-top: 1em !important;
+  }
+
+
+}
+
+  @media only screen and (max-width : 991px) {
+
+  }
