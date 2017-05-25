@@ -41,7 +41,7 @@
         </div>
       </div>
     </div>
-    <div class ="row" ng-repeat ="usuarios in usuarioCompleto  | orderBy: '-puntuacion.matematicas' track by $index ">
+    <div class ="row" ng-repeat ="usuarios in usuarioCompleto  | orderBy: '-puntuacion.ingles' track by $index ">
       <div class ="col-md-12 col-lg-12 col-sm-12 col-xs-12 matematicasHome " >
         <div tabindex="1" tabindex ="1" aria-label ="Posicion {{1 + $index}}. El usuario {{usuarios.username}}, esta actualmente por el nivel {{usuarios.juegoActual}}. Con un total de {{usuarios.puntuacion.ingles}} puntos!">
           <div class ="col-md-3 col-lg-3 col-sm-3 col-xs-12  puntos-matematicas-home"  id ="tag{{$index}}">
