@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +23,7 @@
   <p class ="msg"></p>
 
 <div class ="row formularioSingUpr">
-  <div class ="col-md-4 col-sm-4 col-xs-4 col-lg-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4 col-lg-offset-4">
+  <div class ="col-md-4 col-sm-8 col-xs-10 col-lg-4 col-md-offset-4 col-sm-offset-2 col-xs-offset-1 col-lg-offset-4">
     <% for(var i in messages) { %>
       <div class ="col-ms-12 col-md-12 col-xs-12 col-lg-12">
         <div class='flash btn btn-warning mensageWarning '><%= messages[i] %></div>
@@ -31,6 +34,7 @@
         <h1><%= title %></h1>
     </div>
     <div class ="col-ms-12 col-md-12 col-xs-12 col-lg-12 formularioSingUp">
+
       <form action="/singup" method="post">
         <div>
           <label>Nombre:<label>
@@ -56,6 +60,11 @@
             <input type="submit" value="crear cuenta"/>
           </div>
       </form>
+
+        <div class ="col-ms-4 col-md-4 col-xs-12 col-lg-4 col-ms-offset-1 col-md-offset-1 col-xs-offset-1 col-lg-offset-1"  style="margin-top:1em !important;">
+          <a type="submit" class ="btn" href="/">Volver al Menu Principal</a>
+        </div>
+
     </div>
   </div>
 </div>

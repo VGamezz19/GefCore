@@ -154,9 +154,17 @@ body {
 .rowpuntos {
   margin-top: 4em;
 }
+.checkboxIngles {
+  height: 1em !important;
+  width: 1em !important;
+  font-size: 2em !important;
+}
 
 /* Custom, iPhone Retina */
-  @media only screen and (max-width : 350px) {
+  @media only screen and (max-width : 550px) {
+    .checkboxIngles {
+      font-size: 1em !important;
+    }
     .starGame {
       margin-top: 1.5em !important;
       font-size: 1em !important;
@@ -198,10 +206,16 @@ body {
       margin-right: 1em !important;
     }
     .modal-content {
-      height: 21em !important;
     }
     .modal-body {
       height: 86% !important;
+    }
+    .paddingXS {
+      padding: 0 !important;
+    }
+
+    .paddingRo {
+          padding-left: 0 !important;
     }
   }
 s
