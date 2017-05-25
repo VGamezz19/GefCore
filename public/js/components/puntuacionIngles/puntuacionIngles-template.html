@@ -43,7 +43,7 @@
     </div>
     <div class ="row" ng-repeat ="usuarios in usuarioCompleto  | orderBy: '-puntuacion.matematicas' track by $index ">
       <div class ="col-md-12 col-lg-12 col-sm-12 col-xs-12 matematicasHome " >
-        <div tabindex="1" tabindex ="1" aria-label ="Posicion {{1 + $index}}. El usuario {{usuarios.username}}, esta actualmente por el nivel {{usuarios.juegoActual}}. Con un total de {{usuarios.puntuacion.matematicas}} puntos!">
+        <div tabindex="1" tabindex ="1" aria-label ="Posicion {{1 + $index}}. El usuario {{usuarios.username}}, esta actualmente por el nivel {{usuarios.juegoActual}}. Con un total de {{usuarios.puntuacion.ingles}} puntos!">
           <div class ="col-md-3 col-lg-3 col-sm-3 col-xs-12  puntos-matematicas-home"  id ="tag{{$index}}">
             <h3 style="margin: 0 !important; text-align: left;">{{1 + $index}} - {{usuarios.username}}</h3>
           </div>
@@ -52,10 +52,10 @@
             <p class ="visible-xs" style="font-size:0.8em;">Actualmente esta por el Nivel {{usuarios.juegoActual}}</p>
           </div>
           <div class ="col-md-3 col-lg-3 hidden-sm col-xs-12 puntos-matematicas-home"  id ="tag{{$index}}">
-            <h3 style="margin: 0 !important; text-align: center;">{{usuarios.puntuacion.matematicas}}</h3>
+            <h3 style="margin: 0 !important; text-align: center;">{{usuarios.puntuacion.ingles}}</h3>
           </div>
           <div class ="visible-sm col-sm-11 puntos-matematicas-home" style="width: 95%;" id ="tag{{$index}}">
-            <h3 style="margin: 0 !important; text-align: center;">{{usuarios.puntuacion.matematicas}}</h3>
+            <h3 style="margin: 0 !important; text-align: center;">{{usuarios.puntuacion.ingles}}</h3>
           </div>
         </div>
       </div>

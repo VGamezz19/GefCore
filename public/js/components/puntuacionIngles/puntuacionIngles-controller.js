@@ -12,7 +12,7 @@
         console.log($scope.usuarioCompleto);
         $scope.usuarioCompleto.forEach(function(usuario) {
           var cnt = 0;
-            usuario.matematicas.forEach(function(nivel) {
+            usuario.ingles.forEach(function(nivel) {
                 cnt = cnt + 1;
             });
 
