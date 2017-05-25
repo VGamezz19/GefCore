@@ -6,7 +6,12 @@
 <!-- Profile Matematicas -->
 
   <!-- Repetir -->
-  <h1 class ="tituloProfile" tabindex="1"><p aria-label='Tus juegos de Matematicas'></p>MATEMATICAS</h1>
+    <div class ="row">
+      <div class ="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <h1 class ="tituloProfile" tabindex="1"><p aria-label='Tus juegos de Matematicas'></p>MATEMATICAS</h1>
+      </div>
+    </div>
+
     <div class ="row">
       <div  class =" col-md-5 col-lg-5">
         <div class ="col-md-12 col-lg-12">
@@ -183,7 +188,7 @@
                   <span>{{paraJugar.juego.titulo}}</span>
                 </div>
                 <div class ="col-md-3 col-lg-3 profile-matematicas-home  {{paraJugar.juego.identi}}" style ="margin-right: 0 !important;">
-                  {{paraJugar.juego.ultimoUso}}
+                  {{formatFecha(paraJugar.juego.ultimoUso)}}
                 </div>
               </a>
               <span class ="fi glyphicon glyphicon-ok spanFlotandoProfile" style ="right: -1em;"></span>

@@ -19,7 +19,7 @@ function moverDerecha() {
     $(".juego" + cnt).hide();
     //////////////////////////
     cnt = cnt + 1;
-    console.log(cnt);
+    //console.log(cnt);
     $(".juego" + cnt).show();
   }
 }
@@ -41,7 +41,7 @@ $( ".izquierda" ).click(function() {
     $(".izquierda").hide();
     $(".juego2").hide()
     ///////////////////
-    cnt = 0;
+    //cnt = 0;
     $(".juego1").show();
   } else {
     $(".juego" + cnt).hide();
@@ -51,11 +51,11 @@ $( ".izquierda" ).click(function() {
       $(".izquierda").hide();
       $(".juego2").hide()
       ///////////////////
-      cnt = 0;
+      //cnt = 0;
       $(".juego1").show();
     } else {
       $(".juego" + cnt).show();
-      console.log(cnt);
+      //console.log(cnt);
     }
 
   }

@@ -94,7 +94,7 @@ angular.module('juegoIngles').controller('juegoInglesController',['$scope','$htt
              //Significa que ha jugado el juego con dificultad.
              //Luego en el profile, se le recordara, que deveria volverlo hacer
              //Para mejorar su marca
-             if ($scope.errores >=3) {
+             if ($scope.errores >= 3) {
                $scope.estado = 3;
              } else {
                $scope.estado = 1;
