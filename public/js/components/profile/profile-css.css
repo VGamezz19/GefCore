@@ -81,7 +81,7 @@ body {
 
 .spanFlotandoProfile {
    font-size: 3em;
-    
+
     position: absolute;
 }
 
@@ -128,3 +128,102 @@ margin-right: 0em;
   color: rgb(126, 122, 130) !important;
   width: 88% !important;
 }
+
+
+/* Custom, iPhone Retina */
+  @media only screen and (max-width : 550px) {
+    .tituloProfile {
+      background: #CCCC99 !important;
+      color: #666633 !important;
+      padding-left: -8% !important;
+      left: -0.5em !important;
+      padding-left: 4.5em !important;
+      padding: 0.5em !important;
+      margin-top: 1em !important;
+      width: 171% !important;
+      text-align: left !important;
+      position: relative !important;
+      margin-right: 0em !important;
+    }
+    .tituloRepetir {
+      font-size: 2em !important;
+    }
+    .bloqueadoGame {
+       width: 100% !important;
+      font-size: 1em !important;
+      padding: 0.9em !important;
+    }
+    .tituloJugable {
+      font-size: 2em !important;
+      padding-left: 0 !important;
+    }
+    .juegosProfileJ {
+      font-size: 0.7em !important;
+    }
+
+    .profile-matematicas-home {
+      padding-top: 0.9em !important;
+    }
+    .tituloProfileNivel {
+      margin-right: 0 !important;
+    }
+    .tituloCompleto {
+      padding-left: 0 !important;
+      font-size: 2em !important;
+    }
+
+    .nivelcompletofecha {
+      margin-top: 1em !important;
+      //width: 17.4em !important;
+    }
+
+    .menuPhone {
+      border: solid 3px #CCCC99 !important;
+      margin-right: : 1em;
+      padding: 0 !important;
+      background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+  }
+
+  @media only screen and (max-width : 991px) {
+
+    .tituloRepetir {
+      font-size: 2em !important;
+    }
+    .bloqueadoGame {
+       width: 100% !important;
+      font-size: 1em !important;
+      padding: 0.9em !important;
+    }
+    .tituloJugable {
+      font-size: 2em !important;
+      padding-left: 0 !important;
+    }
+    .juegosProfileJ {
+      font-size: 0.7em !important;
+    }
+
+    .profile-matematicas-home {
+      padding-top: 0.9em !important;
+    }
+    .tituloProfileNivel {
+      margin-right: 0 !important;
+    }
+    .tituloCompleto {
+      padding-left: 0 !important;
+      font-size: 2em !important;
+    }
+
+    .menuPhone {
+      border: solid 3px #CCCC99 !important;
+      margin-right: : 1em;
+      padding: 0 !important;
+      background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .profileHome {
+      padding: 0 !important;
+    }
+  }
+
+  }
