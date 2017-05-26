@@ -1,4 +1,4 @@
-angular.module('juego').controller('juegoController',['$scope','$http','$rootScope','$routeParams', '$route', '$window', 'UserCurrent', function ($scope,$http,$rootScope,$routeParams,$route, $window, UserCurrent) {
+angular.module('juego').controller('juegoController',['$scope','$http','$rootScope','$routeParams', '$route', '$window', 'UserCurrent', '$location', function ($scope,$http,$rootScope,$routeParams,$route, $window, UserCurrent, $location) {
 
 //==============================================================================
 
@@ -17,6 +17,13 @@ angular.module('juego').controller('juegoController',['$scope','$http','$rootSco
 
            $(".juego1").show();
          },100);
+
+         UserCurrent.getUser().then(function (user) {
+           var usuario = user;
+           if (usuario.puntuacion.matematicas < $scope.juegoActual.puntuacionTotal) {
+              $location.path( "/" );
+           }
+         })
 
      }, function errorCallback(response) {
 
