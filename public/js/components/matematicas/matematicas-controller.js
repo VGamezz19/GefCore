@@ -34,7 +34,6 @@ UserCurrent.getUser()
 
            });
 
-           console.log($scope.thisUser.puntuacion);
            this.puntuacionMaxima = $scope.thisUser.puntuacion.matematicas;
 
        }

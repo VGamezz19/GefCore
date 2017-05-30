@@ -27,7 +27,7 @@ angular.module('myApp', [
     })
 
     function getResults(response) {
-      console.log(response.data);
+      
       return response.data;
     }
 

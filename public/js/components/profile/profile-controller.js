@@ -4,6 +4,22 @@ angular.module('profile').controller('profileController',['$scope','$http', 'Use
   UserCurrent.getUser()
      .then( function(user) {
        $scope.currentUser = user;
+       
+        //========================Jquery DOM===============================
+        $(".profileHome").hover(function () {
+
+         $(this).find(".spanFlotandoProfile").show();
+        });
+        //quitando hover raton
+        $(".profileHome").mouseleave(function () {
+            $(this).find(".spanFlotandoProfile").hide();
+        });
+
+
+        //Testing TabINDEX jquery
+        $('[tabindex=1]').on('focus', function() {
+
+        });
 
        //========================FUNCIONES PROFILE===============================
 
@@ -97,7 +113,7 @@ angular.module('profile').controller('profileController',['$scope','$http', 'Use
 
      }, function errorCallback(res) {
        return false;
-         console.log("error");
+
      });
 
 
