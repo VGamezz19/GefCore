@@ -160,7 +160,7 @@
         <div class ="initRepetir" ng-if="repetirIng.length != 0">
           <div ng-repeat ="paraJugar in repetirIng | orderBy: 'juego.nivel'">
             <div class ="col-md-12 col-lg-12 col-xs-12 col-sm-12 profileHome " >
-              <a  href="/juego/{{paraJugar.juego.identi}}" class ="juegosProfileJ" tabindex="1" aria-label='Repite el juego. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
+              <a  href="/juegoIngles/{{paraJugar.juego.identi}}" class ="juegosProfileJ" tabindex="1" aria-label='Repite el juego. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
                 <div class ="col-md-3 col-lg-3 col-xs-3 col-sm-3 profile-matematicas-home  {{paraJugar.juego.identi}}">
                   Nivel {{paraJugar.juego.nivel}}
                 </div>
@@ -190,7 +190,7 @@
         <h1 class ="tituloJugable" tabindex="1"> <p aria-label='Aqui estan todos los juegos de matematicas desbloqueados recientemente'></p>Nuevo Juego</h1>
         <div ng-repeat ="paraJugar in ultimoNivelIng | orderBy: 'juego.nivel'">
           <div class ="col-md-12 col-lg-12 col-xs-12 col-sm-12 profileHome " >
-            <a href="/juego/{{paraJugar.juego.identi}}" class ="juegosProfileJ" tabindex="1" aria-label='Juegar el nuevo juego. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
+            <a href="/juegoIngles/{{paraJugar.juego.identi}}" class ="juegosProfileJ" tabindex="1" aria-label='Juegar el nuevo juego. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
               <div class ="col-md-3 col-lg-3 col-xs-4 col-sm-3 profile-matematicas-home  {{paraJugar.juego.identi}}">
                 Nivel {{paraJugar.juego.nivel}}
               </div>
@@ -222,7 +222,7 @@
         <h1 class ="tituloCompleto" tabindex="1"> <p aria-label='Aqui estan todos tus juegos completados de matematicas'></p>Juegos jugados</h1>
         <div ng-repeat ="paraJugar in ultimoRegistroIng | orderBy: 'juego.nivel'">
           <div class ="col-md-12 col-lg-12 col-xs-12 col-sm-12 profileHome " ng-init="formatFecha(paraJugar.juego.ultimoUso)">
-            <a href="/juego/{{paraJugar.juego.identi}}" class ="juegosProfileJ" tabindex="1" aria-label='Juego completado. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
+            <a href="/juegoIngles/{{paraJugar.juego.identi}}" class ="juegosProfileJ" tabindex="1" aria-label='Juego completado. {{paraJugar.juego.titulo}}. Nivel de juego {{paraJugar.juego.nivel}}'>
               <div class ="col-md-2 col-lg-2 col-xs-4 col-sm-2 profile-matematicas-home  {{paraJugar.juego.identi}}">
                 Nivel {{paraJugar.juego.nivel}}
               </div>
