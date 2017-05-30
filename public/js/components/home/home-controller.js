@@ -9,7 +9,7 @@ angular.module('homeModule').controller('homeController',['$scope', '$http', '$s
 
   UserCurrent.getUser()
      .then( function(user) {
-       console.log(user.matematicas);
+
        $scope.thisUser = user
 
 //Recuperamos THIS USER nada mas empezar la carga del HOME.
@@ -47,7 +47,7 @@ angular.module('homeModule').controller('homeController',['$scope', '$http', '$s
 
 
           }, function errorCallback(response) {
-            console.log("not succes");
+
           });
 
        } else {
@@ -99,7 +99,7 @@ angular.module('homeModule').controller('homeController',['$scope', '$http', '$s
 
 
           }, function errorCallback(response) {
-            console.log("not succes");
+            
           });
 
 
