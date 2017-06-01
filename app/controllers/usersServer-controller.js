@@ -328,8 +328,8 @@ exports.forgot = (req, res) => {
         authentication:'plain',
         domain: 'heroku',
         auth: {
-          user:  'app67374351@heroku.com',
-          pass: 'ag6vgsku1842'
+          user:  SENDGRID_USERNAME,
+          pass: SENDGRID_PASSWORD
         }
       });
       var mailOptions = {
@@ -387,8 +387,8 @@ exports.resetConfirmation = (req, res, next) => {
         authentication:'plain',
         domain: 'heroku',
         auth: {
-          user:  'app67374351@heroku.com',
-          pass: 'ag6vgsku1842'
+          user:  SENDGRID_USERNAME,
+          pass: SENDGRID_PASSWORD
         }
       });
       var mailOptions = {
