@@ -170,6 +170,7 @@ exports.singUp = function (req, res, next) {
     user.provider = 'local';
     user.puntuacion.matematicas = 0;
     user.puntuacion.ingles = 0;
+    user.rol = 'user';
 
     //intenta guardar el nuevo usuario en la DB
 
