@@ -7,7 +7,7 @@
     <a href="/" style ="color:#FFCC00"class ="btn" tabindex="1" aria-label='Home'>Home</a>
   </div>
   <div ng-if ="thisUser"class ="col-xs-12 menuPhone">
-    <a href="/profile" style ="color:#FFCC00"class ="btn " tabindex="1" aria-label='perfil'>Perfil</a>
+    <a href="#!/profile" style ="color:#FFCC00"class ="btn " tabindex="1" aria-label='perfil'>Perfil</a>
   </div>
   <div ng-if ="thisUser" class ="col-xs-12 menuPhone">
     <a href="" style ="color:#FFCC00"class ="btn  logeOut" tabindex="1" aria-label='Cerrar sesion'>Cerrar sesion</a>
@@ -38,7 +38,7 @@
     <div class ="row " style ="margin-bottom: 1em;" ng-repeat ="mates in matematicas track by mates.nivel">
     <!-- IF mates.puntos es más pequeña que la puntuacion que necesita para entrar-->
       <div class ="col-md-12 col-lg-12 col-sm-12 matematicasHome desbloqueado" ng-if="mates.puntuacionTotal <= thisUser.puntuacion.ingles">
-        <a href="/juegoIngles/{{mates.identi}}" class ="" tabindex="1" >
+        <a href="#!/juegoIngles/{{mates.identi}}" class ="" tabindex="1" >
           <div aria-label='{{mates.nivel}}' class ="col-md-3 col-lg-3 col-sm-3 col-xs-12 juegos-matematicas-home  {{mates.identi}}">
             Nivel {{mates.nivel}}
           </div>
@@ -104,6 +104,6 @@
     </div>
 
 
-<script src =" /js/components/ingles/ingles-jquery.js">
+<script src ="/js/components/ingles/ingles-jquery.js">
 
   </script>

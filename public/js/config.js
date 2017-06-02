@@ -42,9 +42,9 @@ angular.module('myApp').
         });
         // use the HTML5 History API
         //esto es para quitar el #/ de la ruta
-        $locationProvider.html5Mode({
+       /* $locationProvider.html5Mode({
           enabled: true,
           requireBase: false
-        });
+        }); */
     }
   ]);

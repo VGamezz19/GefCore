@@ -32,6 +32,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
   <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <script src="/lib/bootstrap/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src ="/lib/cheet.js/cheet.min.js"></script>
 
   <!-- Nav Header BOOTSTRAP -->
   <div class ="bar-header">
@@ -54,7 +55,7 @@ enrutamiento y las variables de la carpeta routes con el motor de renderizado ej
           <!-- Usuario Conectado-->
           <%  if( userFullName){ %> <!-- True false User -->
 
-              <li role="presentation"><a href="/profile" tabindex="1" aria-label='Tu perfil <%=userFullName%>'><%=userFullName%></a></li>
+              <li role="presentation"><a href="#!/profile" tabindex="1" aria-label='Tu perfil <%=userFullName%>'><%=userFullName%></a></li>
               <li role="presentation"><a class ="logeOut" href="" tabindex="1" aria-label='Cerrar sesion'>Cerrar sesion</a></li>
           <%}%>
 
