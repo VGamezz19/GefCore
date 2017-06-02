@@ -53,8 +53,6 @@ var id = req.query.id;
     })
   }
 
-  
-
   exports.getPreguntas = function(req,res,next)  {
 
     var id = req.body.identi

@@ -166,7 +166,7 @@ exports.singUp = function (req, res, next) {
     var user = new User(req.body);
     var message = null;
 
-    //configuramos la propiedad user providerId
+    //configuramos las propiedades estaticas
     user.provider = 'local';
     user.puntuacion.matematicas = 0;
     user.puntuacion.ingles = 0;
