@@ -37,7 +37,7 @@
 <p aria-label="Realiza los cálculos propuestos para pasar de nivel" tabindex="1"></p>
 <div class ="row boxJuego">
   <div class= "col-md-2 col-lg-2 col-sm-3 col-xs-3  col-md-offset-1 col-lg-offset-1 ">
-      <button type="button" class="btn izquierda fi glyphicon glyphicon-chevron-left izquierdaFlecha" tabindex="1" aria-label='Retroceder al juego anterior'></button>
+      <button type="button" class="btn izquierda fi glyphicon glyphicon-chevron-left izquierdaFlecha" tabindex="1" aria-label='Retroceder a la pregunta anterior'></button>
   </div>
   <div class ="col-md-6 col-lg-6 col-sm-6 col-xs-6 textCentro">
     <div class ="" ng-repeat = "juego in juegoActual.preguntas track by $index">
@@ -63,7 +63,7 @@
         <div class ="row ">
           <div class ="col-md-10 col-lg-10 col-sm-10 col-xs-12 inputPregunta">
             <div class="input-group">
-              <input type="number"  placeholder="Introduce la respuesta" class="form-control inputEnter" tabindex="5" ng-model="inputsPreguntas[$index]">
+              <input type="number" min ="-25" max="1000" step="1" placeholder="Introduce la respuesta" class="form-control inputEnter" tabindex="5" ng-model="inputsPreguntas[$index]">
             </div>
           </div>
         </div>
