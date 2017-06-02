@@ -71,7 +71,8 @@ var userSchema = new Schema({
         }
     }],
     resetPasswordToken: String,
-    resetPasswordExpires: Date
+    resetPasswordExpires: Date,
+    rol: String
 });
 
 

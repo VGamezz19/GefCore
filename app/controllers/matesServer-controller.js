@@ -51,8 +51,6 @@ var id = req.query.id;
         res.send('Juego eliminado correctamente');
       }
     })
-
-
   }
 
   exports.getPreguntas = function(req,res,next)  {
