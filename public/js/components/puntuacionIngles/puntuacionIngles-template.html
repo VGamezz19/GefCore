@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/js/components/puntuacionIngles/puntuacionIngles-css.css">
 <div>
-    <h1 class ="hidden-xs" tabindex = "1"><p aria-label ="Ranking de los usuarios que han jugado a Ingles."></p>Todas las puntuaciones de Ingles</h1>
+  <p style = "margin-top: 1em;" tabindex = "1" aria-label ="Lista donde podras ver todos los usuarios que han jugado a Ingles, cuantos putnos han ganado y en que posicion estan. Puedes buscarte en el Ranking."></p>
     <!--=============== HEADER NAV FOR PHONE ================================= -->
     <div class ="row visible-xs boque-home mates" style ="margin-top: 3em;">
       <div class ="col-xs-12 menuPhone">
@@ -42,24 +42,42 @@
       </div>
     </div>
     <div class ="row" ng-repeat ="usuarios in usuarioCompleto  | orderBy: '-puntuacion.ingles' track by $index ">
-      <div class ="col-md-12 col-lg-12 col-sm-12 col-xs-12 matematicasHome " >
-        <div tabindex="1" tabindex ="1" aria-label ="Posicion {{1 + $index}}. El usuario {{usuarios.username}}, esta actualmente por el nivel {{usuarios.juegoActual}}. Con un total de {{usuarios.puntuacion.ingles}} puntos!">
-          <div class ="col-md-3 col-lg-3 col-sm-3 col-xs-12  puntos-matematicas-home"  id ="tag{{$index}}">
-            <h3 style="margin: 0 !important; text-align: left;">{{1 + $index}} - {{usuarios.username}}</h3>
+      <div class ="col-md-12 col-lg-12 col-sm-12 col-xs-12 matematicasHome "id = "tag{{$index}}" >
+        <span class ="posicion">{{1 + $index}}</span>
+        <!-- TabFocus-->
+        <div tabindex="1" tabindex ="1" >
+
+           <!--Otro usuario -->
+          <div ng-if ="actualUser.username != usuarios.username" class ="col-md-3 col-lg-3 col-sm-3 col-xs-12  puntos-matematicas-home tag{{$index}}" aria-label ="El usuario {{usuarios.username}} esta actualmente en la posición {{1 + $index}}">
+            <h3 style="margin: 0 !important; text-align: left;">{{usuarios.username}}</h3>
           </div>
-          <div class ="col-md-5 col-lg-5 col-sm-8 col-xs-12 puntos-matematicas-home"  id ="tag{{$index}}">
+           <!--Actual usuario -->
+          <div  ng-if ="actualUser.username == usuarios.username" class ="col-md-3 col-lg-3 col-sm-3 col-xs-12  puntos-matematicas-home tag{{$index}}" aria-label ="{{usuarios.username}}, actualmente estas en la posicion {{1 + $index}}">
+            <h3 style="margin: 0 !important; text-align: left;">{{usuarios.username}}</h3>
+          </div>
+
+          <!--Otro usuario -->
+          <div ng-if ="actualUser.username != usuarios.username" class ="col-md-5 col-lg-5 col-sm-8 col-xs-12 puntos-matematicas-home tag{{$index}}" aria-label = "Este usuario ha desbloqueado recientemente el nivel {{usuarios.juegoActual}}">
             <h3 style="margin: 0 !important; text-align: left; " class ="hidden-xs">Actualmente esta por el Nivel {{usuarios.juegoActual}}</h3>
-            <p class ="visible-xs" style="font-size:0.8em;">Actualmente esta por el Nivel {{usuarios.juegoActual}}</p>
           </div>
-          <div class ="col-md-3 col-lg-3 hidden-sm col-xs-12 puntos-matematicas-home"  id ="tag{{$index}}">
+          <!--Actual usuario -->
+          <div ng-if ="actualUser.username == usuarios.username" class ="col-md-5 col-lg-5 col-sm-8 col-xs-12 puntos-matematicas-home tag{{$index}}" aria-label = "Has desbloqueado recientemente el nivel {{usuarios.juegoActual}}" >
+            <h3 style="margin: 0 !important; text-align: left; " class ="hidden-xs">Actualmente estas por el Nivel {{usuarios.juegoActual}}</h3>
+          </div>
+
+           <!--Otro usuario -->
+          <div ng-if ="actualUser.username != usuarios.username" class ="col-md-3 col-lg-3 hidden-sm col-xs-12 puntos-matematicas-home tag{{$index}}" aria-label = "Tiene un total de {{usuarios.puntuacion.ingles}} puntos en Ingles">
             <h3 style="margin: 0 !important; text-align: center;">{{usuarios.puntuacion.ingles}}</h3>
           </div>
-          <div class ="visible-sm col-sm-11 puntos-matematicas-home" style="width: 95%;" id ="tag{{$index}}">
+          <!--Actual usuario -->
+          <div ng-if ="actualUser.username == usuarios.username" class ="col-md-3 col-lg-3 hidden-sm col-xs-12 puntos-matematicas-home tag{{$index}}" aria-label = "Tienes un total de {{usuarios.puntuacion.ingles}} puntos en Ingles">
             <h3 style="margin: 0 !important; text-align: center;">{{usuarios.puntuacion.ingles}}</h3>
           </div>
         </div>
+        <!-- TabFocus -->
+        <span ng-if ="actualUser.username == usuarios.username"class = "fi glyphicon glyphicon-arrow-left spanFlotando hidden-xs"></span>
       </div>
     </div>
 </div>
 
-<script src =" /js/components/puntuacionIngles/puntuacionIngles-jquery.js"></script>
+<!-- aria-label ="Posicion {{1 + $index}}. El usuario {{usuarios.username}}, esta actualmente por el nivel {{usuarios.juegoActual}}. Con un total de {{usuarios.puntuacion.ingles}} puntos!"-->

@@ -1,15 +1,21 @@
 
 
 
-  angular.module('puntuacionIngles').controller('puntuacionInglesController',['$scope','$http', function ($scope, $http) {
+  angular.module('puntuacionIngles').controller('puntuacionInglesController',['$scope','$http','UserCurrent', function ($scope, $http, UserCurrent) {
     $scope.nivelesUsers = [];
 
       $http({
         method:'GET',
         url:'/getAll'
       }).then(function successCallback(response){
+        //Factory Actual Usaer
+        UserCurrent.getUser().then(function (user) {
+          $scope.actualUser = user
+        })
+
+        //Scope All Users in this aplication.
         $scope.usuarioCompleto = response.data;
-        console.log($scope.usuarioCompleto);
+
         $scope.usuarioCompleto.forEach(function(usuario) {
           var cnt = 0;
             usuario.ingles.forEach(function(nivel) {
